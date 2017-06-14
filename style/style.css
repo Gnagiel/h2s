@@ -1,0 +1,345 @@
+@font-face {
+    font-family: 'bangersregular';
+    src: url('../polices/bangers-webfont.eot');
+    src: url('../polices/bangers-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../polices/bangers-webfont.woff2') format('woff2'),
+         url('../polices/bangers-webfont.woff') format('woff'),
+         url('../polices/bangers-webfont.ttf') format('truetype'),        
+         url('../polices/bangers-webfont.svg#bangersregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#main_page {
+	width: 100%;
+	height: 620px;
+/*	background-image: url("../images/fond_accueil.jpg");
+	background-size: 100%;
+  background-attachment: fixed;*/
+}
+
+#combat_page {
+	background-color: grey;
+	margin-top:-20px;	
+	height: 620px;
+}
+
+/*body {
+	font-family: 'bangersregular'; 
+}*/
+
+#bouton_menu {
+	height: 550px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;	
+	align-items: center;
+}
+
+#bouton_menu li {
+	width: 200px;
+	height: 200px;	
+	text-align: center;	
+	list-style-type: none;
+	border-radius: 50%; 
+	background-color: grey;	
+	display: flex;
+	justify-content: space-around;	
+	align-items: center;	
+}
+
+#bouton_menu li a {
+	color: white;
+	text-decoration: none;		
+	padding: 80px;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+
+/*//////////////////// ONGLET  //////////////////*/
+
+#onglets .onglet {
+border:1px solid#000; clear:left; padding:5px; zoom:1 /* ie*/
+}
+#onglets ul{
+border-right:1px solid#000; float:left; margin:0; padding:0
+}
+#onglets li {
+position:relative;
+margin-bottom:-1px;
+list-style-type:none;
+padding:5px;
+border-top:1px solid#000;
+border-bottom:1px solid#000;
+border-left:1px solid#000;
+float:left
+}
+#onglets li.actif{
+border-bottom-color:#FFF
+}
+#onglets li.actif a {
+text-decoration:none
+}
+
+#onglet_2, #onglet_3 {
+	display: none;
+} 
+/*//////////////////// ONGLET  //////////////////*/
+
+
+
+#page {
+	display: flex;
+	justify-content: space-around;	
+	align-items: center;
+}
+
+#resultat {
+	max-width: 450px;
+}
+
+#cible {
+	width: 200px;
+	height: 300px;
+}
+
+#perso {
+	width: 200px;
+	height: 300px;
+}
+
+#team {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;	
+	align-items: center;
+}
+
+#teamA {
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;		
+	align-items: center;
+}
+
+#teamB {
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;	
+	align-items: center;
+}
+
+.avatar {
+	height: 300px;
+}
+
+.avatarC {
+	height: 100px;
+	opacity: 0.75;
+}
+
+.spanDegat{
+	font-family: 'bangersregular';
+	left: 55px;
+	position: absolute;
+}
+.perso {
+	position:relative;
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,0) 95%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 95%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 95%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	width: 120px;
+	text-align: center;	
+	margin: 2px;
+	border-radius: 20px;
+}
+
+.perso2 {
+	position:relative;
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(204,51,0,1) 0%, rgba(204,51,0,0) 75%, rgba(204,51,0,0) 95%, rgba(204,51,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(204,51,0,1) 0%,rgba(204,51,0,0) 75%,rgba(204,51,0,0) 95%,rgba(204,51,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  rgba(204,51,0,1) 0%,rgba(204,51,0,0) 75%,rgba(204,51,0,0) 95%,rgba(204,51,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	width: 120px;
+	text-align: center;	
+	margin: 2px;
+	border-radius: 20px;
+}
+
+.info {
+	left: 50px;
+	position: absolute;
+  font-family: 'bangersregular';   
+}
+
+.perso_menu, .perso_menu_stuff {
+	border: 1px solid black;
+	padding : 20px;
+	width: 300px;	
+	text-align: center;	
+}
+
+.sous_menu {
+	display: flex;
+	justify-content: space-between;			
+}
+
+.perso_sous_menu {
+	width: 130px;
+	display: flex;
+	justify-content: space-between;	
+	align-items: center;		
+}
+
+.list_cheat {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;			
+}
+
+.list_cheat_perso {
+	border: 1px solid black;
+	padding : 20px;
+	text-align: center;			
+}
+
+.affiche_stuff {
+	width:550px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;			
+}
+
+.stuff_menu {
+	text-align: center;		
+	display: flex;	
+	flex-direction: column;
+	justify-content: space-between;	
+}
+
+.stuff_test {
+	border: 1px solid black;
+	width:70px;
+	height:70px;
+	text-align: center;			
+}
+
+#teamC {
+	display: flex;
+	justify-content: space-between;	
+	align-items: center;
+}
+
+#submit {
+	display: none;
+}
+
+.fond {
+	width: 900px;
+	height: 550px;
+	background-image: url("../images/arene.jpg");
+	background-size: 110%;
+	margin: auto;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#head {
+	display: flex;
+	justify-content: space-around;
+	width: 90%;
+	height: 50px;	
+	align-items: center;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+#resultat {
+	margin: auto;
+}
+
+#turn {
+	float:left;
+	width:175px;
+	text-align: center;	
+	margin-left: 7px;
+}
+
+#log {
+	float:right;
+	width:175px;
+	height: 550px;
+	overflow:hidden;
+	overflow-y:auto;
+	margin-right: 7px;
+	margin-left: 7px;
+}
+
+#test {
+	display: flex;
+	height: 510px;
+}
+
+.form {
+	text-align: center;	
+	padding-top: 100px;
+}
+
+#choix_adv {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.nom_adv {
+	text-align: center;
+	width: 250px;
+	padding:20px;
+}
+
+#charge {
+	width:80px;
+	border-radius:50%;
+}
+
+/*////////////////// DRAG AND DROP :////////////////*/
+
+.drag {
+	width:70px;
+	height:70px;
+	text-align: center;
+	background-color: grey;
+	border: 1px solid black;
+	margin: 10px;	
+}
+
+.drag p {
+	text-align: center;
+}
+
+.preferance {
+	width:70px;
+	height:70px;
+}
+
+#persos {
+	margin-top:10px;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+}
+
+.pref {
+	margin-top:50px;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+}
+
+form {
+	text-align: center;
+}

@@ -1,0 +1,34 @@
+[Project ID]
+Signature=UE Proj: v.1
+Unicode=1
+[Project Information]
+Compilable=1
+Use Relative Directory=1
+Relative to Project File=1
+Include Sub Directories=1
+Project TagfileW=
+Project WordfileW=
+Project TpFileW=
+FilterW=
+Using VCS=0
+Save Account=0
+Create Tagfile=0
+CTags Legacy Support=0
+[uemakeXp]
+ReleaseMode=0
+[Debug Settings]
+Program Arguments=
+Symbol Paths=
+Working Directory=
+Selected Debugger=2
+Source Paths=
+Watch Symbols 0=
+Watch Symbols 1=
+Watch Symbols 2=
+Watch Symbols 3=
+Column Coordinates 0=200|100|100|100
+Column Coordinates 1=200|100|100|100
+Column Coordinates 2=200|100|100|100
+Column Coordinates 3=200|100|100|100
+[FilesW]
+0=.\
