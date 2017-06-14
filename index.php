@@ -37,7 +37,7 @@
   <body>
   <div id="main_page">
 <?php
-
+echo 'test';
 if (isset($message)) // On a un message à afficher ?
 {
   echo '<p>', $message, '</p>'; // Si oui, on l'affiche

@@ -1,36 +1,13 @@
-[BreakpEnabled]
-C:\wamp64\www\h2s\index.php=1,1,1,-1,
-
-[Breakpoints]
-C:\wamp64\www\h2s\index.php=11964,64,78,103,-1,
-
-[Folders]
-.\=1
-.\ - ajax=1
-.\ - JS=1
-
 [Open Files]
 Active File Display Mode=1
-Active File Index=3
-Open File Line0=3720
-Open File Line1=6480
-Open File Line2=0
-Open File Line3=0
-Open File Pos0=7844
-Open File Pos1=702
-Open File Pos2=0
-Open File Pos3=0
-Open File Window Pos0=0,1,-1,-1,-1,-1,5,27,1145,565
-Open File Window Pos1=0,1,-1,-1,-1,-1,5,27,1145,565
-Open File Window Pos2=0,1,-1,-1,-1,-1,5,27,1145,565
-Open File Window Pos3=0,1,-1,-1,-1,-1,5,27,1145,565
+Active File Index=0
+Open File Line0=940
+Open File Pos0=1958
+Open File Window Pos0=0,1,-1,-1,-1,-1,5,27,1145,359
 Open File0=.\index.php
-Open File1=.\includes\team.php
-Open File2=.\ajax\team.php
-Open File3=.\JS\team.js
-Open File4=
+Open File1=
 Remember Files=1
 
 [Project Information]
 Project Start=E107060002000D000A000400230000002E
-Working Time=2480
+
