@@ -37,7 +37,6 @@
   <body>
   <div id="main_page">
 <?php
-echo 'test';
 if (isset($message)) // On a un message à afficher ?
 {
   echo '<p>', $message, '</p>'; // Si oui, on l'affiche
@@ -101,7 +100,7 @@ if (isset($user)) // Si on utilise un user (nouveau ou pas).
 
 			/// CHOIX PVP
 			case 'choix':
-				$retourUsers = $managerUser->getList($user->nom());
+				/*$retourUsers = $managerUser->getList($user->nom());
 				echo '<div id="choix_adv">';
 				if (empty($retourUsers))
 				{
@@ -124,18 +123,18 @@ if (isset($user)) // Si on utilise un user (nouveau ou pas).
 				    }
 			    }
 			  }
-			  echo '</div>';
+			  echo '</div>';*/
 			break;
 			
 			/// COMBAT PVP
 			case 'combatPVP':
-				?>
+				/*?>
 				<script src="./JS/attaquerPVP.js"></script>
 				<script src="./JS/soignerPVP.js"></script>
 				<script src="./JS/endormirPVP.js"></script>
 				<?php
 				echo '<div id="combat_page" >';
-				include("./includes/Function_CombatPVP.php");
+				include("./includes/Function_CombatPVP.php");*/
 			break;			
 								
 			default :

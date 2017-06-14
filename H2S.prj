@@ -20,7 +20,17 @@ ReleaseMode=0
 Program Arguments=
 Symbol Paths=
 Working Directory=
-Selected Debugger=0
+Selected Debugger=2
 Source Paths=
+Watch Symbols 0=
+Watch Symbols 1=
+Watch Symbols 2=
+Watch Symbols 3=
+Column Coordinates 0=200|100|100|100
+Column Coordinates 1=200|100|100|100
+Column Coordinates 2=200|100|100|100
+Column Coordinates 3=200|100|100|100
 [FilesW]
 0=.\
+[]
+Debugger=C:\wamp64\bin\php\php5.6.25\php-win.exe
