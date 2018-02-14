@@ -1,4 +1,5 @@
 <?php
+
 class PersonnagesManager
 {
   private $_db; // Instance de PDO
@@ -90,7 +91,7 @@ class PersonnagesManager
       p.id_persos,
       q.etoile,  
       (p.pv + (
-	      SELECT s.atr_1
+	      SELECT s.atr_2
 				FROM stuff s
 	      WHERE s.id_stuff = t.stuff_3   
       )) pv, 
@@ -181,7 +182,7 @@ class PersonnagesManager
     p.id_persos, 
     q.etoile,  
     (p.pv + (
-      SELECT s.atr_1
+      SELECT s.atr_2
 			FROM stuff s
       WHERE s.id_stuff = t.stuff_3   
     )) pv, 
@@ -217,12 +218,62 @@ class PersonnagesManager
     return $persos;
   }
 
+  public function getList_up(User $user, Personnage $perso)
+  {
+    $persos = [];
+    
+    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team,
+    p.nom, p.types, p.emp_team, 
+    p.id_persos, 
+    q.etoile,  
+    (p.pv + (
+      SELECT s.atr_2
+			FROM stuff s
+      WHERE s.id_stuff = t.stuff_3   
+    )) pv, 
+    (p.att + (
+      SELECT s.atr_1
+			FROM stuff s
+      WHERE s.id_stuff = t.stuff_1   
+    )) att,
+    (p.def + (
+      SELECT s.atr_1
+			FROM stuff s
+      WHERE s.id_stuff = t.stuff_2   
+    )) def,    
+    n.xp_max      
+    FROM team t
+    INNER JOIN persos p
+ 		ON t.id_persos = p.id_persos       
+    INNER JOIN niv_perso n
+ 		ON t.niveau = n.niv_perso  
+ 		INNER JOIN q_perso q
+ 		ON t.qualite = q.id_q   		      
+    WHERE id_user = :id_user
+    AND id_perso != :id_perso
+    AND (t.team = 0
+    OR t.team IS NULL)
+    ORDER BY t.niveau, p.nom');
+    
+    $q->bindValue(':id_user', $user->id_user(), PDO::PARAM_INT);
+    $q->bindValue(':id_perso', $perso->id_perso(), PDO::PARAM_INT);
+        
+    $q->execute();
+    
+    while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+    {
+    	$persos[] = new Personnage($donnees);
+    }
+    
+    return $persos;
+  }
+  
   public function delete(Personnage $perso)
   {
-  	$this->db->exec('DELETE FROM stuff WHERE id_stuff = '.$perso->stuff_1().' ');
-  	$this->db->exec('DELETE FROM stuff WHERE id_stuff = '.$perso->stuff_2().' ');
-  	$this->db->exec('DELETE FROM stuff WHERE id_stuff = '.$perso->stuff_3().' ');
-    $this->db->exec('DELETE FROM team WHERE id_perso = '.$perso->id_perso().' ');
+  	$this->db->exec('DELETE FROM stuff WHERE id_stuff = '.$perso->stuff_1().'');
+  	$this->db->exec('DELETE FROM stuff WHERE id_stuff = '.$perso->stuff_2().'');
+  	$this->db->exec('DELETE FROM stuff WHERE id_stuff = '.$perso->stuff_3().'');
+    $this->db->exec('DELETE FROM team WHERE id_perso = '.$perso->id_perso().'');
   }
 
   public function sup_team()
@@ -248,25 +299,22 @@ class PersonnagesManager
   public function update(Personnage $perso)
   {
     $q = $this->db->prepare('UPDATE team 
-    SET forcePerso = :forcePerso, degats = :degats, niveau = :niveau, experience = :experience, 
-    timeEndormi = :timeEndormi, atout = :atout, XpMax = :XpMax, vie = :vie, vieMax = :vieMax, 
-    magie = :magie, magieMax = :magieMax, inte = :inte, etat = :etat WHERE id = :id');
+    SET niveau = :niveau, xp = :xp, qualite = :qualite, team = :team, stuff_1 = :stuff_1, 
+    stuff_2 = :stuff_2, stuff_3 = :stuff_3, 
+    stuff_4 = :stuff_4, etat = :etat 
+    WHERE id_perso = :id_perso');
 
-    $q->bindValue(':forcePerso', $perso->forcePerso(), PDO::PARAM_INT);
-    $q->bindValue(':degats', $perso->degats(), PDO::PARAM_INT);
     $q->bindValue(':niveau', $perso->niveau(), PDO::PARAM_INT);
-    $q->bindValue(':experience', $perso->experience(), PDO::PARAM_INT);
-    $q->bindValue(':timeEndormi', $perso->timeEndormi(), PDO::PARAM_INT);
-    $q->bindValue(':atout', $perso->atout(), PDO::PARAM_INT);
-    $q->bindValue(':id', $perso->id(), PDO::PARAM_INT);
-    $q->bindValue(':XpMax', $perso->XpMax(), PDO::PARAM_INT);
-    $q->bindValue(':vie', $perso->vie(), PDO::PARAM_INT);
-    $q->bindValue(':vieMax', $perso->vieMax(), PDO::PARAM_INT);
-    $q->bindValue(':magie', $perso->magie(), PDO::PARAM_INT);
-    $q->bindValue(':magieMax', $perso->magieMax(), PDO::PARAM_INT);
-    $q->bindValue(':inte', $perso->inte(), PDO::PARAM_INT);
-    $q->bindValue(':etat', $perso->etat(), PDO::PARAM_INT);
-    
+    $q->bindValue(':xp', $perso->xp(), PDO::PARAM_INT);
+    $q->bindValue(':qualite', $perso->qualite(), PDO::PARAM_INT);
+    $q->bindValue(':team', $perso->team(), PDO::PARAM_INT);
+    $q->bindValue(':stuff_1', $perso->stuff_1(), PDO::PARAM_INT);
+    $q->bindValue(':stuff_2', $perso->stuff_2(), PDO::PARAM_INT);
+    $q->bindValue(':stuff_3', $perso->stuff_3(), PDO::PARAM_INT);
+    $q->bindValue(':stuff_4', $perso->stuff_4(), PDO::PARAM_INT);
+    $q->bindValue(':etat', $perso->etat(), PDO::PARAM_STR);
+    $q->bindValue(':id_perso', $perso->id_perso(), PDO::PARAM_INT);
+
     $q->execute();
   }
 

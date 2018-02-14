@@ -1,4 +1,5 @@
 <?php
+
 class User
 {
   protected $id_user,
@@ -38,7 +39,12 @@ class User
 	    }
 	  }
 	}
-	
+
+  public function payer_argent($somme)
+  {
+    $this->argent = $this->argent - $somme;
+  }
+  	
 	// GETTERS //
 	
   public function id_user() { return $this->id_user; }

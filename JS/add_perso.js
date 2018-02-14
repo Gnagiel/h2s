@@ -1,4 +1,4 @@
-function auto_load(){
+ function auto_load(){
   $.ajax({
     url: 'index.php?action=cheat',
     cache: false,

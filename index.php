@@ -1,15 +1,35 @@
 ﻿<?php
-	function chargerClasse($classe)
+/*! \mainpage Page Principale
+ * \file          Index.php
+ * \author    Guillaume Nagiel
+ * \version   1.0
+ * \date       26 Janvier 2018
+ * \brief       Page d'index du jeu.
+ *
+ * \details    Ce fichier est la base du jeu.
+ * \todo  Il reste à implémenter les scripts de combats PVE et PVP 
+ */
+ 
+ 	/**
+	 * \brief       Charger les class à la demande
+	 * \details    Permet de charger les class uniquement si elles sont utilisées via la fonction spl_autoload_register('chargerClass'). (cf #$classe)
+	 * \param    $class         Class à instancier.
+	 * \return    Rien.
+	 */	 
+ 
+	function chargerClass($class)
 	{
-	  require './class/'.$classe . '.php';
+	  require './class/'.$class.'.php';
 	}
 	
-	spl_autoload_register('chargerClasse');
+	spl_autoload_register('chargerClass');
 
 	session_start();
 	
 	include('./includes/eviterMessageAvertissement.php');	
-
+/**
+* \code{.php}
+*/
 	if (isset($_GET['deconnexion']))
 	{
 	  session_destroy();
@@ -19,7 +39,6 @@
 
 	include("./includes/identifiant.php");
 	include("./includes/Function_Jeu.php");
-	//include("./includes/Function_Attaque.php");
 
 ?>
 <!DOCTYPE html>
@@ -31,11 +50,20 @@
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
 		<script type="text/javascript">
     	google.load('jquery','1');
-    </script> 
+    </script>
+    
+	  <script src="./JS/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
+	  <link rel="stylesheet" href="./JS/jquery.modal.css" type="text/css" media="screen" />
+
+	  <script src="./JS/highlight/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+	  <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
+	  <link rel="stylesheet" href="./JS/highlight/github.css" type="text/css" media="screen" />
+	    
     <meta charset="utf-8" />
   </head>
   <body>
   <div id="main_page">
+
 <?php
 if (isset($message)) // On a un message à afficher ?
 {
@@ -53,18 +81,19 @@ if (isset($user)) // Si on utilise un user (nouveau ou pas).
 			<?php
 			echo '<h2>'.$user->pseudo().'</h2>';
 			$perso = $manager->getList($user);
+			echo '<h2 id="or">Or : '.$user->or_().'</h2>';
+			echo '<h2 id="argent">Argent : '.$user->argent().'</h2>';
 			?>
 			<h2><a href="index.php" class="root" >Accueil</a></h2>
 			<h2><a href="index.php?deconnexion=1" class="root" >Déconnexion</a></h2>
 		</div>
 	</div>
 	<?php	
-	//var_dump($perso);
 	
 	if (isset($_GET["action"])) {
 		switch ($_GET["action"]) {
 			
-			/// EDITION DU MENU CHEAT
+			// EDITION DU MENU CHEAT
 			case 'cheat':
 				?>		
 				<script src="./JS/add_perso.js"></script>
@@ -74,7 +103,7 @@ if (isset($user)) // Si on utilise un user (nouveau ou pas).
 				include("./includes/cheat.php");
 			break;
 			
-			/// EDITION DU MENU D'EQUIPE
+			// EDITION DU MENU D'EQUIPE
 			case 'team':
 				?>	
 				<script src="./JS/team.js"></script>			
@@ -82,12 +111,17 @@ if (isset($user)) // Si on utilise un user (nouveau ou pas).
 				include("./includes/team.php");
 			break;			
 
-			/// EDITION DU MENU D'EQUIPEMENT
+			// EDITION DU MENU D'EQUIPEMENT
 			case 'stuff':
 				include("./includes/stuff.php");
 			break;	
+			
+			// EDITION DU MENU DES PERSONNAGES
+			case 'up_perso':
+				include("./includes/up_perso.php");
+			break;	
 						
-			/// COMBAT
+			// COMBAT
 			case 'combat':	
 				?>
 				<script src="./JS/attaquer.js"></script>
@@ -98,43 +132,12 @@ if (isset($user)) // Si on utilise un user (nouveau ou pas).
 				include("./includes/Function_Combat.php");
 			break;	
 
-			/// CHOIX PVP
+			// CHOIX PVP
 			case 'choix':
-				/*$retourUsers = $managerUser->getList($user->nom());
-				echo '<div id="choix_adv">';
-				if (empty($retourUsers))
-				{
-				  echo 'Personne à combattre !';
-				}
-				else
-				{
-			    foreach ($retourUsers as $unUser)
-			    {
-			    	if (($unUser->nom() != "IA") && !empty($unUser->perso_1()))
-			    	{
-				      echo '<div class="nom_adv"><a href="?combatPVP=x&idUser=', $unUser->id(), '"><h3>', htmlspecialchars($unUser->nom()), '</h3></a></br>'; 
-				      $adv1 = $manager->get($unUser->perso_1());
-							$adv2 = $manager->get($unUser->perso_2());
-							$adv3 = $manager->get($unUser->perso_3());
-							echo "Personnages :</br>";
-				      echo '	'.htmlspecialchars($adv1->nom()). ', '. htmlspecialchars($adv1->type()).' de niveau '.$adv1->niveau() .'</a></br>'; 
-				      echo '	'.htmlspecialchars($adv2->nom()). ', '. htmlspecialchars($adv2->type()).' de niveau '.$adv2->niveau() .'</a></br>';
-				      echo '	'.htmlspecialchars($adv3->nom()). ', '. htmlspecialchars($adv3->type()).' de niveau '.$adv3->niveau() .'</a></br></div></br>';    
-				    }
-			    }
-			  }
-			  echo '</div>';*/
 			break;
 			
-			/// COMBAT PVP
+			// COMBAT PVP
 			case 'combatPVP':
-				/*?>
-				<script src="./JS/attaquerPVP.js"></script>
-				<script src="./JS/soignerPVP.js"></script>
-				<script src="./JS/endormirPVP.js"></script>
-				<?php
-				echo '<div id="combat_page" >';
-				include("./includes/Function_CombatPVP.php");*/
 			break;			
 								
 			default :
@@ -155,6 +158,7 @@ if (isset($user)) // Si on utilise un user (nouveau ou pas).
 				  <li><a href="index.php?action=cheat" class="root" >Cheat</a></li>				  
 				  <li><a href="index.php?action=team" class="root" >Team</a></li>
 				  <li><a href="index.php?action=stuff" class="root" >Amélioration de l'équipement</a></li>
+				  <li><a href="index.php?action=up_perso" class="root" >Amélioration des personnages</a></li>
 				  <li><a href="index.php?action=Combat" class="root" >Combat</a></li>
 				  <li><a href="index.php?action=combatPVP" class="root" >CombatPVP</a></li>
 			</ul>
@@ -224,3 +228,4 @@ if (isset($user)) // Si on a créé un personnage, on le stocke dans une variabl
 }
 
 ?>
+

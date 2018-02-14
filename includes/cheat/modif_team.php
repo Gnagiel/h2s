@@ -1,4 +1,18 @@
 <?php
+
+/**
+ * \file          modif_team.php
+ * \author    Guillaume Nagiel
+ * \version   1.0
+ * \date       26 Janvier 2018
+ * \brief       Menu cheat de la team.
+ *
+ * \details    Ce fichier est le menu cheat de la team, ce menu permet de cheater afin de tester toutes les fonctionnalités concernant votre équipe.
+ */
+ 
+/**
+* \code{.php}
+*/
 echo '<div id="team">';
 foreach ($perso as $persos)
 {		

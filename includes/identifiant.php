@@ -1,13 +1,24 @@
 <?php
+/**
+ * \file          identifiant.php
+ * \author    Guillaume Nagiel
+ * \version   1.0
+ * \date       29 Janvier 2018
+ * \brief       Connexion PDO.
+ *
+ * \details    Ce fichier contient le code permettant d'instancier l'objet PDO afin de se connecter Ã  la base de donnÃ©es.
+ */
+/**
+* \code{.php}
+*/
 	try
 	{
-	  $db = new PDO('mysql:host=localhost;dbname=h2s', 'root', ''); // Tentative de connexion.
+	  $db = new PDO('mysql:host=localhost;dbname=h2s', 'root', 'Pa$$w0rd'); 
 	  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 	}
-
-	catch (PDOException $e) // On attrape les exceptions PDOException.
+	catch (PDOException $e) 
 	{
-	  echo 'La connexion a échoué.<br />';
-	  echo 'Informations : [', $e->getCode(), '] ', $e->getMessage(); // On affiche le n° de l'erreur ainsi que le message.
+	  echo 'La connexion a Ã©chouÃ©<br />';	  
+	  echo 'Informations : [', $e->getCode(), '] ', $e->getMessage(); 
 	}
 ?>

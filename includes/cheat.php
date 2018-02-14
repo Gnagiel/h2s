@@ -1,3 +1,14 @@
+<?php
+/**
+ * \file          cheat.php
+ * \author    Guillaume Nagiel
+ * \version   1.0
+ * \date       26 Janvier 2018
+ * \brief       Menu cheat du jeu.
+ *
+ * \details    Ce fichier est le menu cheat du jeu, ce menu permet de cheater afin de tester toutes les fonctionnalités du jeu.
+ */
+?> 
 <div id="onglets">
 	<ul>
 		<li class="actif"><a href="#onglet_1">Modif Team</a></li>

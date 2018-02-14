@@ -1,4 +1,49 @@
+
 <?php
+/**
+ * \file          Function_Jeu.php
+ * \author    Guillaume Nagiel
+ * \version   1.0
+ * \date       26 Janvier 2018
+ * \brief       DÃ©finit les fonctions du jeu.
+ *
+ * \details    Ce fichier dÃ©finit toutes les fonctions utilisÃ©es pour initialiser le jeu.
+ */
+
+function affichePerso($perso) {		
+/**
+ * \brief       Afficher un personnage
+ * \details    GÃ©nÃ¨re l'HTML permettant d'afficher un personnage du jeu. (cf #$perso)
+ * \param    $perso         Perso Ã  afficher.
+ * \return    Un block HTML.
+ */	 	
+	if ($perso->atout() == 2) {			
+		echo '<div class="perso2">';	
+	} else {
+		echo '<div class="perso">';	
+	}
+	if ($perso->timeEndormi() == 1) {			
+		echo '<span class="info">zZZZz</span><br />';	
+	}	
+	if ($perso->etat() == "good") {
+		$image = $perso->type().'Mini.png';
+	}
+	else {
+		$image = 'tombe.png';
+	}
+	echo '<span id="'.$perso->id().'Degat" class="spanDegat"></span>';
+	echo '<a onClick="cible('.$perso->id().')">';
+	echo '<img src="./images/'.$image.'" class="avatarC" id="'.$perso->id().'"/>';
+	echo '</a><br />';
+	echo 'Vie : '.htmlspecialchars($perso->vie()).'/'.htmlspecialchars($perso->vieMax()).'<br />'; 
+	echo '</div>';			
+};	
+
+function fonctionComparaison($a, $b){
+    return $a['vie'] > $b['vie'];
+};
+
+
 
 	$manager = new PersonnagesManager($db);
 	$managerUser = new UserManager($db);
@@ -10,11 +55,11 @@
 	}
 	
 
-	elseif (isset($_POST['creeruser']) && isset($_POST['nom'])) // Si on a voulu créer un utilisateur.
+	elseif (isset($_POST['creeruser']) && isset($_POST['nom'])) // Si on a voulu crÃ©er un utilisateur.
 	{
 		$user = new User(['nom' => $_POST['nom'], 'mdp' => $_POST['mdp']]);
 		
-	  if (isset($user)) // Si le type du personnage est valide, on a créé un personnage.
+	  if (isset($user)) // Si le type du personnage est valide, on a crÃ©e un personnage.
 	  {
 	    if (!$user->nomValide())
 	    {
@@ -23,7 +68,7 @@
 	    }
 	    elseif ($managerUser->exists($user->nom()))
 	    {
-	      $message = 'Le nom est déjà pris.';
+	      $message = 'Le nom est dÃ©ja pris.';
 	      unset($user);
 	    }
 	    else
@@ -73,7 +118,7 @@
 	      break;
 	  }
 	  
-	  if (isset($perso1)) // Si le type du personnage est valide, on a créé un personnage.
+	  if (isset($perso1)) // Si le type du personnage est valide, on a crÃ©Ã© un personnage.
 	  {
 	    if (!$perso1->nomValide())
 	    {
@@ -107,7 +152,7 @@
 	      break;
 	  }
 	  
-	  if (isset($perso2)) // Si le type du personnage est valide, on a créé un personnage.
+	  if (isset($perso2)) // Si le type du personnage est valide, on a crÃ©Ã© un personnage.
 	  {
 	    if (!$perso2->nomValide())
 	    {
@@ -141,7 +186,7 @@
 	      break;
 	  }
 	  
-	  if (isset($perso3)) // Si le type du personnage est valide, on a créé un personnage.
+	  if (isset($perso3)) // Si le type du personnage est valide, on a crÃ©Ã© un personnage.
 	  {
 	    if (!$perso3->nomValide())
 	    {
@@ -158,31 +203,4 @@
 
   $managerUser->update($user);
 	}
-	
-function affichePerso($perso) {		
-	if ($perso->atout() == 2) {			
-		echo '<div class="perso2">';	
-	} else {
-		echo '<div class="perso">';	
-	}
-	if ($perso->timeEndormi() == 1) {			
-		echo '<span class="info">zZZZz</span><br />';	
-	}	
-	if ($perso->etat() == "good") {
-		$image = $perso->type().'Mini.png';
-	}
-	else {
-		$image = 'tombe.png';
-	}
-	echo '<span id="'.$perso->id().'Degat" class="spanDegat"></span>';
-	echo '<a onClick="cible('.$perso->id().')">';
-	echo '<img src="./images/'.$image.'" class="avatarC" id="'.$perso->id().'"/>';
-	echo '</a><br />';
-  echo 'Vie : '.htmlspecialchars($perso->vie()).'/'.htmlspecialchars($perso->vieMax()).'<br />'; 
-  echo '</div>';			
-}	
-
-function fonctionComparaison($a, $b){
-    return $a['vie'] > $b['vie'];
-}
 ?>

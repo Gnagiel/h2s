@@ -1,4 +1,15 @@
-<script>
+<?php
+/**
+ * \file          /includes/team.php
+ * \author    Guillaume Nagiel
+ * \version   1.0
+ * \date       26 Janvier 2018
+ * \brief       Menu de gestion d'équipe.
+ *
+ * \details    Ce menu permet de gérer son équipe.
+ */
+ ?>
+ <script>
 	// ajoute la propriété pour le drop et le transfert de données
 	$.event.props.push('dataTransfer');
 	 
@@ -63,6 +74,14 @@
 	});	
 </script>	 
 <?php
+ 	/**
+	 * \brief       Génération de l'équipe
+	 * \details    Permet générer l'équipe existante, en implémentant les fonction de drag and drop.
+	 * \param    $emp_team         Emplacement du personnage (de 1 à 6).
+	 * \param    $user         Class User.
+	 * \param    $manager         Class PersonnagesManager.
+	 * \return    un block html pour chaque personnage, définit ou non.
+	 */	
 function cadre_team($emp_team, $user, $manager) {	
 	$tab = $manager->get_id_team($emp_team, $user->id_user());
 	//var_dump($tab);

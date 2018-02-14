@@ -1,10 +1,20 @@
 <?php
+/**
+ * \class Personnage Personnage.php "class/Personnage.php" 
+ * \file      Personnage.php
+ * \author    Guillaume Nagiel
+ * \version   1.0
+ * \date      26 Janvier 2018
+ * \brief     Class des personnages.
+ *
+ * \details   Class des personnages. Elle définit les attributs et methodes des personnages.
+ */
+
 class Personnage extends Base_personnage
 {
   protected $atout,
   					$id_user,
-  					$id_perso,
-            $id_persos,
+            $id_perso,
             $niveau,
             $xp,
             $xp_max,
@@ -12,13 +22,7 @@ class Personnage extends Base_personnage
             $qualite,
             $etoile,
             $team,
-            $stuff_1,
-  					$stuff_2,
-  					$stuff_3,
-  					$stuff_4,
-  					$etat,  					
-  					$pv,
-  					$att,
+  					$etat,  
   					$def,
   					$vit,
   					$pen,
@@ -27,10 +31,7 @@ class Personnage extends Base_personnage
   					$esc,
   					$crit,
   					$ten,
-  					$soi,
-  					$nom,
-  					$types,
-  					$emp_team;
+  					$soi;
   					  
   const CEST_MOI = 1;
   const PERSONNAGE_TUE = 2;
@@ -70,7 +71,14 @@ class Personnage extends Base_personnage
   	$this->timeEndormi == 1;
     return $this->timeEndormi;
   }
-  
+
+ 	/**
+	 * \brief       Fonction pour frapper
+	 * \details    Fonction permettant à un personnage de frapper un autre personnage. S'il est sa propre cible ou s'il est endormit, il ne pourra pas frapper
+	 * \param    Personnage $perso         Perso qui se fait frapper.
+	 * \param    Personnage $perso2         Person qui frappe.
+	 * \return    Renvoie à la fonction qui permet de recevoir des dégats ("recevoirDegats()").
+	 */	  
   public function frapper(Personnage $perso, Personnage $perso2)
   {
     if ($perso->id == $this->id)
@@ -91,18 +99,13 @@ class Personnage extends Base_personnage
 
 	public function recevoirXP($val)
   {
-    $this->experience += $val;
+    $this->xp += $val;
     
     // Si on a assez d'XP, on prend un lvl.
-    if ($this->experience >= $this->XpMax)
+    if ($this->xp >= $this->xp_max)
     {
       $this->niveau += 1;
-      $this->experience = $this->experience - $this->XpMax;
-      $this->XpMax += 5;
-      $this->magieMax += 5;
-      $this->forcePerso += 2;
-      $this->inte += 2;
-      $this->vieMax += 5;
+      //$this->xp = $this->xp - $this->XpMax;
     }
   }
 
@@ -170,10 +173,9 @@ class Personnage extends Base_personnage
 
 	// GETTERS //
 	
-  public function id_perso() { return $this->id_perso; }
+
   public function id_user() { return $this->id_user; }
-  public function nom() { return $this->nom; }
-  public function id_persos() { return $this->id_persos; }
+  public function id_perso() { return $this->id_perso; }
   public function xp() { return $this->xp; }
   public function xp_max() { return $this->xp_max; }
   public function niveau() { return $this->niveau; }
@@ -183,12 +185,6 @@ class Personnage extends Base_personnage
   public function timeEndormi() { return $this->timeEndormi; }
   public function types() { return $this->types; }
   public function team() { return $this->team; }
-  public function stuff_1() { return $this->stuff_1; }
-  public function stuff_2() { return $this->stuff_2; }
-  public function stuff_3() { return $this->stuff_3; }
-  public function stuff_4() { return $this->stuff_4; }
-  public function pv() { return $this->pv; }
-  public function att() { return $this->att; }
   public function def() { return $this->def; }
   public function vit() { return $this->vit; }
   public function pen() { return $this->pen; }
@@ -198,7 +194,6 @@ class Personnage extends Base_personnage
   public function crit() { return $this->crit; }
   public function ten() { return $this->ten; }
   public function soi() { return $this->soi; }
-  public function emp_team() { return $this->emp_team; }
   public function etat() { return $this->etat; }
 
   public function setAtout($atout)
@@ -211,32 +206,16 @@ class Personnage extends Base_personnage
     }
   }
     
-  public function setId_perso($id_perso)
-  {
-    // L'identifiant du personnage sera, quoi qu'il arrive, un nombre entier.
-    $this->id_perso = (int) $id_perso;
-  }
-    
   public function setId_user($id_user)
   {
     // L'identifiant du personnage sera, quoi qu'il arrive, un nombre entier.
     $this->id_user = (int) $id_user;
   }
     
-  public function setId_persos($id_persos)
+  public function setId_perso($id_perso)
   {
     // L'identifiant du personnage sera, quoi qu'il arrive, un nombre entier.
-    $this->id_persos = (int) $id_persos;
-  }
-
-  public function setNom($nom)
-  {
-    // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-    // Dont la longueur est inférieure à 30 caractères.
-    if (is_string($nom) && strlen($nom) <= 30)
-    {
-      $this->nom = $nom;
-    }
+    $this->id_perso = (int) $id_perso;
   }
 
   public function setEtoile($etoile)
@@ -307,28 +286,6 @@ class Personnage extends Base_personnage
       $this->team = $team;
     } 
   }  
-  
-  public function setPv($pv)
-  {
-    $pv = (int) $pv;
-
-    // On vérifie que la vie n'est pas négative.
-    if ($pv >= 0)
-    {
-      $this->pv = $pv;
-    }
-  }
-
-  public function setAtt($att)
-  {
-    $att = (int) $att;
-
-    // On vérifie que la vie n'est pas négative.
-    if ($att >= 0)
-    {
-      $this->att = $att;
-    }
-  }
 
   public function setDef($def)
   {
@@ -428,61 +385,7 @@ class Personnage extends Base_personnage
       $this->soi = $soi;
     }
   }
-
-  public function setEmp_team($emp_team)
-  {
-    $emp_team = (int) $emp_team;
-
-    // On vérifie que la vie n'est pas négative.
-    if ($emp_team >= 0)
-    {
-      $this->emp_team = $emp_team;
-    }
-  }
-
-  public function setStuff_1($stuff_1)
-  {
-    $stuff_1 = (int) $stuff_1;
-
-    // On vérifie que la vie n'est pas négative.
-    if ($stuff_1 >= 0)
-    {
-      $this->stuff_1 = $stuff_1;
-    }
-  }
-  
-  public function setStuff_2($stuff_2)
-  {
-    $stuff_2 = (int) $stuff_2;
-
-    // On vérifie que la vie n'est pas négative.
-    if ($stuff_2 >= 0)
-    {
-      $this->stuff_2 = $stuff_2;
-    }
-  }  
-
-  public function setStuff_3($stuff_3)
-  {
-    $stuff_3 = (int) $stuff_3;
-
-    // On vérifie que la vie n'est pas négative.
-    if ($stuff_3 >= 0)
-    {
-      $this->stuff_3 = $stuff_3;
-    }
-  }
-
-  public function setStuff_4($stuff_4)
-  {
-    $stuff_4 = (int) $stuff_4;
-
-    // On vérifie que la vie n'est pas négative.
-    if ($stuff_4 >= 0)
-    {
-      $this->stuff_4 = $stuff_4;
-    }
-  }                
+               
   public function setEtat($etat)
   {
     $this->etat = $etat;

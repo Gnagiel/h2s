@@ -1,4 +1,5 @@
 <?php
+
 class StuffManager
 {
   private $_db; // Instance de PDO
@@ -54,32 +55,27 @@ class StuffManager
     }
   }
 
-  public function get_id_team($info, $user)
+  public function get_niveau_sup($info)
   {
-    $q = $this->db->prepare('SELECT t.id_perso, p.nom, q.etoile 
-    FROM team t
-    INNER JOIN persos p
- 		ON t.id_persos = p.id_persos    
- 		INNER JOIN q_perso q
- 		ON t.qualite = q.id_q   
-    WHERE t.id_user = :id_user AND t.team = :team');  
-    $q->bindValue(':team', $info, PDO::PARAM_INT);
-    $q->bindValue(':id_user', $user, PDO::PARAM_INT);
+			$info++; 
+			
+      $q = $this->db->prepare('SELECT up_atr_1, up_atr_2, up_atr_3      
+      FROM niv_stuff		      
+      WHERE niv_stuff = :niv_stuff');
+      $q->execute([':niv_stuff' => $info]);
+      
+      $tab = $q->fetch(PDO::FETCH_OBJ);
     
-    $q->execute(); 
-		$perso = $q->fetch(PDO::FETCH_ASSOC);       
-    return $perso;
-  }
-    
+    return $tab;
+
+  }    
   public function get($info)
   {
 
-      $q = $this->db->prepare('SELECT s.id_stuff, s.niveau, s.qualite, s.id_base,
+      $q = $this->db->prepare('SELECT s.id_stuff, s.niveau, s.qualite, s.id_base, s.atr_1, s.atr_2,
       b.nom, b.descr, b.types,  
       q.etoile,
-      n.up_atr_1, n.up_atr_2,
-      (b.atr_1 + n.up_atr_1 + q.up_atr_1) atr_1, 
-      (b.atr_2 + n.up_atr_2 + q.up_atr_2) atr_2      
+      n.cout    
       FROM stuff s
       INNER JOIN base_stuff b
    		ON s.id_base = b.id_base_stuff       
@@ -215,27 +211,17 @@ class StuffManager
     $q->execute();
   }
     
-  public function update(Personnage $perso)
+  public function update(Stuff $stuff)
   {
-    $q = $this->db->prepare('UPDATE team 
-    SET forcePerso = :forcePerso, degats = :degats, niveau = :niveau, experience = :experience, 
-    timeEndormi = :timeEndormi, atout = :atout, XpMax = :XpMax, vie = :vie, vieMax = :vieMax, 
-    magie = :magie, magieMax = :magieMax, inte = :inte, etat = :etat WHERE id = :id');
+    $q = $this->db->prepare('UPDATE stuff 
+    SET NIVEAU = :NIVEAU, QUALITE = :QUALITE, atr_1 = :atr_1, atr_2 = :atr_2 
+    WHERE id_stuff = :id');
 
-    $q->bindValue(':forcePerso', $perso->forcePerso(), PDO::PARAM_INT);
-    $q->bindValue(':degats', $perso->degats(), PDO::PARAM_INT);
-    $q->bindValue(':niveau', $perso->niveau(), PDO::PARAM_INT);
-    $q->bindValue(':experience', $perso->experience(), PDO::PARAM_INT);
-    $q->bindValue(':timeEndormi', $perso->timeEndormi(), PDO::PARAM_INT);
-    $q->bindValue(':atout', $perso->atout(), PDO::PARAM_INT);
-    $q->bindValue(':id', $perso->id(), PDO::PARAM_INT);
-    $q->bindValue(':XpMax', $perso->XpMax(), PDO::PARAM_INT);
-    $q->bindValue(':vie', $perso->vie(), PDO::PARAM_INT);
-    $q->bindValue(':vieMax', $perso->vieMax(), PDO::PARAM_INT);
-    $q->bindValue(':magie', $perso->magie(), PDO::PARAM_INT);
-    $q->bindValue(':magieMax', $perso->magieMax(), PDO::PARAM_INT);
-    $q->bindValue(':inte', $perso->inte(), PDO::PARAM_INT);
-    $q->bindValue(':etat', $perso->etat(), PDO::PARAM_INT);
+    $q->bindValue(':NIVEAU', $stuff->niveau(), PDO::PARAM_INT);
+    $q->bindValue(':QUALITE', $stuff->qualite(), PDO::PARAM_INT);
+    $q->bindValue(':atr_1', $stuff->atr_1(), PDO::PARAM_INT);
+    $q->bindValue(':atr_2', $stuff->atr_2(), PDO::PARAM_INT);
+    $q->bindValue(':id', $stuff->id_stuff(), PDO::PARAM_INT);
     
     $q->execute();
   }

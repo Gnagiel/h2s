@@ -1,4 +1,18 @@
 <?php
+
+/**
+ * \file          modif_stuff.php
+ * \author    Guillaume Nagiel
+ * \version   1.0
+ * \date       26 Janvier 2018
+ * \brief       Menu cheat du stuff.
+ *
+ * \details    Ce fichier est le menu cheat du stuff, ce menu permet de cheater afin de tester toutes les fonctionnalités concernant le stuff.
+ */
+
+/**
+* \code{.php}
+*/
 echo '<div id="team">';
 
 foreach ($perso as $persos)
@@ -59,6 +73,7 @@ foreach ($perso as $persos)
 ?>
 <?php
 echo '</div>';
+
 ?>
 	<script>
 		$(document).ready(function(){			

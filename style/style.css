@@ -343,3 +343,14 @@ text-decoration:none
 form {
 	text-align: center;
 }
+
+/*GESTION STUFF */
+
+.stuff_up {
+	text-align: center;
+}
+
+.img_stuff {
+	width:150px;
+	height:150px;
+}

@@ -1,18 +1,56 @@
+[BreakpEnabled]
+C:\wamp64\www\h2s\php_file_tree.php=1,1,1,1,1,-1,
+
+[Breakpoints]
+C:\wamp64\www\h2s\php_file_tree.php=2922,50,56,61,70,72,-1,
+
+[Folders]
+.\ - generateur_arbo=1
+.\=1
+.\ - sql=1
+.\ - style=1
+.\ - ajax=1
+.\ - JS=1
+.\ - includes=1
+.\ - class=1
+
 [Open Files]
 Active File Display Mode=1
 Active File Index=0
-Open File Line0=4558
-Open File Line1=3048
-Open File Pos0=7664
-Open File Pos1=4002
-Open File Window Pos0=0,1,-1,-1,-1,-1,5,27,1103,565
-Open File Window Pos1=0,1,-1,-1,-1,-1,5,27,1103,565
-Open File0=.\index.php
-Open File1=.\includes\team.php
-Open File2=
+Open File Line0=868
+Open File Line1=10732
+Open File Line2=988
+Open File Line3=3064
+Open File Line4=2
+Open File Line5=414
+Open File Line6=7262
+Open File Line7=2
+Open File Pos0=1878
+Open File Pos1=11896
+Open File Pos2=2030
+Open File Pos3=3646
+Open File Pos4=14044
+Open File Pos5=1316
+Open File Pos6=9878
+Open File Pos7=106
+Open File Window Pos0=0,1,-1,-1,-1,-1,5,27,1131,565
+Open File Window Pos1=0,1,-1,-1,-1,-1,5,27,1131,565
+Open File Window Pos2=0,1,-1,-1,-1,-1,5,27,1131,565
+Open File Window Pos3=0,1,-1,-1,-1,-1,5,27,1131,565
+Open File Window Pos4=0,1,-1,-1,-1,-1,5,27,1131,565
+Open File Window Pos5=0,1,-1,-1,-1,-1,5,27,1131,565
+Open File Window Pos6=0,1,-1,-1,-1,-1,5,27,1131,565
+Open File Window Pos7=0,1,-1,-1,-1,-1,5,27,1131,565
+Open File0=D:\Documents\Projects\babylon\public\js\Arena.js
+Open File1=D:\Documents\Projects\babylon\public\js\NetworkManager.js
+Open File2=D:\Documents\Projects\babylon\public\js\Game.js
+Open File3=D:\Documents\Projects\babylon\server.js
+Open File4=D:\Documents\Projects\babylon\public\js\Player.js
+Open File5=D:\Documents\Projects\babylon\public\js\GhostPlayer.js
+Open File6=D:\Documents\Projects\babylon\public\js\Weapons.js
+Open File7=D:\Documents\Projects\babylon\public\js\Armory.js
+Open File8=
 Remember Files=1
 
 [Project Information]
 Project Start=E107060002000D000A000400230000002E
-[Folders]
-.\=1

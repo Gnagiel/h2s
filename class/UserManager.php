@@ -1,4 +1,5 @@
 <?php
+
 class UserManager
 {
   private $_db; // Instance de PDO

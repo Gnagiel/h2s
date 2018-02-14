@@ -10,7 +10,7 @@ function auto_load(){
 
 $(document).ready(function(){
 		$(".add_team").submit(function() {
-				s = $(".add_team").serialize();
+				s = $(this).serialize();
 				$.ajax({
 					type: "POST",
 					data: s,
