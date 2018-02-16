@@ -44,7 +44,9 @@ function fonctionComparaison($a, $b){
 };
 
 
-
+/**
+* \code{.php}
+*/
 	$manager = new PersonnagesManager($db);
 	$managerUser = new UserManager($db);
 	$managerStuff = new StuffManager($db);
