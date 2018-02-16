@@ -4,13 +4,13 @@
  * \author    Guillaume Nagiel
  * \version   1.0
  * \date       26 Janvier 2018
- * \brief       Page d'index du jeu.
- *
- * \details    Ce fichier est la base du jeu.
+ * \brief       Page d'index du jeu. 
+ * \details    Ce fichier est la base du jeu. 
  * \todo  Il reste à implémenter les scripts de combats PVE et PVP 
  */
  
  	/**
+ 	 * \fn chargerClass($class)
 	 * \brief       Charger les class à la demande
 	 * \details    Permet de charger les class uniquement si elles sont utilisées via la fonction spl_autoload_register('chargerClass'). (cf #$classe)
 	 * \param    $class         Class à instancier.
@@ -21,7 +21,7 @@
 	{
 	  require './class/'.$class.'.php';
 	}
-	
+
 	spl_autoload_register('chargerClass');
 
 	session_start();
