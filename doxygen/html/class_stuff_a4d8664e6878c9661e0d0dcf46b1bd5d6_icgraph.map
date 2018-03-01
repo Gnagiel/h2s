@@ -1,0 +1,7 @@
+<map id="Stuff\niveau" name="Stuff\niveau">
+<area shape="rect" id="node2" href="$class_stuff.html#a58df203bb30ef856eab931a8b363ee69" title="Stuff\\lvlUp" alt="" coords="173,5,251,32"/>
+<area shape="rect" id="node3" href="$class_stuff.html#ad30226d936b128c511c6af7b542d8966" title="Stuff\\setNiveau" alt="" coords="158,56,266,83"/>
+<area shape="rect" id="node4" href="$class_stuff_manager.html#ab754f0d8b6625898735779a852268223" title="StuffManager\\add" alt="" coords="151,107,273,133"/>
+<area shape="rect" id="node6" href="$class_stuff_manager.html#a45dc81b0ddbbd804960d197d7a1cad69" title="StuffManager\\update" alt="" coords="141,157,283,184"/>
+<area shape="rect" id="node5" href="$class_personnages_manager.html#a3ce7c5751a3faedb4f639a009ff0243e" title="PersonnagesManager\\add" alt="" coords="331,107,504,133"/>
+</map>

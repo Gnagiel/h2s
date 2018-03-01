@@ -1,48 +1,46 @@
-﻿<?php
+<?php
 /*! \mainpage Page Principale
+ * Jeu en construction. Jeu de cartes à collectionner, constitution d'un deck, combats PVE et PVP automatiques
+ */
+/**
  * \file          Index.php
  * \author    Guillaume Nagiel
  * \version   1.0
  * \date       26 Janvier 2018
- * \brief       Page d'index du jeu. 
- * \details    Ce fichier est la base du jeu. 
- * \todo  Il reste à implémenter les scripts de combats PVE et PVP 
+ * \brief       Page d'index du jeu.
+ * \details    Ce fichier est la base du jeu.
+ * \todo  Il reste à implémenter les scripts de combats PVE et PVP
  */
- 
+
  	/**
  	 * \fn chargerClass($class)
 	 * \brief       Charger les class à la demande
 	 * \details    Permet de charger les class uniquement si elles sont utilisées via la fonction spl_autoload_register('chargerClass'). (cf #$classe)
 	 * \param    $class         Class à instancier.
 	 * \return    Rien.
-	 */	 
- 
+	 */
+
 	function chargerClass($class)
 	{
 	  require './class/'.$class.'.php';
 	}
 
 	spl_autoload_register('chargerClass');
-
 	session_start();
-	
-	include('./includes/eviterMessageAvertissement.php');	
 /**
 * \code{.php}
 */
 	if (isset($_GET['deconnexion']))
 	{
 	  session_destroy();
-	  header('Location: .');
-	  exit();
 	}
 
 	include("./includes/identifiant.php");
 	include("./includes/Function_Jeu.php");
 
 ?>
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang='fr'>
 	<head>
     <title>Heroes Smash Storm</title>
     <link rel="stylesheet" media="screen" type="text/css" href="./style/style.css" />
@@ -51,33 +49,26 @@
 		<script type="text/javascript">
     	google.load('jquery','1');
     </script>
-    
 	  <script src="./JS/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
 	  <link rel="stylesheet" href="./JS/jquery.modal.css" type="text/css" media="screen" />
-
 	  <script src="./JS/highlight/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
 	  <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
 	  <link rel="stylesheet" href="./JS/highlight/github.css" type="text/css" media="screen" />
-	    
     <meta charset="utf-8" />
   </head>
+
   <body>
   <div id="main_page">
-
 <?php
 if (isset($message)) // On a un message à afficher ?
 {
   echo '<p>', $message, '</p>'; // Si oui, on l'affiche
 }
-
 if (isset($user)) // Si on utilise un user (nouveau ou pas).
 {
 	?>
-	<div class="flex">		
-		<div id="chargement">
-			<img src="./images/charge.gif" id="charge" />
-		</div>	
-		<div id="head">	
+	<div class="flex">
+		<div id="head">
 			<?php
 			echo '<h2>'.$user->pseudo().'</h2>';
 			$perso = $manager->getList($user);
@@ -88,74 +79,67 @@ if (isset($user)) // Si on utilise un user (nouveau ou pas).
 			<h2><a href="index.php?deconnexion=1" class="root" >Déconnexion</a></h2>
 		</div>
 	</div>
-	<?php	
-	
+	<?php
+
 	if (isset($_GET["action"])) {
 		switch ($_GET["action"]) {
-			
+
 			// EDITION DU MENU CHEAT
 			case 'cheat':
-				?>		
+				?>
 				<script src="./JS/add_perso.js"></script>
 				<script src="./JS/sup_perso.js"></script>
-				<?php			
-				
+				<?php
 				include("./includes/cheat.php");
 			break;
-			
+
 			// EDITION DU MENU D'EQUIPE
 			case 'team':
-				?>	
-				<script src="./JS/team.js"></script>			
+				?>
+				<script src="./JS/team.js"></script>
 				<?php
 				include("./includes/team.php");
-			break;			
+			break;
 
 			// EDITION DU MENU D'EQUIPEMENT
 			case 'stuff':
 				include("./includes/stuff.php");
-			break;	
-			
+			break;
+
 			// EDITION DU MENU DES PERSONNAGES
 			case 'up_perso':
 				include("./includes/up_perso.php");
-			break;	
-						
+			break;
+
 			// COMBAT
-			case 'combat':	
-				?>
-				<script src="./JS/attaquer.js"></script>
-				<script src="./JS/soigner.js"></script>
-				<script src="./JS/endormir.js"></script>
-				<?php
-				echo '<div id="combat_page" >';
-				include("./includes/Function_Combat.php");
-			break;	
+			case 'combat':
+
+			break;
 
 			// CHOIX PVP
 			case 'choix':
 			break;
-			
+
 			// COMBAT PVP
 			case 'combatPVP':
-			break;			
-								
+			break;
+
 			default :
 
-				break;	
+				break;
 		}
 	}
 	else
 	{
 		if (file_exists($_SESSION['user']->pseudo().".txt")) {
-			unlink($_SESSION['user']->pseudo().".txt");
-		}			
-	
+			//unlink($_SESSION['user']->pseudo().".txt");
+		}
+
 		$_SESSION['tr'] = 0;
 		$_SESSION['tour'] = 0;
 		?>
 			<ul id="bouton_menu">
-				  <li><a href="index.php?action=cheat" class="root" >Cheat</a></li>				  
+				  <li><a href="index.php?action=cheat" class="root" >Cheat</a></li>
 				  <li><a href="index.php?action=team" class="root" >Team</a></li>
 				  <li><a href="index.php?action=stuff" class="root" >Amélioration de l'équipement</a></li>
 				  <li><a href="index.php?action=up_perso" class="root" >Amélioration des personnages</a></li>
@@ -163,12 +147,11 @@ if (isset($user)) // Si on utilise un user (nouveau ou pas).
 				  <li><a href="index.php?action=combatPVP" class="root" >CombatPVP</a></li>
 			</ul>
 
-		<?php			
+		<?php
 	}
 }
 else // Si on veut utiliser ou créer un user.
 {
-
 ?>
     <form action="index.php" method="POST" class="form">
       <p>
@@ -181,19 +164,17 @@ else // Si on veut utiliser ou créer un user.
 <?php
 }
 ?>
-
-	</div>
-	<script>
-	$(".root").click(function(){ 
-		$.ajax({ 
-			type: "POST", 
-			url: $(this).attr("href"), 
-			success: function(retour){ 
-				$("body").empty().html(retour); 
-			} 
-		}); 
-		return false; 
-	}); 
+	<!--<script>
+	/*$(".root").click(function(){
+		$.ajax({
+			type: "GET",
+			url: $(this).attr("href"),
+			success: function(retour){
+				$("html").empty().html(retour);
+			}
+		});
+		return false;
+	});
 
 	$.ajaxSetup({
 		beforeSend: function() {
@@ -202,10 +183,10 @@ else // Si on veut utiliser ou créer un user.
 		success: function(){
 			$('#chargement').css('visibility', 'hidden');
 		},
-	});		
-	</script>
+	});*/
+	</script>-->
 	<script>
-		$(document).ready(function(){			
+		$(document).ready(function(){
 			$(function(){
 				$("#onglets .onglet").not(":first").hide();
 				$("#onglets .onglet:first").addClass("actif");
@@ -218,14 +199,7 @@ else // Si on veut utiliser ou créer un user.
 				});
 			});
 		});
-	</script>		
+	</script>
+	</div>
   </body>
 </html>
-<?php
-if (isset($user)) // Si on a créé un personnage, on le stocke dans une variable session afin d'économiser une requête SQL.
-{
-  $_SESSION['user'] = $user;
-}
-
-?>
-

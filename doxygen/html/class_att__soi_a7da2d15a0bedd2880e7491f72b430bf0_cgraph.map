@@ -1,0 +1,10 @@
+<map id="Att_soi\lancerUnSoin" name="Att_soi\lancerUnSoin">
+<area shape="rect" id="node2" href="$class_personnage.html#a1219171b9ddba0fecfa49995d7d71372" title="Personnage\\soigner" alt="" coords="206,56,343,83"/>
+<area shape="rect" id="node3" href="$class_personnage.html#aabf0bcd80fcea089de16f33c029aae12" title="Personnage\\estEndormi" alt="" coords="405,5,567,32"/>
+<area shape="rect" id="node6" href="$class_personnage.html#aa64edf7d4c080193213b12643eb05a5d" title="Personnage\\recevoirXP" alt="" coords="197,132,352,159"/>
+<area shape="rect" id="node5" href="$class_personnage.html#acadb61228a3ebdf18318771f954e2ae0" title="Personnage\\recevoirSoins" alt="" coords="400,56,572,83"/>
+<area shape="rect" id="node4" href="$class_personnage.html#a5fbe8f1f41e05e856ec6390bfb3e4f03" title="Personnage\\timeEndormi" alt="" coords="620,5,788,32"/>
+<area shape="rect" id="node7" href="$class_personnage.html#a60b2a6a44bc71517c063d87c062e0b87" title="Personnage\\xp" alt="" coords="431,107,541,133"/>
+<area shape="rect" id="node8" href="$class_personnage.html#aa5bc9f2bda281400fedbc1af1c19357d" title="Personnage\\xp_max" alt="" coords="415,157,557,184"/>
+<area shape="rect" id="node9" href="$class_personnage.html#a061130b0c1c551d893ecffff2553cb93" title="Personnage\\niveau" alt="" coords="421,208,551,235"/>
+</map>

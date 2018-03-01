@@ -1,0 +1,5 @@
+<map id="Base_personnage\stuff_4" name="Base_personnage\stuff_4">
+<area shape="rect" id="node2" href="$class_base__personnage.html#a19983536bab7533d81e56f5ca2934f2c" title="Base_personnage\\setStuff_4" alt="" coords="221,5,409,32"/>
+<area shape="rect" id="node3" href="$class_personnages_manager.html#a3ce7c5751a3faedb4f639a009ff0243e" title="PersonnagesManager\\add" alt="" coords="229,56,402,83"/>
+<area shape="rect" id="node4" href="$class_personnages_manager.html#a21d75e552a085ee6178544d71f72b31c" title="PersonnagesManager\l\\update" alt="" coords="241,107,389,149"/>
+</map>

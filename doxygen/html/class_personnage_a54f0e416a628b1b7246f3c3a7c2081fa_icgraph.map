@@ -1,0 +1,4 @@
+<map id="Personnage\atout" name="Personnage\atout">
+<area shape="rect" id="node2" href="$class_personnage.html#a744674b144008a43e37036344accb378" title="Personnage\\incrementAtout" alt="" coords="177,5,360,32"/>
+<area shape="rect" id="node3" href="$class_personnage.html#a3ba4e51f81e8d865675c1514332c0ac5" title="Personnage\\setAtout" alt="" coords="197,56,341,83"/>
+</map>

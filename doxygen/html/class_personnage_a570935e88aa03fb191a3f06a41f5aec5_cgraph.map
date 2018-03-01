@@ -1,0 +1,4 @@
+<map id="Personnage\debut_combat" name="Personnage\debut_combat">
+<area shape="rect" id="node2" href="$class_personnage.html#addeceec710baf3ae687f36151bc5def4" title="Personnage\\etat" alt="" coords="256,5,373,32"/>
+<area shape="rect" id="node3" href="$class_personnage.html#a5fbe8f1f41e05e856ec6390bfb3e4f03" title="Personnage\\timeEndormi" alt="" coords="231,56,399,83"/>
+</map>

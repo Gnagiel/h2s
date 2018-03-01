@@ -13,12 +13,12 @@
 */
 	try
 	{
-	  $db = new PDO('mysql:host=localhost;dbname=h2s', 'root', 'Pa$$w0rd'); 
+	  $db = new PDO('mysql:host=localhost;dbname=h2s', 'root', 'root');
 	  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 	}
-	catch (PDOException $e) 
+	catch (PDOException $e)
 	{
-	  echo 'La connexion a échoué<br />';	  
-	  echo 'Informations : [', $e->getCode(), '] ', $e->getMessage(); 
+	  echo 'La connexion a échoué<br />';
+	  echo 'Informations : [', $e->getCode(), '] ', $e->getMessage();
 	}
 ?>

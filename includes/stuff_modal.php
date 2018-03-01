@@ -5,13 +5,9 @@
  * \version   1.0
  * \date       26 Janvier 2018
  * \brief       Modal de gestion d'un équipement.
- *
+ * \todo Implémenter la fonctionnalité pour up plusieurs niveaux
  * \details    Ce fichier est un modal gérant les fonctionnalités d'un équipement en particulier. Il est appelé par le fichier stuff.php.
  */
- ?>
- <div class="modal">
-<?php
-
 
 /**
 * \code{.php}
@@ -20,19 +16,19 @@
 	{
 	  require '../class/'.$classe . '.php';
 	}
-	
+
 	spl_autoload_register('chargerClasse');
 
 	session_start();
-	
+
 	include("identifiant.php");
-	
+
 	$manager = new PersonnagesManager($db);
 	$managerStuff = new StuffManager($db);
-	
+
 	$stuff = $managerStuff->get($_GET["id_stuff"]);
 	?>
-
+<div class="modal">
 	<div class="stuff_up"	>
 		<?=$stuff->nom()?><br />
 		<img src="./images/stuff/<?=$stuff->nom();?>.jpg" class='img_stuff'/><br />
@@ -42,7 +38,7 @@
 	    </div>
       <div>
 	      <div class="perso_sous_menu"><span>lvl</span><?=$stuff->niveau()?><br /></div>
-	    </div>	    
+	    </div>
 		</div>
 		<div class="sous_menu">
       <div>
@@ -50,8 +46,8 @@
 	    </div>
       <div>
 	      <div class="perso_sous_menu"><br /></div>
-	    </div>	    
-		</div>		
+	    </div>
+		</div>
 		<div class="sous_menu">
       <div>
       	<form id="stuff_up<?=$_GET["id_stuff"];?>">
@@ -62,8 +58,8 @@
 	    </div>
       <div>
 	      <div class="perso_sous_menu"><button type="submit" class="btn_up" name="btn_up_all" value="up_all">Tout améliorer</button><br /></div>
-	    </div>	    
-		</div>					
+	    </div>
+		</div>
 	</div>
 <?=var_dump($stuff);?>
 </div>

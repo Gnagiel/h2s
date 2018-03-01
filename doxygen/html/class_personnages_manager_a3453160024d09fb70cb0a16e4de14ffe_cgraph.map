@@ -1,0 +1,4 @@
+<map id="PersonnagesManager\getList_up" name="PersonnagesManager\getList_up">
+<area shape="rect" id="node2" href="$class_user.html#acca0b7b0795d518d884a25505add943c" title="User\\id_user" alt="" coords="226,5,321,32"/>
+<area shape="rect" id="node3" href="$class_personnage.html#aa34eed6a48eb3734596505b58497f2f1" title="Personnage\\id_perso" alt="" coords="201,56,345,83"/>
+</map>

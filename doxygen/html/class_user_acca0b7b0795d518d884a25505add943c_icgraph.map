@@ -1,0 +1,8 @@
+<map id="User\id_user" name="User\id_user">
+<area shape="rect" id="node2" href="$class_personnages_manager.html#a3ce7c5751a3faedb4f639a009ff0243e" title="PersonnagesManager\\add" alt="" coords="148,5,321,32"/>
+<area shape="rect" id="node3" href="$class_personnages_manager.html#add99175d706a1b0909c8c8857561ea41" title="PersonnagesManager\l\\getList" alt="" coords="161,57,309,98"/>
+<area shape="rect" id="node4" href="$class_personnages_manager.html#a3453160024d09fb70cb0a16e4de14ffe" title="PersonnagesManager\l\\getList_up" alt="" coords="161,122,309,163"/>
+<area shape="rect" id="node5" href="$class_stuff_manager.html#a24643ff2a965eaf63cf467fb00107266" title="StuffManager\\getList" alt="" coords="164,188,305,215"/>
+<area shape="rect" id="node6" href="$class_user.html#ab72d9e4455c1813e3be5a8d422b2812d" title="User\\setId_user" alt="" coords="178,239,291,265"/>
+<area shape="rect" id="node7" href="$class_user_manager.html#ad953740cf56464fdb81b8bc9654c5371" title="UserManager\\update" alt="" coords="163,289,306,316"/>
+</map>
