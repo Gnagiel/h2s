@@ -1,5 +1,0 @@
-<map id="Personnage\id_perso" name="Personnage\id_perso">
-<area shape="rect" id="node2" href="$class_personnage.html#abcc3bdc5236dbfccd50c3dc5db1e8fce" title="Personnage\\setId_perso" alt="" coords="197,5,360,32"/>
-<area shape="rect" id="node3" href="$class_personnages_manager.html#a3453160024d09fb70cb0a16e4de14ffe" title="PersonnagesManager\l\\getList_up" alt="" coords="205,57,353,98"/>
-<area shape="rect" id="node4" href="$class_personnages_manager.html#a21d75e552a085ee6178544d71f72b31c" title="PersonnagesManager\l\\update" alt="" coords="205,122,353,163"/>
-</map>

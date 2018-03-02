@@ -1,6 +1,0 @@
-<map id="Personnage\estEndormi" name="Personnage\estEndormi">
-<area shape="rect" id="node2" href="$class_att__soi.html#a7da2d15a0bedd2880e7491f72b430bf0" title="Att_soi\\lancerUnSoin" alt="" coords="405,51,549,78"/>
-<area shape="rect" id="node3" href="$class_personnage.html#a1deaeddff5bc8766d52da4fc2d0b8032" title="Fonction pour frapper. " alt="" coords="216,26,351,53"/>
-<area shape="rect" id="node4" href="$class_personnage.html#a1219171b9ddba0fecfa49995d7d71372" title="Personnage\\soigner" alt="" coords="215,77,352,103"/>
-<area shape="rect" id="node5" href="$class_soigneur.html#ac68dd65c897e55dc77d354e79e79a52c" title="Soigneur\\lancerUnSoin" alt="" coords="400,114,555,141"/>
-</map>

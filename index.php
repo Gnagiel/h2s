@@ -2,6 +2,7 @@
 /*! \mainpage Page Principale
  * Jeu en construction. Jeu de cartes à collectionner, constitution d'un deck, combats PVE et PVP automatiques
  */
+
 /**
  * \file          Index.php
  * \author    Guillaume Nagiel
@@ -9,7 +10,7 @@
  * \date       26 Janvier 2018
  * \brief       Page d'index du jeu.
  * \details    Ce fichier est la base du jeu.
- * \todo  Il reste à implémenter les scripts de combats PVE et PVP
+ * \todo  Il reste à implémenter les scripts de combats PVE et PVP.
  */
 
  	/**

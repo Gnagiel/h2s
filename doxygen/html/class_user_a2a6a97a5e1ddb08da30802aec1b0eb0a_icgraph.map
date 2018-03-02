@@ -1,6 +1,0 @@
-<map id="User\argent" name="User\argent">
-<area shape="rect" id="node2" href="$class_user.html#ad1c97f448cd6d5258f4b1ab9f36172ed" title="User\\payer_argent" alt="" coords="150,5,278,32"/>
-<area shape="rect" id="node3" href="$class_user.html#a1ec02d8692a7b6ae5e191f83c8e81659" title="User\\setArgent" alt="" coords="159,56,269,83"/>
-<area shape="rect" id="node4" href="$class_user_manager.html#a7fb17bfd67135d7be043d59aeec1dcd4" title="UserManager\\add" alt="" coords="152,107,276,133"/>
-<area shape="rect" id="node5" href="$class_user_manager.html#ad953740cf56464fdb81b8bc9654c5371" title="UserManager\\update" alt="" coords="143,157,285,184"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="Personnage\soigner" name="Personnage\soigner">
-<area shape="rect" id="node2" href="$class_personnage.html#aabf0bcd80fcea089de16f33c029aae12" title="Personnage\\estEndormi" alt="" coords="196,5,357,32"/>
-<area shape="rect" id="node4" href="$class_personnage.html#acadb61228a3ebdf18318771f954e2ae0" title="Personnage\\recevoirSoins" alt="" coords="191,56,363,83"/>
-<area shape="rect" id="node3" href="$class_personnage.html#a5fbe8f1f41e05e856ec6390bfb3e4f03" title="Personnage\\timeEndormi" alt="" coords="411,5,579,32"/>
-</map>

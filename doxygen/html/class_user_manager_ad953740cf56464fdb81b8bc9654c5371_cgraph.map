@@ -1,9 +1,0 @@
-<map id="UserManager\update" name="UserManager\update">
-<area shape="rect" id="node2" href="$class_user.html#ab341c8493decd7ed8ad872544a3b3332" title="User\\niveau" alt="" coords="199,5,288,32"/>
-<area shape="rect" id="node3" href="$class_user.html#abc7ddb8ce5c319d13e15734bee03075b" title="User\\xp" alt="" coords="210,56,277,83"/>
-<area shape="rect" id="node4" href="$class_user.html#a11525bb64e691e68ccb43856433f5e71" title="User\\mdp" alt="" coords="204,107,283,133"/>
-<area shape="rect" id="node5" href="$class_user.html#acca0b7b0795d518d884a25505add943c" title="User\\id_user" alt="" coords="196,157,291,184"/>
-<area shape="rect" id="node6" href="$class_user.html#aa7ae3e562d611c4cf112a618db183660" title="User\\endu" alt="" coords="203,208,284,235"/>
-<area shape="rect" id="node7" href="$class_user.html#a1323f270a1285588987ef21bf704975c" title="User\\or_" alt="" coords="208,259,279,285"/>
-<area shape="rect" id="node8" href="$class_user.html#a2a6a97a5e1ddb08da30802aec1b0eb0a" title="User\\argent" alt="" coords="199,309,288,336"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$class_base__personnage.html" title="Base_personnage" alt="" coords="5,31,132,57"/>
-<area shape="rect" id="node2" href="$class_personnage.html" title="Personnage" alt="" coords="180,31,271,57"/>
-<area shape="rect" id="node3" href="$class_att__soi.html" title="Att_soi" alt="" coords="324,5,387,32"/>
-<area shape="rect" id="node4" href="$class_soigneur.html" title="Soigneur" alt="" coords="319,56,392,83"/>
-</map>
