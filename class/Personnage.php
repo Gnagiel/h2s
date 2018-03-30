@@ -1,6 +1,6 @@
 <?php
 /**
- * \class Personnage Personnage.php "class/Personnage.php" 
+ * \class Personnage Personnage.php "class/Personnage.php"
  * \file      Personnage.php
  * \author    Guillaume Nagiel
  * \version   1.0
@@ -10,7 +10,7 @@
  * \details   Class des personnages. Elle définit les attributs et methodes des personnages.
  */
 
-class Personnage extends Base_personnage
+class Personnage
 {
   protected $atout,
   					$id_user,
@@ -19,10 +19,10 @@ class Personnage extends Base_personnage
             $xp,
             $xp_max,
             $timeEndormi,
-            $qualite,
-            $etoile,
             $team,
-  					$etat,  
+  					$etat,
+            $pv, /*!< point de vie du personnage */
+  					$att, /*! degat du personnage */
   					$def,
   					$vit,
   					$pen,
@@ -31,24 +31,35 @@ class Personnage extends Base_personnage
   					$esc,
   					$crit,
   					$ten,
-  					$soi;
-  					  
+  					$soi,
+            $id_persos, /*!< id du personnage */
+  					$nom, /*!< nom du personnage */
+  					$types, /*!< type du personnage */
+            $emp_team, /*!< emplacement si dans l'équipe */
+            $etoile, /*!< étoile du personnage */
+            $qualite, /*!< qualité du personnage */
+            $stuff_1, /*!< id de l'équipement n°1 */
+  					$stuff_2, /*!< id de l'équipement n°2 */
+  					$stuff_3, /*!< id de l'équipement n°3 */
+  					$stuff_4; /*!< id de l'équipement n°4 , vide par default */
+
+
   const CEST_MOI = 1;
   const PERSONNAGE_TUE = 2;
   const PERSONNAGE_FRAPPE = 3; // Constante renvoyée par la méthode `frapper` si le personnage qui veut frapper est endormi.
   const PERSONNAGE_ENSORCELE = 4; // Constante renvoyée par la méthode `lancerUnSort` (voir classe Magicien) si on a bien ensorcelé un personnage.
   const PAS_DE_MAGIE = 5; // Constante renvoyée par la méthode `lancerUnSort` (voir classe Magicien) si on veut jeter un sort alors que la magie du magicien est à 0.
-  const PERSO_ENDORMI = 6; 
-  const PERSONNAGE_SOIGNE = 7;  
+  const PERSO_ENDORMI = 6;
+  const PERSONNAGE_SOIGNE = 7;
 	const PERSO_FULL_LIFE = 8;
-  
+
   public function __construct($valeurs = array())
   {
     if(!empty($valeurs))
         $this->hydrate($valeurs);
     $this->type = strtolower(static::class);
   }
-  
+
   // Un tableau de données doit être passé à la fonction (d'où le préfixe « array »).
 	public function hydrate(array $donnees)
 	{
@@ -56,7 +67,7 @@ class Personnage extends Base_personnage
 	  {
 	    // On récupère le nom du setter correspondant à l'attribut.
 	    $method = 'set'.ucfirst($key);
-	        
+
 	    // Si le setter correspondant existe.
 	    if (method_exists($this, $method))
 	    {
@@ -65,7 +76,7 @@ class Personnage extends Base_personnage
 	    }
 	  }
 	}
-	
+
   public function estEndormi()
   {
   	$this->timeEndormi == 1;
@@ -78,19 +89,19 @@ class Personnage extends Base_personnage
 	 * \param    Personnage $perso         Perso qui se fait frapper.
 	 * \param    Personnage $perso2         Person qui frappe.
 	 * \return    Renvoie à la fonction qui permet de recevoir des dégats ("recevoirDegats()").
-	 */	  
+	 */
   public function frapper(Personnage $perso, Personnage $perso2)
   {
     if ($perso->id == $this->id)
     {
       return self::CEST_MOI;
     }
-    
+
     if ($this->estEndormi())
     {
       return self::PERSO_ENDORMI;
     }
-    
+
     // On indique au personnage qu'il doit recevoir des dégâts.
     // Puis on retourne la valeur renvoyée par la méthode : self::PERSONNAGE_TUE ou self::PERSONNAGE_FRAPPE.
     $this->recevoirXP(3);
@@ -100,7 +111,7 @@ class Personnage extends Base_personnage
 	public function recevoirXP($val)
   {
     $this->xp += $val;
-    
+
     // Si on a assez d'XP, on prend un lvl.
     if ($this->xp >= $this->xp_max)
     {
@@ -112,7 +123,7 @@ class Personnage extends Base_personnage
 	public function recevoirDegats($perso2)
   {
     $this->vie = $this->vie - $perso2->forcePerso;
-    
+
     // Si on a 100 de dégâts ou plus, on dit que le personnage a été tué.
     if ($this->vie <= 0)
     {
@@ -120,11 +131,11 @@ class Personnage extends Base_personnage
     	$this->etat = "kill";
       return self::PERSONNAGE_TUE;
     }
-    
+
     // Sinon, on se contente de dire que le personnage a bien été frappé.
     return self::PERSONNAGE_FRAPPE;
   }
-  
+
   public function soigner(Personnage $perso)
   {
 
@@ -137,25 +148,25 @@ class Personnage extends Base_personnage
     // Puis on retourne la valeur renvoyée par la méthode : self::PERSONNAGE_SOIGNE.
     return $perso->recevoirSoins($this);
   }
-  
+
 	public function recevoirSoins($perso)
   {
   	$this->vie += $perso->inte;
     if ($this->vie >= $this->vieMax)
     {
     $this->vie = $this->vieMax;
-  	}    
+  	}
     // Sinon, on se contente de dire que le personnage a bien été soigné.
     return self::PERSONNAGE_SOIGNE;
   }
-  
+
 	public function debut_combat()
   {
   	$this->vie = $this->vieMax;
   	$this->etat = 'good';
   	$this->timeEndormi = 0;
   }
-  
+
   public function reveil()
   {
     $this->timeEndormi = 0;
@@ -168,11 +179,11 @@ class Personnage extends Base_personnage
   	}
   	else {
   		$this->atout++;
-  	}  	
-  }     
+  	}
+  }
 
 	// GETTERS //
-	
+
 
   public function id_user() { return $this->id_user; }
   public function id_perso() { return $this->id_perso; }
@@ -195,23 +206,32 @@ class Personnage extends Base_personnage
   public function ten() { return $this->ten; }
   public function soi() { return $this->soi; }
   public function etat() { return $this->etat; }
+  public function nom() { return $this->nom; }
+  public function id_persos() { return $this->id_persos; }
+  public function stuff_1() { return $this->stuff_1; }
+  public function stuff_2() { return $this->stuff_2; }
+  public function stuff_3() { return $this->stuff_3; }
+  public function stuff_4() { return $this->stuff_4; }
+  public function pv() { return $this->pv; }
+  public function att() { return $this->att; }
+  public function emp_team() { return $this->emp_team; }
 
   public function setAtout($atout)
   {
     $atout = (int) $atout;
-    
+
     if ($atout >= 0 && $atout <= 3)
     {
       $this->atout = $atout;
     }
   }
-    
+
   public function setId_user($id_user)
   {
     // L'identifiant du personnage sera, quoi qu'il arrive, un nombre entier.
     $this->id_user = (int) $id_user;
   }
-    
+
   public function setId_perso($id_perso)
   {
     // L'identifiant du personnage sera, quoi qu'il arrive, un nombre entier.
@@ -227,7 +247,7 @@ class Personnage extends Base_personnage
       $this->etoile = $etoile;
     }
   }
-  
+
   public function setXp($xp)
   {
     $xp = (int) $xp;
@@ -241,7 +261,7 @@ class Personnage extends Base_personnage
 
     $this->xp_max = $xp_max;
   }
-  
+
   public function setQualite($qualite)
   {
     // On vérifie qu'il s'agit bien d'une chaîne de caractères.
@@ -262,7 +282,7 @@ class Personnage extends Base_personnage
       $this->niveau = $niveau;
     }
   }
-  
+
   public function setTimeEndormi($time)
   {
     $this->timeEndormi = (int) $time;
@@ -277,15 +297,15 @@ class Personnage extends Base_personnage
       $this->types = $types;
     }
   }
-  
+
   public function setTeam($team)
   {
     $team = (int) $team;
     if ($team >= 0)
     {
       $this->team = $team;
-    } 
-  }  
+    }
+  }
 
   public function setDef($def)
   {
@@ -297,7 +317,7 @@ class Personnage extends Base_personnage
       $this->def = $def;
     }
   }
-  
+
   public function setVit($vit)
   {
     $vit = (int) $vit;
@@ -308,7 +328,7 @@ class Personnage extends Base_personnage
       $this->vit = $vit;
     }
   }
- 
+
   public function setPen($pen)
   {
     $pen = (int) $pen;
@@ -319,7 +339,7 @@ class Personnage extends Base_personnage
       $this->pen = $pen;
     }
   }
-  
+
   public function setArm($arm)
   {
     $arm = (int) $arm;
@@ -329,8 +349,8 @@ class Personnage extends Base_personnage
     {
       $this->arm = $arm;
     }
-  }  
-  
+  }
+
   public function setPre($pre)
   {
     $pre = (int) $pre;
@@ -340,7 +360,7 @@ class Personnage extends Base_personnage
     {
       $this->pre = $pre;
     }
-  }    
+  }
 
   public function setEsc($esc)
   {
@@ -352,7 +372,7 @@ class Personnage extends Base_personnage
       $this->esc = $esc;
     }
   }
-  
+
   public function setCrit($crit)
   {
     $crit = (int) $crit;
@@ -362,8 +382,8 @@ class Personnage extends Base_personnage
     {
       $this->crit = $crit;
     }
-  }  
-  
+  }
+
   public function setTen($ten)
   {
     $ten = (int) $ten;
@@ -374,7 +394,7 @@ class Personnage extends Base_personnage
       $this->ten = $ten;
     }
   }
-  
+
   public function setSoi($soi)
   {
     $soi = (int) $soi;
@@ -385,12 +405,105 @@ class Personnage extends Base_personnage
       $this->soi = $soi;
     }
   }
-               
+
   public function setEtat($etat)
   {
     $this->etat = $etat;
   }
-       
+
+  public function setId_persos($id_persos)
+  {
+    // L'identifiant du personnage sera, quoi qu'il arrive, un nombre entier.
+    $this->id_persos = (int) $id_persos;
+  }
+
+  public function setNom($nom)
+  {
+    // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+    // Dont la longueur est inférieure à 30 caractères.
+    if (is_string($nom) && strlen($nom) <= 30)
+    {
+      $this->nom = $nom;
+    }
+  }
+
+  public function setPv($pv)
+  {
+    $pv = (int) $pv;
+
+    // On vérifie que la vie n'est pas négative.
+    if ($pv >= 0)
+    {
+      $this->pv = $pv;
+    }
+  }
+
+  public function setAtt($att)
+  {
+    $att = (int) $att;
+
+    // On vérifie que la vie n'est pas négative.
+    if ($att >= 0)
+    {
+      $this->att = $att;
+    }
+  }
+
+  public function setEmp_team($emp_team)
+  {
+    $emp_team = (int) $emp_team;
+
+    // On vérifie que la vie n'est pas négative.
+    if ($emp_team >= 0)
+    {
+      $this->emp_team = $emp_team;
+    }
+  }
+
+  public function setStuff_1($stuff_1)
+  {
+    $stuff_1 = (int) $stuff_1;
+
+    // On vérifie que la vie n'est pas négative.
+    if ($stuff_1 >= 0)
+    {
+      $this->stuff_1 = $stuff_1;
+    }
+  }
+
+  public function setStuff_2($stuff_2)
+  {
+    $stuff_2 = (int) $stuff_2;
+
+    // On vérifie que la vie n'est pas négative.
+    if ($stuff_2 >= 0)
+    {
+      $this->stuff_2 = $stuff_2;
+    }
+  }
+
+  public function setStuff_3($stuff_3)
+  {
+    $stuff_3 = (int) $stuff_3;
+
+    // On vérifie que la vie n'est pas négative.
+    if ($stuff_3 >= 0)
+    {
+      $this->stuff_3 = $stuff_3;
+    }
+  }
+
+  public function setStuff_4($stuff_4)
+  {
+    $stuff_4 = (int) $stuff_4;
+
+    // On vérifie que la vie n'est pas négative.
+    if ($stuff_4 >= 0)
+    {
+      $this->stuff_4 = $stuff_4;
+    }
+  }
+
 }
 
 ?>

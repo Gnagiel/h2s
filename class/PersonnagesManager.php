@@ -176,7 +176,10 @@ class PersonnagesManager
   public function getList(User $user)
   {
     $persos = [];
-
+    $limit = "";
+    if (isset($offset) && isset($offset)) {
+      $limit = " limit $offset, $limit";
+    }
     $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team,
     p.nom, p.types, p.emp_team,
     p.id_persos,
@@ -207,7 +210,56 @@ class PersonnagesManager
  		INNER JOIN q_perso q
  		ON t.qualite = q.id_q
     WHERE id_user = :id_user
-    ORDER BY t.niveau, p.nom');
+    ORDER BY t.niveau, p.nom'.$limit);
+    $q->execute([':id_user' => $user->id_user()]);
+
+    while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+    {
+    	$persos[] = new Personnage($donnees);
+    }
+
+    return $persos;
+  }
+
+  public function getListPage(User $user, $offset, $limit)
+  {
+    $persos = [];
+    $Limit = "";
+    if (isset($offset) && isset($offset)) {
+      $Limit = " LIMIT $offset, $limit ";
+    }
+    $q = $this->db->prepare("SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team,
+    p.nom, p.types, p.emp_team,
+    p.id_persos,
+    q.etoile,
+    (p.vie + (
+      SELECT s.atr_2
+			FROM stuff s
+      WHERE s.id_stuff = t.stuff_3
+    )) pv,
+    (p.att + (
+      SELECT s.atr_1
+			FROM stuff s
+      WHERE s.id_stuff = t.stuff_1
+    )) att,
+    (p.def + (
+      SELECT s.atr_1
+			FROM stuff s
+      WHERE s.id_stuff = t.stuff_2
+    )) def,
+    p.vit,
+    p.pen, p.arm, p.pre, p.esc, p.crit, p.ten, p.soi,
+    n.xp_max
+    FROM team t
+    INNER JOIN persos p
+ 		ON t.id_persos = p.id_persos
+    INNER JOIN niv_perso n
+ 		ON t.niveau = n.niv_perso
+ 		INNER JOIN q_perso q
+ 		ON t.qualite = q.id_q
+    WHERE id_user = :id_user
+    ORDER BY t.niveau, p.nom
+    $Limit");
     $q->execute([':id_user' => $user->id_user()]);
 
     while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
@@ -267,6 +319,7 @@ class PersonnagesManager
 
     return $persos;
   }
+
 
   public function delete(Personnage $perso)
   {
