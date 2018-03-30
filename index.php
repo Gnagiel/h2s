@@ -1,6 +1,11 @@
 <?php
-/*! \mainpage Page Principale
- * Jeu en construction. Jeu de cartes à collectionner, constitution d'un deck, combats PVE et PVP automatiques
+/*! \mainpage Accueil de la documentation
+ * \section desc Description :
+ * Jeu en construction. Jeu de cartes à collectionner, constitution d'un deck, combats PVE et PVP automatiques.\n
+ * \section inclusion Arbre d'inclusion des fichiers php :
+ * \image html /Applications/MAMP/htdocs/h2s/doc/monGraphe.svg
+ * \section BDD Schéma BDD :
+ * \image html /Applications/MAMP/htdocs/h2s/sql/model.png
  */
 
 /**
@@ -21,37 +26,41 @@
 	 * \return    Rien.
 	 */
 
-	function chargerClass($class)
-	{
-	  require './class/'.$class.'.php';
-	}
 
-	spl_autoload_register('chargerClass');
-	session_start();
+function chargerClass($class)
+{
+  require './class/'.$class.'.php';
+}
+
+spl_autoload_register('chargerClass');
+session_start();
 /**
 * \code{.php}
 */
-	if (isset($_GET['deconnexion']))
-	{
-	  session_destroy();
-	}
+if (isset($_GET['deconnexion']))
+{
+  session_destroy();
+  header("location:index.php");
+}
 
-	include("./includes/identifiant.php");
-	include("./includes/Function_Jeu.php");
+include("./includes/identifiant.php");
+include("./includes/Function_Jeu.php");
 
 ?>
 <!doctype html>
 <html lang='fr'>
 	<head>
     <title>Heroes Smash Storm</title>
-    <link rel="stylesheet" media="screen" type="text/css" href="./style/style.css" />
-    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script   src="https://code.jquery.com/jquery-1.9.1.js"   integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="   crossorigin="anonymous"></script>
+    <!--<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css" />
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
 		<script type="text/javascript">
-    	google.load('jquery','1');
-    </script>
-	  <script src="./JS/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
-	  <link rel="stylesheet" href="./JS/jquery.modal.css" type="text/css" media="screen" />
+    	google.load('jquery','1.9.1');
+    </script>-->
+    <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" type="text/css" href="./style/style.css" />
 	  <script src="./JS/highlight/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
 	  <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
 	  <link rel="stylesheet" href="./JS/highlight/github.css" type="text/css" media="screen" />
@@ -60,24 +69,55 @@
 
   <body>
   <div id="main_page">
-<?php
-if (isset($message)) // On a un message à afficher ?
-{
-  echo '<p>', $message, '</p>'; // Si oui, on l'affiche
-}
-if (isset($user)) // Si on utilise un user (nouveau ou pas).
-{
+  <?php
+  if (isset($message)) // On a un message à afficher ?
+  {
+    echo '<p>', $message, '</p>'; // Si oui, on l'affiche
+  }
+  if (isset($user)) // Si on utilise un user (nouveau ou pas).
+  {
 	?>
-	<div class="flex">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.php"><?=$user->pseudo();?></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?action=cheat">Cheat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?action=team">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?action=stuff">Amélioration de l'équipement</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?action=up_perso">Amélioration des personnages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?action=Combat">Combat PVE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?action=combatPVP">Combat PVP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?deconnexion=1">Déconnexion</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="flex">
 		<div id="head">
 			<?php
-			echo '<h2>'.$user->pseudo().'</h2>';
 			$perso = $manager->getList($user);
-			echo '<h2 id="or">Or : '.$user->or_().'</h2>';
-			echo '<h2 id="argent">Argent : '.$user->argent().'</h2>';
+			echo '<h5 id="or">Or : '.$user->or_().'</h5>';
+			echo '<h5 id="argent">Argent : '.$user->argent().'</h5>';
 			?>
-			<h2><a href="index.php" class="root" >Accueil</a></h2>
-			<h2><a href="index.php?deconnexion=1" class="root" >Déconnexion</a></h2>
 		</div>
 	</div>
 	<?php
@@ -144,8 +184,8 @@ if (isset($user)) // Si on utilise un user (nouveau ou pas).
 				  <li><a href="index.php?action=team" class="root" >Team</a></li>
 				  <li><a href="index.php?action=stuff" class="root" >Amélioration de l'équipement</a></li>
 				  <li><a href="index.php?action=up_perso" class="root" >Amélioration des personnages</a></li>
-				  <li><a href="index.php?action=Combat" class="root" >Combat</a></li>
-				  <li><a href="index.php?action=combatPVP" class="root" >CombatPVP</a></li>
+				  <li><a href="index.php?action=Combat" class="root" >Combat PVE</a></li>
+				  <li><a href="index.php?action=combatPVP" class="root" >Combat PVP</a></li>
 			</ul>
 
 		<?php
@@ -154,53 +194,37 @@ if (isset($user)) // Si on utilise un user (nouveau ou pas).
 else // Si on veut utiliser ou créer un user.
 {
 ?>
-    <form action="index.php" method="POST" class="form">
-      <p>
-      	Nom utilisateur: <input type="text" name="nom" maxlength="50" /><br />
-      	Mdp: <input type="password" name="mdp" maxlength="50" autocomplete="off"/><br />
-        <input type="submit" value="Utiliser cet user" name="user" /><br />
-        <input type="submit" value="Créer cet user" name="creeruser" /><br />
-      </p>
-    </form>
+  <form action="index.php" method="POST" class="form">
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Pseudo et mot de passe</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Nom utilisateur" name="nom" maxlength="50" aria-describedby="inputGroup-sizing-sm">
+      <input type="password" name="mdp" maxlength="50" autocomplete="off" class="form-control" aria-label="Mdp" aria-describedby="inputGroup-sizing-sm">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="submit" value="Utiliser cet user" name="user">Se connecter</button>
+        <button class="btn btn-outline-secondary" type="submit" value="Créer cet user" name="creeruser">Créer</button>
+      </div>
+    </div>
+  </form>
 <?php
 }
 ?>
-	<!--<script>
-	/*$(".root").click(function(){
-		$.ajax({
-			type: "GET",
-			url: $(this).attr("href"),
-			success: function(retour){
-				$("html").empty().html(retour);
-			}
-		});
-		return false;
-	});
+  <script>
+  $(document).ready(function () {
+    var listItems = $('.navbar ul li');
 
-	$.ajaxSetup({
-		beforeSend: function() {
-			$('#chargement').css('visibility', 'visible');
-		},
-		success: function(){
-			$('#chargement').css('visibility', 'hidden');
-		},
-	});*/
-	</script>-->
-	<script>
-		$(document).ready(function(){
-			$(function(){
-				$("#onglets .onglet").not(":first").hide();
-				$("#onglets .onglet:first").addClass("actif");
-				$("#onglets ul a").click(function(){
-					$("#onglets ul a").parent("li").removeClass("actif");
-					$("#onglets .onglet").hide();
-					$(this.hash).show();
-					$(this).blur().parent("li").addClass("actif");
-					return false;
-				});
-			});
-		});
-	</script>
+    $.each(listItems, function (key, litem) {
+        var aElement = $(this).children(litem)[0];
+
+        if(aElement == document.URL) {
+            $(litem).addClass('active');
+        }
+    });
+  });
+  </script>
 	</div>
+
+  <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

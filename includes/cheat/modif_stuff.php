@@ -6,7 +6,7 @@
  * \version   1.0
  * \date       26 Janvier 2018
  * \brief       Menu cheat du stuff.
- *
+ * \todo Finir l'interface
  * \details    Ce fichier est le menu cheat du stuff, ce menu permet de cheater afin de tester toutes les fonctionnalités concernant le stuff.
  */
 
@@ -60,11 +60,6 @@ foreach ($perso as $persos)
 		<a href="#<?=$persos->nom();?><?=$persos->id_perso();?>"><?= htmlspecialchars($persos->nom());?><br /></a>
 		<span>PV </span><?= htmlspecialchars($persos->pv());?><br />
 		<span>ATT </span><?= htmlspecialchars($persos->att());?><br /><br />
-		<form class="add_perso" method="POST" action="index.php?action=cheat">
-			<input type="hidden" name="id_user" value="<?=$user->id_user();?>" />
-			<input type="hidden" name="id_perso" value="<?=$persos->id_persos();?>" />
-			<input type="submit" value="voir" />
-		</form>
 	</div>
 <?php
 //var_dump($persos);

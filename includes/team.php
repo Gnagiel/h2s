@@ -66,12 +66,6 @@
 	        }
 	    });
 	});
-
-	$("#res").click(function(){
-		$('.preferance .drag .text_cadre').html('+');
-		$('.preferance .drag .input_change').val('');
-	  $('.preferance').css("background-color", "white");
-	});
 </script>
 <?php
  	/**
@@ -109,24 +103,24 @@ function cadre_team($emp_team, $user, $manager) {
 }
 ?>
 <form method="post" class="add_team" action="?action=team">
-<div class="pref">
-	<h3 style="width:200px;">Première ligne</h3>
-	<?php
-	for ($i=1 ; $i<=3; $i++) {
-		echo cadre_team($i, $user, $manager);
-	}
-	?>
-</div>
-<div class="pref">
-	<h3 style="width:200px;">Seconde ligne</h3>
-	<?php
-	for ($i=4 ; $i<=6; $i++) {
-		echo cadre_team($i, $user, $manager);
-	}
-	?>
-</div> 	        
-  <p>Reset</p>
-  <button id="res"><span class="ui-icon ui-icon-trash" ></span></button><br />
+  <div class="pref">
+  	<h3 style="width:200px;">Première ligne</h3>
+  	<?php
+  	for ($i=1 ; $i<=3; $i++) {
+  		echo cadre_team($i, $user, $manager);
+  	}
+  	?>
+  </div>
+  <div class="pref">
+  	<h3 style="width:200px;">Seconde ligne</h3>
+  	<?php
+  	for ($i=4 ; $i<=6; $i++) {
+  		echo cadre_team($i, $user, $manager);
+  	}
+  	?>
+  </div>
+  <br/>
+  <button type="button" class="btn btn_secondary" id="res">Reset</button><br />
   <input type="submit" id="choisir" value="Choisir" style="visibility:hidden;"/>
 
 </form>
@@ -146,3 +140,11 @@ foreach ($perso as $persos) {
 }
 ?>
 </div>
+<script>
+$("#res").click(function(){
+  $('.preferance .drag .text_cadre').html('+');
+  $('.preferance .drag .input_change').val('');
+  $('.preferance').css("background-color", "white");
+  $('#choisir').trigger("click");
+});
+</script>
