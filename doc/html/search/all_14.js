@@ -1,7 +1,6 @@
 var searchData=
 [
   ['team',['team',['../class_personnage.html#a0d4c73464508133a5e83f3e53085572c',1,'Personnage']]],
-  ['team_20_2d_20save_2ephp',['team - save.php',['../team_01-_01save_8php.html',1,'']]],
   ['team_2ejs',['team.js',['../team_8js.html',1,'']]],
   ['team_2ephp',['team.php',['../team_8php.html',1,'']]],
   ['team_5fajax_2ephp',['team_ajax.php',['../team__ajax_8php.html',1,'']]],

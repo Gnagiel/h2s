@@ -11,6 +11,7 @@ var class_personnages_manager =
     [ "getList", "class_personnages_manager.html#add99175d706a1b0909c8c8857561ea41", null ],
     [ "getList_up", "class_personnages_manager.html#a3453160024d09fb70cb0a16e4de14ffe", null ],
     [ "getListCheat", "class_personnages_manager.html#ac8ff12b20aab3b59b50efaeb851d8845", null ],
+    [ "getListPage", "class_personnages_manager.html#a516f0d3fc8d8bd57c488ad67cf7a9a46", null ],
     [ "setDb", "class_personnages_manager.html#ad34d7d8f0716d1261437eff3eb7af7d0", null ],
     [ "sup_team", "class_personnages_manager.html#abae7db357c0730386a2804f1716d26f2", null ],
     [ "update", "class_personnages_manager.html#a21d75e552a085ee6178544d71f72b31c", null ],

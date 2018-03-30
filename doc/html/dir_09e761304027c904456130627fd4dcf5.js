@@ -8,7 +8,6 @@ var dir_09e761304027c904456130627fd4dcf5 =
     [ "identifiant.php", "identifiant_8php.html", null ],
     [ "stuff.php", "includes_2_stuff_8php.html", null ],
     [ "stuff_modal.php", "stuff__modal_8php.html", null ],
-    [ "team - save.php", "team_01-_01save_8php.html", null ],
     [ "team.php", "team_8php.html", "team_8php" ],
     [ "up_perso.php", "up__perso_8php.html", null ],
     [ "up_perso_modal.php", "up__perso__modal_8php.html", null ]

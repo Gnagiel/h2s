@@ -10,5 +10,6 @@ var searchData=
   ['get_5fniveau_5fsup',['get_niveau_sup',['../class_stuff_manager.html#a399af828a28e5a36c7255ce7d8671f26',1,'StuffManager']]],
   ['getlist',['getList',['../class_personnages_manager.html#add99175d706a1b0909c8c8857561ea41',1,'PersonnagesManager\getList()'],['../class_stuff_manager.html#a24643ff2a965eaf63cf467fb00107266',1,'StuffManager\getList()'],['../class_user_manager.html#ae5ecbbf0eaf09bf9f8b05208a5e858f4',1,'UserManager\getList()']]],
   ['getlist_5fup',['getList_up',['../class_personnages_manager.html#a3453160024d09fb70cb0a16e4de14ffe',1,'PersonnagesManager']]],
-  ['getlistcheat',['getListCheat',['../class_personnages_manager.html#ac8ff12b20aab3b59b50efaeb851d8845',1,'PersonnagesManager\getListCheat()'],['../class_stuff_manager.html#aa9af4cbbb54d6df257b5c61c9204d4bf',1,'StuffManager\getListCheat()']]]
+  ['getlistcheat',['getListCheat',['../class_personnages_manager.html#ac8ff12b20aab3b59b50efaeb851d8845',1,'PersonnagesManager\getListCheat()'],['../class_stuff_manager.html#aa9af4cbbb54d6df257b5c61c9204d4bf',1,'StuffManager\getListCheat()']]],
+  ['getlistpage',['getListPage',['../class_personnages_manager.html#a516f0d3fc8d8bd57c488ad67cf7a9a46',1,'PersonnagesManager']]]
 ];
