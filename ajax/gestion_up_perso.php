@@ -16,7 +16,7 @@ $perso = $manager->get($_POST["btn_valid"]);
 foreach ($_SESSION['tab_perso'] as $id)
 {
 	$persos = $manager->get($id);
-	$perso->recevoirXP($persos->xp());
+	$perso->recevoirXP(60);
 	$manager->update($perso);
 	$manager->delete($persos);
 }
