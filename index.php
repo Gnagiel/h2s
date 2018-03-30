@@ -2,10 +2,12 @@
 /*! \mainpage Accueil de la documentation
  * \section desc Description :
  * Jeu en construction. Jeu de cartes à collectionner, constitution d'un deck, combats PVE et PVP automatiques.\n
+ * \section desc Lien :
+ * \html <a href="../../index.php">Lien vers le jeu</a>
  * \section inclusion Arbre d'inclusion des fichiers php :
- * \image html /Applications/MAMP/htdocs/h2s/doc/monGraphe.svg
+ * \html <img src="../../doc/monGraphe.svg"/>
  * \section BDD Schéma BDD :
- * \image html /Applications/MAMP/htdocs/h2s/sql/model.png
+ * \html <img src="../../sql/model.png"/>
  */
 
 /**
@@ -103,6 +105,9 @@ include("./includes/Function_Jeu.php");
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php?action=combatPVP">Combat PVP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./doc/html/index.html">Documentation</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php?deconnexion=1">Déconnexion</a>
