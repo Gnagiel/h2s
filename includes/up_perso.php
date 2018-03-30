@@ -5,7 +5,8 @@
  * \version   1.0
  * \date       26 Janvier 2018
  * \brief       Menu d'amélioreration des personnages.
- *
+ * \todo Gérer les attribut du perso selon son niveau.
+ * \todo Implémenter la fonction d'upgrade de qualité.
  * \details    Ce menu permet d'améliorer ses personnages, en sacrifiant des persos inutiles.
  */
 
@@ -13,7 +14,6 @@
 * \code{.php}
 */
 echo '<div id="team">';
-
 foreach ($perso as $persos)
 {
 	?>
@@ -66,7 +66,7 @@ foreach ($perso as $persos)
 	?>
 	<a class="choix_stuff" id="choix<?=$persos->id_perso();?>" href="#<?=$persos->nom();?><?=$persos->id_perso();?>">
 		<div class='list_cheat_perso'>
-			<?= htmlspecialchars($persos->nom());?><br />
+			<?= htmlspecialchars($persos->nom());?> (Niv <span id="lvl<?=$persos->id_perso();?>" ><?=htmlspecialchars($persos->niveau());?></span>)<br />
 				<span>PV </span><?= htmlspecialchars($persos->pv());?><br />
 				<span>ATT </span><?= htmlspecialchars($persos->att());?><br /><br />
 
