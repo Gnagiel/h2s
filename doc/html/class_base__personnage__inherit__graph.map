@@ -1,5 +1,0 @@
-<map id="Base_personnage" name="Base_personnage">
-<area shape="rect" id="node2" href="$class_personnage.html" title="{Personnage\n|+ $id_user\l+ $id_perso\l+ $niveau\l+ $xp\l+ $xp_max\l+ $timeEndormi\l+ $qualite\l+ $etoile\l+ $team\l+ $etat\l+ $def\l+ $vit\l+ $pen\l+ $arm\l+ $pre\let 12 de plus...\l# $atout\l|+ __construct()\l+ hydrate()\l+ estEndormi()\l+ frapper()\l+ recevoirXP()\l+ recevoirDegats()\l+ soigner()\l+ recevoirSoins()\l+ debut_combat()\l+ reveil()\l+ incrementAtout()\l+ id_user()\l+ id_perso()\l+ xp()\l+ xp_max()\let 38 de plus...\l}" alt="" coords="73,473,204,960"/>
-<area shape="rect" id="node3" href="$class_att__soi.html" title="{Att_soi\n||+ lancerUnSoin()\l}" alt="" coords="5,1008,127,1081"/>
-<area shape="rect" id="node4" href="$class_soigneur.html" title="{Soigneur\n||+ lancerUnSoin()\l}" alt="" coords="151,1008,272,1081"/>
-</map>

@@ -24,15 +24,12 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "H2S", "index.html", [
-    [ "Page Principale", "index.html", null ],
-    [ "Liste des choses à faire", "todo.html", null ],
-    [ "Espaces de nommage", "namespaces.html", [
-      [ "Liste des espaces de nommage", "namespaces.html", "namespaces_dup" ],
-      [ "Membres de l'espace de nommage", "namespacemembers.html", [
-        [ "Tout", "namespacemembers.html", null ],
-        [ "Fonctions", "namespacemembers_func.html", null ]
-      ] ]
+    [ "Accueil de la documentation", "index.html", [
+      [ "Description :", "index.html#desc", null ],
+      [ "Arbre d'inclusion des fichiers php :", "index.html#inclusion", null ],
+      [ "Schéma BDD :", "index.html#BDD", null ]
     ] ],
+    [ "Liste des choses à faire", "todo.html", null ],
     [ "Structures de données", "annotated.html", [
       [ "Structures de données", "annotated.html", "annotated_dup" ],
       [ "Index des structures de données", "classes.html", null ],
@@ -57,7 +54,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_att__soi_8php.html",
-"class_user.html#a2826726689d756f84814487cf2823040"
+"class_stuff_manager.html#a4475df7ca91c484fb5140888b9d88b46"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

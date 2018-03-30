@@ -24,15 +24,10 @@ for the JavaScript code in this file
 var menudata={children:[
 {text:"Page principale",url:"index.html"},
 {text:"Pages associées",url:"pages.html"},
-{text:"Espaces de nommage",url:"namespaces.html",children:[
-{text:"Liste des espaces de nommage",url:"namespaces.html"},
-{text:"Membres de l'espace de nommage",url:"namespacemembers.html",children:[
-{text:"Tout",url:"namespacemembers.html"},
-{text:"Fonctions",url:"namespacemembers_func.html"}]}]},
 {text:"Structures de données",url:"annotated.html",children:[
 {text:"Structures de données",url:"annotated.html"},
 {text:"Index des structures de données",url:"classes.html"},
-{text:"Hiérarchie des classes",url:"inherits.html"},
+{text:"Hiérarchie des classes",url:"hierarchy.html"},
 {text:"Champs de donnée",url:"functions.html",children:[
 {text:"Tout",url:"functions.html",children:[
 {text:"$",url:"functions.html#index_0x24"},
@@ -92,29 +87,18 @@ var menudata={children:[
 {text:"c",url:"globals.html#index_c"},
 {text:"e",url:"globals.html#index_e"},
 {text:"f",url:"globals.html#index_f"},
-{text:"g",url:"globals.html#index_g"},
 {text:"h",url:"globals.html#index_h"},
 {text:"i",url:"globals.html#index_i"},
 {text:"j",url:"globals.html#index_j"},
-{text:"p",url:"globals.html#index_p"},
 {text:"r",url:"globals.html#index_r"},
-{text:"s",url:"globals.html#index_s"},
-{text:"t",url:"globals.html#index_t"},
-{text:"w",url:"globals.html#index_w"},
 {text:"x",url:"globals.html#index_x"}]},
 {text:"Fonctions",url:"globals_func.html"},
 {text:"Variables",url:"globals_vars.html",children:[
 {text:"$",url:"globals_vars.html#index_0x24"},
 {text:"c",url:"globals_vars.html#index_c"},
 {text:"e",url:"globals_vars.html#index_e"},
-{text:"f",url:"globals_vars.html#index_f"},
-{text:"g",url:"globals_vars.html#index_g"},
 {text:"h",url:"globals_vars.html#index_h"},
 {text:"i",url:"globals_vars.html#index_i"},
 {text:"j",url:"globals_vars.html#index_j"},
-{text:"p",url:"globals_vars.html#index_p"},
 {text:"r",url:"globals_vars.html#index_r"},
-{text:"s",url:"globals_vars.html#index_s"},
-{text:"t",url:"globals_vars.html#index_t"},
-{text:"w",url:"globals_vars.html#index_w"},
 {text:"x",url:"globals_vars.html#index_x"}]}]}]}]}

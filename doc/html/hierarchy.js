@@ -1,10 +1,9 @@
 var hierarchy =
 [
-    [ "Base_personnage", "class_base__personnage.html", [
-      [ "Personnage", "class_personnage.html", [
-        [ "Att_soi", "class_att__soi.html", null ],
-        [ "Soigneur", "class_soigneur.html", null ]
-      ] ]
+    [ "Base_personnage", "class_base__personnage.html", null ],
+    [ "Personnage", "class_personnage.html", [
+      [ "Att_soi", "class_att__soi.html", null ],
+      [ "Soigneur", "class_soigneur.html", null ]
     ] ],
     [ "PersonnagesManager", "class_personnages_manager.html", null ],
     [ "Stuff", "class_stuff.html", null ],

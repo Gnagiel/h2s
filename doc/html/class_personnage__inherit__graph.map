@@ -1,5 +1,4 @@
 <map id="Personnage" name="Personnage">
-<area shape="rect" id="node3" href="$class_att__soi.html" title="{Att_soi\n||+ lancerUnSoin()\l}" alt="" coords="5,1008,127,1081"/>
-<area shape="rect" id="node4" href="$class_soigneur.html" title="{Soigneur\n||+ lancerUnSoin()\l}" alt="" coords="151,1008,272,1081"/>
-<area shape="rect" id="node2" href="$class_base__personnage.html" title="{Base_personnage\n|+ $nom\l+ $types\l+ $emp_team\l+ $etoile\l+ $qualite\l+ $stuff_1\l+ $stuff_2\l+ $stuff_3\l+ $stuff_4\l+ $pv\l+ $att\l# $id_persos\l|+ __construct()\l+ hydrate()\l+ nom()\l+ id_persos()\l+ qualite()\l+ types()\l+ etoile()\l+ stuff_1()\l+ stuff_2()\l+ stuff_3()\l+ stuff_4()\l+ pv()\l+ att()\l+ setId_persos()\l+ setNom()\let 9 de plus...\l}" alt="" coords="73,5,203,425"/>
+<area shape="rect" id="node2" href="$class_att__soi.html" title="{Att_soi\n||+ lancerUnSoin()\l}" alt="" coords="5,540,127,613"/>
+<area shape="rect" id="node3" href="$class_soigneur.html" title="{Soigneur\n||+ lancerUnSoin()\l}" alt="" coords="151,540,272,613"/>
 </map>

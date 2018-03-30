@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['function_5fattaque_2ephp',['Function_Attaque.php',['../_function___attaque_8php.html',1,'']]],
-  ['function_5fjeu_2ephp',['Function_Jeu.php',['../_function___jeu_8php.html',1,'']]]
+  ['gestion_5fperso_2ephp',['gestion_perso.php',['../gestion__perso_8php.html',1,'']]],
+  ['gestion_5fstuff_2ephp',['gestion_stuff.php',['../gestion__stuff_8php.html',1,'']]],
+  ['gestion_5fsup_5ftab_2ephp',['gestion_sup_tab.php',['../gestion__sup__tab_8php.html',1,'']]],
+  ['gestion_5fup_5fperso_2ephp',['gestion_up_perso.php',['../gestion__up__perso_8php.html',1,'']]]
 ];

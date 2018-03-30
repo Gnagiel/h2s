@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['handle_5ffunction',['handle_function',['../doxygen_8js.html#a707646e352fa6c9fc38032ac148e66ff',1,'doxygen.js']]],
-  ['handle_5fline',['handle_line',['../doxygen_8js.html#a2bf59fb89cb9cb88399cd2b447d777fb',1,'doxygen.js']]],
-  ['handle_5fparam',['handle_param',['../doxygen_8js.html#a3d6505368d593cd8abb443a418ad33b0',1,'doxygen.js']]],
-  ['handle_5freturn',['handle_return',['../doxygen_8js.html#a2df526fa9dde3ba3d1902be86292e40d',1,'doxygen.js']]],
   ['highlight_2epack_2ejs',['highlight.pack.js',['../highlight_8pack_8js.html',1,'']]],
   ['hljs',['hljs',['../highlight_8pack_8js.html#a1c543686e0dae902af3bfa53233f1fd9',1,'highlight.pack.js']]],
   ['html',['html',['../highlight_8pack_8js.html#a7ef884a47bb6ae6702bcf81a734242fa',1,'highlight.pack.js']]],
