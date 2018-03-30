@@ -1,0 +1,95 @@
+\hypertarget{gestion__up__perso_8php}{}\section{Référence du fichier ajax/gestion\+\_\+up\+\_\+perso.php}
+\label{gestion__up__perso_8php}\index{ajax/gestion\+\_\+up\+\_\+perso.\+php@{ajax/gestion\+\_\+up\+\_\+perso.\+php}}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gestion__up__perso_8php_a6bdbbd60a21fa5e8c1db3f7596a47013}{charger\+Classe}} (\$classe)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gestion__up__perso_8php_a4621b1cd69b1417c9fb966c825299de1}{\$manager}} = new \mbox{\hyperlink{class_personnages_manager}{Personnages\+Manager}}(\$db)
+\item 
+\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{\$perso}} = \$manager-\/$>$get(\$\+\_\+\+P\+O\+ST\mbox{[}\char`\"{}btn\+\_\+valid\char`\"{}\mbox{]})
+\item 
+\mbox{\hyperlink{gestion__up__perso_8php_a5291dff564984cdb59d278ef6c471d80}{\$entry}}
+\item 
+\mbox{\hyperlink{gestion__up__perso_8php_add07af0ae9e1b5fc6710c22cf96fd24c}{\$json}} \mbox{[}0\mbox{]} = \$entry
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{gestion__up__perso_8php_a6bdbbd60a21fa5e8c1db3f7596a47013}\label{gestion__up__perso_8php_a6bdbbd60a21fa5e8c1db3f7596a47013}} 
+\index{gestion\+\_\+up\+\_\+perso.\+php@{gestion\+\_\+up\+\_\+perso.\+php}!charger\+Classe@{charger\+Classe}}
+\index{charger\+Classe@{charger\+Classe}!gestion\+\_\+up\+\_\+perso.\+php@{gestion\+\_\+up\+\_\+perso.\+php}}
+\subsubsection{\texorpdfstring{charger\+Classe()}{chargerClasse()}}
+{\footnotesize\ttfamily charger\+Classe (\begin{DoxyParamCaption}\item[{}]{\$classe }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne 2 du fichier gestion\+\_\+up\+\_\+perso.\+php.
+
+
+
+\subsection{Documentation des variables}
+\mbox{\Hypertarget{gestion__up__perso_8php_a5291dff564984cdb59d278ef6c471d80}\label{gestion__up__perso_8php_a5291dff564984cdb59d278ef6c471d80}} 
+\index{gestion\+\_\+up\+\_\+perso.\+php@{gestion\+\_\+up\+\_\+perso.\+php}!\$entry@{\$entry}}
+\index{\$entry@{\$entry}!gestion\+\_\+up\+\_\+perso.\+php@{gestion\+\_\+up\+\_\+perso.\+php}}
+\subsubsection{\texorpdfstring{\$entry}{$entry}}
+{\footnotesize\ttfamily \$entry}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}
+= array(
+    \textcolor{stringliteral}{'result'} => \textcolor{stringliteral}{'lvl Up'},
+    \textcolor{stringliteral}{'niveau'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->niveau()),
+    \textcolor{stringliteral}{'id\_perso'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->id\_perso()),
+    \textcolor{stringliteral}{'type'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->types()),
+    \textcolor{stringliteral}{'perso\_pv'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->pv()),
+    \textcolor{stringliteral}{'perso\_att'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->att()),
+    \textcolor{stringliteral}{'perso\_def'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->def()),
+    \textcolor{stringliteral}{'perso\_vit'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->vit()),
+    \textcolor{stringliteral}{'perso\_pen'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->pen()),
+    \textcolor{stringliteral}{'perso\_arm'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->arm()),
+    \textcolor{stringliteral}{'perso\_pre'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->pre()),
+    \textcolor{stringliteral}{'perso\_esc'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->esc()),
+    \textcolor{stringliteral}{'perso\_crit'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->crit()),
+    \textcolor{stringliteral}{'perso\_ten'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->ten()),
+    \textcolor{stringliteral}{'perso\_soi'} => utf8\_encode(\mbox{\hyperlink{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}{$perso}}->soi()),
+    \textcolor{stringliteral}{'tab'} => $\_SESSION[\textcolor{stringliteral}{'tab\_perso'}]
+)
+\end{DoxyCode}
+
+
+Définition à la ligne 28 du fichier gestion\+\_\+up\+\_\+perso.\+php.
+
+\mbox{\Hypertarget{gestion__up__perso_8php_add07af0ae9e1b5fc6710c22cf96fd24c}\label{gestion__up__perso_8php_add07af0ae9e1b5fc6710c22cf96fd24c}} 
+\index{gestion\+\_\+up\+\_\+perso.\+php@{gestion\+\_\+up\+\_\+perso.\+php}!\$json@{\$json}}
+\index{\$json@{\$json}!gestion\+\_\+up\+\_\+perso.\+php@{gestion\+\_\+up\+\_\+perso.\+php}}
+\subsubsection{\texorpdfstring{\$json}{$json}}
+{\footnotesize\ttfamily \$json\mbox{[}0\mbox{]} = \$entry}
+
+
+
+Définition à la ligne 47 du fichier gestion\+\_\+up\+\_\+perso.\+php.
+
+\mbox{\Hypertarget{gestion__up__perso_8php_a4621b1cd69b1417c9fb966c825299de1}\label{gestion__up__perso_8php_a4621b1cd69b1417c9fb966c825299de1}} 
+\index{gestion\+\_\+up\+\_\+perso.\+php@{gestion\+\_\+up\+\_\+perso.\+php}!\$manager@{\$manager}}
+\index{\$manager@{\$manager}!gestion\+\_\+up\+\_\+perso.\+php@{gestion\+\_\+up\+\_\+perso.\+php}}
+\subsubsection{\texorpdfstring{\$manager}{$manager}}
+{\footnotesize\ttfamily \$manager = new \mbox{\hyperlink{class_personnages_manager}{Personnages\+Manager}}(\$db)}
+
+
+
+Définition à la ligne 13 du fichier gestion\+\_\+up\+\_\+perso.\+php.
+
+\mbox{\Hypertarget{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}\label{gestion__up__perso_8php_a648bcc9981df7cceb4b931a80064a6c5}} 
+\index{gestion\+\_\+up\+\_\+perso.\+php@{gestion\+\_\+up\+\_\+perso.\+php}!\$perso@{\$perso}}
+\index{\$perso@{\$perso}!gestion\+\_\+up\+\_\+perso.\+php@{gestion\+\_\+up\+\_\+perso.\+php}}
+\subsubsection{\texorpdfstring{\$perso}{$perso}}
+{\footnotesize\ttfamily \$perso = \$manager-\/$>$get(\$\+\_\+\+P\+O\+ST\mbox{[}\char`\"{}btn\+\_\+valid\char`\"{}\mbox{]})}
+
+
+
+Définition à la ligne 14 du fichier gestion\+\_\+up\+\_\+perso.\+php.
+

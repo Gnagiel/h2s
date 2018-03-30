@@ -1,0 +1,926 @@
+\begin{theindex}
+
+  \item {\$\+Xp\+\_\+\+Max}
+    \subitem {User}, \hyperpage{91}
+  \item {\$argent}
+    \subitem {User}, \hyperpage{90}
+  \item {\$arm}
+    \subitem {Personnage}, \hyperpage{52}
+  \item {\$atout}
+    \subitem {Personnage}, \hyperpage{52}
+  \item {\$atr\+\_\+1}
+    \subitem {Stuff}, \hyperpage{73}
+  \item {\$atr\+\_\+2}
+    \subitem {Stuff}, \hyperpage{73}
+  \item {\$att}
+    \subitem {Base\+\_\+personnage}, \hyperpage{24}
+  \item {\$cout}
+    \subitem {Stuff}, \hyperpage{73}
+  \item {\$crit}
+    \subitem {Personnage}, \hyperpage{52}
+  \item {\$def}
+    \subitem {Personnage}, \hyperpage{52}
+  \item {\$descr}
+    \subitem {Stuff}, \hyperpage{73}
+  \item {\$email}
+    \subitem {User}, \hyperpage{90}
+  \item {\$emp\+\_\+team}
+    \subitem {Base\+\_\+personnage}, \hyperpage{24}
+  \item {\$emp\+\_\+team\+\_\+max}
+    \subitem {User}, \hyperpage{90}
+  \item {\$endu}
+    \subitem {User}, \hyperpage{90}
+  \item {\$endu\+\_\+\+Max}
+    \subitem {User}, \hyperpage{90}
+  \item {\$entry}
+    \subitem {gestion\+\_\+up\+\_\+perso.\+php}, \hyperpage{99}
+  \item {\$esc}
+    \subitem {Personnage}, \hyperpage{53}
+  \item {\$etat}
+    \subitem {Personnage}, \hyperpage{53}
+  \item {\$etoile}
+    \subitem {Base\+\_\+personnage}, \hyperpage{24}
+    \subitem {Personnage}, \hyperpage{53}
+    \subitem {Stuff}, \hyperpage{74}
+  \item {\$id\+\_\+base}
+    \subitem {Stuff}, \hyperpage{74}
+  \item {\$id\+\_\+perso}
+    \subitem {Personnage}, \hyperpage{53}
+  \item {\$id\+\_\+persos}
+    \subitem {Base\+\_\+personnage}, \hyperpage{24}
+  \item {\$id\+\_\+stuff}
+    \subitem {Stuff}, \hyperpage{74}
+  \item {\$id\+\_\+user}
+    \subitem {Personnage}, \hyperpage{53}
+    \subitem {User}, \hyperpage{90}
+  \item {\$json}
+    \subitem {gestion\+\_\+up\+\_\+perso.\+php}, \hyperpage{100}
+  \item {\$manager}
+    \subitem {add\+\_\+perso.\+php}, \hyperpage{95}
+    \subitem {gestion\+\_\+stuff.\+php}, \hyperpage{97}
+    \subitem {gestion\+\_\+up\+\_\+perso.\+php}, \hyperpage{100}
+    \subitem {sup\+\_\+perso.\+php}, \hyperpage{101}
+    \subitem {team\+\_\+ajax.\+php}, \hyperpage{102}
+  \item {\$manager\+Stuff}
+    \subitem {add\+\_\+perso.\+php}, \hyperpage{96}
+    \subitem {gestion\+\_\+stuff.\+php}, \hyperpage{98}
+  \item {\$manager\+User}
+    \subitem {gestion\+\_\+stuff.\+php}, \hyperpage{98}
+  \item {\$mdp}
+    \subitem {User}, \hyperpage{91}
+  \item {\$niveau}
+    \subitem {Personnage}, \hyperpage{53}
+    \subitem {Stuff}, \hyperpage{74}
+    \subitem {User}, \hyperpage{91}
+  \item {\$nom}
+    \subitem {Base\+\_\+personnage}, \hyperpage{24}
+    \subitem {Stuff}, \hyperpage{74}
+  \item {\$or\+\_\+}
+    \subitem {User}, \hyperpage{91}
+  \item {\$pen}
+    \subitem {Personnage}, \hyperpage{54}
+  \item {\$perso}
+    \subitem {add\+\_\+perso.\+php}, \hyperpage{96}
+    \subitem {gestion\+\_\+stuff.\+php}, \hyperpage{98}
+    \subitem {gestion\+\_\+up\+\_\+perso.\+php}, \hyperpage{100}
+    \subitem {sup\+\_\+perso.\+php}, \hyperpage{101}
+  \item {\$pre}
+    \subitem {Personnage}, \hyperpage{54}
+  \item {\$pseudo}
+    \subitem {User}, \hyperpage{91}
+  \item {\$pv}
+    \subitem {Base\+\_\+personnage}, \hyperpage{24}
+  \item {\$qualite}
+    \subitem {Base\+\_\+personnage}, \hyperpage{25}
+    \subitem {Personnage}, \hyperpage{54}
+    \subitem {Stuff}, \hyperpage{74}
+  \item {\$soi}
+    \subitem {Personnage}, \hyperpage{54}
+  \item {\$stuff}
+    \subitem {gestion\+\_\+stuff.\+php}, \hyperpage{98}
+  \item {\$stuff\+\_\+1}
+    \subitem {Base\+\_\+personnage}, \hyperpage{25}
+  \item {\$stuff\+\_\+2}
+    \subitem {Base\+\_\+personnage}, \hyperpage{25}
+  \item {\$stuff\+\_\+3}
+    \subitem {Base\+\_\+personnage}, \hyperpage{25}
+  \item {\$stuff\+\_\+4}
+    \subitem {Base\+\_\+personnage}, \hyperpage{25}
+  \item {\$tab}
+    \subitem {gestion\+\_\+stuff.\+php}, \hyperpage{98}
+  \item {\$team}
+    \subitem {Personnage}, \hyperpage{54}
+  \item {\$ten}
+    \subitem {Personnage}, \hyperpage{54}
+  \item {\$time\+Endormi}
+    \subitem {Personnage}, \hyperpage{55}
+  \item {\$types}
+    \subitem {Base\+\_\+personnage}, \hyperpage{26}
+    \subitem {Stuff}, \hyperpage{75}
+  \item {\$user}
+    \subitem {add\+\_\+perso.\+php}, \hyperpage{96}
+  \item {\$usermanager}
+    \subitem {add\+\_\+perso.\+php}, \hyperpage{96}
+  \item {\$vit}
+    \subitem {Personnage}, \hyperpage{55}
+  \item {\$xp}
+    \subitem {Personnage}, \hyperpage{55}
+    \subitem {User}, \hyperpage{91}
+  \item {\$xp\+\_\+max}
+    \subitem {Personnage}, \hyperpage{55}
+  \item {\+\_\+\+\_\+construct}
+    \subitem {Base\+\_\+personnage}, \hyperpage{15}
+    \subitem {Personnage}, \hyperpage{29}
+    \subitem {Personnages\+Manager}, \hyperpage{57}
+    \subitem {Stuff}, \hyperpage{63}
+    \subitem {Stuff\+Manager}, \hyperpage{75}
+    \subitem {User}, \hyperpage{79}
+    \subitem {User\+Manager}, \hyperpage{92}
+
+  \indexspace
+
+  \item {add}
+    \subitem {Personnages\+Manager}, \hyperpage{58}
+    \subitem {Stuff\+Manager}, \hyperpage{76}
+    \subitem {User\+Manager}, \hyperpage{93}
+  \item {add\+\_\+perso.\+js}
+    \subitem {auto\+\_\+load}, \hyperpage{112}
+    \subitem {submit}, \hyperpage{112}
+  \item {add\+\_\+perso.\+php}
+    \subitem {\$manager}, \hyperpage{95}
+    \subitem {\$manager\+Stuff}, \hyperpage{96}
+    \subitem {\$perso}, \hyperpage{96}
+    \subitem {\$user}, \hyperpage{96}
+    \subitem {\$usermanager}, \hyperpage{96}
+    \subitem {charger\+Classe}, \hyperpage{95}
+  \item {affiche\+Perso}
+    \subitem {Function\+\_\+\+Jeu.\+php}, \hyperpage{107}
+  \item {ajax/add\+\_\+perso.\+php}, \hyperpage{95}
+  \item {ajax/gestion\+\_\+perso.\+php}, \hyperpage{96}
+  \item {ajax/gestion\+\_\+stuff.\+php}, \hyperpage{97}
+  \item {ajax/gestion\+\_\+sup\+\_\+tab.\+php}, \hyperpage{99}
+  \item {ajax/gestion\+\_\+up\+\_\+perso.\+php}, \hyperpage{99}
+  \item {ajax/sup\+\_\+perso.\+php}, \hyperpage{100}
+  \item {ajax/team\+\_\+ajax.\+php}, \hyperpage{101}
+  \item {argent}
+    \subitem {User}, \hyperpage{80}
+  \item {arm}
+    \subitem {Personnage}, \hyperpage{29}
+  \item {atout}
+    \subitem {Personnage}, \hyperpage{30}
+  \item {atr\+\_\+1}
+    \subitem {Stuff}, \hyperpage{63}
+  \item {atr\+\_\+2}
+    \subitem {Stuff}, \hyperpage{64}
+  \item {att}
+    \subitem {Base\+\_\+personnage}, \hyperpage{16}
+  \item {Att\+\_\+soi}, \hyperpage{12}
+    \subitem {lancer\+Un\+Soin}, \hyperpage{13}
+  \item {auto\+\_\+load}
+    \subitem {add\+\_\+perso.\+js}, \hyperpage{112}
+    \subitem {sup\+\_\+perso.\+js}, \hyperpage{123}
+    \subitem {team.\+js}, \hyperpage{124}
+
+  \indexspace
+
+  \item {Base\+\_\+personnage}, \hyperpage{13}
+    \subitem {\$att}, \hyperpage{24}
+    \subitem {\$emp\+\_\+team}, \hyperpage{24}
+    \subitem {\$etoile}, \hyperpage{24}
+    \subitem {\$id\+\_\+persos}, \hyperpage{24}
+    \subitem {\$nom}, \hyperpage{24}
+    \subitem {\$pv}, \hyperpage{24}
+    \subitem {\$qualite}, \hyperpage{25}
+    \subitem {\$stuff\+\_\+1}, \hyperpage{25}
+    \subitem {\$stuff\+\_\+2}, \hyperpage{25}
+    \subitem {\$stuff\+\_\+3}, \hyperpage{25}
+    \subitem {\$stuff\+\_\+4}, \hyperpage{25}
+    \subitem {\$types}, \hyperpage{26}
+    \subitem {\+\_\+\+\_\+construct}, \hyperpage{15}
+    \subitem {att}, \hyperpage{16}
+    \subitem {etoile}, \hyperpage{16}
+    \subitem {hydrate}, \hyperpage{16}
+    \subitem {id\+\_\+persos}, \hyperpage{16}
+    \subitem {nom}, \hyperpage{17}
+    \subitem {pv}, \hyperpage{17}
+    \subitem {qualite}, \hyperpage{17}
+    \subitem {set\+Att}, \hyperpage{18}
+    \subitem {set\+Emp\+\_\+team}, \hyperpage{18}
+    \subitem {set\+Id\+\_\+persos}, \hyperpage{18}
+    \subitem {set\+Nom}, \hyperpage{19}
+    \subitem {set\+Pv}, \hyperpage{19}
+    \subitem {set\+Qualite}, \hyperpage{20}
+    \subitem {set\+Stuff\+\_\+1}, \hyperpage{20}
+    \subitem {set\+Stuff\+\_\+2}, \hyperpage{20}
+    \subitem {set\+Stuff\+\_\+3}, \hyperpage{21}
+    \subitem {set\+Stuff\+\_\+4}, \hyperpage{21}
+    \subitem {set\+Types}, \hyperpage{21}
+    \subitem {stuff\+\_\+1}, \hyperpage{22}
+    \subitem {stuff\+\_\+2}, \hyperpage{22}
+    \subitem {stuff\+\_\+3}, \hyperpage{22}
+    \subitem {stuff\+\_\+4}, \hyperpage{23}
+    \subitem {types}, \hyperpage{23}
+
+  \indexspace
+
+  \item {C\+E\+S\+T\+\_\+\+M\+OI}
+    \subitem {Personnage}, \hyperpage{55}
+  \item {cadre\+\_\+team}
+    \subitem {team.\+php}, \hyperpage{109}
+  \item {charger\+Class}
+    \subitem {index.\+php}, \hyperpage{111}
+  \item {charger\+Classe}
+    \subitem {add\+\_\+perso.\+php}, \hyperpage{95}
+    \subitem {gestion\+\_\+stuff.\+php}, \hyperpage{97}
+    \subitem {gestion\+\_\+up\+\_\+perso.\+php}, \hyperpage{99}
+    \subitem {sup\+\_\+perso.\+php}, \hyperpage{101}
+    \subitem {team\+\_\+ajax.\+php}, \hyperpage{102}
+  \item {class/\+Att\+\_\+soi.\+php}, \hyperpage{102}
+  \item {class/\+Base\+\_\+personnage.\+php}, \hyperpage{102}
+  \item {class/\+Personnage.\+php}, \hyperpage{103}
+  \item {class/\+Personnages\+Manager.\+php}, \hyperpage{103}
+  \item {class/\+Soigneur.\+php}, \hyperpage{103}
+  \item {class/\+Stuff.\+php}, \hyperpage{103}
+  \item {class/\+Stuff\+Manager.\+php}, \hyperpage{104}
+  \item {class/\+User.\+php}, \hyperpage{104}
+  \item {class/\+User\+Manager.\+php}, \hyperpage{104}
+  \item {count}
+    \subitem {Personnages\+Manager}, \hyperpage{58}
+    \subitem {Stuff\+Manager}, \hyperpage{76}
+    \subitem {User\+Manager}, \hyperpage{93}
+  \item {cout}
+    \subitem {Stuff}, \hyperpage{64}
+  \item {crit}
+    \subitem {Personnage}, \hyperpage{30}
+  \item {css}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{115}
+
+  \indexspace
+
+  \item {debut\+\_\+combat}
+    \subitem {Personnage}, \hyperpage{31}
+  \item {def}
+    \subitem {Personnage}, \hyperpage{31}
+  \item {delete}
+    \subitem {Personnages\+Manager}, \hyperpage{58}
+    \subitem {Stuff\+Manager}, \hyperpage{76}
+    \subitem {User\+Manager}, \hyperpage{93}
+  \item {descr}
+    \subitem {Stuff}, \hyperpage{65}
+
+  \indexspace
+
+  \item {easing}
+    \subitem {jquery.\+easing.\+1.\+3.\+js}, \hyperpage{122}
+  \item {else}
+    \subitem {gestion\+\_\+perso.\+php}, \hyperpage{97}
+    \subitem {gestion\+\_\+stuff.\+php}, \hyperpage{98}
+  \item {email}
+    \subitem {User}, \hyperpage{80}
+  \item {emp\+\_\+team\+\_\+max}
+    \subitem {User}, \hyperpage{81}
+  \item {endu}
+    \subitem {User}, \hyperpage{81}
+  \item {endu\+\_\+\+Max}
+    \subitem {User}, \hyperpage{81}
+  \item {esc}
+    \subitem {Personnage}, \hyperpage{32}
+  \item {est\+Endormi}
+    \subitem {Personnage}, \hyperpage{32}
+  \item {etat}
+    \subitem {Personnage}, \hyperpage{33}
+  \item {etoile}
+    \subitem {Base\+\_\+personnage}, \hyperpage{16}
+    \subitem {Personnage}, \hyperpage{33}
+    \subitem {Stuff}, \hyperpage{65}
+  \item {exists}
+    \subitem {Personnages\+Manager}, \hyperpage{58}
+    \subitem {Stuff\+Manager}, \hyperpage{76}
+    \subitem {User\+Manager}, \hyperpage{93}
+  \item {extend}
+    \subitem {jquery.\+easing.\+1.\+3.\+js}, \hyperpage{121}
+
+  \indexspace
+
+  \item {fonction\+Comparaison}
+    \subitem {Function\+\_\+\+Jeu.\+php}, \hyperpage{107}
+  \item {frapper}
+    \subitem {Personnage}, \hyperpage{33}
+  \item {function}
+    \subitem {jquery.\+modal.\+js}, \hyperpage{122}
+  \item {Function\+\_\+\+Jeu.\+php}
+    \subitem {affiche\+Perso}, \hyperpage{107}
+    \subitem {fonction\+Comparaison}, \hyperpage{107}
+
+  \indexspace
+
+  \item {gestion\+\_\+perso.\+php}
+    \subitem {else}, \hyperpage{97}
+  \item {gestion\+\_\+stuff.\+php}
+    \subitem {\$manager}, \hyperpage{97}
+    \subitem {\$manager\+Stuff}, \hyperpage{98}
+    \subitem {\$manager\+User}, \hyperpage{98}
+    \subitem {\$perso}, \hyperpage{98}
+    \subitem {\$stuff}, \hyperpage{98}
+    \subitem {\$tab}, \hyperpage{98}
+    \subitem {charger\+Classe}, \hyperpage{97}
+    \subitem {else}, \hyperpage{98}
+  \item {gestion\+\_\+up\+\_\+perso.\+php}
+    \subitem {\$entry}, \hyperpage{99}
+    \subitem {\$json}, \hyperpage{100}
+    \subitem {\$manager}, \hyperpage{100}
+    \subitem {\$perso}, \hyperpage{100}
+    \subitem {charger\+Classe}, \hyperpage{99}
+  \item {get}
+    \subitem {Personnages\+Manager}, \hyperpage{58}
+    \subitem {Stuff\+Manager}, \hyperpage{77}
+    \subitem {User\+Manager}, \hyperpage{93}
+  \item {get\+\_\+base\+\_\+perso}
+    \subitem {Personnages\+Manager}, \hyperpage{58}
+    \subitem {Stuff\+Manager}, \hyperpage{77}
+  \item {get\+\_\+id\+\_\+team}
+    \subitem {Personnages\+Manager}, \hyperpage{59}
+  \item {get\+\_\+niveau\+\_\+sup}
+    \subitem {Stuff\+Manager}, \hyperpage{77}
+  \item {get\+List}
+    \subitem {Personnages\+Manager}, \hyperpage{59}
+    \subitem {Stuff\+Manager}, \hyperpage{77}
+    \subitem {User\+Manager}, \hyperpage{93}
+  \item {get\+List\+\_\+up}
+    \subitem {Personnages\+Manager}, \hyperpage{59}
+  \item {get\+List\+Cheat}
+    \subitem {Personnages\+Manager}, \hyperpage{59}
+    \subitem {Stuff\+Manager}, \hyperpage{77}
+
+  \indexspace
+
+  \item {H\+T\+M\+L\+\_\+\+A\+T\+TR}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{117}
+  \item {H\+T\+M\+L\+\_\+\+D\+O\+C\+T\+Y\+PE}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{117}
+  \item {H\+T\+M\+L\+\_\+\+S\+H\+O\+R\+T\+\_\+\+A\+T\+TR}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{118}
+  \item {H\+T\+M\+L\+\_\+\+T\+A\+GS}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{118}
+  \item {H\+T\+M\+L\+\_\+\+V\+A\+L\+UE}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{118}
+  \item {highlight.\+pack.\+js}
+    \subitem {css}, \hyperpage{115}
+    \subitem {H\+T\+M\+L\+\_\+\+A\+T\+TR}, \hyperpage{117}
+    \subitem {H\+T\+M\+L\+\_\+\+D\+O\+C\+T\+Y\+PE}, \hyperpage{117}
+    \subitem {H\+T\+M\+L\+\_\+\+S\+H\+O\+R\+T\+\_\+\+A\+T\+TR}, 
+		\hyperpage{118}
+    \subitem {H\+T\+M\+L\+\_\+\+T\+A\+GS}, \hyperpage{118}
+    \subitem {H\+T\+M\+L\+\_\+\+V\+A\+L\+UE}, \hyperpage{118}
+    \subitem {hljs}, \hyperpage{116}
+    \subitem {html}, \hyperpage{117}
+    \subitem {init\+Highlighting\+On\+Load}, \hyperpage{118}
+    \subitem {javascript}, \hyperpage{118}
+    \subitem {X\+M\+L\+\_\+\+A\+T\+TR}, \hyperpage{119}
+    \subitem {X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT}, \hyperpage{119}
+    \subitem {X\+M\+L\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+P\+OS}, 
+		\hyperpage{119}
+    \subitem {X\+M\+L\+\_\+\+V\+A\+L\+U\+E\+\_\+\+Q\+U\+OT}, 
+		\hyperpage{119}
+    \subitem {xml}, \hyperpage{119}
+  \item {hljs}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{116}
+  \item {html}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{117}
+  \item {hydrate}
+    \subitem {Base\+\_\+personnage}, \hyperpage{16}
+    \subitem {Personnage}, \hyperpage{34}
+    \subitem {Stuff}, \hyperpage{65}
+    \subitem {User}, \hyperpage{82}
+
+  \indexspace
+
+  \item {id\+\_\+base}
+    \subitem {Stuff}, \hyperpage{66}
+  \item {id\+\_\+perso}
+    \subitem {Personnage}, \hyperpage{35}
+  \item {id\+\_\+persos}
+    \subitem {Base\+\_\+personnage}, \hyperpage{16}
+  \item {id\+\_\+stuff}
+    \subitem {Stuff}, \hyperpage{66}
+  \item {id\+\_\+user}
+    \subitem {Personnage}, \hyperpage{35}
+    \subitem {User}, \hyperpage{82}
+  \item {includes/\+Function\+\_\+\+Attaque.\+php}, \hyperpage{106}
+  \item {includes/\+Function\+\_\+\+Jeu.\+php}, \hyperpage{106}
+  \item {includes/cheat.\+php}, \hyperpage{104}
+  \item {includes/cheat/modif\+\_\+stuff.\+php}, \hyperpage{105}
+  \item {includes/cheat/modif\+\_\+team.\+php}, \hyperpage{105}
+  \item {includes/eviter\+Message\+Avertissement.\+php}, 
+		\hyperpage{106}
+  \item {includes/identifiant.\+php}, \hyperpage{108}
+  \item {includes/stuff.\+php}, \hyperpage{104}
+  \item {includes/stuff\+\_\+modal.\+php}, \hyperpage{108}
+  \item {includes/team -\/ save.\+php}, \hyperpage{109}
+  \item {includes/team.\+php}, \hyperpage{109}
+  \item {includes/up\+\_\+perso.\+php}, \hyperpage{110}
+  \item {includes/up\+\_\+perso\+\_\+modal.\+php}, \hyperpage{110}
+  \item {increment\+Atout}
+    \subitem {Personnage}, \hyperpage{35}
+  \item {index.\+php}, \hyperpage{111}
+    \subitem {charger\+Class}, \hyperpage{111}
+  \item {init\+Highlighting\+On\+Load}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{118}
+
+  \indexspace
+
+  \item {j\+Query-\/\+Rotate-\/\+Plugin.\+js}
+    \subitem {rotate}, \hyperpage{120}
+  \item {J\+S/add\+\_\+perso.\+js}, \hyperpage{112}
+  \item {J\+S/highlight/highlight.\+pack.\+js}, \hyperpage{113}
+  \item {J\+S/j\+Query-\/\+Rotate-\/\+Plugin.\+js}, \hyperpage{120}
+  \item {J\+S/jquery.\+easing.\+1.\+3.\+js}, \hyperpage{120}
+  \item {J\+S/jquery.\+modal.\+js}, \hyperpage{122}
+  \item {J\+S/sup\+\_\+perso.\+js}, \hyperpage{123}
+  \item {J\+S/team.\+js}, \hyperpage{124}
+  \item {javascript}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{118}
+  \item {jquery.\+easing.\+1.\+3.\+js}
+    \subitem {easing}, \hyperpage{122}
+    \subitem {extend}, \hyperpage{121}
+  \item {jquery.\+modal.\+js}
+    \subitem {function}, \hyperpage{122}
+
+  \indexspace
+
+  \item {lancer\+Un\+Soin}
+    \subitem {Att\+\_\+soi}, \hyperpage{13}
+    \subitem {Soigneur}, \hyperpage{62}
+  \item {lvl\+Up}
+    \subitem {Stuff}, \hyperpage{66}
+
+  \indexspace
+
+  \item {mdp}
+    \subitem {User}, \hyperpage{82}
+
+  \indexspace
+
+  \item {niveau}
+    \subitem {Personnage}, \hyperpage{36}
+    \subitem {Stuff}, \hyperpage{67}
+    \subitem {User}, \hyperpage{83}
+  \item {nom}
+    \subitem {Base\+\_\+personnage}, \hyperpage{17}
+    \subitem {Stuff}, \hyperpage{67}
+  \item {nom\+Valide}
+    \subitem {User}, \hyperpage{83}
+
+  \indexspace
+
+  \item {or\+\_\+}
+    \subitem {User}, \hyperpage{83}
+
+  \indexspace
+
+  \item {P\+A\+S\+\_\+\+D\+E\+\_\+\+M\+A\+G\+IE}
+    \subitem {Personnage}, \hyperpage{55}
+  \item {P\+E\+R\+S\+O\+\_\+\+E\+N\+D\+O\+R\+MI}
+    \subitem {Personnage}, \hyperpage{56}
+  \item {P\+E\+R\+S\+O\+\_\+\+F\+U\+L\+L\+\_\+\+L\+I\+FE}
+    \subitem {Personnage}, \hyperpage{56}
+  \item {P\+E\+R\+S\+O\+N\+N\+A\+G\+E\+\_\+\+E\+N\+S\+O\+R\+C\+E\+LE}
+    \subitem {Personnage}, \hyperpage{56}
+  \item {P\+E\+R\+S\+O\+N\+N\+A\+G\+E\+\_\+\+F\+R\+A\+P\+PE}
+    \subitem {Personnage}, \hyperpage{56}
+  \item {P\+E\+R\+S\+O\+N\+N\+A\+G\+E\+\_\+\+S\+O\+I\+G\+NE}
+    \subitem {Personnage}, \hyperpage{56}
+  \item {P\+E\+R\+S\+O\+N\+N\+A\+G\+E\+\_\+\+T\+UE}
+    \subitem {Personnage}, \hyperpage{56}
+  \item {payer\+\_\+argent}
+    \subitem {User}, \hyperpage{84}
+  \item {pen}
+    \subitem {Personnage}, \hyperpage{36}
+  \item {Personnage}, \hyperpage{26}
+    \subitem {\$arm}, \hyperpage{52}
+    \subitem {\$atout}, \hyperpage{52}
+    \subitem {\$crit}, \hyperpage{52}
+    \subitem {\$def}, \hyperpage{52}
+    \subitem {\$esc}, \hyperpage{53}
+    \subitem {\$etat}, \hyperpage{53}
+    \subitem {\$etoile}, \hyperpage{53}
+    \subitem {\$id\+\_\+perso}, \hyperpage{53}
+    \subitem {\$id\+\_\+user}, \hyperpage{53}
+    \subitem {\$niveau}, \hyperpage{53}
+    \subitem {\$pen}, \hyperpage{54}
+    \subitem {\$pre}, \hyperpage{54}
+    \subitem {\$qualite}, \hyperpage{54}
+    \subitem {\$soi}, \hyperpage{54}
+    \subitem {\$team}, \hyperpage{54}
+    \subitem {\$ten}, \hyperpage{54}
+    \subitem {\$time\+Endormi}, \hyperpage{55}
+    \subitem {\$vit}, \hyperpage{55}
+    \subitem {\$xp}, \hyperpage{55}
+    \subitem {\$xp\+\_\+max}, \hyperpage{55}
+    \subitem {\+\_\+\+\_\+construct}, \hyperpage{29}
+    \subitem {arm}, \hyperpage{29}
+    \subitem {atout}, \hyperpage{30}
+    \subitem {C\+E\+S\+T\+\_\+\+M\+OI}, \hyperpage{55}
+    \subitem {crit}, \hyperpage{30}
+    \subitem {debut\+\_\+combat}, \hyperpage{31}
+    \subitem {def}, \hyperpage{31}
+    \subitem {esc}, \hyperpage{32}
+    \subitem {est\+Endormi}, \hyperpage{32}
+    \subitem {etat}, \hyperpage{33}
+    \subitem {etoile}, \hyperpage{33}
+    \subitem {frapper}, \hyperpage{33}
+    \subitem {hydrate}, \hyperpage{34}
+    \subitem {id\+\_\+perso}, \hyperpage{35}
+    \subitem {id\+\_\+user}, \hyperpage{35}
+    \subitem {increment\+Atout}, \hyperpage{35}
+    \subitem {niveau}, \hyperpage{36}
+    \subitem {P\+A\+S\+\_\+\+D\+E\+\_\+\+M\+A\+G\+IE}, \hyperpage{55}
+    \subitem {P\+E\+R\+S\+O\+\_\+\+E\+N\+D\+O\+R\+MI}, \hyperpage{56}
+    \subitem {P\+E\+R\+S\+O\+\_\+\+F\+U\+L\+L\+\_\+\+L\+I\+FE}, 
+		\hyperpage{56}
+    \subitem {P\+E\+R\+S\+O\+N\+N\+A\+G\+E\+\_\+\+E\+N\+S\+O\+R\+C\+E\+LE}, 
+		\hyperpage{56}
+    \subitem {P\+E\+R\+S\+O\+N\+N\+A\+G\+E\+\_\+\+F\+R\+A\+P\+PE}, 
+		\hyperpage{56}
+    \subitem {P\+E\+R\+S\+O\+N\+N\+A\+G\+E\+\_\+\+S\+O\+I\+G\+NE}, 
+		\hyperpage{56}
+    \subitem {P\+E\+R\+S\+O\+N\+N\+A\+G\+E\+\_\+\+T\+UE}, 
+		\hyperpage{56}
+    \subitem {pen}, \hyperpage{36}
+    \subitem {pre}, \hyperpage{37}
+    \subitem {qualite}, \hyperpage{37}
+    \subitem {recevoir\+Degats}, \hyperpage{37}
+    \subitem {recevoir\+Soins}, \hyperpage{38}
+    \subitem {recevoir\+XP}, \hyperpage{38}
+    \subitem {reveil}, \hyperpage{39}
+    \subitem {set\+Arm}, \hyperpage{39}
+    \subitem {set\+Atout}, \hyperpage{40}
+    \subitem {set\+Crit}, \hyperpage{40}
+    \subitem {set\+Def}, \hyperpage{41}
+    \subitem {set\+Esc}, \hyperpage{41}
+    \subitem {set\+Etat}, \hyperpage{41}
+    \subitem {set\+Etoile}, \hyperpage{42}
+    \subitem {set\+Id\+\_\+perso}, \hyperpage{42}
+    \subitem {set\+Id\+\_\+user}, \hyperpage{43}
+    \subitem {set\+Niveau}, \hyperpage{43}
+    \subitem {set\+Pen}, \hyperpage{43}
+    \subitem {set\+Pre}, \hyperpage{44}
+    \subitem {set\+Qualite}, \hyperpage{44}
+    \subitem {set\+Soi}, \hyperpage{45}
+    \subitem {set\+Team}, \hyperpage{45}
+    \subitem {set\+Ten}, \hyperpage{45}
+    \subitem {set\+Time\+Endormi}, \hyperpage{46}
+    \subitem {set\+Types}, \hyperpage{46}
+    \subitem {set\+Vit}, \hyperpage{47}
+    \subitem {set\+Xp}, \hyperpage{47}
+    \subitem {set\+Xp\+\_\+max}, \hyperpage{47}
+    \subitem {soi}, \hyperpage{48}
+    \subitem {soigner}, \hyperpage{48}
+    \subitem {team}, \hyperpage{49}
+    \subitem {ten}, \hyperpage{49}
+    \subitem {time\+Endormi}, \hyperpage{50}
+    \subitem {types}, \hyperpage{50}
+    \subitem {vit}, \hyperpage{51}
+    \subitem {xp}, \hyperpage{51}
+    \subitem {xp\+\_\+max}, \hyperpage{51}
+  \item {Personnages\+Manager}, \hyperpage{57}
+    \subitem {\+\_\+\+\_\+construct}, \hyperpage{57}
+    \subitem {add}, \hyperpage{58}
+    \subitem {count}, \hyperpage{58}
+    \subitem {delete}, \hyperpage{58}
+    \subitem {exists}, \hyperpage{58}
+    \subitem {get}, \hyperpage{58}
+    \subitem {get\+\_\+base\+\_\+perso}, \hyperpage{58}
+    \subitem {get\+\_\+id\+\_\+team}, \hyperpage{59}
+    \subitem {get\+List}, \hyperpage{59}
+    \subitem {get\+List\+\_\+up}, \hyperpage{59}
+    \subitem {get\+List\+Cheat}, \hyperpage{59}
+    \subitem {set\+Db}, \hyperpage{59}
+    \subitem {sup\+\_\+team}, \hyperpage{60}
+    \subitem {update}, \hyperpage{60}
+    \subitem {update\+\_\+team}, \hyperpage{60}
+  \item {pre}
+    \subitem {Personnage}, \hyperpage{37}
+  \item {pseudo}
+    \subitem {User}, \hyperpage{84}
+  \item {pv}
+    \subitem {Base\+\_\+personnage}, \hyperpage{17}
+
+  \indexspace
+
+  \item {qualite}
+    \subitem {Base\+\_\+personnage}, \hyperpage{17}
+    \subitem {Personnage}, \hyperpage{37}
+    \subitem {Stuff}, \hyperpage{68}
+
+  \indexspace
+
+  \item {recevoir\+Degats}
+    \subitem {Personnage}, \hyperpage{37}
+  \item {recevoir\+Soins}
+    \subitem {Personnage}, \hyperpage{38}
+  \item {recevoir\+XP}
+    \subitem {Personnage}, \hyperpage{38}
+  \item {reveil}
+    \subitem {Personnage}, \hyperpage{39}
+  \item {rotate}
+    \subitem {j\+Query-\/\+Rotate-\/\+Plugin.\+js}, \hyperpage{120}
+
+  \indexspace
+
+  \item {set\+Argent}
+    \subitem {User}, \hyperpage{84}
+  \item {set\+Arm}
+    \subitem {Personnage}, \hyperpage{39}
+  \item {set\+Atout}
+    \subitem {Personnage}, \hyperpage{40}
+  \item {set\+Atr\+\_\+1}
+    \subitem {Stuff}, \hyperpage{68}
+  \item {set\+Atr\+\_\+2}
+    \subitem {Stuff}, \hyperpage{68}
+  \item {set\+Att}
+    \subitem {Base\+\_\+personnage}, \hyperpage{18}
+  \item {set\+Cout}
+    \subitem {Stuff}, \hyperpage{69}
+  \item {set\+Crit}
+    \subitem {Personnage}, \hyperpage{40}
+  \item {set\+Db}
+    \subitem {Personnages\+Manager}, \hyperpage{59}
+    \subitem {Stuff\+Manager}, \hyperpage{77}
+    \subitem {User\+Manager}, \hyperpage{94}
+  \item {set\+Def}
+    \subitem {Personnage}, \hyperpage{41}
+  \item {set\+Descr}
+    \subitem {Stuff}, \hyperpage{69}
+  \item {set\+Email}
+    \subitem {User}, \hyperpage{85}
+  \item {set\+Emp\+\_\+team}
+    \subitem {Base\+\_\+personnage}, \hyperpage{18}
+  \item {set\+Emp\+\_\+team\+\_\+max}
+    \subitem {User}, \hyperpage{85}
+  \item {set\+Endu}
+    \subitem {User}, \hyperpage{86}
+  \item {set\+Endu\+\_\+\+Max}
+    \subitem {User}, \hyperpage{86}
+  \item {set\+Esc}
+    \subitem {Personnage}, \hyperpage{41}
+  \item {set\+Etat}
+    \subitem {Personnage}, \hyperpage{41}
+  \item {set\+Etoile}
+    \subitem {Personnage}, \hyperpage{42}
+    \subitem {Stuff}, \hyperpage{70}
+  \item {set\+Id\+\_\+base}
+    \subitem {Stuff}, \hyperpage{70}
+  \item {set\+Id\+\_\+perso}
+    \subitem {Personnage}, \hyperpage{42}
+  \item {set\+Id\+\_\+persos}
+    \subitem {Base\+\_\+personnage}, \hyperpage{18}
+  \item {set\+Id\+\_\+stuff}
+    \subitem {Stuff}, \hyperpage{70}
+  \item {set\+Id\+\_\+user}
+    \subitem {Personnage}, \hyperpage{43}
+    \subitem {User}, \hyperpage{86}
+  \item {set\+Mdp}
+    \subitem {User}, \hyperpage{87}
+  \item {set\+Niveau}
+    \subitem {Personnage}, \hyperpage{43}
+    \subitem {Stuff}, \hyperpage{71}
+    \subitem {User}, \hyperpage{87}
+  \item {set\+Nom}
+    \subitem {Base\+\_\+personnage}, \hyperpage{19}
+    \subitem {Stuff}, \hyperpage{71}
+  \item {set\+Or\+\_\+}
+    \subitem {User}, \hyperpage{88}
+  \item {set\+Pen}
+    \subitem {Personnage}, \hyperpage{43}
+  \item {set\+Pre}
+    \subitem {Personnage}, \hyperpage{44}
+  \item {set\+Pseudo}
+    \subitem {User}, \hyperpage{88}
+  \item {set\+Pv}
+    \subitem {Base\+\_\+personnage}, \hyperpage{19}
+  \item {set\+Qualite}
+    \subitem {Base\+\_\+personnage}, \hyperpage{20}
+    \subitem {Personnage}, \hyperpage{44}
+    \subitem {Stuff}, \hyperpage{72}
+  \item {set\+Soi}
+    \subitem {Personnage}, \hyperpage{45}
+  \item {set\+Stuff\+\_\+1}
+    \subitem {Base\+\_\+personnage}, \hyperpage{20}
+  \item {set\+Stuff\+\_\+2}
+    \subitem {Base\+\_\+personnage}, \hyperpage{20}
+  \item {set\+Stuff\+\_\+3}
+    \subitem {Base\+\_\+personnage}, \hyperpage{21}
+  \item {set\+Stuff\+\_\+4}
+    \subitem {Base\+\_\+personnage}, \hyperpage{21}
+  \item {set\+Team}
+    \subitem {Personnage}, \hyperpage{45}
+  \item {set\+Ten}
+    \subitem {Personnage}, \hyperpage{45}
+  \item {set\+Time\+Endormi}
+    \subitem {Personnage}, \hyperpage{46}
+  \item {set\+Types}
+    \subitem {Base\+\_\+personnage}, \hyperpage{21}
+    \subitem {Personnage}, \hyperpage{46}
+    \subitem {Stuff}, \hyperpage{72}
+  \item {set\+Vit}
+    \subitem {Personnage}, \hyperpage{47}
+  \item {set\+Xp}
+    \subitem {Personnage}, \hyperpage{47}
+    \subitem {User}, \hyperpage{88}
+  \item {set\+Xp\+\_\+\+Max}
+    \subitem {User}, \hyperpage{89}
+  \item {set\+Xp\+\_\+max}
+    \subitem {Personnage}, \hyperpage{47}
+  \item {soi}
+    \subitem {Personnage}, \hyperpage{48}
+  \item {soigner}
+    \subitem {Personnage}, \hyperpage{48}
+  \item {Soigneur}, \hyperpage{61}
+    \subitem {lancer\+Un\+Soin}, \hyperpage{62}
+  \item {Stuff}, \hyperpage{62}
+    \subitem {\$atr\+\_\+1}, \hyperpage{73}
+    \subitem {\$atr\+\_\+2}, \hyperpage{73}
+    \subitem {\$cout}, \hyperpage{73}
+    \subitem {\$descr}, \hyperpage{73}
+    \subitem {\$etoile}, \hyperpage{74}
+    \subitem {\$id\+\_\+base}, \hyperpage{74}
+    \subitem {\$id\+\_\+stuff}, \hyperpage{74}
+    \subitem {\$niveau}, \hyperpage{74}
+    \subitem {\$nom}, \hyperpage{74}
+    \subitem {\$qualite}, \hyperpage{74}
+    \subitem {\$types}, \hyperpage{75}
+    \subitem {\+\_\+\+\_\+construct}, \hyperpage{63}
+    \subitem {atr\+\_\+1}, \hyperpage{63}
+    \subitem {atr\+\_\+2}, \hyperpage{64}
+    \subitem {cout}, \hyperpage{64}
+    \subitem {descr}, \hyperpage{65}
+    \subitem {etoile}, \hyperpage{65}
+    \subitem {hydrate}, \hyperpage{65}
+    \subitem {id\+\_\+base}, \hyperpage{66}
+    \subitem {id\+\_\+stuff}, \hyperpage{66}
+    \subitem {lvl\+Up}, \hyperpage{66}
+    \subitem {niveau}, \hyperpage{67}
+    \subitem {nom}, \hyperpage{67}
+    \subitem {qualite}, \hyperpage{68}
+    \subitem {set\+Atr\+\_\+1}, \hyperpage{68}
+    \subitem {set\+Atr\+\_\+2}, \hyperpage{68}
+    \subitem {set\+Cout}, \hyperpage{69}
+    \subitem {set\+Descr}, \hyperpage{69}
+    \subitem {set\+Etoile}, \hyperpage{70}
+    \subitem {set\+Id\+\_\+base}, \hyperpage{70}
+    \subitem {set\+Id\+\_\+stuff}, \hyperpage{70}
+    \subitem {set\+Niveau}, \hyperpage{71}
+    \subitem {set\+Nom}, \hyperpage{71}
+    \subitem {set\+Qualite}, \hyperpage{72}
+    \subitem {set\+Types}, \hyperpage{72}
+    \subitem {types}, \hyperpage{72}
+  \item {stuff\+\_\+1}
+    \subitem {Base\+\_\+personnage}, \hyperpage{22}
+  \item {stuff\+\_\+2}
+    \subitem {Base\+\_\+personnage}, \hyperpage{22}
+  \item {stuff\+\_\+3}
+    \subitem {Base\+\_\+personnage}, \hyperpage{22}
+  \item {stuff\+\_\+4}
+    \subitem {Base\+\_\+personnage}, \hyperpage{23}
+  \item {Stuff\+Manager}, \hyperpage{75}
+    \subitem {\+\_\+\+\_\+construct}, \hyperpage{75}
+    \subitem {add}, \hyperpage{76}
+    \subitem {count}, \hyperpage{76}
+    \subitem {delete}, \hyperpage{76}
+    \subitem {exists}, \hyperpage{76}
+    \subitem {get}, \hyperpage{77}
+    \subitem {get\+\_\+base\+\_\+perso}, \hyperpage{77}
+    \subitem {get\+\_\+niveau\+\_\+sup}, \hyperpage{77}
+    \subitem {get\+List}, \hyperpage{77}
+    \subitem {get\+List\+Cheat}, \hyperpage{77}
+    \subitem {set\+Db}, \hyperpage{77}
+    \subitem {sup\+\_\+team}, \hyperpage{78}
+    \subitem {update}, \hyperpage{78}
+    \subitem {update\+\_\+team}, \hyperpage{78}
+  \item {submit}
+    \subitem {add\+\_\+perso.\+js}, \hyperpage{112}
+    \subitem {sup\+\_\+perso.\+js}, \hyperpage{123}
+    \subitem {team.\+js}, \hyperpage{124}
+  \item {sup\+\_\+perso.\+js}
+    \subitem {auto\+\_\+load}, \hyperpage{123}
+    \subitem {submit}, \hyperpage{123}
+  \item {sup\+\_\+perso.\+php}
+    \subitem {\$manager}, \hyperpage{101}
+    \subitem {\$perso}, \hyperpage{101}
+    \subitem {charger\+Classe}, \hyperpage{101}
+  \item {sup\+\_\+team}
+    \subitem {Personnages\+Manager}, \hyperpage{60}
+    \subitem {Stuff\+Manager}, \hyperpage{78}
+
+  \indexspace
+
+  \item {team}
+    \subitem {Personnage}, \hyperpage{49}
+  \item {team.\+js}
+    \subitem {auto\+\_\+load}, \hyperpage{124}
+    \subitem {submit}, \hyperpage{124}
+  \item {team.\+php}
+    \subitem {cadre\+\_\+team}, \hyperpage{109}
+  \item {team\+\_\+ajax.\+php}
+    \subitem {\$manager}, \hyperpage{102}
+    \subitem {charger\+Classe}, \hyperpage{102}
+  \item {ten}
+    \subitem {Personnage}, \hyperpage{49}
+  \item {time\+Endormi}
+    \subitem {Personnage}, \hyperpage{50}
+  \item {types}
+    \subitem {Base\+\_\+personnage}, \hyperpage{23}
+    \subitem {Personnage}, \hyperpage{50}
+    \subitem {Stuff}, \hyperpage{72}
+
+  \indexspace
+
+  \item {update}
+    \subitem {Personnages\+Manager}, \hyperpage{60}
+    \subitem {Stuff\+Manager}, \hyperpage{78}
+    \subitem {User\+Manager}, \hyperpage{94}
+  \item {update\+\_\+team}
+    \subitem {Personnages\+Manager}, \hyperpage{60}
+    \subitem {Stuff\+Manager}, \hyperpage{78}
+  \item {User}, \hyperpage{79}
+    \subitem {\$\+Xp\+\_\+\+Max}, \hyperpage{91}
+    \subitem {\$argent}, \hyperpage{90}
+    \subitem {\$email}, \hyperpage{90}
+    \subitem {\$emp\+\_\+team\+\_\+max}, \hyperpage{90}
+    \subitem {\$endu}, \hyperpage{90}
+    \subitem {\$endu\+\_\+\+Max}, \hyperpage{90}
+    \subitem {\$id\+\_\+user}, \hyperpage{90}
+    \subitem {\$mdp}, \hyperpage{91}
+    \subitem {\$niveau}, \hyperpage{91}
+    \subitem {\$or\+\_\+}, \hyperpage{91}
+    \subitem {\$pseudo}, \hyperpage{91}
+    \subitem {\$xp}, \hyperpage{91}
+    \subitem {\+\_\+\+\_\+construct}, \hyperpage{79}
+    \subitem {argent}, \hyperpage{80}
+    \subitem {email}, \hyperpage{80}
+    \subitem {emp\+\_\+team\+\_\+max}, \hyperpage{81}
+    \subitem {endu}, \hyperpage{81}
+    \subitem {endu\+\_\+\+Max}, \hyperpage{81}
+    \subitem {hydrate}, \hyperpage{82}
+    \subitem {id\+\_\+user}, \hyperpage{82}
+    \subitem {mdp}, \hyperpage{82}
+    \subitem {niveau}, \hyperpage{83}
+    \subitem {nom\+Valide}, \hyperpage{83}
+    \subitem {or\+\_\+}, \hyperpage{83}
+    \subitem {payer\+\_\+argent}, \hyperpage{84}
+    \subitem {pseudo}, \hyperpage{84}
+    \subitem {set\+Argent}, \hyperpage{84}
+    \subitem {set\+Email}, \hyperpage{85}
+    \subitem {set\+Emp\+\_\+team\+\_\+max}, \hyperpage{85}
+    \subitem {set\+Endu}, \hyperpage{86}
+    \subitem {set\+Endu\+\_\+\+Max}, \hyperpage{86}
+    \subitem {set\+Id\+\_\+user}, \hyperpage{86}
+    \subitem {set\+Mdp}, \hyperpage{87}
+    \subitem {set\+Niveau}, \hyperpage{87}
+    \subitem {set\+Or\+\_\+}, \hyperpage{88}
+    \subitem {set\+Pseudo}, \hyperpage{88}
+    \subitem {set\+Xp}, \hyperpage{88}
+    \subitem {set\+Xp\+\_\+\+Max}, \hyperpage{89}
+    \subitem {xp}, \hyperpage{89}
+    \subitem {xp\+\_\+\+Max}, \hyperpage{89}
+  \item {User\+Manager}, \hyperpage{92}
+    \subitem {\+\_\+\+\_\+construct}, \hyperpage{92}
+    \subitem {add}, \hyperpage{93}
+    \subitem {count}, \hyperpage{93}
+    \subitem {delete}, \hyperpage{93}
+    \subitem {exists}, \hyperpage{93}
+    \subitem {get}, \hyperpage{93}
+    \subitem {get\+List}, \hyperpage{93}
+    \subitem {set\+Db}, \hyperpage{94}
+    \subitem {update}, \hyperpage{94}
+    \subitem {verif\+Mdp}, \hyperpage{94}
+
+  \indexspace
+
+  \item {verif\+Mdp}
+    \subitem {User\+Manager}, \hyperpage{94}
+  \item {vit}
+    \subitem {Personnage}, \hyperpage{51}
+
+  \indexspace
+
+  \item {X\+M\+L\+\_\+\+A\+T\+TR}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{119}
+  \item {X\+M\+L\+\_\+\+C\+O\+M\+M\+E\+NT}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{119}
+  \item {X\+M\+L\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+P\+OS}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{119}
+  \item {X\+M\+L\+\_\+\+V\+A\+L\+U\+E\+\_\+\+Q\+U\+OT}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{119}
+  \item {xml}
+    \subitem {highlight.\+pack.\+js}, \hyperpage{119}
+  \item {xp}
+    \subitem {Personnage}, \hyperpage{51}
+    \subitem {User}, \hyperpage{89}
+  \item {xp\+\_\+\+Max}
+    \subitem {User}, \hyperpage{89}
+  \item {xp\+\_\+max}
+    \subitem {Personnage}, \hyperpage{51}
+
+\end{theindex}

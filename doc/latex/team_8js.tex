@@ -1,0 +1,47 @@
+\hypertarget{team_8js}{}\section{Référence du fichier J\+S/team.js}
+\label{team_8js}\index{J\+S/team.\+js@{J\+S/team.\+js}}
+
+
+Ajax pour gestion de l\textquotesingle{}équipe.  
+
+
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{jquery_8modal_8js_af15824e9d460aa2a8934989c901ea797}{function}} \mbox{\hyperlink{team_8js_a639711ad2253733a1f54081fd9e798b7}{auto\+\_\+load}} ()
+\item 
+document \mbox{\hyperlink{team_8js_aa83382a052fe4af51577f19ee8c9a61a}{ready}} (\mbox{\hyperlink{jquery_8modal_8js_af15824e9d460aa2a8934989c901ea797}{function}}() \{ \$(\char`\"{}.add\+\_\+team\char`\"{}).submit(\mbox{\hyperlink{jquery_8modal_8js_af15824e9d460aa2a8934989c901ea797}{function}}() \{ s=\$(this).serialize();\$.ajax(\{ type\+:\char`\"{}P\+O\+ST\char`\"{}, data\+:s, url\+:\textquotesingle{}ajax/team\+\_\+ajax.\+php\textquotesingle{}, success\+:function(retour)\{ \mbox{\hyperlink{team_8js_a639711ad2253733a1f54081fd9e798b7}{auto\+\_\+load}}();\} \});return false;\});\})
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Ajax pour gestion de l\textquotesingle{}équipe. 
+
+\begin{DoxyAuthor}{Auteur}
+Guillaume Nagiel 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+5 Mars 2018
+\end{DoxyDate}
+Ce fichier js sert à modifier l\textquotesingle{}état de l\textquotesingle{}équipe via une requete Ajax. 
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{team_8js_a639711ad2253733a1f54081fd9e798b7}\label{team_8js_a639711ad2253733a1f54081fd9e798b7}} 
+\index{team.\+js@{team.\+js}!auto\+\_\+load@{auto\+\_\+load}}
+\index{auto\+\_\+load@{auto\+\_\+load}!team.\+js@{team.\+js}}
+\subsubsection{\texorpdfstring{auto\+\_\+load()}{auto\_load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jquery_8modal_8js_af15824e9d460aa2a8934989c901ea797}{function}} auto\+\_\+load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne 15 du fichier team.\+js.
+
+\mbox{\Hypertarget{team_8js_aa83382a052fe4af51577f19ee8c9a61a}\label{team_8js_aa83382a052fe4af51577f19ee8c9a61a}} 
+\index{team.\+js@{team.\+js}!ready@{ready}}
+\index{ready@{ready}!team.\+js@{team.\+js}}
+\subsubsection{\texorpdfstring{ready()}{ready()}}
+{\footnotesize\ttfamily document ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jquery_8modal_8js_af15824e9d460aa2a8934989c901ea797}{function}}() \{ \$(\char`\"{}.add\+\_\+team\char`\"{}).submit(\mbox{\hyperlink{jquery_8modal_8js_af15824e9d460aa2a8934989c901ea797}{function}}() \{ s=\$(this).serialize();\$.ajax(\{ type\+:\char`\"{}P\+O\+ST\char`\"{}, data\+:s, url\+:\textquotesingle{}ajax/team\+\_\+ajax.\+php\textquotesingle{}, success\+:function(retour)\{ \mbox{\hyperlink{team_8js_a639711ad2253733a1f54081fd9e798b7}{auto\+\_\+load}}();\} \});return false;\});\}}]{ }\end{DoxyParamCaption})}
+
