@@ -47,14 +47,14 @@ if (isset($_GET['deconnexion']))
 
 include("./includes/identifiant.php");
 include("./includes/Function_Jeu.php");
-
+Ò
 ?>
 <!doctype html>
 <html lang='fr'>
 	<head>
     <title>Heroes Smash Storm</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script   src="https://code.jquery.com/jquery-1.9.1.js"   integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="   crossorigin="anonymous"></script>
     <!--<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css" />
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
@@ -199,13 +199,13 @@ include("./includes/Function_Jeu.php");
 else // Si on veut utiliser ou créer un user.
 {
 ?>
-  <form action="index.php" method="POST" class="form">
+  <form action="index.php" method="POST" class="col-md-auto form">
     <div class="input-group input-group-lg">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-lg">Pseudo et mot de passe</span>
+        <span class="input-group-text" id="inputGroup-sizing-lg">Connexion</span>
       </div>
-      <input type="text" class="form-control" aria-label="Nom utilisateur" name="nom" maxlength="50" aria-describedby="inputGroup-sizing-sm">
-      <input type="password" name="mdp" maxlength="50" autocomplete="off" class="form-control" aria-label="Mdp" aria-describedby="inputGroup-sizing-sm">
+      <input type="text" class="form-control" placeholder="Pseudo" aria-label="nom" name="nom" maxlength="50" aria-describedby="inputGroup-sizing-sm">
+      <input type="password" name="mdp" maxlength="50" placeholder="Mot de passe" autocomplete="off" class="form-control" aria-label="mdp" aria-describedby="inputGroup-sizing-sm">
       <div class="input-group-append">
         <button class="btn btn-outline-secondary" type="submit" value="Utiliser cet user" name="user">Se connecter</button>
         <button class="btn btn-outline-secondary" type="submit" value="Créer cet user" name="creeruser">Créer</button>
