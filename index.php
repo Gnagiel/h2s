@@ -47,7 +47,7 @@ if (isset($_GET['deconnexion']))
 
 include("./includes/identifiant.php");
 include("./includes/Function_Jeu.php");
-Ò
+
 ?>
 <!doctype html>
 <html lang='fr'>
