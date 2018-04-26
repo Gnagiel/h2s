@@ -51,7 +51,7 @@ function fonctionComparaison($a, $b){
 	$manager = new PersonnagesManager($db);
 	$managerUser = new UserManager($db);
 	$managerStuff = new StuffManager($db);
-	
+
 	if (isset($user)) // Si on a créé un personnage, on le stocke dans une variable session afin d'économiser une requête SQL.
 	{
 	  $_SESSION['user'] = $user;
@@ -62,8 +62,8 @@ function fonctionComparaison($a, $b){
 	}
 	elseif (isset($_POST['creeruser']) && isset($_POST['nom'])) // Si on a voulu créer un utilisateur.
 	{
-		$user = new User(['nom' => $_POST['nom'], 'mdp' => $_POST['mdp']]);
-
+		$user = new User(['pseudo' => $_POST['nom'], 'mdp' => $_POST['mdp']]);
+		var_dump($user);
 	  if (isset($user)) // Si le type du personnage est valide, on a crée un personnage.
 	  {
 	    if (!$user->nomValide())
@@ -71,7 +71,7 @@ function fonctionComparaison($a, $b){
 	      $message = 'Le nom choisi est invalide.';
 	      unset($user);
 	    }
-	    elseif ($managerUser->exists($user->nom()))
+	    elseif ($managerUser->exists($user->pseudo()))
 	    {
 	      $message = 'Le nom est déja pris.';
 	      unset($user);
@@ -90,7 +90,7 @@ function fonctionComparaison($a, $b){
 
 	    $user = $managerUser->get($_POST['nom']);
 	    $_SESSION['user'] = $user;
-			$managerUser->update($user);
+			//$managerUser->update($user);
 	  }
     elseif (!$managerUser->verifMdp($_POST['nom'], $_POST['mdp']))
     {
