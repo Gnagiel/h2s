@@ -57,7 +57,10 @@ include("./includes/Function_Jeu.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script   src="https://code.jquery.com/jquery-1.9.1.js"   integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="   crossorigin="anonymous"></script>
-    <!--<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css" />
+    <script src="./bootstrap/assets/js/vendor/popper.min.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css" />
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
 		<script type="text/javascript">
     	google.load('jquery','1.9.1');
@@ -231,6 +234,6 @@ else // Si on veut utiliser ou créer un user.
   </script>
 	</div>
 
-  <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+
   </body>
 </html>
