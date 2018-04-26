@@ -14,15 +14,15 @@ class User
             $endu,
             $endu_Max,
             $emp_team_max;
-  					  
-  
+
+
   public function __construct($valeurs = array())
   {
     if(!empty($valeurs))
         $this->hydrate($valeurs);
     $this->type = strtolower(static::class);
   }
-  
+
   // Un tableau de données doit être passé à la fonction (d'où le préfixe « array »).
 	public function hydrate(array $donnees)
 	{
@@ -30,7 +30,7 @@ class User
 	  {
 	    // On récupère le nom du setter correspondant à l'attribut.
 	    $method = 'set'.ucfirst($key);
-	        
+
 	    // Si le setter correspondant existe.
 	    if (method_exists($this, $method))
 	    {
@@ -44,9 +44,9 @@ class User
   {
     $this->argent = $this->argent - $somme;
   }
-  	
+
 	// GETTERS //
-	
+
   public function id_user() { return $this->id_user; }
   public function pseudo() { return $this->pseudo; }
   public function endu() { return $this->endu; }
@@ -59,12 +59,15 @@ class User
   public function or_() { return $this->or_; }
   public function argent() { return $this->argent; }
   public function emp_team_max() { return $this->emp_team_max; }
-  					
+
   public function nomValide()
   {
-    return !empty($this->nom);
+    if (!empty($this->pseudo))
+    {
+      return true;
+    }
   }
-  
+
   public function setId_user($id_user)
   {
     // L'identifiant du personnage sera, quoi qu'il arrive, un nombre entier.
@@ -90,7 +93,7 @@ class User
       $this->mdp = $mdp;
     }
   }
-  
+
   public function setNiveau($niveau)
   {
     $niveau = (int) $niveau;
@@ -112,7 +115,7 @@ class User
       $this->xp = $xp;
     }
   }
-  
+
   public function setXp_Max($xp_Max)
   {
     $xp_Max = (int) $xp_Max;
@@ -122,16 +125,16 @@ class User
     {
       $this->Xp_Max = $xp_Max;
     }
-  } 
-  
+  }
+
   public function setEndu($endu)
   {
     $endu = (int) $endu;
 
     $this->endu = $endu;
 
-  }  
-  
+  }
+
   public function setEndu_Max($endu_Max)
   {
     $endu_Max = (int) $endu_Max;
@@ -141,7 +144,7 @@ class User
     {
       $this->endu_Max = $endu_Max;
     }
-  } 
+  }
 
   public function setOr_($or_)
   {
@@ -152,8 +155,8 @@ class User
     {
       $this->or_ = $or_;
     }
-  }  
-  
+  }
+
   public function setArgent($argent)
   {
     $argent = (int) $argent;
@@ -163,7 +166,7 @@ class User
     {
       $this->argent = $argent;
     }
-  }         
+  }
 
   public function setEmail($email)
   {
@@ -174,14 +177,14 @@ class User
       $this->email = $email;
     }
   }
- 
+
   public function setEmp_team_max($emp_team_max)
   {
     $emp_team_max = (int) $emp_team_max;
 
     $this->emp_team_max = $emp_team_max;
 
-  }    
+  }
 }
 
 ?>
