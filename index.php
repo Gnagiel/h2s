@@ -1,14 +1,25 @@
 <?php
-/*! \mainpage Accueil de la documentation
- * \section desc Description :
- * Jeu en construction. Jeu de cartes à collectionner, constitution d'un deck, combats PVE et PVP automatiques.\n
- * \section desc Lien :
- * \html <a href="../../index.php">Lien vers le jeu</a>
- * \section inclusion Arbre d'inclusion des fichiers php :
- * \html <img src="../../doc/monGraphe.svg"/>
- * \section BDD Schéma BDD :
- * \html <img src="../../sql/model.png"/>
+/*! \mainpage Documentation utilisateur
+ - \subpage intro
+ - \subpage doc_user
  */
+
+/*! \page intro Introduction
+  * \section desc Description
+  * Jeu en construction. Jeu de cartes à collectionner, constitution d'un deck, combats PVE et PVP automatiques.
+  * \section link Lien
+  * <a href="../../index.php">Lien vers le jeu</a>
+  * \section inclusion Arbre d'inclusion des fichiers php
+  * <img src="../../doc/monGraphe.svg" style="width:100%;"/>
+  * \section BDD Schéma BDD
+  * <img src="../../sql/model.png" style="width:100%;"/>
+ */
+
+ /*! \page doc_user Documentation utilisateur
+   * \section connexion Page de connexion
+   * Page de connexion et d'inscription au jeu.
+   * <img src="../../doc/img/connexion.png" style="width:100%;"/>
+  */
 
 /**
  * \file          Index.php
