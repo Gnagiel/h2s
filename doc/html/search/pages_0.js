@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['accueil_20de_20la_20documentation',['Accueil de la documentation',['../index.html',1,'']]]
+  ['documentation_20utilisateur',['Documentation utilisateur',['../doc_user.html',1,'index']]],
+  ['documentation_20utilisateur',['Documentation utilisateur',['../index.html',1,'']]]
 ];

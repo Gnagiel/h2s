@@ -9,24 +9,24 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 23)">
 <title>User\setNiveau</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-23 193.7188,-23 193.7188,4 -4,4"/>
-<!-- Node63 -->
+<!-- Node65 -->
 <g id="node1" class="node">
-<title>Node63</title>
+<title>Node65</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-.5 0,-18.5 84.3594,-18.5 84.3594,-.5 0,-.5"/>
 <text text-anchor="middle" x="42.1797" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">User\setNiveau</text>
 </g>
-<!-- Node64 -->
+<!-- Node66 -->
 <g id="node2" class="node">
-<title>Node64</title>
+<title>Node66</title>
 <g id="a_node2"><a xlink:href="class_user.html#ab341c8493decd7ed8ad872544a3b3332" target="_top" xlink:title="User\\niveau">
 <polygon fill="#ffffff" stroke="#000000" points="120.3594,-.5 120.3594,-18.5 189.7188,-18.5 189.7188,-.5 120.3594,-.5"/>
 <text text-anchor="middle" x="155.0391" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">User\niveau</text>
 </a>
 </g>
 </g>
-<!-- Node63&#45;&gt;Node64 -->
+<!-- Node65&#45;&gt;Node66 -->
 <g id="edge1" class="edge">
-<title>Node63&#45;&gt;Node64</title>
+<title>Node65&#45;&gt;Node66</title>
 <path fill="none" stroke="#191970" d="M84.5254,-9.5C92.8853,-9.5 101.6857,-9.5 110.127,-9.5"/>
 <polygon fill="#191970" stroke="#191970" points="110.1917,-13.0001 120.1916,-9.5 110.1916,-6.0001 110.1917,-13.0001"/>
 </g>

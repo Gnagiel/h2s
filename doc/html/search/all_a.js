@@ -8,5 +8,6 @@ var searchData=
   ['identifiant_2ephp',['identifiant.php',['../identifiant_8php.html',1,'']]],
   ['incrementatout',['incrementAtout',['../class_personnage.html#a744674b144008a43e37036344accb378',1,'Personnage']]],
   ['index_2ephp',['index.php',['../index_8php.html',1,'']]],
-  ['inithighlightingonload',['initHighlightingOnLoad',['../highlight_8pack_8js.html#a618051a93fd6706e4858f836a7a40b82',1,'highlight.pack.js']]]
+  ['inithighlightingonload',['initHighlightingOnLoad',['../highlight_8pack_8js.html#a618051a93fd6706e4858f836a7a40b82',1,'highlight.pack.js']]],
+  ['introduction',['Introduction',['../intro.html',1,'index']]]
 ];

@@ -12,6 +12,5 @@ var searchData=
   ['att',['att',['../class_base__personnage.html#ad09642245bba8747d0ebd3ab991c66b9',1,'Base_personnage\att()'],['../class_personnage.html#a6d94c6fd714c9e8ef344e386f16c671a',1,'Personnage\att()']]],
   ['att_5fsoi',['Att_soi',['../class_att__soi.html',1,'']]],
   ['att_5fsoi_2ephp',['Att_soi.php',['../_att__soi_8php.html',1,'']]],
-  ['auto_5fload',['auto_load',['../add__perso_8js.html#aaba1cd0abfebf408ecb5c0b12cb5072c',1,'auto_load():&#160;add_perso.js'],['../sup__perso_8js.html#a639711ad2253733a1f54081fd9e798b7',1,'auto_load():&#160;sup_perso.js'],['../team_8js.html#a639711ad2253733a1f54081fd9e798b7',1,'auto_load():&#160;team.js']]],
-  ['accueil_20de_20la_20documentation',['Accueil de la documentation',['../index.html',1,'']]]
+  ['auto_5fload',['auto_load',['../add__perso_8js.html#aaba1cd0abfebf408ecb5c0b12cb5072c',1,'auto_load():&#160;add_perso.js'],['../sup__perso_8js.html#a639711ad2253733a1f54081fd9e798b7',1,'auto_load():&#160;sup_perso.js'],['../team_8js.html#a639711ad2253733a1f54081fd9e798b7',1,'auto_load():&#160;team.js']]]
 ];
