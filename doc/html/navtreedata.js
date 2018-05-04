@@ -24,7 +24,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "H2S", "index.html", [
-    [ "Documentation utilisateur", "index.html", "index" ],
+    [ "Manuel", "index.html", "index" ],
     [ "Liste des choses à faire", "todo.html", null ],
     [ "Structures de données", "annotated.html", [
       [ "Structures de données", "annotated.html", "annotated_dup" ],
