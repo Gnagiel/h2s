@@ -14,6 +14,7 @@ class PersonnagesManager
     $perso->hydrate([
 		  'timeEndormi' => 0,
 		  'xp' => 0,
+      'xp_min' => 0,
       'atout' => 0,
       'team' => 0,
       'niveau' => 1,
@@ -90,6 +91,7 @@ class PersonnagesManager
       p.nom, p.types, p.emp_team,
       p.id_persos,
       q.etoile,
+      (n.xp_max - n.xp) as xp_min,
       (p.vie + (
 	      SELECT s.atr_2
 				FROM stuff s
@@ -181,6 +183,7 @@ class PersonnagesManager
     p.nom, p.types, p.emp_team,
     p.id_persos,
     q.etoile,
+    (n.xp_max - n.xp) as xp_min,
     (p.vie + (
       SELECT s.atr_2
 			FROM stuff s
@@ -229,6 +232,7 @@ class PersonnagesManager
     p.nom, p.types, p.emp_team,
     p.id_persos,
     q.etoile,
+    (n.xp_max - n.xp) as xp_min,
     (p.vie + (
       SELECT s.atr_2
 			FROM stuff s
@@ -275,6 +279,7 @@ class PersonnagesManager
     p.nom, p.types, p.emp_team,
     p.id_persos,
     q.etoile,
+    (n.xp_max - n.xp) as xp_min,
     (p.vie + (
       SELECT s.atr_2
 			FROM stuff s
@@ -332,6 +337,24 @@ class PersonnagesManager
     SET team = 0');
 
     $q->execute();
+  }
+
+  public function update_lvl(Personnage $perso)
+  {
+    $q = $this->db->prepare('SELECT n.niv_perso
+    FROM niv_perso n
+    WHERE n.xp_min <= :perso_xp
+    AND n.xp_max > :perso_xp2');
+    $q->execute([':perso_xp' => $perso->xp(),
+                ':perso_xp2' => $perso->xp()]);
+
+    $donnees = $q->fetch(PDO::FETCH_ASSOC);
+
+    $perso->hydrate([
+      'niveau' => $donnees["niv_perso"],
+    ]);
+    //$this->update($perso);
+    return $perso;
   }
 
   public function update_team($team, $id_perso)

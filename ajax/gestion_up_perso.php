@@ -17,10 +17,10 @@ foreach ($_SESSION['tab_perso'] as $id)
 {
 	$persos = $manager->get($id);
 	$perso->recevoirXP(60);
-	$manager->update($perso);
+  $perso = $manager->update_lvl($perso);	
 	$manager->delete($persos);
 }
-
+$manager->update($perso);
 unset($perso);
 $perso = $manager->get($_POST["btn_valid"]);
 
@@ -41,6 +41,9 @@ $entry = array(
 	'perso_crit' => utf8_encode($perso->crit()),
 	'perso_ten' => utf8_encode($perso->ten()),
 	'perso_soi' => utf8_encode($perso->soi()),
+  'xp' => utf8_encode($perso->xp()),
+  'xp_max' => utf8_encode($perso->xp_max()),
+  'xp_min' => utf8_encode($perso->xp_min()),
 	'tab' => $_SESSION['tab_perso']
 );
 

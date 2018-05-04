@@ -17,6 +17,7 @@ class Personnage
             $id_perso,
             $niveau,
             $xp,
+            $xp_min,
             $xp_max,
             $timeEndormi,
             $team,
@@ -111,13 +112,6 @@ class Personnage
 	public function recevoirXP($val)
   {
     $this->xp += $val;
-
-    // Si on a assez d'XP, on prend un lvl.
-    if ($this->xp >= $this->xp_max)
-    {
-      $this->niveau += 1;
-      //$this->xp = $this->xp - $this->XpMax;
-    }
   }
 
 	public function recevoirDegats($perso2)
@@ -189,6 +183,7 @@ class Personnage
   public function id_perso() { return $this->id_perso; }
   public function xp() { return $this->xp; }
   public function xp_max() { return $this->xp_max; }
+  public function xp_min() { return $this->xp_min; }
   public function niveau() { return $this->niveau; }
   public function qualite() { return $this->qualite; }
   public function etoile() { return $this->etoile; }
@@ -260,6 +255,13 @@ class Personnage
     $xp_max = (int) $xp_max;
 
     $this->xp_max = $xp_max;
+  }
+
+  public function setXp_min($xp_min)
+  {
+    $xp_min = (int) $xp_min;
+
+    $this->xp_min = $xp_min;
   }
 
   public function setQualite($qualite)

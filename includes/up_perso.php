@@ -16,11 +16,24 @@
 echo '<div id="team">';
 foreach ($perso as $persos)
 {
+
+	if ($persos->xp() != 0 && $persos->xp_max() != 0)
+	{
+		$level = (($persos->xp() - $persos->xp_min()) / ($persos->xp_max() - $persos->xp_min())) * 100;
+	}
+	else
+	{
+		$level = 0;
+	}
 	?>
 	<div class="affiche_stuff">
 		<div class="perso_menu" id="<?=$persos->nom();?><?=$persos->id_perso();?>">
 			<a href="./includes/up_perso_modal.php?id_perso=<?=$persos->id_perso()?>" class="manual-ajax" >
-	    <?= htmlspecialchars($persos->nom());?> (Niv <span id="lvl<?=$persos->id_perso();?>" ><?=htmlspecialchars($persos->niveau());?></span>)<br /><br />
+	    <?= htmlspecialchars($persos->nom());?> (Niv <span id="lvl<?=$persos->id_perso();?>" ><?=htmlspecialchars($persos->niveau());?></span>)<br />
+			<br />
+			<div class="progress">
+			  <div class="progress-bar" id="progress-bar<?=$persos->id_perso()?>" style="width: <?=$level?>%" role="progressbar" aria-valuenow="<?=$persos->xp()?>" aria-valuemin="0" aria-valuemax="<?=$persos->xp_max()?>"></div>
+			</div>
 			<br />
 	    <div class="sous_menu">
 	      <div>
@@ -44,7 +57,7 @@ foreach ($perso as $persos)
 	    <button type="button" class="btn btn-secondary btn_valid" name="btn_valid" value="<?=$persos->id_perso()?>">Choisir</button>
 
 	  </div>
-
+		<?php //var_dump($persos); ?>
 	</div>
 
 	<?php
@@ -137,6 +150,15 @@ echo '</div>';
 							$(".crit"+json[0].id_perso).html(json[0].perso_crit);
 							$(".ten"+json[0].id_perso).html(json[0].perso_ten);
 							$(".soi"+json[0].id_perso).html(json[0].perso_soi);
+							var xp = Number(json[0].xp);
+							var xp_max = Number(json[0].xp_max);
+							var xp_min = Number(json[0].xp_min);
+							//alert(xp + " " + xp_min + " " +  xp_max);
+							var level = 0;
+							level = (xp - xp_min) / (xp_max - xp_min);
+							level = level * 100;
+							//alert(level);
+							$("#progress-bar"+json[0].id_perso).width(level+"%");
 							$("#session_tab").html("Upgrade effectué");
 					}
 				});
