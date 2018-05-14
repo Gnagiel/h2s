@@ -1,18 +1,28 @@
 <?php
-class Base_personnage
-{
-  protected $id_persos,
-  					$nom,
-  					$types,
-            $emp_team,
-            $etoile,
-            $qualite,
-            $stuff_1,
-  					$stuff_2,
-  					$stuff_3,
-  					$stuff_4,  					
-  					$pv,
-  					$att;
+/**
+ * \class Base_personnage Base_personnage.php "class/Base_personnage.php" 
+ * \file      Base_personnage.php
+ * \author    Guillaume Nagiel
+ * \version   1.0
+ * \date      26 Janvier 2018
+ * \brief     Class de base des personnages.
+ *
+ * \details   Class de base des personnages. Elle définit les attributs et methodes inhérent à tous les personnages.
+ */
+
+class Base_personnage {
+  protected $id_persos, /*!< id du personnage */
+  					$nom, /*!< nom du personnage */
+  					$types, /*!< type du personnage */
+            $emp_team, /*!< emplacement si dans l'équipe */
+            $etoile, /*!< étoile du personnage */
+            $qualite, /*!< qualité du personnage */
+            $stuff_1, /*!< id de l'équipement n°1 */
+  					$stuff_2, /*!< id de l'équipement n°2 */
+  					$stuff_3, /*!< id de l'équipement n°3 */
+  					$stuff_4, /*!< id de l'équipement n°4 , vide par default */ 					
+  					$pv, /*!< point de vie du personnage */
+  					$att /*! degat du personnage */;
   					    
   public function __construct($valeurs = array())
   {

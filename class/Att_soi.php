@@ -1,4 +1,5 @@
 <?php
+
 class Att_soi extends Personnage
 {
   public function lancerUnSoin(Personnage $perso)

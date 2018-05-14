@@ -1,9 +1,11 @@
 <?php
+
 class Stuff
 {
   protected $id_stuff,
   					$nom,
   					$types,
+  					$cout,
             $etoile,
             $niveau,
             $qualite,
@@ -35,7 +37,22 @@ class Stuff
 	    }
 	  }
 	}
-	
+
+	public function lvlUp(User $user, $tab)
+  {    
+    // Si on a assez d'or, on prend un lvl.
+    if ($this->cout <= $user->argent())
+    {
+      $this->niveau += 1;
+      if ($this->atr_1 != 0) {
+      	$this->atr_1 = $this->atr_1 + intval($tab->up_atr_1);
+      }
+      elseif ($this->atr_2 != 0) {
+      	$this->atr_2 = $this->atr_2 + intval($tab->up_atr_2);
+      }
+    }
+  }
+  	
 	// GETTERS //
 
   public function nom() { return $this->nom; }
@@ -44,6 +61,7 @@ class Stuff
   public function niveau() { return $this->niveau; }  
   public function qualite() { return $this->qualite; }
   public function types() { return $this->types; }
+  public function cout() { return $this->cout; }  
   public function etoile() { return $this->etoile; }
   public function atr_1() { return $this->atr_1; }
   public function atr_2() { return $this->atr_2; }
@@ -68,6 +86,12 @@ class Stuff
     // L'identifiant du personnage sera, quoi qu'il arrive, un nombre entier.
     $this->niveau = (int) $niveau;
   }
+  
+  public function setCout($cout)
+  {
+    // L'identifiant du personnage sera, quoi qu'il arrive, un nombre entier.
+    $this->cout = (int) $cout;
+  }  
     
   public function setNom($nom)
   {

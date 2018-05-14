@@ -1,5 +1,6 @@
 <?php
-class Monk extends Personnage
+
+class Soigneur extends Personnage
 {
   public function lancerUnSoin(Personnage $perso)
   {        

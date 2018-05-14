@@ -1,0 +1,6 @@
+<map id="Personnage\etat" name="Personnage\etat">
+<area shape="rect" id="node2" href="$class_personnage.html#a226affce78dca0151e0901896e58f14d" title="Personnage\\recevoirDegats" alt="" coords="173,5,359,31"/>
+<area shape="rect" id="node4" href="$class_personnage.html#a570935e88aa03fb191a3f06a41f5aec5" title="Personnage\\debut_combat" alt="" coords="175,55,357,80"/>
+<area shape="rect" id="node5" href="$class_personnage.html#af368ea425266209c0dcf800bdfcf1b84" title="Personnage\\setEtat" alt="" coords="197,104,335,129"/>
+<area shape="rect" id="node3" href="$class_personnage.html#a1deaeddff5bc8766d52da4fc2d0b8032" title="Fonction pour frapper. " alt="" coords="407,5,546,31"/>
+</map>

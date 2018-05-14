@@ -4,7 +4,7 @@
     src: url('../polices/bangers-webfont.eot?#iefix') format('embedded-opentype'),
          url('../polices/bangers-webfont.woff2') format('woff2'),
          url('../polices/bangers-webfont.woff') format('woff'),
-         url('../polices/bangers-webfont.ttf') format('truetype'),        
+         url('../polices/bangers-webfont.ttf') format('truetype'),
          url('../polices/bangers-webfont.svg#bangersregular') format('svg');
     font-weight: normal;
     font-style: normal;
@@ -13,47 +13,40 @@
 #main_page {
 	width: 100%;
 	height: 620px;
-/*	background-image: url("../images/fond_accueil.jpg");
-	background-size: 100%;
-  background-attachment: fixed;*/
 }
 
 #combat_page {
 	background-color: grey;
-	margin-top:-20px;	
+	margin-top:-20px;
 	height: 620px;
 }
 
-/*body {
-	font-family: 'bangersregular'; 
-}*/
-
 #bouton_menu {
-	height: 550px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;	
+	justify-content: space-around;
 	align-items: center;
 }
 
 #bouton_menu li {
 	width: 200px;
-	height: 200px;	
-	text-align: center;	
+	height: 200px;
+	text-align: center;
 	list-style-type: none;
-	border-radius: 50%; 
-	background-color: grey;	
+	border-radius: 50%;
+	background-color: grey;
 	display: flex;
-	justify-content: space-around;	
-	align-items: center;	
+	justify-content: space-around;
+	align-items: center;
 }
 
 #bouton_menu li a {
 	color: white;
-	text-decoration: none;		
+	text-decoration: none;
 	padding: 80px;
 }
-a{
+
+a, a:hover {
 	color: black;
 	text-decoration: none;
 }
@@ -85,14 +78,14 @@ text-decoration:none
 
 #onglet_2, #onglet_3 {
 	display: none;
-} 
+}
 /*//////////////////// ONGLET  //////////////////*/
 
 
 
 #page {
 	display: flex;
-	justify-content: space-around;	
+	justify-content: space-around;
 	align-items: center;
 }
 
@@ -113,21 +106,21 @@ text-decoration:none
 #team {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;	
+	justify-content: space-around;
 	align-items: center;
 }
 
 #teamA {
 	display: flex;
 	flex-direction: column;
-	align-content: space-around;		
+	align-content: space-around;
 	align-items: center;
 }
 
 #teamB {
 	display: flex;
 	flex-direction: column;
-	align-content: space-around;	
+	align-content: space-around;
 	align-items: center;
 }
 
@@ -152,7 +145,7 @@ text-decoration:none
 	background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 95%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	width: 120px;
-	text-align: center;	
+	text-align: center;
 	margin: 2px;
 	border-radius: 20px;
 }
@@ -163,7 +156,7 @@ text-decoration:none
 	background: -webkit-radial-gradient(center, ellipse cover,  rgba(204,51,0,1) 0%,rgba(204,51,0,0) 75%,rgba(204,51,0,0) 95%,rgba(204,51,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: radial-gradient(ellipse at center,  rgba(204,51,0,1) 0%,rgba(204,51,0,0) 75%,rgba(204,51,0,0) 95%,rgba(204,51,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	width: 120px;
-	text-align: center;	
+	text-align: center;
 	margin: 2px;
 	border-radius: 20px;
 }
@@ -171,64 +164,64 @@ text-decoration:none
 .info {
 	left: 50px;
 	position: absolute;
-  font-family: 'bangersregular';   
+  font-family: 'bangersregular';
 }
 
 .perso_menu, .perso_menu_stuff {
 	border: 1px solid black;
 	padding : 20px;
-	width: 300px;	
-	text-align: center;	
+	width: 300px;
+	text-align: center;
 }
 
 .sous_menu {
 	display: flex;
-	justify-content: space-between;			
+	justify-content: space-around;
 }
 
 .perso_sous_menu {
 	width: 130px;
 	display: flex;
-	justify-content: space-between;	
-	align-items: center;		
+	justify-content: space-between;
+	align-items: center;
 }
 
 .list_cheat {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;			
+	justify-content: space-around;
 }
 
 .list_cheat_perso {
 	border: 1px solid black;
 	padding : 20px;
-	text-align: center;			
+	text-align: center;
 }
 
 .affiche_stuff {
 	width:550px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;			
+	justify-content: space-around;
 }
 
 .stuff_menu {
-	text-align: center;		
-	display: flex;	
+	text-align: center;
+	display: flex;
 	flex-direction: column;
-	justify-content: space-between;	
+	justify-content: space-between;
 }
 
 .stuff_test {
 	border: 1px solid black;
 	width:70px;
 	height:70px;
-	text-align: center;			
+	text-align: center;
 }
 
 #teamC {
 	display: flex;
-	justify-content: space-between;	
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -250,7 +243,7 @@ text-decoration:none
 	display: flex;
 	justify-content: space-around;
 	width: 90%;
-	height: 50px;	
+	height: 50px;
 	align-items: center;
 }
 
@@ -266,7 +259,7 @@ text-decoration:none
 #turn {
 	float:left;
 	width:175px;
-	text-align: center;	
+	text-align: center;
 	margin-left: 7px;
 }
 
@@ -286,7 +279,7 @@ text-decoration:none
 }
 
 .form {
-	text-align: center;	
+	text-align: center;
 	padding-top: 100px;
 }
 
@@ -314,7 +307,7 @@ text-decoration:none
 	text-align: center;
 	background-color: grey;
 	border: 1px solid black;
-	margin: 10px;	
+	margin: 10px;
 }
 
 .drag p {
@@ -342,4 +335,15 @@ text-decoration:none
 
 form {
 	text-align: center;
+}
+
+/*GESTION STUFF */
+
+.stuff_up {
+	text-align: center;
+}
+
+.img_stuff {
+	width:150px;
+	height:150px;
 }

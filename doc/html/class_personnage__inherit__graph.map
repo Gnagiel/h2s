@@ -1,0 +1,4 @@
+<map id="Personnage" name="Personnage">
+<area shape="rect" id="node2" href="$class_att__soi.html" title="{Att_soi\n||+ lancerUnSoin()\l}" alt="" coords="5,540,127,613"/>
+<area shape="rect" id="node3" href="$class_soigneur.html" title="{Soigneur\n||+ lancerUnSoin()\l}" alt="" coords="151,540,272,613"/>
+</map>

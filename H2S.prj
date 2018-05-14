@@ -22,13 +22,15 @@ Symbol Paths=
 Working Directory=
 Selected Debugger=2
 Source Paths=
-Watch Symbols 0=
+Watch Symbols 0=247068705F66696C655F74726565|2466696C65
 Watch Symbols 1=
 Watch Symbols 2=
 Watch Symbols 3=
-Column Coordinates 0=200|100|100|100
+Column Coordinates 0=200|100|563|100
 Column Coordinates 1=200|100|100|100
 Column Coordinates 2=200|100|100|100
 Column Coordinates 3=200|100|100|100
 [FilesW]
 0=.\
+[]
+Debugger=C:\wamp64\bin\php\php5.6.25\php-win.exe
