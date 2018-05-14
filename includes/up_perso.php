@@ -32,7 +32,7 @@ foreach ($perso as $persos)
 	    <?= htmlspecialchars($persos->nom());?> (Niv <span id="lvl<?=$persos->id_perso();?>" ><?=htmlspecialchars($persos->niveau());?></span>)<br />
 			<br />
 			<div class="progress">
-			  <div class="progress-bar" id="progress-bar<?=$persos->id_perso()?>" style="width: <?=$level?>%" role="progressbar" aria-valuenow="<?=$persos->xp()?>" aria-valuemin="0" aria-valuemax="<?=$persos->xp_max()?>"></div>
+			  <div class="progress-bar" id="progress-bar<?=$persos->id_perso()?>" style="width: <?=$level?>%" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="<?=$persos->xp_max()?>"></div>
 			</div>
 			<br />
 	    <div class="sous_menu">
