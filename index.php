@@ -96,6 +96,7 @@ include("./includes/Function_Jeu.php");
 <html lang='fr'>
 	<head>
     <title>Heroes Smash Storm</title>
+    <base href="/h2s/" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script   src="https://code.jquery.com/jquery-1.9.1.js"   integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="   crossorigin="anonymous"></script>
@@ -108,11 +109,11 @@ include("./includes/Function_Jeu.php");
     	google.load('jquery','1.9.1');
     </script>-->
     <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" media="screen" type="text/css" href="./style/style.css" />
 	  <script src="./JS/highlight/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
 	  <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
 	  <link rel="stylesheet" href="./JS/highlight/github.css" type="text/css" media="screen" />
     <meta charset="utf-8" />
+    <link rel="stylesheet" media="screen" type="text/css" href="./style/style.css" />
   </head>
 
   <body>
@@ -127,7 +128,7 @@ include("./includes/Function_Jeu.php");
 	?>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.php"><?=$user->pseudo();?></a>
+    <a class="navbar-brand" href="index"><?=$user->pseudo();?></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -135,22 +136,22 @@ include("./includes/Function_Jeu.php");
     <div class="collapse navbar-collapse justify-content-end" id="navbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="index.php?action=cheat">Cheat</a>
+          <a class="nav-link" href="index/cheat">Cheat</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?action=team">Team</a>
+          <a class="nav-link" href="index/team">Team</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?action=stuff">Amélioration de l'équipement</a>
+          <a class="nav-link" href="index/stuff">Amélioration de l'équipement</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?action=up_perso">Amélioration des personnages</a>
+          <a class="nav-link" href="index/up_perso">Amélioration des personnages</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?action=Combat">Combat PVE</a>
+          <a class="nav-link" href="index/combat">Combat PVE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?action=combatPVP">Combat PVP</a>
+          <a class="nav-link" href="index/combatPVP">Combat PVP</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./doc/html/index.html">Documentation</a>
@@ -231,12 +232,12 @@ include("./includes/Function_Jeu.php");
 		$_SESSION['tour'] = 0;
 		?>
 			<ul id="bouton_menu">
-				  <li><a href="index.php?action=cheat" class="root" >Cheat</a></li>
-				  <li><a href="index.php?action=team" class="root" >Team</a></li>
-				  <li><a href="index.php?action=stuff" class="root" >Amélioration de l'équipement</a></li>
-				  <li><a href="index.php?action=up_perso" class="root" >Amélioration des personnages</a></li>
-				  <li><a href="index.php?action=Combat" class="root" >Combat PVE</a></li>
-				  <li><a href="index.php?action=combatPVP" class="root" >Combat PVP</a></li>
+				  <li><a href="index/cheat" class="root" >Cheat</a></li>
+				  <li><a href="index/team" class="root" >Team</a></li>
+				  <li><a href="index/stuff" class="root" >Amélioration de l'équipement</a></li>
+				  <li><a href="index/up_perso" class="root" >Amélioration des personnages</a></li>
+				  <li><a href="index/combat" class="root" >Combat PVE</a></li>
+				  <li><a href="index/combatPVP" class="root" >Combat PVP</a></li>
 			</ul>
 
 		<?php

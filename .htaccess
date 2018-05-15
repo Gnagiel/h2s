@@ -1,3 +1,6 @@
+
 Options +FollowSymlinks
 RewriteEngine On
-RewriteRule	^index.html$	/h2s/index.php [L]
+RewriteRule	^index$	/h2s/index.php [L]
+# N'applique aucune règle pour les fichiers contenus dans le répertoire /style/
+RewriteRule	^index/(.+)$	/h2s/index.php?action=$1 [QSA,L,NE,PT]
