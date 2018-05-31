@@ -24,18 +24,15 @@ function chargerClass($class)
 
 spl_autoload_register('chargerClass');
 session_start();
-/**
-* \code{.php}
-*/
-if (isset($_GET['deconnexion']))
-{
+
+/// Si on clique sur déconnexion, un champ deconnexion se place dans la querystring et nous permet de rentrer dans cette condition. On détruit alors la session et in redirige vers l'interface de connexion.
+if (isset($_GET['deconnexion'])) {
   session_destroy();
   header("location:index.php");
 }
 
 include("./includes/identifiant.php");
 include("./includes/Function_Jeu.php");
-
 ?>
 <!doctype html>
 <html lang='fr'>
@@ -43,7 +40,9 @@ include("./includes/Function_Jeu.php");
     <title>Heroes Smash Storm</title>
     <base href="/h2s/" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="images/logos/1367009902-test2.png" type="image/x-icon">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <script   src="https://code.jquery.com/jquery-1.9.1.js"   integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="   crossorigin="anonymous"></script>
     <script src="./bootstrap/assets/js/vendor/popper.min.js"></script>
     <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
@@ -59,17 +58,19 @@ include("./includes/Function_Jeu.php");
 	  <link rel="stylesheet" href="./JS/highlight/github.css" type="text/css" media="screen" />
     <meta charset="utf-8" />
     <link rel="stylesheet" media="screen" type="text/css" href="./style/style.css" />
+    <link rel="stylesheet" href="assets/theme/css/style.css">
   </head>
 
   <body>
   <div id="main_page">
   <?php
-  if (isset($message)) // On a un message à afficher ?
-  {
+  /// Si on a un message stocker dans $message, on l'affiche en début de page.
+  if (isset($message)) {
     echo '<p>', $message, '</p>'; // Si oui, on l'affiche
   }
-  if (isset($user)) // Si on utilise un user (nouveau ou pas).
-  {
+
+  /// Si on est connecté, on affiche l'interface du jeu.
+  if (isset($user)) {
 	?>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -169,6 +170,8 @@ include("./includes/Function_Jeu.php");
 	}
 	else
 	{
+
+    /// Si un log de combat existe, on le détruit.
 		if (file_exists($_SESSION['user']->pseudo().".txt")) {
 			//unlink($_SESSION['user']->pseudo().".txt");
 		}
@@ -221,6 +224,52 @@ else // Si on veut utiliser ou créer un user.
   });
   </script>
 	</div>
+  <section class="cid-qQ8zjsXxiv" id="footer1-a">
+      <div class="container">
+          <div class="media-container-row content text-white">
+              <div class="col-12 col-md-3">
+                  <div class="media-wrap">
+                      <a href="">
+                          <img src="images/logos/1367009902-test2.png" alt="logo" title="">
+                      </a>
+                  </div>
+              </div>
+              <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                  <h5 class="pb-3">
+                      Address
+                  </h5>
+                  <p class="mbr-text">156 Avenue Jean-Jaures<br>47000 AGEN</p>
+              </div>
+              <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                  <h5 class="pb-3">
+                      Contacts
+                  </h5>
+                  <p class="mbr-text">
+                      Email: tech.in.job@intech-sud.fr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>Phone: +33 (0)5 35 55 61 51<br></p>
+              </div>
+              <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                  <h5 class="pb-3">
+                      Links
+                  </h5>
+                  <p class="mbr-text"><a href="https://www.intechinfo.fr/" target="_blank" class="text-white">IN'TECH</a></p>
+              </div>
+          </div>
+          <div class="footer-lower">
+              <div class="media-container-row">
+                  <div class="col-sm-12">
+                      <hr>
+                  </div>
+              </div>
+              <div class="media-container-row mbr-white">
+                  <div class="col-sm-12 copyright">
+                      <p class="mbr-text mbr-fonts-style display-7">
+                          © Copyright 2017 tech in JOB - All Rights Reserved
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
 
   </body>
