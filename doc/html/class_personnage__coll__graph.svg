@@ -19,18 +19,18 @@
 <text text-anchor="start" x="8" y="-324.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $id_perso</text>
 <text text-anchor="start" x="8" y="-314.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $niveau</text>
 <text text-anchor="start" x="8" y="-304.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $xp</text>
-<text text-anchor="start" x="8" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $xp_max</text>
-<text text-anchor="start" x="8" y="-284.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $timeEndormi</text>
-<text text-anchor="start" x="8" y="-274.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $team</text>
-<text text-anchor="start" x="8" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $etat</text>
-<text text-anchor="start" x="8" y="-254.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pv</text>
-<text text-anchor="start" x="8" y="-244.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $att</text>
-<text text-anchor="start" x="8" y="-234.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $def</text>
-<text text-anchor="start" x="8" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $vit</text>
-<text text-anchor="start" x="8" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pen</text>
-<text text-anchor="start" x="8" y="-204.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $arm</text>
-<text text-anchor="start" x="8" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pre</text>
-<text text-anchor="start" x="8" y="-184.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">et 22 de plus...</text>
+<text text-anchor="start" x="8" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $xp_min</text>
+<text text-anchor="start" x="8" y="-284.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $xp_max</text>
+<text text-anchor="start" x="8" y="-274.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $timeEndormi</text>
+<text text-anchor="start" x="8" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $team</text>
+<text text-anchor="start" x="8" y="-254.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $etat</text>
+<text text-anchor="start" x="8" y="-244.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pv</text>
+<text text-anchor="start" x="8" y="-234.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $att</text>
+<text text-anchor="start" x="8" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $def</text>
+<text text-anchor="start" x="8" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $vit</text>
+<text text-anchor="start" x="8" y="-204.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pen</text>
+<text text-anchor="start" x="8" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $arm</text>
+<text text-anchor="start" x="8" y="-184.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">et 23 de plus...</text>
 <text text-anchor="start" x="8" y="-174.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># $atout</text>
 <polyline fill="none" stroke="#000000" points="0,-168.5 98.5342,-168.5 "/>
 <text text-anchor="start" x="8" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ __construct()</text>
@@ -48,7 +48,7 @@
 <text text-anchor="start" x="8" y="-36.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ id_perso()</text>
 <text text-anchor="start" x="8" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ xp()</text>
 <text text-anchor="start" x="8" y="-16.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ xp_max()</text>
-<text text-anchor="start" x="8" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">et 56 de plus...</text>
+<text text-anchor="start" x="8" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">et 58 de plus...</text>
 </g>
 </g>
 </svg>

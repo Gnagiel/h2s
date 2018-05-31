@@ -68,7 +68,7 @@ var sectionId = 'dynsection-0';
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="class_personnage.html" target="_top" xlink:title="{Personnage\n|+ $id_user\l+ $id_perso\l+ $niveau\l+ $xp\l+ $xp_max\l+ $timeEndormi\l+ $team\l+ $etat\l+ $pv\l+ $att\l+ $def\l+ $vit\l+ $pen\l+ $arm\l+ $pre\let 22 de plus...\l# $atout\l|+ __construct()\l+ hydrate()\l+ estEndormi()\l+ frapper()\l+ recevoirXP()\l+ recevoirDegats()\l+ soigner()\l+ recevoirSoins()\l+ debut_combat()\l+ reveil()\l+ incrementAtout()\l+ id_user()\l+ id_perso()\l+ xp()\l+ xp_max()\let 56 de plus...\l}">
+<g id="a_node2"><a xlink:href="class_personnage.html" target="_top" xlink:title="{Personnage\n|+ $id_user\l+ $id_perso\l+ $niveau\l+ $xp\l+ $xp_min\l+ $xp_max\l+ $timeEndormi\l+ $team\l+ $etat\l+ $pv\l+ $att\l+ $def\l+ $vit\l+ $pen\l+ $arm\let 23 de plus...\l# $atout\l|+ __construct()\l+ hydrate()\l+ estEndormi()\l+ frapper()\l+ recevoirXP()\l+ recevoirDegats()\l+ soigner()\l+ recevoirSoins()\l+ debut_combat()\l+ reveil()\l+ incrementAtout()\l+ id_user()\l+ id_perso()\l+ xp()\l+ xp_max()\let 58 de plus...\l}">
 <polygon fill="#ffffff" stroke="#000000" points="0,-91.5 0,-455.5 98.5342,-455.5 98.5342,-91.5 0,-91.5"/>
 <text text-anchor="middle" x="49.2671" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Personnage</text>
 <polyline fill="none" stroke="#000000" points="0,-437.5 98.5342,-437.5 "/>
@@ -76,18 +76,18 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="8" y="-415.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $id_perso</text>
 <text text-anchor="start" x="8" y="-405.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $niveau</text>
 <text text-anchor="start" x="8" y="-395.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $xp</text>
-<text text-anchor="start" x="8" y="-385.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $xp_max</text>
-<text text-anchor="start" x="8" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $timeEndormi</text>
-<text text-anchor="start" x="8" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $team</text>
-<text text-anchor="start" x="8" y="-355.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $etat</text>
-<text text-anchor="start" x="8" y="-345.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pv</text>
-<text text-anchor="start" x="8" y="-335.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $att</text>
-<text text-anchor="start" x="8" y="-325.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $def</text>
-<text text-anchor="start" x="8" y="-315.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $vit</text>
-<text text-anchor="start" x="8" y="-305.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pen</text>
-<text text-anchor="start" x="8" y="-295.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $arm</text>
-<text text-anchor="start" x="8" y="-285.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pre</text>
-<text text-anchor="start" x="8" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">et 22 de plus...</text>
+<text text-anchor="start" x="8" y="-385.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $xp_min</text>
+<text text-anchor="start" x="8" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $xp_max</text>
+<text text-anchor="start" x="8" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $timeEndormi</text>
+<text text-anchor="start" x="8" y="-355.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $team</text>
+<text text-anchor="start" x="8" y="-345.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $etat</text>
+<text text-anchor="start" x="8" y="-335.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pv</text>
+<text text-anchor="start" x="8" y="-325.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $att</text>
+<text text-anchor="start" x="8" y="-315.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $def</text>
+<text text-anchor="start" x="8" y="-305.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $vit</text>
+<text text-anchor="start" x="8" y="-295.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pen</text>
+<text text-anchor="start" x="8" y="-285.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $arm</text>
+<text text-anchor="start" x="8" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">et 23 de plus...</text>
 <text text-anchor="start" x="8" y="-265.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># $atout</text>
 <polyline fill="none" stroke="#000000" points="0,-259.5 98.5342,-259.5 "/>
 <text text-anchor="start" x="8" y="-247.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ __construct()</text>
@@ -105,7 +105,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="8" y="-127.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ id_perso()</text>
 <text text-anchor="start" x="8" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ xp()</text>
 <text text-anchor="start" x="8" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ xp_max()</text>
-<text text-anchor="start" x="8" y="-97.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">et 56 de plus...</text>
+<text text-anchor="start" x="8" y="-97.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">et 58 de plus...</text>
 </a>
 </g>
 </g>

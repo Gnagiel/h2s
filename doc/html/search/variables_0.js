@@ -1,11 +1,14 @@
 var searchData=
 [
+  ['_24_5fsession',['$_SESSION',['../index_8php.html#ac31011e1f60d90d4fb30b9d52a1ee4aa',1,'index.php']]],
   ['_24argent',['$argent',['../class_user.html#a79520a8a5b3c4631fc9f92312fc90854',1,'User']]],
   ['_24arm',['$arm',['../class_personnage.html#a317df061881238833410018536fc7e89',1,'Personnage']]],
   ['_24atout',['$atout',['../class_personnage.html#a8f907b4e3eddc4042ca7b0a30a7df51c',1,'Personnage']]],
   ['_24atr_5f1',['$atr_1',['../class_stuff.html#a1d53fb4decffa46e91d7d97af818ed11',1,'Stuff']]],
   ['_24atr_5f2',['$atr_2',['../class_stuff.html#ae58100a21fb46de944460d1e5599d68e',1,'Stuff']]],
   ['_24att',['$att',['../class_base__personnage.html#a95a0c782140918824dcb403e4fe83db4',1,'Base_personnage\$att()'],['../class_personnage.html#af656014aa0bcdb218dda521175b7ca7d',1,'Personnage\$att()']]],
+  ['_24classes',['$classes',['../php__filter_8php.html#a4212f1eca3e4faf764728d56bc13dfd3',1,'php_filter.php']]],
+  ['_24closingbracepos',['$closingBracePos',['../php__filter_8php.html#acc6803f3c8c5324a8378eebe9ab6f3b8',1,'php_filter.php']]],
   ['_24cout',['$cout',['../class_stuff.html#a73bdc82076db4b6966704f0ca381bb27',1,'Stuff']]],
   ['_24crit',['$crit',['../class_personnage.html#a4200ea4e8cf620cd02e67abd20bf4704',1,'Personnage']]],
   ['_24def',['$def',['../class_personnage.html#a73553ab3389a0ae13b6fb74e95ffb678',1,'Personnage']]],
@@ -31,6 +34,7 @@ var searchData=
   ['_24mdp',['$mdp',['../class_user.html#a1859346ac71910451896694bf682cd89',1,'User']]],
   ['_24niveau',['$niveau',['../class_personnage.html#a3b7142756b0726ddcfbdf15f25e73013',1,'Personnage\$niveau()'],['../class_stuff.html#a0a814c87c774e0edc5dca84f127d2844',1,'Stuff\$niveau()'],['../class_user.html#ad6256c6f687a1dc86e7569f5862f86b4',1,'User\$niveau()']]],
   ['_24nom',['$nom',['../class_base__personnage.html#afd27c4f68e90081ac017ad811ceecc13',1,'Base_personnage\$nom()'],['../class_personnage.html#a52bdc2f86e26ee040520cb2fce00c016',1,'Personnage\$nom()'],['../class_stuff.html#a483af054953bae13906012fae9cb1c0e',1,'Stuff\$nom()']]],
+  ['_24openingbracepos',['$openingBracePos',['../php__filter_8php.html#a1358febb5e20fc83af3d7ca9211114d7',1,'php_filter.php']]],
   ['_24or_5f',['$or_',['../class_user.html#af074b3f75584864604427a86112de654',1,'User']]],
   ['_24pen',['$pen',['../class_personnage.html#a0755ccfa96194e0b53a52145e064a6f4',1,'Personnage']]],
   ['_24perso',['$perso',['../add__perso_8php.html#a648bcc9981df7cceb4b931a80064a6c5',1,'$perso():&#160;add_perso.php'],['../gestion__stuff_8php.html#a648bcc9981df7cceb4b931a80064a6c5',1,'$perso():&#160;gestion_stuff.php'],['../gestion__up__perso_8php.html#a648bcc9981df7cceb4b931a80064a6c5',1,'$perso():&#160;gestion_up_perso.php'],['../sup__perso_8php.html#a648bcc9981df7cceb4b931a80064a6c5',1,'$perso():&#160;sup_perso.php']]],
@@ -38,7 +42,10 @@ var searchData=
   ['_24pseudo',['$pseudo',['../class_user.html#afef83346eacede41ce6c2450a64de7a8',1,'User']]],
   ['_24pv',['$pv',['../class_base__personnage.html#aa052dcb8719da97edec439217353a80b',1,'Base_personnage\$pv()'],['../class_personnage.html#a141c51268500c29e5d32388a715385c4',1,'Personnage\$pv()']]],
   ['_24qualite',['$qualite',['../class_base__personnage.html#a740e0ca5d6d55c3d196c465749504e0d',1,'Base_personnage\$qualite()'],['../class_personnage.html#a02762eb4d5e56672d1cba97679661b49',1,'Personnage\$qualite()'],['../class_stuff.html#a928b6a9a6bd623efbcfd4ba2f9e51d59',1,'Stuff\$qualite()']]],
+  ['_24regexp',['$regexp',['../php__filter_8php.html#a33522f9e38f97add84cf6a3c7e5d39ab',1,'php_filter.php']]],
+  ['_24replace',['$replace',['../php__filter_8php.html#aed6e7e83c8d3cbc4f6797f93bf4a602b',1,'php_filter.php']]],
   ['_24soi',['$soi',['../class_personnage.html#af3cf1d157c89a87bc64735f8b67ea5e1',1,'Personnage']]],
+  ['_24source',['$source',['../php__filter_8php.html#a99a2b085f0a29bd5d799fdcbb63d261b',1,'php_filter.php']]],
   ['_24stuff',['$stuff',['../gestion__stuff_8php.html#a76bfc00f1cc8b5d6c8ee34bc94d5f3e7',1,'gestion_stuff.php']]],
   ['_24stuff_5f1',['$stuff_1',['../class_base__personnage.html#a15cf5869509ee2bad46d637b1ec3e7d0',1,'Base_personnage\$stuff_1()'],['../class_personnage.html#a42e6869532c1ab4ef22b184a32e7731c',1,'Personnage\$stuff_1()']]],
   ['_24stuff_5f2',['$stuff_2',['../class_base__personnage.html#a4e35acccaa1e6ef3a08f3c31f6a2dc4c',1,'Base_personnage\$stuff_2()'],['../class_personnage.html#a5d60aca8a94609c63fce087a54e1b514',1,'Personnage\$stuff_2()']]],
@@ -48,10 +55,12 @@ var searchData=
   ['_24team',['$team',['../class_personnage.html#a6ad71afaee95c8a74314ed4dbde996fa',1,'Personnage']]],
   ['_24ten',['$ten',['../class_personnage.html#a8b582f85a6f349ca07ebf7bea833f2c0',1,'Personnage']]],
   ['_24timeendormi',['$timeEndormi',['../class_personnage.html#aa65967577dc96f51e7ac97ad693db6ba',1,'Personnage']]],
+  ['_24tokens',['$tokens',['../php__filter_8php.html#a72ead29e4317fbc4335fd3ba764e8b59',1,'php_filter.php']]],
   ['_24types',['$types',['../class_base__personnage.html#a9b93bd32a21d0fbecdd136edc1b5d4e4',1,'Base_personnage\$types()'],['../class_personnage.html#a359e3877a58637216b1922083c037726',1,'Personnage\$types()'],['../class_stuff.html#a1c7a83697898f22a8ef9ccdcb296d9ca',1,'Stuff\$types()']]],
   ['_24user',['$user',['../add__perso_8php.html#a598ca4e71b15a1313ec95f0df1027ca5',1,'add_perso.php']]],
   ['_24usermanager',['$usermanager',['../add__perso_8php.html#a1844abd2b7670cc866b055ad9d342102',1,'add_perso.php']]],
   ['_24vit',['$vit',['../class_personnage.html#a0ea966627267856b8a91ddd9d8d8bbee',1,'Personnage']]],
   ['_24xp',['$xp',['../class_personnage.html#a61c48e5d8e8f292eae5ee25bdece2ea5',1,'Personnage\$xp()'],['../class_user.html#a063b57fc9f20bea915e12eb745149c32',1,'User\$xp()']]],
-  ['_24xp_5fmax',['$xp_max',['../class_personnage.html#a5db9df67ee8e4db9cd102cd1e3c16d66',1,'Personnage\$xp_max()'],['../class_user.html#ad47865919a843bb699e5f4773c66ae71',1,'User\$Xp_Max()']]]
+  ['_24xp_5fmax',['$xp_max',['../class_personnage.html#a5db9df67ee8e4db9cd102cd1e3c16d66',1,'Personnage\$xp_max()'],['../class_user.html#ad47865919a843bb699e5f4773c66ae71',1,'User\$Xp_Max()']]],
+  ['_24xp_5fmin',['$xp_min',['../class_personnage.html#a99fd4af2a70da7d28624cb4a5a04162c',1,'Personnage']]]
 ];

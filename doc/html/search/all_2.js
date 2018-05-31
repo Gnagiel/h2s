@@ -4,6 +4,7 @@ var searchData=
   ['add_5fperso_2ejs',['add_perso.js',['../add__perso_8js.html',1,'']]],
   ['add_5fperso_2ephp',['add_perso.php',['../add__perso_8php.html',1,'']]],
   ['afficheperso',['affichePerso',['../_function___jeu_8php.html#a99d6d6774e3dfca9aa050319450c9799',1,'Function_Jeu.php']]],
+  ['annexes',['Annexes',['../annexes.html',1,'DocTechnique']]],
   ['argent',['argent',['../class_user.html#a2a6a97a5e1ddb08da30802aec1b0eb0a',1,'User']]],
   ['arm',['arm',['../class_personnage.html#afa3847dccf10793b4512467e6fdb98fc',1,'Personnage']]],
   ['atout',['atout',['../class_personnage.html#a54f0e416a628b1b7246f3c3a7c2081fa',1,'Personnage']]],

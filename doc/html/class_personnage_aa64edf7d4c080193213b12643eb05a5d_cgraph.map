@@ -1,5 +1,3 @@
 <map id="Personnage\recevoirXP" name="Personnage\recevoirXP">
-<area shape="rect" id="node2" href="$class_personnage.html#a60b2a6a44bc71517c063d87c062e0b87" title="Personnage\\xp" alt="" coords="232,5,343,31"/>
-<area shape="rect" id="node3" href="$class_personnage.html#aa5bc9f2bda281400fedbc1af1c19357d" title="Personnage\\xp_max" alt="" coords="215,55,359,80"/>
-<area shape="rect" id="node4" href="$class_personnage.html#a061130b0c1c551d893ecffff2553cb93" title="Personnage\\niveau" alt="" coords="219,104,355,129"/>
+<area shape="rect" id="node2" href="$class_personnage.html#a60b2a6a44bc71517c063d87c062e0b87" title="Personnage\\xp" alt="" coords="215,5,327,31"/>
 </map>

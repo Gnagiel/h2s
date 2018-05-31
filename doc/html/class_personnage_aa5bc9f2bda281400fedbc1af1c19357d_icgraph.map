@@ -1,7 +1,3 @@
 <map id="Personnage\xp_max" name="Personnage\xp_max">
-<area shape="rect" id="node2" href="$class_personnage.html#aa64edf7d4c080193213b12643eb05a5d" title="Personnage\\recevoirXP" alt="" coords="198,55,360,80"/>
-<area shape="rect" id="node6" href="$class_personnage.html#a19b9b5a7408d7d8b707e278e24af358f" title="Personnage\\setXp_max" alt="" coords="197,104,361,129"/>
-<area shape="rect" id="node3" href="$class_att__soi.html#a7da2d15a0bedd2880e7491f72b430bf0" title="Att_soi\\lancerUnSoin" alt="" coords="415,5,561,31"/>
-<area shape="rect" id="node4" href="$class_personnage.html#a1deaeddff5bc8766d52da4fc2d0b8032" title="Fonction pour frapper. " alt="" coords="418,55,557,80"/>
-<area shape="rect" id="node5" href="$class_soigneur.html#ac68dd65c897e55dc77d354e79e79a52c" title="Soigneur\\lancerUnSoin" alt="" coords="409,104,567,129"/>
+<area shape="rect" id="node2" href="$class_personnage.html#a19b9b5a7408d7d8b707e278e24af358f" title="Personnage\\setXp_max" alt="" coords="197,5,361,31"/>
 </map>

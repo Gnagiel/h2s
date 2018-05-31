@@ -9,24 +9,24 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 23)">
 <title>Personnage\setVit</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-23 220.252,-23 220.252,4 -4,4"/>
-<!-- Node190 -->
+<!-- Node182 -->
 <g id="node1" class="node">
-<title>Node190</title>
+<title>Node182</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-.5 0,-18.5 97.543,-18.5 97.543,-.5 0,-.5"/>
 <text text-anchor="middle" x="48.7715" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Personnage\setVit</text>
 </g>
-<!-- Node191 -->
+<!-- Node183 -->
 <g id="node2" class="node">
-<title>Node191</title>
+<title>Node183</title>
 <g id="a_node2"><a xlink:href="class_personnage.html#a2b3231199bcc4e3515dfada8efb24313" target="_top" xlink:title="Personnage\\vit">
 <polygon fill="#ffffff" stroke="#000000" points="133.543,-.5 133.543,-18.5 216.252,-18.5 216.252,-.5 133.543,-.5"/>
 <text text-anchor="middle" x="174.8975" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Personnage\vit</text>
 </a>
 </g>
 </g>
-<!-- Node190&#45;&gt;Node191 -->
+<!-- Node182&#45;&gt;Node183 -->
 <g id="edge1" class="edge">
-<title>Node190&#45;&gt;Node191</title>
+<title>Node182&#45;&gt;Node183</title>
 <path fill="none" stroke="#191970" d="M97.8962,-9.5C106.2558,-9.5 114.9594,-9.5 123.3788,-9.5"/>
 <polygon fill="#191970" stroke="#191970" points="123.4654,-13.0001 133.4654,-9.5 123.4653,-6.0001 123.4654,-13.0001"/>
 </g>

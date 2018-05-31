@@ -15,5 +15,6 @@ var class_personnages_manager =
     [ "setDb", "class_personnages_manager.html#ad34d7d8f0716d1261437eff3eb7af7d0", null ],
     [ "sup_team", "class_personnages_manager.html#abae7db357c0730386a2804f1716d26f2", null ],
     [ "update", "class_personnages_manager.html#a21d75e552a085ee6178544d71f72b31c", null ],
+    [ "update_lvl", "class_personnages_manager.html#ad5c864d56b8ca4e71ab81403d4309014", null ],
     [ "update_team", "class_personnages_manager.html#a1847a27412e7325761f5866f584e3b22", null ]
 ];
