@@ -22,10 +22,7 @@ foreach ($perso as $persos)
 <div class="affiche_stuff">
 	<div class="perso_menu" id="<?=$persos->nom();?><?=$persos->id_perso();?>">
     <?= htmlspecialchars($persos->nom()).' (Niv'.htmlspecialchars($persos->niveau()).')' ?><br /><br />
-<!--	  <form class="" method="POST" action="index.php?action=cheat">
-			<input type="hidden" name="id_perso" value="<?=$persos->id_perso();?>" />
-			<input type="submit" value="-" />
-		</form>--><br />
+		<br />
     <div class="sous_menu">
       <div>
 	      <div class="perso_sous_menu"><span>PV</span><?= htmlspecialchars($persos->pv()) ?><br /></div>

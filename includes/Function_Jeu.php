@@ -101,6 +101,4 @@ function fonctionComparaison($a, $b){
     	$message = 'L\'utilisateur n\'existe pas';
     }
 	}
-
-
 ?>
