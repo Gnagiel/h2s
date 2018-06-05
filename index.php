@@ -94,7 +94,7 @@ include("./includes/Function_Jeu.php");
           <a class="nav-link" href="index/up_perso">Amélioration des personnages</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index/combat">Combat PVE</a>
+          <a class="nav-link" href="index/histoire">Histoire</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index/combatPVP">Combat PVP</a>
@@ -150,9 +150,14 @@ include("./includes/Function_Jeu.php");
 				include("./includes/up_perso.php");
 			break;
 
-			// COMBAT
+      // COMBAT
 			case 'combat':
+        include("./includes/function_combat.php");
+			break;
 
+			// HISTOIRE
+			case 'histoire':
+        include("./includes/histoire.php");
 			break;
 
 			// CHOIX PVP
@@ -184,7 +189,7 @@ include("./includes/Function_Jeu.php");
 				  <li><a href="index/team" class="root" >Team</a></li>
 				  <li><a href="index/stuff" class="root" >Amélioration de l'équipement</a></li>
 				  <li><a href="index/up_perso" class="root" >Amélioration des personnages</a></li>
-				  <li><a href="index/combat" class="root" >Combat PVE</a></li>
+				  <li><a href="index/histoire" class="root" >Histoire</a></li>
 				  <li><a href="index/combatPVP" class="root" >Combat PVP</a></li>
 			</ul>
 
@@ -226,7 +231,7 @@ else // Si on veut utiliser ou créer un user.
 	</div>
   <section class="cid-qQ8zjsXxiv" id="footer1-a">
       <div class="container">
-          <div class="media-container-row content text-white">
+          <div class="media-container-row content text-grey">
               <div class="col-12 col-md-3">
                   <div class="media-wrap">
                       <a href="">
@@ -245,13 +250,17 @@ else // Si on veut utiliser ou créer un user.
                       Contacts
                   </h5>
                   <p class="mbr-text">
-                      Email: tech.in.job@intech-sud.fr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>Phone: +33 (0)5 35 55 61 51<br></p>
+                    Email: g.nagiel@intech-sud.fr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                    <br>
+                    Phone: +33 (0)5 35 55 61 51
+                    <br>
+                  </p>
               </div>
               <div class="col-12 col-md-3 mbr-fonts-style display-7">
                   <h5 class="pb-3">
                       Links
                   </h5>
-                  <p class="mbr-text"><a href="https://www.intechinfo.fr/" target="_blank" class="text-white">IN'TECH</a></p>
+                  <p class="mbr-text"><a href="https://www.intechinfo.fr/" target="_blank" class="text-grey">IN'TECH</a></p>
               </div>
           </div>
           <div class="footer-lower">
@@ -260,10 +269,10 @@ else // Si on veut utiliser ou créer un user.
                       <hr>
                   </div>
               </div>
-              <div class="media-container-row mbr-white">
+              <div class="media-container-row mbr-grey">
                   <div class="col-sm-12 copyright">
                       <p class="mbr-text mbr-fonts-style display-7">
-                          © Copyright 2017 tech in JOB - All Rights Reserved
+                          © Copyright 2017 IN'TECH - All Rights Reserved
                       </p>
                   </div>
               </div>

@@ -84,6 +84,47 @@ class PersonnagesManager
     return $perso;
   }
 
+  public function get_team($info, $user)
+  {
+    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4,
+    p.nom, p.types, p.emp_team, p.team,
+    p.id_persos,
+    q.etoile,
+    (n.xp_max - n.xp) as xp_min,
+    (p.vie + n.vie + (
+      SELECT s.atr_2
+			FROM stuff s
+      WHERE s.id_stuff = t.stuff_3
+    )) pv,
+    (p.att + n.att + (
+      SELECT s.atr_1
+			FROM stuff s
+      WHERE s.id_stuff = t.stuff_1
+    )) att,
+    (p.def + (
+      SELECT s.atr_1
+      FROM stuff s
+      WHERE s.id_stuff = t.stuff_2
+    )) def,
+    p.vit,
+    p.pen, p.arm, p.pre, p.esc, p.crit, p.ten, p.soi,
+    n.xp_max
+    FROM team t
+    INNER JOIN persos p
+    ON t.id_persos = p.id_persos
+    INNER JOIN niv_perso n
+    ON t.niveau = n.niv_perso
+    INNER JOIN q_perso q
+    ON t.qualite = q.id_q
+    WHERE t.id_user = :id_user AND t.team = :team');
+    $q->bindValue(':team', $info, PDO::PARAM_INT);
+    $q->bindValue(':id_user', $user, PDO::PARAM_INT);
+
+    $q->execute();
+		$perso = $q->fetch(PDO::FETCH_ASSOC);
+    return new Personnage($perso);
+  }
+
   public function get($info)
   {
 
@@ -92,15 +133,15 @@ class PersonnagesManager
       p.id_persos,
       q.etoile,
       (n.xp_max - n.xp) as xp_min,
-      (p.vie + (
-	      SELECT s.atr_2
-				FROM stuff s
-	      WHERE s.id_stuff = t.stuff_3
+      (p.vie + n.vie + (
+        SELECT s.atr_2
+  			FROM stuff s
+        WHERE s.id_stuff = t.stuff_3
       )) pv,
-      (p.att + (
-	      SELECT s.atr_1
-				FROM stuff s
-	      WHERE s.id_stuff = t.stuff_1
+      (p.att + n.att + (
+        SELECT s.atr_1
+  			FROM stuff s
+        WHERE s.id_stuff = t.stuff_1
       )) att,
       (p.def + (
 	      SELECT s.atr_1
@@ -184,12 +225,12 @@ class PersonnagesManager
     p.id_persos,
     q.etoile,
     (n.xp_max - n.xp) as xp_min,
-    (p.vie + (
+    (p.vie + n.vie + (
       SELECT s.atr_2
 			FROM stuff s
       WHERE s.id_stuff = t.stuff_3
     )) pv,
-    (p.att + (
+    (p.att + n.att + (
       SELECT s.atr_1
 			FROM stuff s
       WHERE s.id_stuff = t.stuff_1
@@ -233,12 +274,12 @@ class PersonnagesManager
     p.id_persos,
     q.etoile,
     (n.xp_max - n.xp) as xp_min,
-    (p.vie + (
+    (p.vie + n.vie + (
       SELECT s.atr_2
 			FROM stuff s
       WHERE s.id_stuff = t.stuff_3
     )) pv,
-    (p.att + (
+    (p.att + n.att + (
       SELECT s.atr_1
 			FROM stuff s
       WHERE s.id_stuff = t.stuff_1
@@ -280,12 +321,12 @@ class PersonnagesManager
     p.id_persos,
     q.etoile,
     (n.xp_max - n.xp) as xp_min,
-    (p.vie + (
+    (p.vie + n.vie + (
       SELECT s.atr_2
 			FROM stuff s
       WHERE s.id_stuff = t.stuff_3
     )) pv,
-    (p.att + (
+    (p.att + n.att + (
       SELECT s.atr_1
 			FROM stuff s
       WHERE s.id_stuff = t.stuff_1
@@ -341,7 +382,7 @@ class PersonnagesManager
 
   public function update_lvl(Personnage $perso)
   {
-    $q = $this->db->prepare('SELECT n.niv_perso
+    $q = $this->db->prepare('SELECT n.niv_perso, n.vie, n.att
     FROM niv_perso n
     WHERE n.xp_min <= :perso_xp
     AND n.xp_max > :perso_xp2');
@@ -352,6 +393,8 @@ class PersonnagesManager
 
     $perso->hydrate([
       'niveau' => $donnees["niv_perso"],
+      'pv' => $donnees["vie"],
+      'att' => $donnees["att"],
     ]);
     //$this->update($perso);
     return $perso;

@@ -42,7 +42,8 @@ class Personnage
             $stuff_1, /*!< id de l'équipement n°1 */
   					$stuff_2, /*!< id de l'équipement n°2 */
   					$stuff_3, /*!< id de l'équipement n°3 */
-  					$stuff_4; /*!< id de l'équipement n°4 , vide par default */
+  					$stuff_4, /*!< id de l'équipement n°4 , vide par default */
+            $vieMax; /*!< Niveau de vie au maximum */
 
 
   const CEST_MOI = 1;
@@ -156,7 +157,7 @@ class Personnage
 
 	public function debut_combat()
   {
-  	$this->vie = $this->vieMax;
+  	$this->vieMax = $this->pv;
   	$this->etat = 'good';
   	$this->timeEndormi = 0;
   }
@@ -210,6 +211,7 @@ class Personnage
   public function pv() { return $this->pv; }
   public function att() { return $this->att; }
   public function emp_team() { return $this->emp_team; }
+  public function vieMax() { return $this->vieMax; }
 
   public function setAtout($atout)
   {
@@ -505,6 +507,18 @@ class Personnage
       $this->stuff_4 = $stuff_4;
     }
   }
+
+  public function setVieMax($vieMax)
+  {
+    $vieMax = (int) $vieMax;
+
+    // On vérifie que la vie n'est pas négative.
+    if ($vieMax >= 0)
+    {
+      $this->$vieMax = $this->$pv();
+    }
+  }
+
 
 }
 
