@@ -12,7 +12,7 @@ include("../includes/identifiant.php");
 $manager = new PersonnagesManager($db);
 if (isset($_POST['choix']))
 {
-	$manager->sup_team();
+	$manager->sup_team($_SESSION['user']);
 	$tab_team = $_POST['choix'];
 	$i = 1;
   foreach ($tab_team as $perso)

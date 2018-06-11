@@ -63,7 +63,7 @@ class PersonnagesManager
   {
     if (is_int($info)) // On veut voir si tel personnage ayant pour id $info existe.
     {
-      return (bool) $this->db->query('SELECT COUNT(*) FROM team WHERE id = '.$info)->fetchColumn();
+      return (bool) $this->db->query('SELECT COUNT(*) FROM team WHERE id_perso = '.$info)->fetchColumn();
     }
   }
 
@@ -86,8 +86,8 @@ class PersonnagesManager
 
   public function get_team($info, $user)
   {
-    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4,
-    p.nom, p.types, p.emp_team, p.team,
+    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight,
+    p.nom, p.types, p.emp_team,
     p.id_persos,
     q.etoile,
     (n.xp_max - n.xp) as xp_min,
@@ -128,7 +128,7 @@ class PersonnagesManager
   public function get($info)
   {
 
-      $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4,
+      $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight,
       p.nom, p.types, p.emp_team,
       p.id_persos,
       q.etoile,
@@ -220,7 +220,7 @@ class PersonnagesManager
   {
     $persos = [];
 
-    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team,
+    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight,
     p.nom, p.types, p.emp_team,
     p.id_persos,
     q.etoile,
@@ -269,8 +269,8 @@ class PersonnagesManager
     if (isset($offset) && isset($offset)) {
       $Limit = " LIMIT $offset, $limit ";
     }
-    $q = $this->db->prepare("SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team,
-    p.nom, p.types, p.emp_team,
+    $q = $this->db->prepare("SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight,
+    p.nom, p.types, p.emp_team, p.team,
     p.id_persos,
     q.etoile,
     (n.xp_max - n.xp) as xp_min,
@@ -316,8 +316,8 @@ class PersonnagesManager
   {
     $persos = [];
 
-    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team,
-    p.nom, p.types, p.emp_team,
+    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight,
+    p.nom, p.types, p.emp_team, p.team,
     p.id_persos,
     q.etoile,
     (n.xp_max - n.xp) as xp_min,
@@ -372,11 +372,12 @@ class PersonnagesManager
     $this->db->exec('DELETE FROM team WHERE id_perso = '.$perso->id_perso().'');
   }
 
-  public function sup_team()
+  public function sup_team(User $user)
   {
     $q = $this->db->prepare('UPDATE team
-    SET team = 0');
-
+    SET team = 0
+    WHERE id_user = :id_user');
+    $q->bindValue(':id_user', $user->id_user(), PDO::PARAM_INT);
     $q->execute();
   }
 
@@ -415,12 +416,13 @@ class PersonnagesManager
   public function update(Personnage $perso)
   {
     $q = $this->db->prepare('UPDATE team
-    SET niveau = :niveau, xp = :xp, qualite = :qualite, team = :team, stuff_1 = :stuff_1,
+    SET niveau = :niveau, pv_fight = :pv_fight, xp = :xp, qualite = :qualite, team = :team, stuff_1 = :stuff_1,
     stuff_2 = :stuff_2, stuff_3 = :stuff_3,
     stuff_4 = :stuff_4, etat = :etat
     WHERE id_perso = :id_perso');
 
     $q->bindValue(':niveau', $perso->niveau(), PDO::PARAM_INT);
+    $q->bindValue(':pv_fight', $perso->pv_fight(), PDO::PARAM_INT);
     $q->bindValue(':xp', $perso->xp(), PDO::PARAM_INT);
     $q->bindValue(':qualite', $perso->qualite(), PDO::PARAM_INT);
     $q->bindValue(':team', $perso->team(), PDO::PARAM_INT);

@@ -46,12 +46,6 @@ include("./includes/Function_Jeu.php");
     <script   src="https://code.jquery.com/jquery-1.9.1.js"   integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="   crossorigin="anonymous"></script>
     <script src="./bootstrap/assets/js/vendor/popper.min.js"></script>
     <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
-    <!--
-    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css" />
-		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-		<script type="text/javascript">
-    	google.load('jquery','1.9.1');
-    </script>-->
     <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	  <script src="./JS/highlight/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
 	  <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
@@ -65,9 +59,9 @@ include("./includes/Function_Jeu.php");
   <div id="main_page">
   <?php
   /// Si on a un message stocker dans $message, on l'affiche en début de page.
-  if (isset($message)) {
-    echo '<p>', $message, '</p>'; // Si oui, on l'affiche
-  }
+  // if (isset($message)) {
+  //   echo '<p>', $message, '</p>'; // Si oui, on l'affiche
+  // }
 
   /// Si on est connecté, on affiche l'interface du jeu.
   if (isset($user)) {
@@ -152,6 +146,9 @@ include("./includes/Function_Jeu.php");
 
       // COMBAT
 			case 'combat':
+        ?>
+        <script src="./JS/attaquer.js"></script>
+        <?php
         include("./includes/function_combat.php");
 			break;
 
@@ -177,8 +174,8 @@ include("./includes/Function_Jeu.php");
 	{
 
     /// Si un log de combat existe, on le détruit.
-		if (file_exists($_SESSION['user']->pseudo().".txt")) {
-			//unlink($_SESSION['user']->pseudo().".txt");
+		if (file_exists("./logs/".$_SESSION['user']->pseudo().".txt")) {
+			unlink("./logs/".$_SESSION['user']->pseudo().".txt");
 		}
 
 		$_SESSION['tr'] = 0;
@@ -229,7 +226,7 @@ else // Si on veut utiliser ou créer un user.
   });
   </script>
 	</div>
-  <section class="cid-qQ8zjsXxiv" id="footer1-a">
+  <section class="" id="footer">
       <div class="container">
           <div class="media-container-row content text-grey">
               <div class="col-12 col-md-3">
@@ -250,7 +247,7 @@ else // Si on veut utiliser ou créer un user.
                       Contacts
                   </h5>
                   <p class="mbr-text">
-                    Email: g.nagiel@intech-sud.fr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                    Email: g.nagiel@intech-sud.fr
                     <br>
                     Phone: +33 (0)5 35 55 61 51
                     <br>
@@ -272,7 +269,7 @@ else // Si on veut utiliser ou créer un user.
               <div class="media-container-row mbr-grey">
                   <div class="col-sm-12 copyright">
                       <p class="mbr-text mbr-fonts-style display-7">
-                          © Copyright 2017 IN'TECH - All Rights Reserved
+                          © Copyright 2018 IN'TECH - All Rights Reserved
                       </p>
                   </div>
               </div>

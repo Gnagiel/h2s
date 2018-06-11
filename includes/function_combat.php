@@ -13,24 +13,58 @@
 
 <?php
 function afficher_perso($perso) {
+	/**
+	 * \brief       Afficher un personnage
+	 * \details    Génère l'HTML permettant d'afficher un personnage du jeu. (cf #$perso)
+	 * \param    $perso         Personnage à afficher.
+	 * \return    Un block HTML.
+	 */
+	$percent_pv = ($perso->pv_fight() / $perso->pv()) * 100;
+
+	// if ($perso->atout() == 2) {
+	// 	echo '<div class="perso2">';
+	// } else {
+	// 	echo '<div class="perso">';
+	// }
+	// if ($perso->timeEndormi() == 1) {
+	// 	echo '<span class="info">zZZZz</span><br />';
+	// }
 	if ($perso->etat() != "kill")
 	{
 	?>
-	<div class="card border rounded" style="width:200px;padding:5px">
-		<a onClick="cible('<?= $perso->id_perso();?>')"  style="margin: auto;">
-			<img src="./images/perso/<?= $perso->nom();?>2.jpg" class="avatarC" id="<?= $perso->id_perso();?>"/>
-		</a>
+	<div class="card border rounded" id="card<?= $perso->id_perso();?>" style="width:200px;padding:5px">
+
+		<img src="./images/perso/<?= $perso->nom();?>2.jpg" class="avatarC" id="<?= $perso->id_perso();?>"/>
+		<img id="blastG" src="./images/effects/blastG.gif"/>
 	  <div class="card-body">
 			<div class="progress">
-				<div class="progress-bar" id="progress-bar<?=$perso->id_perso()?>" style="width: <?=$perso->pv()?>%" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="<?=$perso->vieMax()?>"></div>
+				<div class="progress-bar" id="progress-bar<?=$perso->id_perso()?>"  role="progressbar" style="width:<?=$percent_pv;?>%" aria-valuenow="<?=$perso->pv_fight()?>" aria-valuemin="0" aria-valuemax="<?=$perso->pv()?>"></div>
 			</div>
 	  </div>
 	</div>
 	<?php
 	}
+	else
+	{
+		?>
+		<div class="card border rounded" style="width:200px;padding:5px">
+
+			<img src="./images/perso/rip.jpg" class="avatarC" id=""/>
+
+		  <div class="card-body">
+				<div class="progress">
+					<div class="progress-bar"  role="progressbar" style="width:0%" aria-valuenow="" aria-valuemin="0" aria-valuemax=""></div>
+				</div>
+		  </div>
+		</div>
+		<?php
+	}
 }
 
 function verifEtat($tab, $i) {
+	if ($i >= count($tab)) {
+		$i = 1;
+	}
 	if ($tab[$i]->etat() == "kill") {
 		return verifEtat($tab, $i+1);
 	}
@@ -61,30 +95,45 @@ $adv6 = $manager->get_team(6, $userAdv->id_user());
 
 if ($_SESSION['tour'] == 0) {
 	$perso1->debut_combat();
+	$manager->update($perso1);
 	$perso2->debut_combat();
+	$manager->update($perso2);
 	$perso3->debut_combat();
+	$manager->update($perso3);
+	$perso4->debut_combat();
+	$manager->update($perso4);
+	$perso5->debut_combat();
+	$manager->update($perso5);
+	$perso6->debut_combat();
+	$manager->update($perso6);
 	$adv1->debut_combat();
+	$manager->update($adv1);
 	$adv2->debut_combat();
+	$manager->update($adv2);
 	$adv3->debut_combat();
+	$manager->update($adv3);
 	$adv4->debut_combat();
+	$manager->update($adv4);
 	$adv5->debut_combat();
+	$manager->update($adv5);
 	$adv6->debut_combat();
+	$manager->update($adv6);
   $f = fopen("./logs/".$_SESSION['user']->pseudo().".txt", "a+");
   $message = " ";
   fwrite($f,$message);
 	fclose($f);
 }
-
-if (($perso1->etat() == "kill") && ($perso2->etat() == "kill") && ($perso3->etat() == "kill")) {
-	unlink($_SESSION['user']->pseudo().".txt");
+//var_dump($perso1);
+if (($perso1->etat() == "kill") && ($perso2->etat() == "kill") && ($perso3->etat() == "kill") && ($perso4->etat() == "kill") && ($perso5->etat() == "kill") && ($perso6->etat() == "kill")) {
+	unlink("./logs/".$_SESSION['user']->pseudo().".txt");
 	echo '<div class="fond">DEFAITE</ br>';
 	echo '<form action="" method="GET">
   	<input type="submit" value="Retour" name="retour" />
 	</form></div>';
 }
 
-else if (($adv1->etat() == "kill") && ($adv2->etat() == "kill") && ($adv3->etat() == "kill")) {
-	unlink($_SESSION['user']->pseudo().".txt");
+else if (($adv1->etat() == "kill") && ($adv2->etat() == "kill") && ($adv3->etat() == "kill") && ($adv4->etat() == "kill") && ($adv5->etat() == "kill") && ($adv6->etat() == "kill")) {
+	unlink("./logs/".$_SESSION['user']->pseudo().".txt");
 	echo '<div class="fond">VICTOIRE</ br>';
 	echo '<form action="" method="GET">
   	<input type="submit" value="Retour" name="retour" />
@@ -128,7 +177,7 @@ else
   ];
 ///////////////////////////GESTION DES TOURS/////////////////////////////////////////////////////
 
-	$i = intval($_SESSION['tr']) +1;
+	$i = (int)$_SESSION['tr'] +1;
 
 	if ($i == count($jr)) {
 		$i = 1;
@@ -155,6 +204,9 @@ else
 		$jr[$i]->incrementAtout();
 		$manager->update($jr[$i]);
 	}
+	else {
+		$i = 1;
+	}
 
 	$_SESSION['tr'] = $i;
 
@@ -169,7 +221,7 @@ else
 ?>
 <div id="turn">
 	<?php
-		echo htmlspecialchars($_SESSION['user']->pseudo()).' VS bot<br />';
+		echo htmlspecialchars($_SESSION['user']->pseudo()).' VS bot. '.$i.'<br />';
 		echo 'Tour '.$_SESSION['tour'].'<br />';
 		echo 'C\'est au tour de '.$jr[$i]->nom().'<br />';
 	?>
@@ -198,7 +250,7 @@ else
 	</div>
 	</div>
 	<div style="text-align:center" id="chargement">
-		<img src="./images/charge.gif" id="charge" />
+		<img src="./images/charge.gif" id="charge" hidden/>
 		<?php
 		include("./includes/Function_Gest_Jeu.php");
 		?>
@@ -225,6 +277,7 @@ else
 		</div>
 	</div>
 </div>
+<!-- <img id="blastG" src="./images/effects/blastG.gif"/> -->
 <div id="log">
 	<?php
 	$f = fopen("./logs/".$_SESSION['user']->pseudo().".txt", "a+") ;
@@ -244,103 +297,180 @@ else
 
 		$(document).ready(function() {
 
-			if ($('input[name=id1]').val() == "<?= $perso1->id();?>") {
-				$('#<?= $perso1->id();?>').fadeTo('fast', 1);
-				$('#<?= $perso1->id();?>').animate({
-        	height: '130px'
-        });
+			if ($('input[name=id1]').val() == "<?= $perso1->id_perso();?>") {
+				$('#card<?= $perso1->id_perso();?>').css("background-color","blue");
+				// $('#<?= $perso1->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $perso1->id_perso();?>').animate({
+        // 	height: '130px'
+        // });
 			}
-			if ($('input[name=idCible]').val() == "<?= $perso1->id();?>") {
-				$('#<?= $perso1->id();?>').fadeTo('fast', 1);
-				$('#<?= $perso1->id();?>').animate({
-        	height: '130px'
-        });
+			if ($('input[name=idCible]').val() == "<?= $perso1->id_perso();?>") {
+				$('#card<?= $perso1->id_perso();?>').css("background-color","grey");
+				// $('#<?= $perso1->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $perso1->id_perso();?>').animate({
+        // 	height: '130px'
+        // });
 			}
-			if ($('input[name=id1]').val() == "<?= $perso2->id();?>") {
-				$('#<?= $perso2->id();?>').fadeTo('fast', 1);
-				$('#<?= $perso2->id();?>').animate({
-        	height: '130px'
-        });
+			if ($('input[name=id1]').val() == "<?= $perso2->id_perso();?>") {
+				$('#card<?= $perso2->id_perso();?>').css("background-color","blue");
+				// $('#<?= $perso2->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $perso2->id_perso();?>').animate({
+        // 	height: '130px'
+        // });
 			}
-			if ($('input[name=idCible]').val() == "<?= $perso2->id();?>") {
-				$('#<?= $perso2->id();?>').fadeTo('fast', 1);
-				$('#<?= $perso2->id();?>').animate({
-        	height: '130px'
-        });
+			if ($('input[name=idCible]').val() == "<?= $perso2->id_perso();?>") {
+				$('#card<?= $perso2->id_perso();?>').css("background-color","grey");
+				// $('#<?= $perso2->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $perso2->id_perso();?>').animate({
+        // 	height: '130px'
+        // });
 			}
-			if ($('input[name=id1]').val() == "<?= $perso3->id();?>") {
-				$('#<?= $perso3->id();?>').fadeTo('fast', 1);
-				$('#<?= $perso3->id();?>').animate({
-        	height: '130px'
-        });
+			if ($('input[name=id1]').val() == "<?= $perso3->id_perso();?>") {
+				$('#card<?= $perso3->id_perso();?>').css("background-color","blue");
+				// $('#<?= $perso3->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $perso3->id_perso();?>').animate({
+        // 	height: '130px'
+        // });
 			}
-			if ($('input[name=idCible]').val() == "<?= $perso3->id();?>") {
-				$('#<?= $perso3->id();?>').fadeTo('fast', 1);
-				$('#<?= $perso3->id();?>').animate({
-        	height: '130px'
-        });
+			if ($('input[name=idCible]').val() == "<?= $perso3->id_perso();?>") {
+				$('#card<?= $perso3->id_perso();?>').css("background-color","grey");
+				// $('#<?= $perso3->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $perso3->id_perso();?>').animate({
+        // 	height: '130px'
+        // });
 			}
-			if ($('input[name=id1]').val() == "<?= $adv1->id();?>") {
-				$('#<?= $adv1->id();?>').fadeTo('fast', 1);
-				$('#<?= $adv1->id();?>').animate({
-        	height: '130px'
-        });
+			if ($('input[name=id1]').val() == "<?= $perso4->id_perso();?>") {
+				$('#card<?= $perso4->id_perso();?>').css("background-color","blue");
+				// $('#<?= $perso4->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $perso4->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
 			}
-			if ($('input[name=id1]').val() == "<?= $adv2->id();?>") {
-				$('#<?= $adv2->id();?>').fadeTo('fast', 1);
-				$('#<?= $adv2->id();?>').animate({
-        	height: '130px'
-        });
+			if ($('input[name=idCible]').val() == "<?= $perso4->id_perso();?>") {
+				$('#card<?= $perso4->id_perso();?>').css("background-color","grey");
+				// $('#<?= $perso4->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $perso4->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
 			}
-			if ($('input[name=id1]').val() == "<?= $adv3->id();?>") {
-				$('#<?= $adv3->id();?>').fadeTo('fast', 1);
-				$('#<?= $adv3->id();?>').animate({
-        	height: '130px'
-        });
+			if ($('input[name=id1]').val() == "<?= $perso5->id_perso();?>") {
+				$('#card<?= $perso5->id_perso();?>').css("background-color","blue");
+				// $('#<?= $perso5->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $perso5->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
+			}
+			if ($('input[name=idCible]').val() == "<?= $perso5->id_perso();?>") {
+				$('#card<?= $perso5->id_perso();?>').css("background-color","grey");
+				// $('#<?= $perso5->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $perso5->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
+			}
+			if ($('input[name=id1]').val() == "<?= $perso6->id_perso();?>") {
+				$('#card<?= $perso6->id_perso();?>').css("background-color","blue");
+				// $('#<?= $perso6->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $perso6->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
+			}
+			if ($('input[name=idCible]').val() == "<?= $perso6->id_perso();?>") {
+				$('#card<?= $perso6->id_perso();?>').css("background-color","grey");
+				// $('#<?= $perso6->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $perso6->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
+			}
+			if ($('input[name=id1]').val() == "<?= $adv1->id_perso();?>") {
+				$('#card<?= $adv1->id_perso();?>').css("background-color","blue");
+				// $('#<?= $adv1->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $adv1->id_perso();?>').animate({
+        // 	height: '130px'
+        // });
+			}
+			if ($('input[name=idCible]').val() == "<?= $adv1->id_perso();?>") {
+				$('#card<?= $adv1->id_perso();?>').css("background-color","grey");
+				// $('#<?= $adv1->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $adv1->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
+			}
+			if ($('input[name=id1]').val() == "<?= $adv2->id_perso();?>") {
+				$('#card<?= $adv2->id_perso();?>').css("background-color","blue");
+				// $('#<?= $adv2->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $adv2->id_perso();?>').animate({
+        // 	height: '130px'
+        // });
+			}
+			if ($('input[name=idCible]').val() == "<?= $adv2->id_perso();?>") {
+				$('#card<?= $adv2->id_perso();?>').css("background-color","grey");
+				// $('#<?= $adv2->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $adv2->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
+			}
+			if ($('input[name=id1]').val() == "<?= $adv3->id_perso();?>") {
+				$('#card<?= $adv3->id_perso();?>').css("background-color","blue");
+				// $('#<?= $adv3->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $adv3->id_perso();?>').animate({
+        // 	height: '130px'
+        // });
+			}
+			if ($('input[name=idCible]').val() == "<?= $adv3->id_perso();?>") {
+				$('#card<?= $adv3->id_perso();?>').css("background-color","grey");
+				// $('#<?= $adv3->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $adv3->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
+			}
+			if ($('input[name=id1]').val() == "<?= $adv4->id_perso();?>") {
+				$('#card<?= $adv4->id_perso();?>').css("background-color","blue");
+				// $('#<?= $adv4->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $adv4->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
+			}
+			if ($('input[name=idCible]').val() == "<?= $adv4->id_perso();?>") {
+				$('#card<?= $adv4->id_perso();?>').css("background-color","grey");
+				// $('#<?= $adv4->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $adv4->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
+			}
+			if ($('input[name=id1]').val() == "<?= $adv5->id_perso();?>") {
+				$('#card<?= $adv5->id_perso();?>').css("background-color","blue");
+				// $('#<?= $adv5->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $adv5->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
+			}
+			if ($('input[name=idCible]').val() == "<?= $adv5->id_perso();?>") {
+				$('#card<?= $adv5->id_perso();?>').css("background-color","grey");
+				// $('#<?= $adv5->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $adv5->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
+			}
+			if ($('input[name=id1]').val() == "<?= $adv6->id_perso();?>") {
+				$('#card<?= $adv6->id_perso();?>').css("background-color","blue");
+				// $('#<?= $adv6->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $adv6->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
+			}
+			if ($('input[name=idCible]').val() == "<?= $adv6->id_perso();?>") {
+				$('#card<?= $adv6->id_perso();?>').css("background-color","grey");
+				// $('#<?= $adv6->id_perso();?>').fadeTo('fast', 1);
+				// $('#<?= $adv6->id_perso();?>').animate({
+				// 	height: '130px'
+				// });
 			}
 
-			$('#<?= $perso1->id();?>').click(function() {
-				$('#<?= $perso1->id();?>').fadeTo('fast', 1);
-				$('#<?= $perso1->id();?>').animate({
-        	height: '130px'
-        });
-			});
-			$('#<?= $perso2->id();?>').click(function() {
-				$('#<?= $perso2->id();?>').fadeTo('fast', 1);
-				$('#<?= $perso2->id();?>').animate({
-        	height: '130px'
-        });
-			});
-			$('#<?= $perso3->id();?>').click(function() {
-				$('#<?= $perso3->id();?>').fadeTo('fast', 1);
-				$('#<?= $perso3->id();?>').animate({
-        	height: '130px'
-        });
-			});
 
-			$('#<?= $adv1->id();?>').click(function() {
-				$('#<?= $adv1->id();?>').fadeTo('fast', 1);
-				$('#<?= $adv1->id();?>').animate({
-        	height: '130px'
-        });
-			});
-			$('#<?= $adv2->id();?>').click(function() {
-				$('#<?= $adv2->id();?>').fadeTo('fast', 1);
-				$('#<?= $adv2->id();?>').animate({
-        	height: '130px'
-        });
-			});
-			$('#<?= $adv3->id();?>').click(function() {
-				$('#<?= $adv3->id();?>').fadeTo('fast', 1);
-				$('#<?= $adv3->id();?>').animate({
-        	height: '130px'
-        });
-			});
 		});
 
 	</script>
 <?php
 }
-var_dump($teamA);
-var_dump($teamB);
+// var_dump($_SESSION);
 ?>

@@ -23,6 +23,7 @@ class Personnage
             $team,
   					$etat,
             $pv, /*!< point de vie du personnage */
+            $pv_fight, /*!< Niveau de vie au maximum */
   					$att, /*! degat du personnage */
   					$def,
   					$vit,
@@ -42,8 +43,8 @@ class Personnage
             $stuff_1, /*!< id de l'équipement n°1 */
   					$stuff_2, /*!< id de l'équipement n°2 */
   					$stuff_3, /*!< id de l'équipement n°3 */
-  					$stuff_4, /*!< id de l'équipement n°4 , vide par default */
-            $vieMax; /*!< Niveau de vie au maximum */
+  					$stuff_4; /*!< id de l'équipement n°4 , vide par default */
+
 
 
   const CEST_MOI = 1;
@@ -59,7 +60,7 @@ class Personnage
   {
     if(!empty($valeurs))
         $this->hydrate($valeurs);
-    $this->type = strtolower(static::class);
+    //$this->type = strtolower(static::class);
   }
 
   // Un tableau de données doit être passé à la fonction (d'où le préfixe « array »).
@@ -94,7 +95,7 @@ class Personnage
 	 */
   public function frapper(Personnage $perso, Personnage $perso2)
   {
-    if ($perso->id == $this->id)
+    if ($perso->id_perso == $this->id_perso)
     {
       return self::CEST_MOI;
     }
@@ -117,12 +118,12 @@ class Personnage
 
 	public function recevoirDegats($perso2)
   {
-    $this->vie = $this->vie - $perso2->forcePerso;
+    $this->pv_fight = $this->pv_fight - $perso2->att;
 
     // Si on a 100 de dégâts ou plus, on dit que le personnage a été tué.
-    if ($this->vie <= 0)
+    if ($this->pv_fight <= 0)
     {
-    	$this->vie = 0;
+    	$this->pv_fight = 0;
     	$this->etat = "kill";
       return self::PERSONNAGE_TUE;
     }
@@ -146,10 +147,10 @@ class Personnage
 
 	public function recevoirSoins($perso)
   {
-  	$this->vie += $perso->inte;
-    if ($this->vie >= $this->vieMax)
+  	$this->pv += $perso->inte;
+    if ($this->pv >= $this->pv_max)
     {
-    $this->vie = $this->vieMax;
+    $this->pv = $this->pv_max;
   	}
     // Sinon, on se contente de dire que le personnage a bien été soigné.
     return self::PERSONNAGE_SOIGNE;
@@ -157,7 +158,7 @@ class Personnage
 
 	public function debut_combat()
   {
-  	$this->vieMax = $this->pv;
+    $this->pv_fight = $this->pv;
   	$this->etat = 'good';
   	$this->timeEndormi = 0;
   }
@@ -209,9 +210,9 @@ class Personnage
   public function stuff_3() { return $this->stuff_3; }
   public function stuff_4() { return $this->stuff_4; }
   public function pv() { return $this->pv; }
+  public function pv_fight() { return $this->pv_fight; }
   public function att() { return $this->att; }
   public function emp_team() { return $this->emp_team; }
-  public function vieMax() { return $this->vieMax; }
 
   public function setAtout($atout)
   {
@@ -508,18 +509,16 @@ class Personnage
     }
   }
 
-  public function setVieMax($vieMax)
+  public function setPv_fight($pv_fight)
   {
-    $vieMax = (int) $vieMax;
+    $pv_fight = (int) $pv_fight;
 
     // On vérifie que la vie n'est pas négative.
-    if ($vieMax >= 0)
+    if ($pv_fight >= 0)
     {
-      $this->$vieMax = $this->$pv();
+      $this->pv_fight = $pv_fight;
     }
   }
-
-
 }
 
 ?>

@@ -12,12 +12,6 @@
 
 function affichePerso($perso)
 {
-/**
- * \brief       Afficher un personnage
- * \details    Génère l'HTML permettant d'afficher un personnage du jeu. (cf #$perso)
- * \param    $perso         Perso à afficher.
- * \return    Un block HTML.
- */
 	if ($perso->atout() == 2) {
 		echo '<div class="perso2">';
 	} else {

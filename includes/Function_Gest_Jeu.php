@@ -17,6 +17,18 @@ for ($j = 0; $j < count($teamA); $j++) {
 				{
 					$id = $teamB[2]->id_perso();
 				}
+				else if ($teamB[3]->etat() == "good")
+				{
+					$id = $teamB[3]->id_perso();
+				}
+				else if ($teamB[4]->etat() == "good")
+				{
+					$id = $teamB[4]->id_perso();
+				}
+				else if ($teamB[5]->etat() == "good")
+				{
+					$id = $teamB[5]->id_perso();
+				}
 			}
 			elseif ($jr[$i]->id_perso() == $perso2->id_perso()) {
 	  		if ($teamB[1]->etat() == "good")
@@ -31,6 +43,18 @@ for ($j = 0; $j < count($teamA); $j++) {
 				{
 					$id = $teamB[2]->id_perso();
 				}
+				else if ($teamB[4]->etat() == "good")
+				{
+					$id = $teamB[4]->id_perso();
+				}
+				else if ($teamB[3]->etat() == "good")
+				{
+					$id = $teamB[3]->id_perso();
+				}
+				else if ($teamB[5]->etat() == "good")
+				{
+					$id = $teamB[5]->id_perso();
+				}
 			}
 			elseif ($jr[$i]->id_perso() == $perso3->id_perso()) {
 	  		if ($teamB[2]->etat() == "good")
@@ -44,6 +68,96 @@ for ($j = 0; $j < count($teamA); $j++) {
 				else if ($teamB[0]->etat() == "good")
 				{
 					$id = $teamB[0]->id_perso();
+				}
+				else if ($teamB[5]->etat() == "good")
+				{
+					$id = $teamB[5]->id_perso();
+				}
+				else if ($teamB[4]->etat() == "good")
+				{
+					$id = $teamB[4]->id_perso();
+				}
+				else if ($teamB[3]->etat() == "good")
+				{
+					$id = $teamB[3]->id_perso();
+				}
+			}
+			else if ($jr[$i]->id_perso() == $perso4->id_perso()) {
+				if ($teamB[0]->etat() == "good")
+				{
+					$id = $teamB[0]->id_perso();
+				}
+				else if ($teamB[1]->etat() == "good")
+				{
+					$id = $teamB[1]->id_perso();
+				}
+				else if ($teamB[2]->etat() == "good")
+				{
+					$id = $teamB[2]->id_perso();
+				}
+				else if ($teamB[3]->etat() == "good")
+				{
+					$id = $teamB[3]->id_perso();
+				}
+				else if ($teamB[4]->etat() == "good")
+				{
+					$id = $teamB[4]->id_perso();
+				}
+				else if ($teamB[5]->etat() == "good")
+				{
+					$id = $teamB[5]->id_perso();
+				}
+			}
+			elseif ($jr[$i]->id_perso() == $perso5->id_perso()) {
+				if ($teamB[1]->etat() == "good")
+				{
+					$id = $teamB[1]->id_perso();
+				}
+				else if ($teamB[0]->etat() == "good")
+				{
+					$id = $teamB[0]->id_perso();
+				}
+				else if ($teamB[2]->etat() == "good")
+				{
+					$id = $teamB[2]->id_perso();
+				}
+				else if ($teamB[4]->etat() == "good")
+				{
+					$id = $teamB[4]->id_perso();
+				}
+				else if ($teamB[3]->etat() == "good")
+				{
+					$id = $teamB[3]->id_perso();
+				}
+				else if ($teamB[5]->etat() == "good")
+				{
+					$id = $teamB[5]->id_perso();
+				}
+			}
+			elseif ($jr[$i]->id_perso() == $perso6->id_perso()) {
+				if ($teamB[2]->etat() == "good")
+				{
+					$id = $teamB[2]->id_perso();
+				}
+				else if ($teamB[1]->etat() == "good")
+				{
+					$id = $teamB[1]->id_perso();
+				}
+				else if ($teamB[0]->etat() == "good")
+				{
+					$id = $teamB[0]->id_perso();
+				}
+				else if ($teamB[5]->etat() == "good")
+				{
+					$id = $teamB[5]->id_perso();
+				}
+				else if ($teamB[4]->etat() == "good")
+				{
+					$id = $teamB[4]->id_perso();
+				}
+				else if ($teamB[3]->etat() == "good")
+				{
+					$id = $teamB[3]->id_perso();
 				}
 			}
 		}
@@ -61,6 +175,18 @@ for ($j = 0; $j < count($teamA); $j++) {
 				{
 					$id = $teamA[2]->id_perso();
 				}
+				else if ($teamA[3]->etat() == "good")
+				{
+					$id = $teamA[3]->id_perso();
+				}
+				else if ($teamA[4]->etat() == "good")
+				{
+					$id = $teamA[4]->id_perso();
+				}
+				else if ($teamA[5]->etat() == "good")
+				{
+					$id = $teamA[5]->id_perso();
+				}
 			}
 			elseif ($jr[$i]->id_perso() == $adv2->id_perso()) {
 	  		if ($teamA[1]->etat() == "good")
@@ -74,6 +200,18 @@ for ($j = 0; $j < count($teamA); $j++) {
 				else if ($teamA[2]->etat() == "good")
 				{
 					$id = $teamA[2]->id_perso();
+				}
+				else if ($teamA[4]->etat() == "good")
+				{
+					$id = $teamA[4]->id_perso();
+				}
+				else if ($teamA[3]->etat() == "good")
+				{
+					$id = $teamA[3]->id_perso();
+				}
+				else if ($teamA[5]->etat() == "good")
+				{
+					$id = $teamA[5]->id_perso();
 				}
 			}
 			elseif ($jr[$i]->id_perso() == $adv3->id_perso()) {
@@ -89,6 +227,96 @@ for ($j = 0; $j < count($teamA); $j++) {
 				{
 					$id = $teamA[0]->id_perso();
 				}
+				else if ($teamA[5]->etat() == "good")
+				{
+					$id = $teamA[5]->id_perso();
+				}
+				else if ($teamA[4]->etat() == "good")
+				{
+					$id = $teamA[4]->id_perso();
+				}
+				else if ($teamA[3]->etat() == "good")
+				{
+					$id = $teamA[3]->id_perso();
+				}
+			}
+			else if ($jr[$i]->id_perso() == $adv4->id_perso()) {
+	  		if ($teamA[0]->etat() == "good")
+				{
+					$id = $teamA[0]->id_perso();
+				}
+				else if ($teamA[1]->etat() == "good")
+				{
+					$id = $teamA[1]->id_perso();
+				}
+				else if ($teamA[2]->etat() == "good")
+				{
+					$id = $teamA[2]->id_perso();
+				}
+				else if ($teamA[3]->etat() == "good")
+				{
+					$id = $teamA[3]->id_perso();
+				}
+				else if ($teamA[4]->etat() == "good")
+				{
+					$id = $teamA[4]->id_perso();
+				}
+				else if ($teamA[5]->etat() == "good")
+				{
+					$id = $teamA[5]->id_perso();
+				}
+			}
+			elseif ($jr[$i]->id_perso() == $adv5->id_perso()) {
+	  		if ($teamA[1]->etat() == "good")
+				{
+					$id = $teamA[1]->id_perso();
+				}
+				else if ($teamA[0]->etat() == "good")
+				{
+					$id = $teamA[0]->id_perso();
+				}
+				else if ($teamA[2]->etat() == "good")
+				{
+					$id = $teamA[2]->id_perso();
+				}
+				else if ($teamA[4]->etat() == "good")
+				{
+					$id = $teamA[4]->id_perso();
+				}
+				else if ($teamA[3]->etat() == "good")
+				{
+					$id = $teamA[3]->id_perso();
+				}
+				else if ($teamA[5]->etat() == "good")
+				{
+					$id = $teamA[5]->id_perso();
+				}
+			}
+			elseif ($jr[$i]->id_perso() == $adv6->id_perso()) {
+	  		if ($teamA[2]->etat() == "good")
+				{
+					$id = $teamA[2]->id_perso();
+				}
+				else if ($teamA[1]->etat() == "good")
+				{
+					$id = $teamA[1]->id_perso();
+				}
+				else if ($teamA[0]->etat() == "good")
+				{
+					$id = $teamA[0]->id_perso();
+				}
+				else if ($teamA[5]->etat() == "good")
+				{
+					$id = $teamA[5]->id_perso();
+				}
+				else if ($teamA[4]->etat() == "good")
+				{
+					$id = $teamA[4]->id_perso();
+				}
+				else if ($teamA[3]->etat() == "good")
+				{
+					$id = $teamA[3]->id_perso();
+				}
 			}
 		}
 	}
@@ -101,7 +329,7 @@ for ($j = 0; $j < count($teamA); $j++) {
 				if ($teamA[$x]->etat() == "good") {
 					$pers = array(
 		        'id_perso' => $teamA[$x]->id_perso(),
-		        'vie' => $teamA[$x]->vie()
+		        'vie' => $teamA[$x]->pv()
 			  	);
 					$teamAsort[count($teamAsort)] = $pers;
 				}
@@ -114,7 +342,7 @@ for ($j = 0; $j < count($teamA); $j++) {
 				if ($teamB[$y]->etat() == "good") {
 					$pers = array(
 		        'id_perso' => $teamB[$y]->id_perso(),
-		        'vie' => $teamB[$y]->vie()
+		        'vie' => $teamB[$y]->pv()
 			  	);
 					$teamBsort[count($teamBsort)] = $pers;
 				}
@@ -126,7 +354,7 @@ for ($j = 0; $j < count($teamA); $j++) {
 }
 ?>
 <form id="formId" method="GET">
-	<input type="hidden" id="id" name="id" value="<?= $_SESSION['idAdv']->id_user();?>"/>
+	<input type="hidden" id="idUser" name="idUser" value="<?= $_GET['idUser'];?>"/>
 	<input type="hidden" id="user" name="user" value="<?= $user->id_user();?>"/>
 	<input type="hidden" id="idCible" name="idCible" value="<?= $id;?>"/>
 	<input type="hidden" id="action" name="action" value="frapper" />
@@ -159,8 +387,16 @@ for ($j = 0; $j < count($teamA); $j++) {
 		}
 	});
 
+	$( document ).ajaxStart(function() {
+		$( "#charge" ).show();
+	});
+
+	$( document ).ajaxStop(function() {
+		$( "#charge" ).hide();
+	});
+
 	function submitForm() {
 	 $("#submit").click();
 	}
-	setTimeout("submitForm()",2*1000);
+	setTimeout("submitForm()",1*500);
 </script>
