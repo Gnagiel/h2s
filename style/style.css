@@ -10,9 +10,20 @@
     font-style: normal;
 }
 
-#main_page {
+html, body {
+  height: 100%;
+  margin: 0;
+  padding : 0;
+}
+
+body {
+	display : table;
 	width: 100%;
-	min-height: 640px;
+}
+
+#footer {
+	display : table-row;
+	height: 100px; /* à titre d'exemple */
 }
 
 #combat_page {
@@ -177,6 +188,25 @@ text-decoration:none
 	margin-right: 7px;
 	margin-left: 7px;
 }
+
+@keyframes masuperanimation {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(150px);
+    }
+
+    100% {
+        transform: translateX(150px) rotate(30deg);
+    }
+}
+
+#blast {
+  animation: masuperanimation 2s; /* On utilise "ma super animation" définie plus tôt */
+}
+
 /* Fin Function_combat */
 
 
