@@ -181,30 +181,29 @@ text-decoration:none
 }
 
 #log {
-	width:175px;
-	height: 550px;
+	height: 50px;
 	overflow:hidden;
 	overflow-y:auto;
 	margin-right: 7px;
 	margin-left: 7px;
 }
 
-@keyframes masuperanimation {
+/* @keyframes blastAnim {
     0% {
-        transform: translateX(0px);
-    }
-
-    50% {
-        transform: translateX(150px);
+        transform: translateX(0px) rotate(60deg);
     }
 
     100% {
-        transform: translateX(150px) rotate(30deg);
+        transform: translateX(150px) rotate(60deg);
     }
 }
+*/
 
-#blast {
-  animation: masuperanimation 2s; /* On utilise "ma super animation" définie plus tôt */
+.blast {
+  /* animation: blastAnim 2s; */
+  position: absolute;
+  bottom:40px;
+  z-index: 1000;
 }
 
 /* Fin Function_combat */

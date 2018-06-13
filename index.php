@@ -147,6 +147,7 @@ include("./includes/Function_Jeu.php");
       // COMBAT
 			case 'combat':
         ?>
+        <script src="./JS/CSSAnimation.js"></script>
         <script src="./JS/attaquer.js"></script>
         <?php
         include("./includes/function_combat.php");

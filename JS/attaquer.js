@@ -7,6 +7,28 @@ function auto_load(idU){
     }
   });
 }
+jQuery.fn.extend({
+   findPos : function() {
+       obj = jQuery(this).get(0);
+       var curleft = obj.offsetLeft || 0;
+       var curtop = obj.offsetTop || 0;
+       while (obj = obj.offsetParent) {
+                curleft += obj.offsetLeft
+                curtop += obj.offsetTop
+       }
+       return {x:curleft,y:curtop};
+   }
+});
+
+// Converts from degrees to radians.
+// Math.radians = function(degrees) {
+//   return degrees * Math.PI / 180;
+// };
+//
+// // Converts from radians to degrees.
+// Math.degrees = function(radians) {
+//   return radians * 180 / Math.PI;
+// };
 
 $(document).ready(function(){
 
@@ -14,6 +36,8 @@ $(document).ready(function(){
   		 var cible = $("#idCible").val();
   		 var attaquant = $("#id1").val();
   		 var idUser = $("#idUser").val();
+
+
 			s = $("#formId").serialize();
         $.ajax({
             url: './ajax/attaque.php',
@@ -21,19 +45,56 @@ $(document).ready(function(){
             data: s,
             success: function(json) {
 
-                //setTimeout("auto_load(idUser)",1*1000);
+                //Calcul des distances des effets spéciaux
+
+                var x_cible = $("#card"+cible).offset().left;
+                var y_cible = $("#card"+cible).offset().top;
+
+                var x_attaquant = $("#card"+attaquant).offset().left;
+                var y_attaquant = $("#card"+attaquant).offset().top;
+
+                var x = x_cible - x_attaquant;
+                var y = y_cible - y_attaquant;
+
+                //Calcul des angles de pivot des effets spéciaux
+
+                // var AB = x_cible - x_attaquant;
+                // var AC = y_cible - y_attaquant;
+                //
+                // var BC = Math.hypot(AB, AC);
+                //
+                // var angleRad = AB / AC;
+                // angleRad = Math.tan(angleRad);
+                // var angleDeg = Math.degrees(angleRad);
+                //
+                // if (isNaN(angleDeg))
+                // {
+                //   angleDeg = 0;
+                // }
+                //alert('AB : '+AB+' px. AC : '+AC+' px. BC : '+BC+' px. Angle : '+angleRad+' rad et '+angleDeg+' rad');
+
+                $("#blast"+attaquant).attr("hidden", false);
+
+                //$("#blast"+attaquant).attr("class", "blast");
+
+                var anim = CSSAnimations.get('blastAnim');
+                var anim = CSSAnimations.create({
+                    '0%': { transform: 'translateX(0px) translateY(0px)' },
+                    '100%': { transform: 'translateX('+x+'px) translateY('+y+'px)' }
+                });
+
+                $("#blast"+attaquant).css({ 'animation-name': anim.name,
+                            'animation-duration': '0.5s' });
+
+                $("#blast"+attaquant).on('animationend', function() {
+                    CSSAnimations.remove(anim.name);
+                    $("#blast"+attaquant).attr("hidden", true);
+                });
 
                 if (json.result == 'frapper')
                 {
                   $("#progress-bar"+json.id).attr('aria-valuenow', json.pv);
 									//$("#resultat").html("<p>Vous avez frappé !</p>");
-
-									$("#"+cible).fadeTo('fast', 0.75);
-
-									$("#"+cible).animate({
-					        	height: '100px'
-					        });
-
                   var pv = Number(json.pv);
     							var pv_max = Number($("#progress-bar"+json.id).attr("aria-valuemax"));
     							//alert(xp + " " + xp_min + " " +  xp_max);
@@ -41,70 +102,16 @@ $(document).ready(function(){
     							level = pv / pv_max;
     							level = level * 100;
                   $("#progress-bar"+json.id).width(level+'%');
-                  // var pv = json.pv /
-                  // $("#progress-bar"+json.id).style();
-									// $("#"+cible)
-									// 	.rotate({ startDeg:0, endDeg:25, easing:'ease-out', duration:0.2 })
-									// 	.rotate({ startDeg:25, endDeg:-15, easing:'ease-out', duration:0.2 })
-									// 	.rotate({ startDeg:-15, endDeg:0, easing:'ease-out', duration:0.2 });
-
-									// $('#son').get(0).play();
-
-									// $("#"+json.id+"Degat").html("<p>"+json[0].persoForce+"</p>");
-									// $("#"+json.id+"Degat").css("color", "red");
-									// $("#"+json.id+"Degat").animate({"top":"-15px"},2500);
-									// $("#"+json.id+"Degat").fadeTo('slow', 0.1);
-
-
-									// $("#"+attaquant).fadeTo('fast', 0.75);
-									// $("#"+attaquant).animate({
-					        // 	height: '100px'
-					        // });
-
-									//setTimeout("auto_load('idUser')",1*1000);
    							}
-                // else if (json[0].result == 'soigner') {
+                // else if (json.result == 'soigner') {
                 // 	$('#son2').get(0).play();
                 //   $("#resultat").html("<p>Vous avez soigné !</p>");
-                //
-                //
-								// 	$("#"+json[0].id+"Degat").fadeOut( "slow", function() {
-								// 		$("#"+json[0].id+"Degat").html("<p>"+json[0].persoInte+"</p>");
-								// 		$("#"+json[0].id+"Degat").css("color", "green");
-								// 		$("#"+json[0].id+"Degat").animate({"top":"-15px"},2500);
-								//   });
-                //
-								// 	$("#"+attaquant).fadeTo('fast', 0.75);
-								// 	$("#"+attaquant).animate({
-					      //   	height: '100px'
-					      //   });
-					      //   //setTimeout("auto_load('idUser')",1*1000);
                 // }
-                // else if (json[0].result == 'endormir') {
+                // else if (json.result == 'endormir') {
 								// 	$("#resultat").html("<p>Vous avez ensorcelé !</p>");
-                //
-								// 	$("#"+cible).fadeTo('fast', 0.75);
-                //
-								// 	$("#"+cible).animate({
-					      //   	height: '100px'
-					      //   });
-                //
-								// 	$("#"+cible)
-								// 		.rotate({ startDeg:0, endDeg:25, easing:'ease-out', duration:0.2 })
-								// 		.rotate({ startDeg:25, endDeg:-15, easing:'ease-out', duration:0.2 })
-								// 		.rotate({ startDeg:-15, endDeg:0, easing:'ease-out', duration:0.2 });
-                //
-								// 	$('#son').get(0).play();
-                //
-								// 	$("#"+attaquant).fadeTo('fast', 0.75);
-								// 	$("#"+attaquant).animate({
-					      //   	height: '100px'
-					      //   });
-					      //   //setTimeout("auto_load('idUser')",1*1000);
    							// }
                 else if (json.result == 'Pas possible') {
                   //$("#resultat").html("<p>Pourquoi vous frappez-vous ??? ...</p>");
-                  //setTimeout("auto_load('idUser')",1*1000);
                 }
                 else if (json.result == 'Tué') {
 									//$("#resultat").html("<p>Vous avez tué !</p>");
@@ -112,23 +119,8 @@ $(document).ready(function(){
 							    //$('#son').get(0).play();
                   $("#progress-bar"+json.id).width('0%');
                   $("#card"+json.id+" img").attr('src', "./images/perso/rip.jpg");
-
-									// $("#"+json[0].id+"Degat").html("<p>"+json[0].persoForce+"</p>");
-									// $("#"+json[0].id+"Degat").css("color", "red");
-									// $("#"+json[0].id+"Degat").animate({"top":"-15px"},2500);
-									// $("#"+json[0].id+"Degat").fadeTo('slow', 0.1);
-
-									// $("#"+attaquant).fadeTo('fast', 0.75);
-									// $("#"+attaquant).animate({
-					        // 	height: '100px'
-					        // });
-					        //setTimeout("auto_load('idUser')",1*1000);
                 }
-                // else {
-                // 	//$("#resultat").html(data);
-                // 	//setTimeout("auto_load('idUser')",1*1000);
-                // }
-
+                setTimeout("location.reload()",1*1000);
             }
         });
     });

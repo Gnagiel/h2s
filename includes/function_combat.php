@@ -12,7 +12,7 @@
 </script>
 
 <?php
-function afficher_perso($perso) {
+function afficher_perso($perso, $teamA) {
 	/**
 	 * \brief       Afficher un personnage
 	 * \details    Génère l'HTML permettant d'afficher un personnage du jeu. (cf #$perso)
@@ -32,12 +32,29 @@ function afficher_perso($perso) {
 	if ($perso->etat() != "kill")
 	{
 	?>
-	<div class="card border rounded" id="card<?= $perso->id_perso();?>" style="width:200px;padding:5px">
+	<div class="card border rounded center" id="card<?= $perso->id_perso();?>" style="width:200px;padding:5px">
 
 		<img src="./images/perso/<?= $perso->nom();?>2.jpg" class="avatarC" id="<?= $perso->id_perso();?>"/>
-		<img id="blastG" src="./images/effects/blastG.gif"/>
-	  <div class="card-body">
+		<div class="card-body">
+			<div class="col align-self-center">
+				<?php
+				if (in_array($perso, $teamA, true))
+				{
+					?>
+					<img class="blast" id="blast<?=$perso->id_perso();?>" src="./images/effects/blastG.gif" style="{width:60px;margin:auto;}" hidden/>
+					<?php
+				}
+				else
+				{
+					?>
+					<img class="blast" id="blast<?=$perso->id_perso();?>" src="./images/effects/blastD.gif" style="{width:60px;margin:auto;}" hidden/>
+					<?php
+				}
+				?>
+			</div>
 			<div class="progress">
+
+
 				<div class="progress-bar" id="progress-bar<?=$perso->id_perso()?>"  role="progressbar" style="width:<?=$percent_pv;?>%" aria-valuenow="<?=$perso->pv_fight()?>" aria-valuemin="0" aria-valuemax="<?=$perso->pv()?>"></div>
 			</div>
 	  </div>
@@ -232,20 +249,20 @@ else
 	<div class="team">
 		<div class="line">
 			<?php
-			afficher_perso($perso4);
+			afficher_perso($perso4, $teamA);
 
-			afficher_perso($perso5);
+			afficher_perso($perso5, $teamA);
 
-			afficher_perso($perso6);
+			afficher_perso($perso6, $teamA);
 			?>
 		</div>
 		<div class="line">
 			<?php
-			afficher_perso($perso1);
+			afficher_perso($perso1, $teamA);
 
-			afficher_perso($perso2);
+			afficher_perso($perso2, $teamA);
 
-			afficher_perso($perso3);
+			afficher_perso($perso3, $teamA);
 			?>
 	</div>
 	</div>
@@ -259,20 +276,20 @@ else
 	<div class="team">
 		<div class="line">
 			<?php
-			afficher_perso($adv1);
+			afficher_perso($adv1, $teamA);
 
-			afficher_perso($adv2);
+			afficher_perso($adv2, $teamA);
 
-			afficher_perso($adv3);
+			afficher_perso($adv3, $teamA);
 			?>
 		</div>
 		<div class="line">
 			<?php
-			afficher_perso($adv4);
+			afficher_perso($adv4, $teamA);
 
-			afficher_perso($adv5);
+			afficher_perso($adv5, $teamA);
 
-			afficher_perso($adv6);
+			afficher_perso($adv6, $teamA);
 			?>
 		</div>
 	</div>
