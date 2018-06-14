@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['payer_5fargent',['payer_argent',['../class_user.html#ad1c97f448cd6d5258f4b1ab9f36172ed',1,'User']]],
-  ['pen',['pen',['../class_personnage.html#a4c3db78c974d2b3d0345a677e1370162',1,'Personnage']]],
-  ['pre',['pre',['../class_personnage.html#ae7675cda70f8e9488d1b4e28550a0871',1,'Personnage']]],
-  ['pseudo',['pseudo',['../class_user.html#a5589abfe412eaa4755f3c984729802b7',1,'User']]],
-  ['pv',['pv',['../class_base__personnage.html#a2b94389a8a3b5538c0b01e36f3ca55bf',1,'Base_personnage\pv()'],['../class_personnage.html#ac33d3de759181a59960066291c8065a9',1,'Personnage\pv()']]]
+  ['niveau',['niveau',['../class_personnage.html#a061130b0c1c551d893ecffff2553cb93',1,'Personnage\niveau()'],['../class_stuff.html#a4d8664e6878c9661e0d0dcf46b1bd5d6',1,'Stuff\niveau()'],['../class_user.html#ab341c8493decd7ed8ad872544a3b3332',1,'User\niveau()']]],
+  ['nom',['nom',['../class_base__personnage.html#abd3b2c38016dc7f95b967225d4dfbd17',1,'Base_personnage\nom()'],['../class_personnage.html#a236eb0f89c6676425ddfcc25967a527a',1,'Personnage\nom()'],['../class_stuff.html#a38d4592ddc6ed1f09868ea5b7a82fdb9',1,'Stuff\nom()']]],
+  ['nomvalide',['nomValide',['../class_user.html#a786a3c86445a30cddb0e1d4b73f133ec',1,'User']]]
 ];

@@ -1,20 +1,10 @@
 var searchData=
 [
-  ['pas_5fde_5fmagie',['PAS_DE_MAGIE',['../class_personnage.html#af787cf8c787c7e07dda043c15f9bde35',1,'Personnage']]],
-  ['payer_5fargent',['payer_argent',['../class_user.html#ad1c97f448cd6d5258f4b1ab9f36172ed',1,'User']]],
-  ['pen',['pen',['../class_personnage.html#a4c3db78c974d2b3d0345a677e1370162',1,'Personnage']]],
-  ['perso_5fendormi',['PERSO_ENDORMI',['../class_personnage.html#af0cacca8d3367d4df844e24d456f6ab5',1,'Personnage']]],
-  ['perso_5ffull_5flife',['PERSO_FULL_LIFE',['../class_personnage.html#a47535a4f21f4edf5835d8fea36814f6a',1,'Personnage']]],
-  ['personnage',['Personnage',['../class_personnage.html',1,'']]],
-  ['personnage_2ephp',['Personnage.php',['../_personnage_8php.html',1,'']]],
-  ['personnage_5fensorcele',['PERSONNAGE_ENSORCELE',['../class_personnage.html#a3e00a0b7df1869a6a7bfe06aff0ca8ae',1,'Personnage']]],
-  ['personnage_5ffrappe',['PERSONNAGE_FRAPPE',['../class_personnage.html#a2e38e0c1c4678aa41c5c70415dc9f055',1,'Personnage']]],
-  ['personnage_5fsoigne',['PERSONNAGE_SOIGNE',['../class_personnage.html#a8af7b48a38eda95264d46bd5b742a360',1,'Personnage']]],
-  ['personnage_5ftue',['PERSONNAGE_TUE',['../class_personnage.html#ae654e11146b60710874ae7ddd8e0f9af',1,'Personnage']]],
-  ['personnagesmanager',['PersonnagesManager',['../class_personnages_manager.html',1,'']]],
-  ['personnagesmanager_2ephp',['PersonnagesManager.php',['../_personnages_manager_8php.html',1,'']]],
-  ['php_5ffilter_2ephp',['php_filter.php',['../php__filter_8php.html',1,'']]],
-  ['pre',['pre',['../class_personnage.html#ae7675cda70f8e9488d1b4e28550a0871',1,'Personnage']]],
-  ['pseudo',['pseudo',['../class_user.html#a5589abfe412eaa4755f3c984729802b7',1,'User']]],
-  ['pv',['pv',['../class_base__personnage.html#a2b94389a8a3b5538c0b01e36f3ca55bf',1,'Base_personnage\pv()'],['../class_personnage.html#ac33d3de759181a59960066291c8065a9',1,'Personnage\pv()']]]
+  ['nagt',['nAgt',['../jquery_8mb_8vimeo__player_8js.html#abfbd7845647706c051216ad97d48fdc3',1,'nAgt():&#160;jquery.mb.vimeo_player.js'],['../jquery_8mb_8ytplayer_8min_8js.html#abfbd7845647706c051216ad97d48fdc3',1,'nAgt():&#160;jquery.mb.ytplayer.min.js']]],
+  ['name',['name',['../jquery_8mb_8ytplayer_8min_8js.html#a4c4115adf6eb766335fa8a090a264cfd',1,'jquery.mb.ytplayer.min.js']]],
+  ['nameoffset',['nameOffset',['../jquery_8mb_8ytplayer_8min_8js.html#ad38f2243c0aee776f0a7dc2fe244d3d2',1,'jquery.mb.ytplayer.min.js']]],
+  ['niveau',['niveau',['../class_personnage.html#a061130b0c1c551d893ecffff2553cb93',1,'Personnage\niveau()'],['../class_stuff.html#a4d8664e6878c9661e0d0dcf46b1bd5d6',1,'Stuff\niveau()'],['../class_user.html#ab341c8493decd7ed8ad872544a3b3332',1,'User\niveau()']]],
+  ['nom',['nom',['../class_base__personnage.html#abd3b2c38016dc7f95b967225d4dfbd17',1,'Base_personnage\nom()'],['../class_personnage.html#a236eb0f89c6676425ddfcc25967a527a',1,'Personnage\nom()'],['../class_stuff.html#a38d4592ddc6ed1f09868ea5b7a82fdb9',1,'Stuff\nom()']]],
+  ['nomvalide',['nomValide',['../class_user.html#a786a3c86445a30cddb0e1d4b73f133ec',1,'User']]],
+  ['normalizecss',['normalizeCss',['../jquery_8mb_8ytplayer_8min_8js.html#a10bb857cc40492c5ca95302a96a76827',1,'jquery.mb.ytplayer.min.js']]]
 ];

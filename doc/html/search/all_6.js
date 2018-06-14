@@ -1,17 +1,10 @@
 var searchData=
 [
-  ['easing',['easing',['../jquery_8easing_81_83_8js.html#a882f7d405d370ac72490f5c08b4042df',1,'jquery.easing.1.3.js']]],
-  ['else',['else',['../gestion__perso_8php.html#a467fb87dd181c3adef01f7b4a3797207',1,'else():&#160;gestion_perso.php'],['../gestion__stuff_8php.html#abfd6cdf9d11bd39db0c3babaafd3015e',1,'else():&#160;gestion_stuff.php'],['../index_8php.html#a45c7da2c4ca4350855edfeec906d8f87',1,'else():&#160;index.php']]],
-  ['email',['email',['../class_user.html#afffcb74b0fe718305661fb57d5fdfde0',1,'User']]],
-  ['emp_5fteam',['emp_team',['../class_personnage.html#a7c3150644dfeedeae54ca86e43bc29a0',1,'Personnage']]],
-  ['emp_5fteam_5fmax',['emp_team_max',['../class_user.html#aa4d14a670efb836bee049266a044d818',1,'User']]],
-  ['endu',['endu',['../class_user.html#aa7ae3e562d611c4cf112a618db183660',1,'User']]],
-  ['endu_5fmax',['endu_Max',['../class_user.html#a3c4f83665c4b093ac23cb1ef8c962b4e',1,'User']]],
-  ['esc',['esc',['../class_personnage.html#aae5ecffa3c0802af6664ad0f3b396561',1,'Personnage']]],
-  ['estendormi',['estEndormi',['../class_personnage.html#aabf0bcd80fcea089de16f33c029aae12',1,'Personnage']]],
-  ['etat',['etat',['../class_personnage.html#addeceec710baf3ae687f36151bc5def4',1,'Personnage']]],
-  ['etoile',['etoile',['../class_base__personnage.html#a17546eb34101fa1d501e84309f3f806c',1,'Base_personnage\etoile()'],['../class_personnage.html#ade67f55b78368cd7e3c92128bb7ae67d',1,'Personnage\etoile()'],['../class_stuff.html#a60e42cc89da2a51716a685ad1cbe8b44',1,'Stuff\etoile()']]],
-  ['evitermessageavertissement_2ephp',['eviterMessageAvertissement.php',['../eviter_message_avertissement_8php.html',1,'']]],
-  ['exists',['exists',['../class_personnages_manager.html#ac6a8e85041681ee0e6c32ade99529273',1,'PersonnagesManager\exists()'],['../class_stuff_manager.html#afc4490f2f57a541012ca5f66863b05fd',1,'StuffManager\exists()'],['../class_user_manager.html#a5ab80d63eb955da9e0ab01a9b1607437',1,'UserManager\exists()']]],
-  ['extend',['extend',['../jquery_8easing_81_83_8js.html#aa0ffcbd62889d868db6b6bc825468a2b',1,'jquery.easing.1.3.js']]]
+  ['debut_5fcombat',['debut_combat',['../class_personnage.html#a570935e88aa03fb191a3f06a41f5aec5',1,'Personnage']]],
+  ['def',['def',['../class_personnage.html#adcc095fcc5f137e90860386b4b977817',1,'Personnage']]],
+  ['delete',['delete',['../class_personnages_manager.html#a2c8f754617cbf40ff851a1c91fb7ea9b',1,'PersonnagesManager\delete()'],['../class_stuff_manager.html#a22e7e650bbf0cdb20d1c0c0871c9613f',1,'StuffManager\delete()'],['../class_user_manager.html#a2314547a8d8203652065e73e485a5af4',1,'UserManager\delete()']]],
+  ['descr',['descr',['../class_stuff.html#a1b91ba84e3eb06abc49dc61810f97454',1,'Stuff']]],
+  ['doc_2ephp',['doc.php',['../doc_8php.html',1,'']]],
+  ['documentation_20technique',['Documentation technique',['../_doc_technique.html',1,'index']]],
+  ['documentation_20utilisateur',['Documentation utilisateur',['../_doc_user.html',1,'index']]]
 ];

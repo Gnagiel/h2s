@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>H2S:  Fichier source de assets/mbr-tabs/mbr-tabs.js</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="1367009902-test2.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">H2S
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Jeu en construction. Jeu de cartes à collectionner, constitution d&#39;un deck, combats PVE et PVP automatiques</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('mbr-tabs_8js_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">mbr-tabs.js</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="mbr-tabs_8js.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="mbr-tabs_8js.html#a6f5efde13693966c99f260398ce2bede">    1</a></span>&#160;$.fn.outerFind = <span class="keyword">function</span>(selector) {</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="keywordflow">return</span> this.find(selector).addBack(selector);</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;};</div><div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="mbr-tabs_8js.html#a69afcf4dc9877d14c0fbbd13d9df4ac3">    4</a></span>&#160;<span class="keyword">function</span> <a class="code" href="mbr-tabs_8js.html#a69afcf4dc9877d14c0fbbd13d9df4ac3">initTabs</a>(target) {</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">if</span> ($(target).find(<span class="stringliteral">&#39;.nav-tabs&#39;</span>).length !== 0) {</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        $(target).<a class="code" href="mbr-tabs_8js.html#a6f5efde13693966c99f260398ce2bede">outerFind</a>(<span class="stringliteral">&#39;section[id^=&quot;tabs&quot;]&#39;</span>).each(<span class="keyword">function</span>() {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;            var componentID = $(<span class="keyword">this</span>).attr(<span class="stringliteral">&#39;id&#39;</span>);</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;            var $tabsNavItem = $(<span class="keyword">this</span>).find(<span class="stringliteral">&#39;.nav-tabs .nav-item&#39;</span>);</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            var $tabPane = $(<span class="keyword">this</span>).find(<span class="stringliteral">&#39;.tab-pane&#39;</span>);</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            $tabPane.removeClass(<span class="stringliteral">&#39;active&#39;</span>).eq(0).addClass(<span class="stringliteral">&#39;active&#39;</span>);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            $tabsNavItem.find(<span class="charliteral">&#39;a&#39;</span>).removeClass(<span class="stringliteral">&#39;active&#39;</span>).removeAttr(<span class="stringliteral">&#39;aria-expanded&#39;</span>)</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                .eq(0).addClass(<span class="stringliteral">&#39;active&#39;</span>);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            $tabPane.each(<span class="keyword">function</span>() {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                $(<span class="keyword">this</span>).attr(<span class="stringliteral">&#39;id&#39;</span>, componentID + <span class="stringliteral">&#39;_tab&#39;</span> + $(<span class="keyword">this</span>).index());</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            });</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            $tabsNavItem.each(<span class="keyword">function</span>() {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                $(<span class="keyword">this</span>).find(<span class="charliteral">&#39;a&#39;</span>).attr(<span class="stringliteral">&#39;href&#39;</span>, <span class="charliteral">&#39;#&#39;</span> + componentID + <span class="stringliteral">&#39;_tab&#39;</span> + $(<span class="keyword">this</span>).index());</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            });</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        });</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Mobirise Initilizaton</span></div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="mbr-tabs_8js.html#a89e2254033bb9a502090221edeb7b1b8">   28</a></span>&#160;var <a class="code" href="mbr-tabs_8js.html#a89e2254033bb9a502090221edeb7b1b8">isBuilder</a> = $(<span class="stringliteral">&#39;html&#39;</span>).hasClass(<span class="stringliteral">&#39;is-builder&#39;</span>);</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="mbr-tabs_8js.html#ae1ae0567f2c81326a72d5e96ab64f53d">   29</a></span>&#160;<span class="keywordflow">if</span> (<a class="code" href="mbr-tabs_8js.html#a89e2254033bb9a502090221edeb7b1b8">isBuilder</a>) {</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    $(document).on(<span class="stringliteral">&#39;add.cards&#39;</span>, <span class="keyword">function</span>(e) {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="mbr-tabs_8js.html#a69afcf4dc9877d14c0fbbd13d9df4ac3">initTabs</a>(e.target);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    });</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <span class="keywordflow">else</span> {</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (typeof <a class="code" href="jarallax_8min_8js.html#a04a8a2bbfa9c15500892b8e5033d625b">window</a>.initTabsPlugin === <span class="stringliteral">&#39;undefined&#39;</span>){</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="jarallax_8min_8js.html#a04a8a2bbfa9c15500892b8e5033d625b">window</a>.initTabsPlugin = <span class="keyword">true</span>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        console.log(<span class="stringliteral">&#39;init tabs by plugin&#39;</span>);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="mbr-tabs_8js.html#a69afcf4dc9877d14c0fbbd13d9df4ac3">initTabs</a>(document.body);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div><div class="ttc" id="jarallax_8min_8js_html_a04a8a2bbfa9c15500892b8e5033d625b"><div class="ttname"><a href="jarallax_8min_8js.html#a04a8a2bbfa9c15500892b8e5033d625b">window</a></div><div class="ttdeci">window</div><div class="ttdef"><b>Definition:</b> <a href="jarallax_8min_8js_source.html#l00007">jarallax.min.js:7</a></div></div>
+<div class="ttc" id="mbr-tabs_8js_html_a6f5efde13693966c99f260398ce2bede"><div class="ttname"><a href="mbr-tabs_8js.html#a6f5efde13693966c99f260398ce2bede">outerFind</a></div><div class="ttdeci">fn outerFind</div><div class="ttdef"><b>Definition:</b> <a href="mbr-tabs_8js_source.html#l00001">mbr-tabs.js:1</a></div></div>
+<div class="ttc" id="mbr-tabs_8js_html_a69afcf4dc9877d14c0fbbd13d9df4ac3"><div class="ttname"><a href="mbr-tabs_8js.html#a69afcf4dc9877d14c0fbbd13d9df4ac3">initTabs</a></div><div class="ttdeci">function initTabs(target)</div><div class="ttdef"><b>Definition:</b> <a href="mbr-tabs_8js_source.html#l00004">mbr-tabs.js:4</a></div></div>
+<div class="ttc" id="mbr-tabs_8js_html_a89e2254033bb9a502090221edeb7b1b8"><div class="ttname"><a href="mbr-tabs_8js.html#a89e2254033bb9a502090221edeb7b1b8">isBuilder</a></div><div class="ttdeci">var isBuilder</div><div class="ttdef"><b>Definition:</b> <a href="mbr-tabs_8js_source.html#l00028">mbr-tabs.js:28</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_34e9a5f624ac092a9ae2401c28d616d7.html">assets</a></li><li class="navelem"><a class="el" href="dir_77ff5aa5281fed751039321cc769bf5f.html">mbr-tabs</a></li><li class="navelem"><a class="el" href="mbr-tabs_8js.html">mbr-tabs.js</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

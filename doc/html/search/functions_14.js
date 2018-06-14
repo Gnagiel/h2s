@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['xp',['xp',['../class_personnage.html#a60b2a6a44bc71517c063d87c062e0b87',1,'Personnage\xp()'],['../class_user.html#abc7ddb8ce5c319d13e15734bee03075b',1,'User\xp()']]],
-  ['xp_5fmax',['xp_Max',['../class_user.html#a2826726689d756f84814487cf2823040',1,'User\xp_Max()'],['../class_personnage.html#aa5bc9f2bda281400fedbc1af1c19357d',1,'Personnage\xp_max()']]],
-  ['xp_5fmin',['xp_min',['../class_personnage.html#a77449606ed23798840b505aa57005cc8',1,'Personnage']]]
+  ['uncamel',['uncamel',['../jquery_8mb_8ytplayer_8min_8js.html#a824d0b03322bf096ce94c7892b7f11d3',1,'jquery.mb.ytplayer.min.js']]],
+  ['update',['update',['../class_personnages_manager.html#a21d75e552a085ee6178544d71f72b31c',1,'PersonnagesManager\update()'],['../class_stuff_manager.html#a45dc81b0ddbbd804960d197d7a1cad69',1,'StuffManager\update()'],['../class_user_manager.html#ad953740cf56464fdb81b8bc9654c5371',1,'UserManager\update()']]],
+  ['update_5flvl',['update_lvl',['../class_personnages_manager.html#ad5c864d56b8ca4e71ab81403d4309014',1,'PersonnagesManager']]],
+  ['update_5fteam',['update_team',['../class_personnages_manager.html#a1847a27412e7325761f5866f584e3b22',1,'PersonnagesManager\update_team()'],['../class_stuff_manager.html#a4ec8aecb8d0e81fc8cb0409e290b95c5',1,'StuffManager\update_team()']]]
 ];

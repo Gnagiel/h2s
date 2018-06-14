@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['cadre_5fteam',['cadre_team',['../team_8php.html#a374fad912a341fd7ef5773fc41273b5d',1,'team.php']]],
-  ['chargerclass',['chargerClass',['../index_8php.html#a63a7332e1e0eb5a63a528700d76383a2',1,'index.php']]],
-  ['chargerclasse',['chargerClasse',['../add__perso_8php.html#a6bdbbd60a21fa5e8c1db3f7596a47013',1,'chargerClasse($classe):&#160;add_perso.php'],['../gestion__stuff_8php.html#a6bdbbd60a21fa5e8c1db3f7596a47013',1,'chargerClasse($classe):&#160;gestion_stuff.php'],['../gestion__up__perso_8php.html#a6bdbbd60a21fa5e8c1db3f7596a47013',1,'chargerClasse($classe):&#160;gestion_up_perso.php'],['../sup__perso_8php.html#a6bdbbd60a21fa5e8c1db3f7596a47013',1,'chargerClasse($classe):&#160;sup_perso.php'],['../team__ajax_8php.html#a6bdbbd60a21fa5e8c1db3f7596a47013',1,'chargerClasse($classe):&#160;team_ajax.php']]],
-  ['count',['count',['../class_personnages_manager.html#a8f6dfe7defa71cebda7abe39c6aecf83',1,'PersonnagesManager\count()'],['../class_stuff_manager.html#a140ab5d594414d8a71b0c8cee976b8de',1,'StuffManager\count()'],['../class_user_manager.html#a15eb546aadcee7b28426bacf0df7f340',1,'UserManager\count()']]],
-  ['cout',['cout',['../class_stuff.html#a3a67cfe36aa054dfc42f99a6883bb408',1,'Stuff']]],
-  ['crit',['crit',['../class_personnage.html#ae91b38c8dfaceca0eda40ae2ea66b99d',1,'Personnage']]]
+  ['add',['add',['../class_personnages_manager.html#a3ce7c5751a3faedb4f639a009ff0243e',1,'PersonnagesManager\add()'],['../class_stuff_manager.html#ab754f0d8b6625898735779a852268223',1,'StuffManager\add()'],['../class_user_manager.html#a7fb17bfd67135d7be043d59aeec1dcd4',1,'UserManager\add()']]],
+  ['afficheperso',['affichePerso',['../_function___jeu_8php.html#a99d6d6774e3dfca9aa050319450c9799',1,'Function_Jeu.php']]],
+  ['afficher_5fperso',['afficher_perso',['../function__combat_8php.html#ab2e1af2b06adbee127be7552225f569a',1,'function_combat.php']]],
+  ['argent',['argent',['../class_user.html#a2a6a97a5e1ddb08da30802aec1b0eb0a',1,'User']]],
+  ['arm',['arm',['../class_personnage.html#afa3847dccf10793b4512467e6fdb98fc',1,'Personnage']]],
+  ['atout',['atout',['../class_personnage.html#a54f0e416a628b1b7246f3c3a7c2081fa',1,'Personnage']]],
+  ['atr_5f1',['atr_1',['../class_stuff.html#a4afe7d4f33396df453f6fdc9c0ba3aa5',1,'Stuff']]],
+  ['atr_5f2',['atr_2',['../class_stuff.html#a1bb01959da153fe1aacf0b3fe5454756',1,'Stuff']]],
+  ['att',['att',['../class_base__personnage.html#ad09642245bba8747d0ebd3ab991c66b9',1,'Base_personnage\att()'],['../class_personnage.html#a6d94c6fd714c9e8ef344e386f16c671a',1,'Personnage\att()']]],
+  ['auto_5fload',['auto_load',['../add__perso_8js.html#aaba1cd0abfebf408ecb5c0b12cb5072c',1,'auto_load():&#160;add_perso.js'],['../attaquer_8js.html#a6f4d73b8087d96961ade5d6ee204801d',1,'auto_load(idU):&#160;attaquer.js'],['../sup__perso_8js.html#a639711ad2253733a1f54081fd9e798b7',1,'auto_load():&#160;sup_perso.js'],['../team_8js.html#a639711ad2253733a1f54081fd9e798b7',1,'auto_load():&#160;team.js']]]
 ];

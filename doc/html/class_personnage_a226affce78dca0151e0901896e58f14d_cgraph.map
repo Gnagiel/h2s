@@ -1,3 +1,4 @@
 <map id="Personnage\recevoirDegats" name="Personnage\recevoirDegats">
-<area shape="rect" id="node2" href="$class_personnage.html#addeceec710baf3ae687f36151bc5def4" title="Personnage\\etat" alt="" coords="240,5,359,31"/>
+<area shape="rect" id="node2" href="$class_personnage.html#ae8e3d042579fa009b69248c20929bce5" title="Personnage\\pv_fight" alt="" coords="240,5,384,31"/>
+<area shape="rect" id="node3" href="$class_personnage.html#addeceec710baf3ae687f36151bc5def4" title="Personnage\\etat" alt="" coords="252,55,371,80"/>
 </map>

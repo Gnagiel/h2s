@@ -25,12 +25,12 @@
 <text text-anchor="start" x="58.3892" y="-355.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $team</text>
 <text text-anchor="start" x="58.3892" y="-345.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $etat</text>
 <text text-anchor="start" x="58.3892" y="-335.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pv</text>
-<text text-anchor="start" x="58.3892" y="-325.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $att</text>
-<text text-anchor="start" x="58.3892" y="-315.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $def</text>
-<text text-anchor="start" x="58.3892" y="-305.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $vit</text>
-<text text-anchor="start" x="58.3892" y="-295.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pen</text>
-<text text-anchor="start" x="58.3892" y="-285.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $arm</text>
-<text text-anchor="start" x="58.3892" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">et 23 de plus...</text>
+<text text-anchor="start" x="58.3892" y="-325.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pv_fight</text>
+<text text-anchor="start" x="58.3892" y="-315.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $att</text>
+<text text-anchor="start" x="58.3892" y="-305.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $def</text>
+<text text-anchor="start" x="58.3892" y="-295.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $vit</text>
+<text text-anchor="start" x="58.3892" y="-285.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ $pen</text>
+<text text-anchor="start" x="58.3892" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">et 24 de plus...</text>
 <text text-anchor="start" x="58.3892" y="-265.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># $atout</text>
 <polyline fill="none" stroke="#000000" points="50.3892,-259.5 148.9233,-259.5 "/>
 <text text-anchor="start" x="58.3892" y="-247.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ __construct()</text>
@@ -48,7 +48,7 @@
 <text text-anchor="start" x="58.3892" y="-127.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ id_perso()</text>
 <text text-anchor="start" x="58.3892" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ xp()</text>
 <text text-anchor="start" x="58.3892" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ xp_max()</text>
-<text text-anchor="start" x="58.3892" y="-97.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">et 58 de plus...</text>
+<text text-anchor="start" x="58.3892" y="-97.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">et 60 de plus...</text>
 </g>
 <!-- Node1 -->
 <g id="node2" class="node">

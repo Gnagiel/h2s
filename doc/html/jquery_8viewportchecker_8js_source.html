@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>H2S:  Fichier source de assets/viewportchecker/jquery.viewportchecker.js</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="1367009902-test2.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">H2S
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Jeu en construction. Jeu de cartes à collectionner, constitution d&#39;un deck, combats PVE et PVP automatiques</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('jquery_8viewportchecker_8js_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">jquery.viewportchecker.js</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="jquery_8viewportchecker_8js.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">    The MIT License (MIT)</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">    Copyright (c) 2014 Dirk Groenen</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    Permission is hereby granted, free of charge, to any person obtaining a copy of</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    this software and associated documentation files (the &quot;Software&quot;), to deal in</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    the Software without restriction, including without limitation the rights to</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    the Software, and to permit persons to whom the Software is furnished to do so,</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    subject to the following conditions:</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    The above copyright notice and this permission notice shall be included in all</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    copies or substantial portions of the Software.</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="jquery_8viewportchecker_8js.html#a2b1d6f9c448e3ce72f4e1865d6e38d2c">   16</a></span>&#160;!<span class="keyword">function</span>(t){t.fn.viewportChecker=<span class="keyword">function</span>(o){var e={classToAdd:<span class="stringliteral">&quot;visible&quot;</span>,classToRemove:<span class="stringliteral">&quot;invisible&quot;</span>,classToAddForFullView:<span class="stringliteral">&quot;full-visible&quot;</span>,removeClassAfterAnimation:!1,offset:100,repeat:!1,invertBottomOffset:!0,callbackFunction:<span class="keyword">function</span>(t,o){},scrollHorizontal:!1,scrollBox:<a class="code" href="jarallax_8min_8js.html#a04a8a2bbfa9c15500892b8e5033d625b">window</a>};t.extend(e,o);var a=<span class="keyword">this</span>,s={height:t(e.scrollBox).height(),width:t(e.scrollBox).width()};<span class="keywordflow">return</span> this.checkElements=<span class="keyword">function</span>(){var o,l;e.scrollHorizontal?(o=Math.max(t(<span class="stringliteral">&quot;html&quot;</span>).scrollLeft(),t(<span class="stringliteral">&quot;body&quot;</span>).scrollLeft(),t(<a class="code" href="jarallax_8min_8js.html#a04a8a2bbfa9c15500892b8e5033d625b">window</a>).scrollLeft()),l=o+s.width):(o=Math.max(t(<span class="stringliteral">&quot;html&quot;</span>).scrollTop(),t(<span class="stringliteral">&quot;body&quot;</span>).scrollTop(),t(<a class="code" href="jarallax_8min_8js.html#a04a8a2bbfa9c15500892b8e5033d625b">window</a>).scrollTop()),l=o+s.height),a.each(<span class="keyword">function</span>(){var a=t(this),i={},n={};<span class="keywordflow">if</span>(a.data(<span class="stringliteral">&quot;vp-add-class&quot;</span>)&amp;&amp;(n.classToAdd=a.data(<span class="stringliteral">&quot;vp-add-class&quot;</span>)),a.data(<span class="stringliteral">&quot;vp-remove-class&quot;</span>)&amp;&amp;(n.classToRemove=a.data(<span class="stringliteral">&quot;vp-remove-class&quot;</span>)),a.data(<span class="stringliteral">&quot;vp-add-class-full-view&quot;</span>)&amp;&amp;(n.classToAddForFullView=a.data(<span class="stringliteral">&quot;vp-add-class-full-view&quot;</span>)),a.data(<span class="stringliteral">&quot;vp-keep-add-class&quot;</span>)&amp;&amp;(n.removeClassAfterAnimation=a.data(<span class="stringliteral">&quot;vp-remove-after-animation&quot;</span>)),a.data(<span class="stringliteral">&quot;vp-offset&quot;</span>)&amp;&amp;(n.offset=a.data(<span class="stringliteral">&quot;vp-offset&quot;</span>)),a.data(<span class="stringliteral">&quot;vp-repeat&quot;</span>)&amp;&amp;(n.repeat=a.data(<span class="stringliteral">&quot;vp-repeat&quot;</span>)),a.data(<span class="stringliteral">&quot;vp-scrollHorizontal&quot;</span>)&amp;&amp;(n.scrollHorizontal=a.data(<span class="stringliteral">&quot;vp-scrollHorizontal&quot;</span>)),a.data(<span class="stringliteral">&quot;vp-invertBottomOffset&quot;</span>)&amp;&amp;(n.scrollHorizontal=a.data(<span class="stringliteral">&quot;vp-invertBottomOffset&quot;</span>)),t.extend(i,e),t.extend(i,n),!a.data(<span class="stringliteral">&quot;vp-animated&quot;</span>)||i.repeat){String(i.offset).indexOf(<span class="stringliteral">&quot;%&quot;</span>)&gt;0&amp;&amp;(i.offset=parseInt(i.offset)/100*s.height);var d=i.scrollHorizontal?a.offset().left:a.offset().top,r=i.scrollHorizontal?d+a.width():d+a.height(),c=Math.round(d)+i.offset,h=i.scrollHorizontal?c+a.width():c+a.height();i.invertBottomOffset&amp;&amp;(h-=2*i.offset),c&lt;l&amp;&amp;h&gt;o?(a.removeClass(i.classToRemove),a.addClass(i.classToAdd),i.callbackFunction(a,<span class="stringliteral">&quot;add&quot;</span>),r&lt;=l&amp;&amp;d&gt;=o?a.addClass(i.classToAddForFullView):a.removeClass(i.classToAddForFullView),a.data(<span class="stringliteral">&quot;vp-animated&quot;</span>,!0),i.removeClassAfterAnimation&amp;&amp;a.one(<span class="stringliteral">&quot;webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend&quot;</span>,<span class="keyword">function</span>(){a.removeClass(i.classToAdd)})):a.hasClass(i.classToAdd)&amp;&amp;i.repeat&amp;&amp;(a.removeClass(i.classToAdd+<span class="stringliteral">&quot; &quot;</span>+i.classToAddForFullView),i.callbackFunction(a,<span class="stringliteral">&quot;remove&quot;</span>),a.data(<span class="stringliteral">&quot;vp-animated&quot;</span>,!1))}})},(<span class="stringliteral">&quot;ontouchstart&quot;</span>in <a class="code" href="jarallax_8min_8js.html#a04a8a2bbfa9c15500892b8e5033d625b">window</a>||<span class="stringliteral">&quot;onmsgesturechange&quot;</span>in <a class="code" href="jarallax_8min_8js.html#a04a8a2bbfa9c15500892b8e5033d625b">window</a>)&amp;&amp;t(document).bind(<span class="stringliteral">&quot;touchmove MSPointerMove pointermove&quot;</span>,this.checkElements),t(e.scrollBox).bind(<span class="stringliteral">&quot;load scroll&quot;</span>,this.checkElements),t(<a class="code" href="jarallax_8min_8js.html#a04a8a2bbfa9c15500892b8e5033d625b">window</a>).resize(<span class="keyword">function</span>(o){s={height:t(e.scrollBox).height(),width:t(e.scrollBox).width()},a.checkElements()}),this.checkElements(),<span class="keyword">this</span>}}(<a class="code" href="jquery_8viewportchecker_8js.html#a2b1d6f9c448e3ce72f4e1865d6e38d2c">jQuery</a>);var <a class="code" href="jquery_8viewportchecker_8js.html#a89e2254033bb9a502090221edeb7b1b8">isBuilder</a>=$(<span class="stringliteral">&quot;html&quot;</span>).hasClass(<span class="stringliteral">&quot;is-builder&quot;</span>);<a class="code" href="jquery_8viewportchecker_8js.html#a89e2254033bb9a502090221edeb7b1b8">isBuilder</a>||$(<span class="stringliteral">&quot;.counters&quot;</span>).each(<span class="keyword">function</span>(){$(<span class="keyword">this</span>).viewportChecker({callbackFunction:<span class="keyword">function</span>(t,o){$(<span class="stringliteral">&quot;#&quot;</span>+t.attr(<span class="stringliteral">&quot;id&quot;</span>)+<span class="stringliteral">&quot; .count&quot;</span>).each(<span class="keyword">function</span>(){$(<span class="keyword">this</span>).prop(<span class="stringliteral">&quot;Counter&quot;</span>,0).animate({Counter:$(<span class="keyword">this</span>).text()},{duration:3e3,<a class="code" href="jquery_8easing_81_83_8js.html#a882f7d405d370ac72490f5c08b4042df">easing</a>:<span class="stringliteral">&quot;swing&quot;</span>,step:<span class="keyword">function</span>(t){$(<span class="keyword">this</span>).text(Math.ceil(t))}})})}})});</div><div class="ttc" id="jarallax_8min_8js_html_a04a8a2bbfa9c15500892b8e5033d625b"><div class="ttname"><a href="jarallax_8min_8js.html#a04a8a2bbfa9c15500892b8e5033d625b">window</a></div><div class="ttdeci">window</div><div class="ttdef"><b>Definition:</b> <a href="jarallax_8min_8js_source.html#l00007">jarallax.min.js:7</a></div></div>
+<div class="ttc" id="jquery_8easing_81_83_8js_html_a882f7d405d370ac72490f5c08b4042df"><div class="ttname"><a href="jquery_8easing_81_83_8js.html#a882f7d405d370ac72490f5c08b4042df">easing</a></div><div class="ttdeci">jQuery easing['jswing']</div><div class="ttdef"><b>Definition:</b> <a href="jquery_8easing_81_83_8js_source.html#l00039">jquery.easing.1.3.js:39</a></div></div>
+<div class="ttc" id="jquery_8viewportchecker_8js_html_a2b1d6f9c448e3ce72f4e1865d6e38d2c"><div class="ttname"><a href="jquery_8viewportchecker_8js.html#a2b1d6f9c448e3ce72f4e1865d6e38d2c">jQuery</a></div><div class="ttdeci">jQuery</div><div class="ttdef"><b>Definition:</b> <a href="jquery_8viewportchecker_8js_source.html#l00016">jquery.viewportchecker.js:16</a></div></div>
+<div class="ttc" id="jquery_8viewportchecker_8js_html_a89e2254033bb9a502090221edeb7b1b8"><div class="ttname"><a href="jquery_8viewportchecker_8js.html#a89e2254033bb9a502090221edeb7b1b8">isBuilder</a></div><div class="ttdeci">var isBuilder</div><div class="ttdef"><b>Definition:</b> <a href="jquery_8viewportchecker_8js_source.html#l00016">jquery.viewportchecker.js:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_34e9a5f624ac092a9ae2401c28d616d7.html">assets</a></li><li class="navelem"><a class="el" href="dir_6e548ce9b839dbb81343a604112e1105.html">viewportchecker</a></li><li class="navelem"><a class="el" href="jquery_8viewportchecker_8js.html">jquery.viewportchecker.js</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

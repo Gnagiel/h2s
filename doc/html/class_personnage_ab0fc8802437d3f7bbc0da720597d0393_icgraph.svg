@@ -9,24 +9,24 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 23)">
 <title>Personnage\id_persos</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-23 286.0332,-23 286.0332,4 -4,4"/>
-<!-- Node60 -->
+<!-- Node62 -->
 <g id="node1" class="node">
-<title>Node60</title>
+<title>Node62</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-.5 0,-18.5 116.0684,-18.5 116.0684,-.5 0,-.5"/>
 <text text-anchor="middle" x="58.0342" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Personnage\id_persos</text>
 </g>
-<!-- Node61 -->
+<!-- Node63 -->
 <g id="node2" class="node">
-<title>Node61</title>
+<title>Node63</title>
 <g id="a_node2"><a xlink:href="class_personnage.html#ac11963514b5d9911283b7ff61e094125" target="_top" xlink:title="Personnage\\setId_persos">
 <polygon fill="#ffffff" stroke="#000000" points="152.0684,-.5 152.0684,-18.5 282.0332,-18.5 282.0332,-.5 152.0684,-.5"/>
 <text text-anchor="middle" x="217.0508" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Personnage\setId_persos</text>
 </a>
 </g>
 </g>
-<!-- Node60&#45;&gt;Node61 -->
+<!-- Node62&#45;&gt;Node63 -->
 <g id="edge1" class="edge">
-<title>Node60&#45;&gt;Node61</title>
+<title>Node62&#45;&gt;Node63</title>
 <path fill="none" stroke="#191970" d="M126.5494,-9.5C135.0072,-9.5 143.6342,-9.5 152.0375,-9.5"/>
 <polygon fill="#191970" stroke="#191970" points="126.3432,-6.0001 116.3431,-9.5 126.3431,-13.0001 126.3432,-6.0001"/>
 </g>
