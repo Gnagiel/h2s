@@ -383,7 +383,7 @@ class PersonnagesManager
 
   public function update_lvl(Personnage $perso)
   {
-    $q = $this->db->prepare('SELECT n.niv_perso, n.vie, n.att
+    $q = $this->db->prepare('SELECT n.niv_perso, n.vie, n.att, n.xp_max
     FROM niv_perso n
     WHERE n.xp_min <= :perso_xp
     AND n.xp_max > :perso_xp2');
@@ -392,12 +392,19 @@ class PersonnagesManager
 
     $donnees = $q->fetch(PDO::FETCH_ASSOC);
 
+    if (($perso->qualite() == 1) && (count($donnees) == 0))
+    {
+      $donnees["niv_perso"] = 20;
+      $donnees["vie"] = 570;
+      $donnees["att"] = 228;
+    }
+
     $perso->hydrate([
       'niveau' => $donnees["niv_perso"],
       'pv' => $donnees["vie"],
       'att' => $donnees["att"],
     ]);
-    //$this->update($perso);
+
     return $perso;
   }
 

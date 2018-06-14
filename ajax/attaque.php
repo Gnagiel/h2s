@@ -34,6 +34,7 @@ if ($_POST['action'] == "frapper") // Si on a cliqué sur un personnage pour le 
     else
     {
       $persoAFrapper = $manager->get((int) $_POST['idCible']);
+
       $retour = $perso->frapper($persoAFrapper, $perso); // On stocke dans $retour les éventuelles erreurs ou messages que renvoie la méthode frapper.
 
       switch ($retour)
@@ -45,6 +46,15 @@ if ($_POST['action'] == "frapper") // Si on a cliqué sur un personnage pour le 
 					);
 
 					echo json_encode($entry);
+        break;
+
+        case Personnage::ATT_ESQUIVE :
+          $message = '<p>'.$persoAFrapper->nom().' a esquivé.';
+          $entry = array(
+            'result' => 'Esquive'
+          );
+
+          echo json_encode($entry);
         break;
 
         case Personnage::PERSONNAGE_FRAPPE :

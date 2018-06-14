@@ -73,26 +73,26 @@ $(document).ready(function(){
                 // }
                 //alert('AB : '+AB+' px. AC : '+AC+' px. BC : '+BC+' px. Angle : '+angleRad+' rad et '+angleDeg+' rad');
 
-                $("#blast"+attaquant).attr("hidden", false);
 
-                //$("#blast"+attaquant).attr("class", "blast");
-
-                var anim = CSSAnimations.get('blastAnim');
-                var anim = CSSAnimations.create({
-                    '0%': { transform: 'translateX(0px) translateY(0px)' },
-                    '100%': { transform: 'translateX('+x+'px) translateY('+y+'px)' }
-                });
-
-                $("#blast"+attaquant).css({ 'animation-name': anim.name,
-                            'animation-duration': '0.5s' });
-
-                $("#blast"+attaquant).on('animationend', function() {
-                    CSSAnimations.remove(anim.name);
-                    $("#blast"+attaquant).attr("hidden", true);
-                });
 
                 if (json.result == 'frapper')
                 {
+                  $("#blast"+attaquant).attr("hidden", false);
+
+                  var anim = CSSAnimations.get('blastAnim');
+                  var anim = CSSAnimations.create({
+                      '0%': { transform: 'translateX(0px) translateY(0px)' },
+                      '100%': { transform: 'translateX('+x+'px) translateY('+y+'px)' }
+                  });
+
+                  $("#blast"+attaquant).css({ 'animation-name': anim.name,
+                              'animation-duration': '0.5s' });
+
+                  $("#blast"+attaquant).on('animationend', function() {
+                      CSSAnimations.remove(anim.name);
+                      $("#blast"+attaquant).attr("hidden", true);
+                  });
+
                   $("#progress-bar"+json.id).attr('aria-valuenow', json.pv);
 									//$("#resultat").html("<p>Vous avez frappé !</p>");
                   var pv = Number(json.pv);
@@ -113,7 +113,26 @@ $(document).ready(function(){
                 else if (json.result == 'Pas possible') {
                   //$("#resultat").html("<p>Pourquoi vous frappez-vous ??? ...</p>");
                 }
+                else if (json.result == 'Esquive') {
+                  //$("#resultat").html("<p>Attaque esquivé</p>");
+                }
                 else if (json.result == 'Tué') {
+                  $("#blast"+attaquant).attr("hidden", false);
+
+                  var anim = CSSAnimations.get('blastAnim');
+                  var anim = CSSAnimations.create({
+                      '0%': { transform: 'translateX(0px) translateY(0px)' },
+                      '100%': { transform: 'translateX('+x+'px) translateY('+y+'px)' }
+                  });
+
+                  $("#blast"+attaquant).css({ 'animation-name': anim.name,
+                              'animation-duration': '0.5s' });
+
+                  $("#blast"+attaquant).on('animationend', function() {
+                      CSSAnimations.remove(anim.name);
+                      $("#blast"+attaquant).attr("hidden", true);
+                  });
+
 									//$("#resultat").html("<p>Vous avez tué !</p>");
 
 							    //$('#son').get(0).play();

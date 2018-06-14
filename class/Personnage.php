@@ -55,6 +55,7 @@ class Personnage
   const PERSO_ENDORMI = 6;
   const PERSONNAGE_SOIGNE = 7;
 	const PERSO_FULL_LIFE = 8;
+  const ATT_ESQUIVE = 9;
 
   public function __construct($valeurs = array())
   {
@@ -105,9 +106,22 @@ class Personnage
       return self::PERSO_ENDORMI;
     }
 
+    $hit = true;
+    $precision = rand(1, $perso2->pre);
+    $esquive = rand(1, $perso->esc);
+    if ($precision < ($esquive/3))
+    {
+      $hit = false;
+    }
+
+    if (!$hit)
+    {
+      return self::ATT_ESQUIVE;
+    }
+
     // On indique au personnage qu'il doit recevoir des dégâts.
     // Puis on retourne la valeur renvoyée par la méthode : self::PERSONNAGE_TUE ou self::PERSONNAGE_FRAPPE.
-    $this->recevoirXP(3);
+    //$this->recevoirXP(3);
     return $perso->recevoirDegats($perso2);
   }
 
@@ -118,7 +132,24 @@ class Personnage
 
 	public function recevoirDegats($perso2)
   {
-    $this->pv_fight = $this->pv_fight - $perso2->att;
+    //Calcul des dégats infligés
+    $degat = $perso2->att - $this->def;
+
+    //Calcul du coup critique
+    $critique = 1;
+    $crit = rand(1, $perso2->crit);
+    $tenacite = rand(1, $this->ten);
+    if ($crit < ($tenacite/3))
+    {
+      $critique = 3;
+    }
+
+    //Calcul des dégats subits
+    $protection = $perso2->pen / $this->arm;
+    $degat = ($degat * $protection)*$critique;
+
+    //Application des dégats
+    $this->pv_fight = $this->pv_fight - $degat;
 
     // Si on a 100 de dégâts ou plus, on dit que le personnage a été tué.
     if ($this->pv_fight <= 0)
