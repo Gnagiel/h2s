@@ -52,6 +52,7 @@ function afficher_perso($perso, $teamA) {
 				}
 				?>
 			</div>
+			<div class="sprite" id="sprite<?=$perso->id_perso();?>" hidden></div>
 			<div class="progress">
 
 

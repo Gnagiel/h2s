@@ -7,28 +7,34 @@ function auto_load(idU){
     }
   });
 }
-jQuery.fn.extend({
-   findPos : function() {
-       obj = jQuery(this).get(0);
-       var curleft = obj.offsetLeft || 0;
-       var curtop = obj.offsetTop || 0;
-       while (obj = obj.offsetParent) {
-                curleft += obj.offsetLeft
-                curtop += obj.offsetTop
-       }
-       return {x:curleft,y:curtop};
-   }
-});
+
+function angleEtOrientation(x, y, xCible, yCible)
+{
+  var z = Math.tan(y - yCible, x - xCible)+Math.PI;
+  return -z;
+}
+// jQuery.fn.extend({
+//    findPos : function() {
+//        obj = jQuery(this).get(0);
+//        var curleft = obj.offsetLeft || 0;
+//        var curtop = obj.offsetTop || 0;
+//        while (obj = obj.offsetParent) {
+//                 curleft += obj.offsetLeft
+//                 curtop += obj.offsetTop
+//        }
+//        return {x:curleft,y:curtop};
+//    }
+// });
 
 // Converts from degrees to radians.
-// Math.radians = function(degrees) {
-//   return degrees * Math.PI / 180;
-// };
-//
-// // Converts from radians to degrees.
-// Math.degrees = function(radians) {
-//   return radians * 180 / Math.PI;
-// };
+Math.radians = function(degrees) {
+  return degrees * Math.PI / 180;
+};
+
+// Converts from radians to degrees.
+Math.degrees = function(radians) {
+  return radians * 180 / Math.PI;
+};
 
 $(document).ready(function(){
 
@@ -55,6 +61,9 @@ $(document).ready(function(){
 
                 var x = x_cible - x_attaquant;
                 var y = y_cible - y_attaquant;
+                var z = angleEtOrientation(x_attaquant, y_attaquant, x_cible, y_cible);
+                z = Math.degrees(z);
+                //alert(z);
 
                 //Calcul des angles de pivot des effets spéciaux
 
@@ -79,7 +88,7 @@ $(document).ready(function(){
                 {
                   $("#blast"+attaquant).attr("hidden", false);
 
-                  var anim = CSSAnimations.get('blastAnim');
+
                   var anim = CSSAnimations.create({
                       '0%': { transform: 'translateX(0px) translateY(0px)' },
                       '100%': { transform: 'translateX('+x+'px) translateY('+y+'px)' }
@@ -91,6 +100,19 @@ $(document).ready(function(){
                   $("#blast"+attaquant).on('animationend', function() {
                       CSSAnimations.remove(anim.name);
                       $("#blast"+attaquant).attr("hidden", true);
+                      $("#sprite"+cible).attr("hidden", false);
+
+                      var anim_hit = CSSAnimations.get('play_hit');
+                      var anim_hit2 = CSSAnimations.get('play_hit2');
+                      $("#sprite"+cible).css({ 'animation-name': anim_hit.name,
+                                  'animation-duration': '0.5s' });
+
+                      $("#sprite"+cible).on('animationend', function() {
+                          CSSAnimations.remove(anim_hit.name);
+                          // $("#sprite"+cible).css({ 'animation-name': anim_hit2.name,
+                          //             'animation-duration': '0.5s' });
+                          //$("#sprite"+cible).attr("hidden", true);
+                      });
                   });
 
                   $("#progress-bar"+json.id).attr('aria-valuenow', json.pv);
@@ -119,7 +141,6 @@ $(document).ready(function(){
                 else if (json.result == 'Tué') {
                   $("#blast"+attaquant).attr("hidden", false);
 
-                  var anim = CSSAnimations.get('blastAnim');
                   var anim = CSSAnimations.create({
                       '0%': { transform: 'translateX(0px) translateY(0px)' },
                       '100%': { transform: 'translateX('+x+'px) translateY('+y+'px)' }
@@ -131,13 +152,24 @@ $(document).ready(function(){
                   $("#blast"+attaquant).on('animationend', function() {
                       CSSAnimations.remove(anim.name);
                       $("#blast"+attaquant).attr("hidden", true);
+
+                      $("#sprite"+cible).attr("hidden", false);
+                      var anim_hit = CSSAnimations.get('play_hit');
+                      $("#sprite"+cible).css({ 'animation-name': anim_hit.name,
+                                  'animation-duration': '0.5s' });
+                      $("#sprite"+cible).on('animationend', function() {
+                          CSSAnimations.remove(anim_hit.name);
+                          $("#sprite"+cible).attr("hidden", true);
+
+                          $("#progress-bar"+json.id).width('0%');
+                          $("#card"+json.id+" img").attr('src', "./images/perso/rip.jpg");
+                      });
                   });
 
 									//$("#resultat").html("<p>Vous avez tué !</p>");
 
 							    //$('#son').get(0).play();
-                  $("#progress-bar"+json.id).width('0%');
-                  $("#card"+json.id+" img").attr('src', "./images/perso/rip.jpg");
+
                 }
                 setTimeout("location.reload()",1*1000);
             }

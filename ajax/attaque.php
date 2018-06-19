@@ -37,9 +37,9 @@ if ($_POST['action'] == "frapper") // Si on a cliqué sur un personnage pour le 
 
       $retour = $perso->frapper($persoAFrapper, $perso); // On stocke dans $retour les éventuelles erreurs ou messages que renvoie la méthode frapper.
 
-      switch ($retour)
+      switch ($retour[0])
       {
-        case Personnage::CEST_MOI :
+        case 'CEST_MOI' :
           $message = 'Mais... pourquoi voulez-vous vous frapper ???';
 					$entry = array(
 						'result' => 'Pas possible'
@@ -48,8 +48,13 @@ if ($_POST['action'] == "frapper") // Si on a cliqué sur un personnage pour le 
 					echo json_encode($entry);
         break;
 
-        case Personnage::ATT_ESQUIVE :
-          $message = '<p>'.$persoAFrapper->nom().' a esquivé.';
+        case 'ATT_ESQUIVE' :
+          $message = '<p>'.$persoAFrapper->nom().' a esquivé.</p>';
+
+          $f = fopen("../logs/".$_SESSION['user']->pseudo().".txt", "a+");
+          fwrite($f,$message);
+          fclose($f) ;
+
           $entry = array(
             'result' => 'Esquive'
           );
@@ -57,8 +62,16 @@ if ($_POST['action'] == "frapper") // Si on a cliqué sur un personnage pour le 
           echo json_encode($entry);
         break;
 
-        case Personnage::PERSONNAGE_FRAPPE :
-          $message = '<p>'.$perso->nom().' a frappé '.$persoAFrapper->nom().' et lui a infligé '.$perso->att().' points de dégat</p>';
+        case 'PERSONNAGE_FRAPPE' :
+          $message = '<p>'.$perso->nom().' a frappé '.$persoAFrapper->nom().' et lui a infligé '.$retour[1].' points de dégat';
+          if ($retour[2] == 3)
+          {
+            $message = $message.' critique</p>';
+          }
+          else {
+            $message = $message.'</p>';
+          }
+
           $manager->update($perso);
           $manager->update($persoAFrapper);
 
@@ -74,11 +87,20 @@ if ($_POST['action'] == "frapper") // Si on a cliqué sur un personnage pour le 
 					echo json_encode($entry);
           break;
 
-        case Personnage::PERSONNAGE_TUE :
-          $message = '<p>'.$perso->nom().' a tué '.$persoAFrapper->nom().'</p>';
+        case 'PERSONNAGE_TUE' :
+          $message = '<p>'.$perso->nom().' a tué '.$persoAFrapper->nom().' en lui a infligé '.$retour[1].' points de dégat';
+          if ($retour[2] == 3)
+          {
+            $message = $message.' critique</p>';
+          }
+          else {
+            $message = $message.'</p>';
+          }
+
           $f = fopen("../logs/".$_SESSION['user']->pseudo().".txt", "a+");
           fwrite($f,$message);
 					fclose($f) ;
+
           $manager->update($perso);
           $manager->update($persoAFrapper);
 					$entry = array(
@@ -90,7 +112,7 @@ if ($_POST['action'] == "frapper") // Si on a cliqué sur un personnage pour le 
 					echo json_encode($entry);
         break;
 
-        case Personnage::PERSO_ENDORMI :
+        case 'PERSO_ENDORMI' :
           $message = 'Vous êtes endormi, vous ne pouvez pas frapper de personnage !';
         break;
       }

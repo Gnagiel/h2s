@@ -91,9 +91,6 @@ text-decoration:none
 	display: none;
 }
 /*//////////////////// ONGLET  //////////////////*/
-
-
-
 #page {
 	display: flex;
 	justify-content: space-around;
@@ -188,16 +185,56 @@ text-decoration:none
 	margin-left: 7px;
 }
 
-/* @keyframes blastAnim {
-    0% {
-        transform: translateX(0px) rotate(60deg);
-    }
-
-    100% {
-        transform: translateX(150px) rotate(60deg);
-    }
+.spritetest {
+  width: 256px;
+  height: 256px;
+  /* position:absolute;
+  bottom:-15px;
+  left:-15px; */
+  display: block;
+  background-image: url('../images/effects/hit.png');
+  animation: play_hit 2s steps(4);
 }
-*/
+
+.sprite {
+  width: 256px;
+  height: 256px;
+  position:absolute;
+  bottom:-15px;
+  left:-15px;
+  display: block;
+  background-image: url('../images/effects/hit.png');
+  -webkit-animation: play_hit .4s steps(4);
+     -moz-animation: play_hit .4s steps(4);
+      -ms-animation: play_hit .4s steps(4);
+       -o-animation: play_hit .4s steps(4);
+}
+
+@-webkit-keyframes play_hit {
+ from { background-position: 0px 0px; }
+   to { background-position: -1024px -1024px; }
+}
+
+@-moz-keyframes play_hit {
+ from { background-position: 0px 0px; }
+   to { background-position: -1024px -1024px; }
+}
+
+@-ms-keyframes play_hit {
+ from { background-position: 0px 0px; }
+   to { background-position: -1024px -1024px; }
+}
+
+@-o-keyframes play_hit {
+ from { background-position: 0px 0px; }
+   to { background-position: -1024px -1024px; }
+}
+
+@keyframes play_hit {
+ from { background-position: 0px 0px; }
+   to { background-position: -1024px -1024px; }
+}
+
 
 .blast {
   /* animation: blastAnim 2s; */

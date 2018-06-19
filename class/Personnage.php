@@ -96,14 +96,18 @@ class Personnage
 	 */
   public function frapper(Personnage $perso, Personnage $perso2)
   {
+    //tableau de stockage des résultats.
+    $retour = [];
     if ($perso->id_perso == $this->id_perso)
     {
-      return self::CEST_MOI;
+      $retour[0] = 'CEST_MOI';
+      return $retour;
     }
 
     if ($this->estEndormi())
     {
-      return self::PERSO_ENDORMI;
+      $retour[0] = 'PERSO_ENDORMI';
+      return $retour;
     }
 
     $hit = true;
@@ -116,7 +120,8 @@ class Personnage
 
     if (!$hit)
     {
-      return self::ATT_ESQUIVE;
+      $retour[0] = 'ATT_ESQUIVE';
+      return $retour;
     }
 
     // On indique au personnage qu'il doit recevoir des dégâts.
@@ -132,6 +137,9 @@ class Personnage
 
 	public function recevoirDegats($perso2)
   {
+    //tableau de stockage des résultats.
+    $retour = [];
+
     //Calcul des dégats infligés
     $degat = $perso2->att - $this->def;
 
@@ -148,6 +156,8 @@ class Personnage
     $protection = $perso2->pen / $this->arm;
     $degat = ($degat * $protection)*$critique;
 
+
+
     //Application des dégats
     $this->pv_fight = $this->pv_fight - $degat;
 
@@ -156,11 +166,17 @@ class Personnage
     {
     	$this->pv_fight = 0;
     	$this->etat = "kill";
-      return self::PERSONNAGE_TUE;
+      $retour[0] = 'PERSONNAGE_TUE';
+      $retour[1] = $degat;
+      $retour[2] = $critique;
+      return $retour;
     }
 
     // Sinon, on se contente de dire que le personnage a bien été frappé.
-    return self::PERSONNAGE_FRAPPE;
+    $retour[0] = 'PERSONNAGE_FRAPPE';
+    $retour[1] = $degat;
+    $retour[2] = $critique;
+    return $retour;
   }
 
   public function soigner(Personnage $perso)

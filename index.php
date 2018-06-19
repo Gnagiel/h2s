@@ -44,9 +44,9 @@ include("./includes/Function_Jeu.php");
     <link rel="shortcut icon" href="images/logos/1367009902-test2.png" type="image/x-icon">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <script   src="https://code.jquery.com/jquery-1.9.1.js"   integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="   crossorigin="anonymous"></script>
-    <script src="./bootstrap/assets/js/vendor/popper.min.js"></script>
-    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
-    <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/bootstrap/assets/js/vendor/popper.min.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	  <script src="./JS/highlight/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
 	  <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
 	  <link rel="stylesheet" href="./JS/highlight/github.css" type="text/css" media="screen" />

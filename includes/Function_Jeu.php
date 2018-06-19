@@ -57,8 +57,8 @@ function fonctionComparaison($a, $b){
 	elseif (isset($_POST['creeruser']) && isset($_POST['nom'])) // Si on a voulu créer un utilisateur.
 	{
 		$user = new User(['pseudo' => $_POST['nom'], 'mdp' => $_POST['mdp']]);
-		var_dump($user);
-	  if (isset($user)) // Si le type du personnage est valide, on a crée un personnage.
+		//var_dump($user);
+	  if (isset($user)) // Si la création de l'utilisateur s'est bien passé.
 	  {
 	    if (!$user->nomValide())
 	    {
@@ -74,6 +74,25 @@ function fonctionComparaison($a, $b){
 	    {
 	      $managerUser->add($user);
 	      $_SESSION['user'] = $user;
+
+				$perso = $manager->get_base_perso(2);
+				$manager->add($perso, $user, $managerStuff);
+
+				$perso2 = $manager->get_base_perso(2);
+				$manager->add($perso2, $user, $managerStuff);
+
+				$perso3 = $manager->get_base_perso(2);
+				$manager->add($perso3, $user, $managerStuff);
+
+				$perso4 = $manager->get_base_perso(1);
+				$manager->add($perso4, $user, $managerStuff);
+
+				$perso5 = $manager->get_base_perso(3);
+				$manager->add($perso5, $user, $managerStuff);
+
+				$perso6 = $manager->get_base_perso(3);
+				$manager->add($perso6, $user, $managerStuff);
+
 	    }
 	  }
 	}
