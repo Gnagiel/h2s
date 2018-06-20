@@ -13,7 +13,7 @@
 */
 	try
 	{
-	  $db = new PDO('mysql:host=localhost;dbname=h2s', 'root', 'molo1982');
+	  $db = new PDO('mysql:host=mysql-gnagiel.alwaysdata.net;dbname=gnagiel_h2s', 'gnagiel_sql', 'molo1982');
 	  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 	}
 	catch (PDOException $e)
