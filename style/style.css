@@ -26,6 +26,10 @@ body {
 	height: 100px; /* à titre d'exemple */
 }
 
+#main_page #footer {
+	display : none;
+}
+
 #combat_page {
 	background-color: grey;
 	margin-top:-20px;
