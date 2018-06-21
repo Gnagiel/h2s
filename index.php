@@ -47,7 +47,7 @@ include("./includes/Function_Jeu.php");
     <script src="assets/bootstrap/assets/js/vendor/popper.min.js"></script>
     <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
     <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	  <!-- <script src="./JS/highlight/highlight.pack.js" type="text/javascript" charset="utf-8"></script> -->
+	  <script src="./JS/highlight/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
 	  <script type="text/javascript" charset="utf-8"> hljs.initHighlightingOnLoad(); </script>
 	  <link rel="stylesheet" href="./JS/highlight/github.css" type="text/css" media="screen" />
     <meta charset="utf-8" />

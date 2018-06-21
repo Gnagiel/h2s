@@ -158,7 +158,13 @@ if ($_SESSION['tour'] == 0) {
 	fclose($f);
 }
 //var_dump($perso1);
-if (($perso1->etat() == "kill") && ($perso2->etat() == "kill") && ($perso3->etat() == "kill") && ($perso4->etat() == "kill") && ($perso5->etat() == "kill") && ($perso6->etat() == "kill")) {
+if (($perso1->etat() == "kill") && ($perso2->etat() == "kill")
+&& ($perso3->etat() == "kill") && ($perso4->etat() == "kill") &&
+($perso5->etat() == "kill") && ($perso6->etat() == "kill")
+||
+($perso1->pv_fight() == null) && ($perso2->pv_fight() == null)
+&& ($perso3->pv_fight() == null) && ($perso4->pv_fight() == null) &&
+($perso5->pv_fight() == null) && ($perso6->pv_fight() == null)) {
 	unlink("./logs/".$_SESSION['user']->pseudo().".txt");
 	echo '<div class="fond">DEFAITE</ br>';
 	echo '<form action="" method="GET">
@@ -166,7 +172,13 @@ if (($perso1->etat() == "kill") && ($perso2->etat() == "kill") && ($perso3->etat
 	</form></div>';
 }
 
-else if (($adv1->etat() == "kill") && ($adv2->etat() == "kill") && ($adv3->etat() == "kill") && ($adv4->etat() == "kill") && ($adv5->etat() == "kill") && ($adv6->etat() == "kill")) {
+else if (($adv1->etat() == "kill") && ($adv2->etat() == "kill")
+&& ($adv3->etat() == "kill") && ($adv4->etat() == "kill") &&
+($adv5->etat() == "kill") && ($adv6->etat() == "kill")
+||
+($adv1->pv_fight() == null) && ($adv2->pv_fight() == null)
+&& ($adv3->pv_fight() == null) && ($adv4->pv_fight() == null) &&
+($adv5->pv_fight() == null) && ($adv6->pv_fight() == null)) {
 	unlink("./logs/".$_SESSION['user']->pseudo().".txt");
 	echo '<div class="fond">VICTOIRE</ br>';
 	echo '<form action="" method="GET">

@@ -5,157 +5,157 @@ for ($j = 0; $j < count($teamA); $j++) {
 	if ($jr[$i]->types() != "monk") {
 		if ($teamA[$j]->id_perso() == $jr[$i]->id_perso()) {
 			if ($jr[$i]->id_perso() == $perso1->id_perso()) {
-	  		if ($teamB[0]->etat() == "good")
+	  		if ($teamB[0]->etat() == "good" && $teamB[0]->pv_fight() != null)
 				{
 					$id = $teamB[0]->id_perso();
 				}
-				else if ($teamB[1]->etat() == "good")
+				else if ($teamB[1]->etat() == "good" && $teamB[1]->pv_fight() != null)
 				{
 					$id = $teamB[1]->id_perso();
 				}
-				else if ($teamB[2]->etat() == "good")
+				else if ($teamB[2]->etat() == "good" && $teamB[2]->pv_fight() != null)
 				{
 					$id = $teamB[2]->id_perso();
 				}
-				else if ($teamB[3]->etat() == "good")
+				else if ($teamB[3]->etat() == "good" && $teamB[3]->pv_fight() != null)
 				{
 					$id = $teamB[3]->id_perso();
 				}
-				else if ($teamB[4]->etat() == "good")
+				else if ($teamB[4]->etat() == "good" && $teamB[4]->pv_fight() != null)
 				{
 					$id = $teamB[4]->id_perso();
 				}
-				else if ($teamB[5]->etat() == "good")
+				else if ($teamB[5]->etat() == "good" && $teamB[5]->pv_fight() != null)
 				{
 					$id = $teamB[5]->id_perso();
 				}
 			}
 			elseif ($jr[$i]->id_perso() == $perso2->id_perso()) {
-	  		if ($teamB[1]->etat() == "good")
+	  		if ($teamB[1]->etat() == "good" && $teamB[1]->pv_fight() != null)
 				{
 					$id = $teamB[1]->id_perso();
 				}
-				else if ($teamB[0]->etat() == "good")
+				else if ($teamB[0]->etat() == "good" && $teamB[0]->pv_fight() != null)
 				{
 					$id = $teamB[0]->id_perso();
 				}
-				else if ($teamB[2]->etat() == "good")
+				else if ($teamB[2]->etat() == "good" && $teamB[2]->pv_fight() != null)
 				{
 					$id = $teamB[2]->id_perso();
 				}
-				else if ($teamB[4]->etat() == "good")
+				else if ($teamB[4]->etat() == "good" && $teamB[4]->pv_fight() != null)
 				{
 					$id = $teamB[4]->id_perso();
 				}
-				else if ($teamB[3]->etat() == "good")
+				else if ($teamB[3]->etat() == "good" && $teamB[3]->pv_fight() != null)
 				{
 					$id = $teamB[3]->id_perso();
 				}
-				else if ($teamB[5]->etat() == "good")
+				else if ($teamB[5]->etat() == "good" && $teamB[5]->pv_fight() != null)
 				{
 					$id = $teamB[5]->id_perso();
 				}
 			}
 			elseif ($jr[$i]->id_perso() == $perso3->id_perso()) {
-	  		if ($teamB[2]->etat() == "good")
+	  		if ($teamB[2]->etat() == "good" && $teamB[2]->pv_fight() != null)
 				{
 					$id = $teamB[2]->id_perso();
 				}
-				else if ($teamB[1]->etat() == "good")
+				else if ($teamB[1]->etat() == "good" && $teamB[1]->pv_fight() != null)
 				{
 					$id = $teamB[1]->id_perso();
 				}
-				else if ($teamB[0]->etat() == "good")
+				else if ($teamB[0]->etat() == "good" && $teamB[0]->pv_fight() != null)
 				{
 					$id = $teamB[0]->id_perso();
 				}
-				else if ($teamB[5]->etat() == "good")
+				else if ($teamB[5]->etat() == "good" && $teamB[5]->pv_fight() != null)
 				{
 					$id = $teamB[5]->id_perso();
 				}
-				else if ($teamB[4]->etat() == "good")
+				else if ($teamB[4]->etat() == "good" && $teamB[4]->pv_fight() != null)
 				{
 					$id = $teamB[4]->id_perso();
 				}
-				else if ($teamB[3]->etat() == "good")
+				else if ($teamB[3]->etat() == "good" && $teamB[3]->pv_fight() != null)
 				{
 					$id = $teamB[3]->id_perso();
 				}
 			}
 			else if ($jr[$i]->id_perso() == $perso4->id_perso()) {
-				if ($teamB[0]->etat() == "good")
+				if ($teamB[0]->etat() == "good" && $teamB[0]->pv_fight() != null)
 				{
 					$id = $teamB[0]->id_perso();
 				}
-				else if ($teamB[1]->etat() == "good")
+				else if ($teamB[1]->etat() == "good" && $teamB[1]->pv_fight() != null)
 				{
 					$id = $teamB[1]->id_perso();
 				}
-				else if ($teamB[2]->etat() == "good")
+				else if ($teamB[2]->etat() == "good" && $teamB[2]->pv_fight() != null)
 				{
 					$id = $teamB[2]->id_perso();
 				}
-				else if ($teamB[3]->etat() == "good")
+				else if ($teamB[3]->etat() == "good" && $teamB[3]->pv_fight() != null)
 				{
 					$id = $teamB[3]->id_perso();
 				}
-				else if ($teamB[4]->etat() == "good")
+				else if ($teamB[4]->etat() == "good" && $teamB[4]->pv_fight() != null)
 				{
 					$id = $teamB[4]->id_perso();
 				}
-				else if ($teamB[5]->etat() == "good")
+				else if ($teamB[5]->etat() == "good" && $teamB[5]->pv_fight() != null)
 				{
 					$id = $teamB[5]->id_perso();
 				}
 			}
 			elseif ($jr[$i]->id_perso() == $perso5->id_perso()) {
-				if ($teamB[1]->etat() == "good")
+				if ($teamB[1]->etat() == "good" && $teamB[1]->pv_fight() != null)
 				{
 					$id = $teamB[1]->id_perso();
 				}
-				else if ($teamB[0]->etat() == "good")
+				else if ($teamB[0]->etat() == "good" && $teamB[0]->pv_fight() != null)
 				{
 					$id = $teamB[0]->id_perso();
 				}
-				else if ($teamB[2]->etat() == "good")
+				else if ($teamB[2]->etat() == "good" && $teamB[2]->pv_fight() != null)
 				{
 					$id = $teamB[2]->id_perso();
 				}
-				else if ($teamB[4]->etat() == "good")
+				else if ($teamB[4]->etat() == "good" && $teamB[4]->pv_fight() != null)
 				{
 					$id = $teamB[4]->id_perso();
 				}
-				else if ($teamB[3]->etat() == "good")
+				else if ($teamB[3]->etat() == "good" && $teamB[3]->pv_fight() != null)
 				{
 					$id = $teamB[3]->id_perso();
 				}
-				else if ($teamB[5]->etat() == "good")
+				else if ($teamB[5]->etat() == "good" && $teamB[5]->pv_fight() != null)
 				{
 					$id = $teamB[5]->id_perso();
 				}
 			}
 			elseif ($jr[$i]->id_perso() == $perso6->id_perso()) {
-				if ($teamB[2]->etat() == "good")
+				if ($teamB[2]->etat() == "good" && $teamB[2]->pv_fight() != null)
 				{
 					$id = $teamB[2]->id_perso();
 				}
-				else if ($teamB[1]->etat() == "good")
+				else if ($teamB[1]->etat() == "good" && $teamB[1]->pv_fight() != null)
 				{
 					$id = $teamB[1]->id_perso();
 				}
-				else if ($teamB[0]->etat() == "good")
+				else if ($teamB[0]->etat() == "good" && $teamB[0]->pv_fight() != null)
 				{
 					$id = $teamB[0]->id_perso();
 				}
-				else if ($teamB[5]->etat() == "good")
+				else if ($teamB[5]->etat() == "good" && $teamB[5]->pv_fight() != null)
 				{
 					$id = $teamB[5]->id_perso();
 				}
-				else if ($teamB[4]->etat() == "good")
+				else if ($teamB[4]->etat() == "good" && $teamB[4]->pv_fight() != null)
 				{
 					$id = $teamB[4]->id_perso();
 				}
-				else if ($teamB[3]->etat() == "good")
+				else if ($teamB[3]->etat() == "good" && $teamB[3]->pv_fight() != null)
 				{
 					$id = $teamB[3]->id_perso();
 				}
@@ -163,157 +163,157 @@ for ($j = 0; $j < count($teamA); $j++) {
 		}
 		else {
 			if ($jr[$i]->id_perso() == $adv1->id_perso()) {
-	  		if ($teamA[0]->etat() == "good")
+	  		if ($teamA[0]->etat() == "good" && $teamA[0]->pv_fight() != null)
 				{
 					$id = $teamA[0]->id_perso();
 				}
-				else if ($teamA[1]->etat() == "good")
+				else if ($teamA[1]->etat() == "good" && $teamA[1]->pv_fight() != null)
 				{
 					$id = $teamA[1]->id_perso();
 				}
-				else if ($teamA[2]->etat() == "good")
+				else if ($teamA[2]->etat() == "good" && $teamA[2]->pv_fight() != null)
 				{
 					$id = $teamA[2]->id_perso();
 				}
-				else if ($teamA[3]->etat() == "good")
+				else if ($teamA[3]->etat() == "good" && $teamA[3]->pv_fight() != null)
 				{
 					$id = $teamA[3]->id_perso();
 				}
-				else if ($teamA[4]->etat() == "good")
+				else if ($teamA[4]->etat() == "good" && $teamA[4]->pv_fight() != null)
 				{
 					$id = $teamA[4]->id_perso();
 				}
-				else if ($teamA[5]->etat() == "good")
+				else if ($teamA[5]->etat() == "good" && $teamA[5]->pv_fight() != null)
 				{
 					$id = $teamA[5]->id_perso();
 				}
 			}
 			elseif ($jr[$i]->id_perso() == $adv2->id_perso()) {
-	  		if ($teamA[1]->etat() == "good")
+	  		if ($teamA[1]->etat() == "good" && $teamA[1]->pv_fight() != null)
 				{
 					$id = $teamA[1]->id_perso();
 				}
-				else if ($teamA[0]->etat() == "good")
+				else if ($teamA[0]->etat() == "good" && $teamA[0]->pv_fight() != null)
 				{
 					$id = $teamA[0]->id_perso();
 				}
-				else if ($teamA[2]->etat() == "good")
+				else if ($teamA[2]->etat() == "good" && $teamA[2]->pv_fight() != null)
 				{
 					$id = $teamA[2]->id_perso();
 				}
-				else if ($teamA[4]->etat() == "good")
+				else if ($teamA[4]->etat() == "good" && $teamA[4]->pv_fight() != null)
 				{
 					$id = $teamA[4]->id_perso();
 				}
-				else if ($teamA[3]->etat() == "good")
+				else if ($teamA[3]->etat() == "good" && $teamA[3]->pv_fight() != null)
 				{
 					$id = $teamA[3]->id_perso();
 				}
-				else if ($teamA[5]->etat() == "good")
+				else if ($teamA[5]->etat() == "good" && $teamA[5]->pv_fight() != null)
 				{
 					$id = $teamA[5]->id_perso();
 				}
 			}
 			elseif ($jr[$i]->id_perso() == $adv3->id_perso()) {
-	  		if ($teamA[2]->etat() == "good")
+	  		if ($teamA[2]->etat() == "good" && $teamA[2]->pv_fight() != null)
 				{
 					$id = $teamA[2]->id_perso();
 				}
-				else if ($teamA[1]->etat() == "good")
+				else if ($teamA[1]->etat() == "good" && $teamA[1]->pv_fight() != null)
 				{
 					$id = $teamA[1]->id_perso();
 				}
-				else if ($teamA[0]->etat() == "good")
+				else if ($teamA[0]->etat() == "good" && $teamA[0]->pv_fight() != null)
 				{
 					$id = $teamA[0]->id_perso();
 				}
-				else if ($teamA[5]->etat() == "good")
+				else if ($teamA[5]->etat() == "good" && $teamA[5]->pv_fight() != null)
 				{
 					$id = $teamA[5]->id_perso();
 				}
-				else if ($teamA[4]->etat() == "good")
+				else if ($teamA[4]->etat() == "good" && $teamA[4]->pv_fight() != null)
 				{
 					$id = $teamA[4]->id_perso();
 				}
-				else if ($teamA[3]->etat() == "good")
+				else if ($teamA[3]->etat() == "good" && $teamA[3]->pv_fight() != null)
 				{
 					$id = $teamA[3]->id_perso();
 				}
 			}
 			else if ($jr[$i]->id_perso() == $adv4->id_perso()) {
-	  		if ($teamA[0]->etat() == "good")
+	  		if ($teamA[0]->etat() == "good" && $teamA[0]->pv_fight() != null)
 				{
 					$id = $teamA[0]->id_perso();
 				}
-				else if ($teamA[1]->etat() == "good")
+				else if ($teamA[1]->etat() == "good" && $teamA[1]->pv_fight() != null)
 				{
 					$id = $teamA[1]->id_perso();
 				}
-				else if ($teamA[2]->etat() == "good")
+				else if ($teamA[2]->etat() == "good" && $teamA[2]->pv_fight() != null)
 				{
 					$id = $teamA[2]->id_perso();
 				}
-				else if ($teamA[3]->etat() == "good")
+				else if ($teamA[3]->etat() == "good" && $teamA[3]->pv_fight() != null)
 				{
 					$id = $teamA[3]->id_perso();
 				}
-				else if ($teamA[4]->etat() == "good")
+				else if ($teamA[4]->etat() == "good" && $teamA[4]->pv_fight() != null)
 				{
 					$id = $teamA[4]->id_perso();
 				}
-				else if ($teamA[5]->etat() == "good")
+				else if ($teamA[5]->etat() == "good" && $teamA[5]->pv_fight() != null)
 				{
 					$id = $teamA[5]->id_perso();
 				}
 			}
 			elseif ($jr[$i]->id_perso() == $adv5->id_perso()) {
-	  		if ($teamA[1]->etat() == "good")
+	  		if ($teamA[1]->etat() == "good" && $teamA[1]->pv_fight() != null)
 				{
 					$id = $teamA[1]->id_perso();
 				}
-				else if ($teamA[0]->etat() == "good")
+				else if ($teamA[0]->etat() == "good" && $teamA[0]->pv_fight() != null)
 				{
 					$id = $teamA[0]->id_perso();
 				}
-				else if ($teamA[2]->etat() == "good")
+				else if ($teamA[2]->etat() == "good" && $teamA[2]->pv_fight() != null)
 				{
 					$id = $teamA[2]->id_perso();
 				}
-				else if ($teamA[4]->etat() == "good")
+				else if ($teamA[4]->etat() == "good" && $teamA[4]->pv_fight() != null)
 				{
 					$id = $teamA[4]->id_perso();
 				}
-				else if ($teamA[3]->etat() == "good")
+				else if ($teamA[3]->etat() == "good" && $teamA[3]->pv_fight() != null)
 				{
 					$id = $teamA[3]->id_perso();
 				}
-				else if ($teamA[5]->etat() == "good")
+				else if ($teamA[5]->etat() == "good" && $teamA[5]->pv_fight() != null)
 				{
 					$id = $teamA[5]->id_perso();
 				}
 			}
 			elseif ($jr[$i]->id_perso() == $adv6->id_perso()) {
-	  		if ($teamA[2]->etat() == "good")
+	  		if ($teamA[2]->etat() == "good" && $teamA[2]->pv_fight() != null)
 				{
 					$id = $teamA[2]->id_perso();
 				}
-				else if ($teamA[1]->etat() == "good")
+				else if ($teamA[1]->etat() == "good" && $teamA[1]->pv_fight() != null)
 				{
 					$id = $teamA[1]->id_perso();
 				}
-				else if ($teamA[0]->etat() == "good")
+				else if ($teamA[0]->etat() == "good" && $teamA[0]->pv_fight() != null)
 				{
 					$id = $teamA[0]->id_perso();
 				}
-				else if ($teamA[5]->etat() == "good")
+				else if ($teamA[5]->etat() == "good" && $teamA[5]->pv_fight() != null)
 				{
 					$id = $teamA[5]->id_perso();
 				}
-				else if ($teamA[4]->etat() == "good")
+				else if ($teamA[4]->etat() == "good" && $teamA[4]->pv_fight() != null)
 				{
 					$id = $teamA[4]->id_perso();
 				}
-				else if ($teamA[3]->etat() == "good")
+				else if ($teamA[3]->etat() == "good" && $teamA[3]->pv_fight() != null)
 				{
 					$id = $teamA[3]->id_perso();
 				}
