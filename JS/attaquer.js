@@ -115,7 +115,6 @@ $(document).ready(function(){
                       });
                   });
 
-                  $("#progress-bar"+json.id).attr('aria-valuenow', json.pv);
 									//$("#resultat").html("<p>Vous avez frappé !</p>");
                   var pv = Number(json.pv);
     							var pv_max = Number($("#progress-bar"+json.id).attr("aria-valuemax"));
@@ -125,10 +124,18 @@ $(document).ready(function(){
     							level = level * 100;
                   $("#progress-bar"+json.id).width(level+'%');
    							}
-                // else if (json.result == 'soigner') {
-                // 	$('#son2').get(0).play();
-                //   $("#resultat").html("<p>Vous avez soigné !</p>");
-                // }
+                else if (json.result == 'soigner') {
+                	//$('#son2').get(0).play();
+                  //$("#resultat").html("<p>Vous avez soigné !</p>");
+
+                  var pv = Number(json.pv);
+    							var pv_max = Number($("#progress-bar"+json.id).attr("aria-valuemax"));
+    							//alert(xp + " " + xp_min + " " +  xp_max);
+    							var level = 0;
+    							level = pv / pv_max;
+    							level = level * 100;
+                  $("#progress-bar"+json.id).width(level+'%');
+                }
                 // else if (json.result == 'endormir') {
 								// 	$("#resultat").html("<p>Vous avez ensorcelé !</p>");
    							// }

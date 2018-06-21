@@ -80,10 +80,11 @@ function cadre_team($emp_team, $user, $manager) {
 	$tab = $manager->get_id_team($emp_team, $user->id_user());
 	//var_dump($tab);
 	if ($tab) {
+    $nom = str_replace(' ', '_', $tab["nom"]);
 		?>
     <div class="preferance" >
 	 		<div class="drag" id="<?=$tab["nom"];?><?=$tab["id_perso"];?>" data-id="<?=$tab["id_perso"];?>"
-	 			style="position: relative;top:-11px;left:-11px;background-image: url('./images/perso/<?=$tab["nom"];?><?=$tab["etoile"];?>.jpg');background-size: 100%;" draggable="true" >
+	 			style="position: relative;top:-11px;left:-11px;background-image: url('images/perso/<?=$nom;?><?=$tab['etoile'];?>.jpg');background-size: 100%;" draggable="true" >
 			  <p class="text_cadre"><?=$tab["nom"];?> <?=$tab["id_perso"];?></p>
 			  <input type="hidden" class="input_change" name="choix[]" value="<?=$tab["id_perso"];?>" />
 			</div>
@@ -128,10 +129,10 @@ function cadre_team($emp_team, $user, $manager) {
 <?php
 foreach ($perso as $persos) {
 	if ($persos->team() == 0) {
-		//var_dump($persos);
+		$nom2 = str_replace(' ', '_', $persos->nom());
   	?>
 	 		<div class="drag" id="<?=$persos->nom();?><?=$persos->id_perso();?>" data-id="<?=$persos->id_perso();?>" draggable="true"
-	 			style="background-image: url('./images/perso/<?=$persos->nom();?><?=$persos->etoile();?>.jpg');background-size: 100%;">
+	 			style="background-image: url('./images/perso/<?=$nom2;?><?=$persos->etoile();?>.jpg');background-size: 100%;">
 			  <p><?=$persos->nom();?> <?=$persos->id_perso();?></p>
 			  <input type="hidden" class="input_change" name="choix[]" value="<?=$persos->id_perso();?>" />
 			</div>

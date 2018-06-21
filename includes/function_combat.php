@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	function attaquant(id1) {
 		document.getElementById("id1").value = nom;
 	}
@@ -9,7 +9,7 @@
 		document.getElementById("soigner").value = id;
 		document.getElementById("idCible").value = id;
 	}
-</script>
+</script> -->
 
 <?php
 function afficher_perso($perso, $teamA) {
@@ -33,10 +33,11 @@ function afficher_perso($perso, $teamA) {
 	// }
 	if (($perso->etat() != "kill") && ($perso->pv_fight() != null))
 	{
+		$nom = str_replace(' ', '_', $perso->nom());
 	?>
 	<div class="card border rounded center" id="card<?= $perso->id_perso();?>" style="width:200px;padding:5px">
 
-		<img src="./images/perso/<?= $perso->nom();?>2.jpg" class="avatarC" id="<?= $perso->id_perso();?>"/>
+		<img src="./images/perso/<?=$nom?><?= $perso->etoile();?>.jpg" class="avatarC" id="<?= $perso->id_perso();?>"/>
 		<div class="card-body">
 			<div class="col align-self-center">
 				<?php

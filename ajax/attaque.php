@@ -183,67 +183,65 @@ if ($_POST['action'] == "frapper") // Si on a cliqué sur un personnage pour le 
 //   }
 // }
 //
-// elseif ($_POST['action'] == 'soigner')
-// {
-//   if (!isset($perso))
-//   {
-//     $message = 'Merci de créer un personnage ou de vous identifier.';
-//   }
-//
-//   else
-//   {
-//     // Il faut bien vérifier que le personnage est un magicien.
-//     if ($perso->type() != 'monk')
-//     {
-//       $message = 'Seuls les monks peuvent soigner des personnages !';
-//     }
-//
-//     else
-//     {
-//       if (!$manager->exists((int) $_POST['idCible']))
-//       {
-//         $message = 'Le personnage que vous voulez soigner n\'existe pas !';
-//       }
-//
-//       else
-//       {
-//         $persoASoigner = $manager->get((int) $_POST['idCible']);
-//         $retour = $perso->lancerUnSoin($persoASoigner);
-//
-//         switch ($retour)
-//         {
-//           case Personnage::PERSONNAGE_SOIGNE :
-//             $message = '<p>'.$perso->nom().' a soigner '.$persoASoigner->nom().' et lui a rendu '.$perso->inte().' points de vie</p>';
-// 	          $f = fopen($_SESSION['user']->nom().".txt", "a+");
-// 	          fwrite($f,$message);
-// 						fclose($f) ;
-// 	          $manager->update($perso);
-// 	          $manager->update($persoASoigner);
-// 						$entry = array(
-// 							'result' => 'soigner',
-// 							'persoInte' => utf8_encode($perso->inte()),
-// 							'id' => utf8_encode($persoASoigner->id()),
-// 							'vie' => utf8_encode($persoASoigner->vie())
-// 						);
-//
-// 						$json[] = $entry;
-// 						echo json_encode($json);
-// 	          break;
-//
-//           case Personnage::PAS_DE_MAGIE :
-//             $message = 'Vous n\'avez pas de magie !';
-//             break;
-//
-//           case Personnage::PERSO_ENDORMI :
-//             $message = 'Vous êtes endormi, vous ne pouvez pas lancer de sort !';
-//             break;
-//
-//           case Personnage::PERSO_FULL_LIFE :
-//             $message = 'Le personnage n\'a plus besoin de soin !';
-//             break;
-//         }
-//       }
-//     }
-//   }
-// }
+elseif ($_POST['action'] == 'soigner')
+{
+  if (!isset($perso))
+  {
+    $message = 'Merci de créer un personnage ou de vous identifier.';
+  }
+
+  else
+  {
+    // Il faut bien vérifier que le personnage est un magicien.
+    if ($perso->types() != 'soigneur')
+    {
+      $message = 'Seuls les soigneurs peuvent soigner des personnages !';
+    }
+
+    else
+    {
+      if (!$manager->exists((int) $_POST['idCible']))
+      {
+        $message = 'Le personnage que vous voulez soigner n\'existe pas !';
+      }
+
+      else
+      {
+        $persoASoigner = $manager->get((int) $_POST['idCible']);
+        $retour = $perso->soigner($persoASoigner);
+
+        switch ($retour)
+        {
+          case Personnage::PERSONNAGE_SOIGNE :
+            $message = '<p>'.$perso->nom().' a soigner '.$persoASoigner->nom().' et lui a rendu 60 points de vie</p>';
+	          $f = fopen("../logs/".$_SESSION['user']->pseudo().".txt", "a+");
+	          fwrite($f,$message);
+						fclose($f) ;
+	          $manager->update($perso);
+	          $manager->update($persoASoigner);
+						$entry = array(
+							'result' => 'soigner',
+							'id' => utf8_encode($persoASoigner->id_perso())
+						);
+
+  					echo json_encode($entry);
+
+	          break;
+
+          case Personnage::PAS_DE_MAGIE :
+            $message = 'Vous n\'avez pas de magie !';
+            break;
+
+          case Personnage::PERSO_ENDORMI :
+            $message = 'Vous êtes endormi, vous ne pouvez pas lancer de sort !';
+            break;
+
+          case Personnage::PERSO_FULL_LIFE :
+            $message = 'Le personnage n\'a plus besoin de soin !';
+            break;
+        }
+      }
+    }
+  }
+}
 ?>

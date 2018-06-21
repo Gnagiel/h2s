@@ -186,7 +186,7 @@ class Personnage
     {
       return self::PERSO_ENDORMI;
     }
-    $this->magie -= 10;
+    //$this->magie -= 10;
     // On indique au personnage qu'il doit recevoir des soins.
     // Puis on retourne la valeur renvoyée par la méthode : self::PERSONNAGE_SOIGNE.
     return $perso->recevoirSoins($this);
@@ -194,10 +194,10 @@ class Personnage
 
 	public function recevoirSoins($perso)
   {
-  	$this->pv += $perso->inte;
-    if ($this->pv >= $this->pv_max)
+  	$this->pv_fight += 60;
+    if ($this->pv_fight >= $this->pv)
     {
-    $this->pv = $this->pv_max;
+    $this->pv_fight = $this->pv;
   	}
     // Sinon, on se contente de dire que le personnage a bien été soigné.
     return self::PERSONNAGE_SOIGNE;

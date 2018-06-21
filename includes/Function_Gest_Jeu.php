@@ -2,7 +2,7 @@
 // Gestion des persos sauf healers
 
 for ($j = 0; $j < count($teamA); $j++) {
-	if ($jr[$i]->types() != "monk") {
+	if ($jr[$i]->types() != "soigneur") {
 		if ($teamA[$j]->id_perso() == $jr[$i]->id_perso()) {
 			if ($jr[$i]->id_perso() == $perso1->id_perso()) {
 	  		if ($teamB[0]->etat() == "good" && $teamB[0]->pv_fight() != null)
@@ -321,7 +321,7 @@ for ($j = 0; $j < count($teamA); $j++) {
 		}
 	}
 	// Gestion des healers
-	else if ($jr[$i]->type() == "monk"){
+	else if ($jr[$i]->types() == "soigneur"){
 		$teamAsort = [];
 		$teamBsort = [];
 		if ($teamA[$j]->id_perso() == $jr[$i]->id_perso()) {
@@ -329,7 +329,7 @@ for ($j = 0; $j < count($teamA); $j++) {
 				if ($teamA[$x]->etat() == "good") {
 					$pers = array(
 		        'id_perso' => $teamA[$x]->id_perso(),
-		        'vie' => $teamA[$x]->pv()
+		        'vie' => $teamA[$x]->pv_fight()
 			  	);
 					$teamAsort[count($teamAsort)] = $pers;
 				}
@@ -342,7 +342,7 @@ for ($j = 0; $j < count($teamA); $j++) {
 				if ($teamB[$y]->etat() == "good") {
 					$pers = array(
 		        'id_perso' => $teamB[$y]->id_perso(),
-		        'vie' => $teamB[$y]->pv()
+		        'vie' => $teamB[$y]->pv_fight()
 			  	);
 					$teamBsort[count($teamBsort)] = $pers;
 				}
@@ -366,12 +366,11 @@ for ($j = 0; $j < count($teamA); $j++) {
 
 <script language="JavaScript" type="text/JavaScript">
 	$(document).ready(function(){
-		if ($("#type").val() == 'monk') {
-				$("#submit")
-					.attr("class","heal")
-					.attr("name",'heal')
-					.attr("value",'Soigner');
-
+		if ($("#type").val() == 'soigneur') {
+			$("#submit")
+				.attr("class","heal")
+				.attr("name",'heal')
+				.attr("value",'Soigner');
 			$("#action").attr("value","soigner");
 		}
 
