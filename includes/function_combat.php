@@ -19,7 +19,9 @@ function afficher_perso($perso, $teamA) {
 	 * \param    $perso         Personnage à afficher.
 	 * \return    Un block HTML.
 	 */
-	$percent_pv = ($perso->pv_fight() / $perso->pv()) * 100;
+	 if ($perso->pv_fight() != null) {
+		 $percent_pv = ($perso->pv_fight() / $perso->pv()) * 100;
+	 }
 
 	// if ($perso->atout() == 2) {
 	// 	echo '<div class="perso2">';
@@ -29,7 +31,7 @@ function afficher_perso($perso, $teamA) {
 	// if ($perso->timeEndormi() == 1) {
 	// 	echo '<span class="info">zZZZz</span><br />';
 	// }
-	if ($perso->etat() != "kill")
+	if (($perso->etat() != "kill") && ($perso->pv_fight() != null))
 	{
 	?>
 	<div class="card border rounded center" id="card<?= $perso->id_perso();?>" style="width:200px;padding:5px">
@@ -62,11 +64,25 @@ function afficher_perso($perso, $teamA) {
 	</div>
 	<?php
 	}
-	else
+	elseif ($perso->etat() == "kill")
 	{
 		?>
 		<div class="card border rounded" style="width:200px;padding:5px">
 
+			<img src="./images/perso/rip.jpg" class="avatarC" id=""/>
+
+		  <div class="card-body">
+				<div class="progress">
+					<div class="progress-bar"  role="progressbar" style="width:0%" aria-valuenow="" aria-valuemin="0" aria-valuemax=""></div>
+				</div>
+		  </div>
+		</div>
+		<?php
+	}
+	elseif ($perso->etat() != "kill")
+	{
+		?>
+		<div class="card border rounded" style="width:200px;padding:5px;visibility:hidden;">
 			<img src="./images/perso/rip.jpg" class="avatarC" id=""/>
 
 		  <div class="card-body">
@@ -83,7 +99,7 @@ function verifEtat($tab, $i) {
 	if ($i >= count($tab)) {
 		$i = 1;
 	}
-	if ($tab[$i]->etat() == "kill") {
+	if (($tab[$i]->etat() == "kill") || ($tab[$i]->pv_fight() == null)) {
 		return verifEtat($tab, $i+1);
 	}
 	return $i;
@@ -195,6 +211,7 @@ else
   ];
 ///////////////////////////GESTION DES TOURS/////////////////////////////////////////////////////
 
+var_dump($jr);
 	$i = (int)$_SESSION['tr'] +1;
 
 	if ($i == count($jr)) {
