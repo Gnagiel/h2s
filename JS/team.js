@@ -12,15 +12,7 @@
  * \brief       Chargement automatique.
  * \details    Permet de recharger automatiquement la page de gestion de l'équipe.
  */
-function auto_load(){
-  $.ajax({
-    url: 'index.php?action=team',
-    cache: false,
-    success: function(data){
-       $("#main_page").html(data);
-    }
-  });
-}
+
 $( document ).ready(function() {
   $(".add_team").submit(function() {
   		s = $(this).serialize();
@@ -29,7 +21,7 @@ $( document ).ready(function() {
   			data: s,
   			url: 'ajax/team_ajax.php',
   			success: function(retour){
-  				auto_load();
+  				location.reload();
   			}
   		});
   		return false;

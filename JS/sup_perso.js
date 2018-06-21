@@ -7,20 +7,6 @@
  * \details    Ce fichier js sert à supprimer un personnage du deck via une requete Ajax.
  */
 
- /**
-  * \fn auto_load()
-  * \brief       Chargement automatique.
-  * \details    Permet de recharger automatiquement la page de gestion de l'équipe.
-  */
-function auto_load(){
- $.ajax({
-   url: 'index.php?action=cheat',
-   cache: false,
-   success: function(data){
-      $("#main_page").html(data);
-   }
- });
-}
 $( document ).ready(function() {
   $(".sup_perso").submit(function() {
   	s = $(this).serialize();
@@ -29,7 +15,7 @@ $( document ).ready(function() {
   		data: s,
   		url: 'ajax/sup_perso.php',
   		success: function(retour){
-  			auto_load();
+  			location.reload();
   		}
   	});
   	return false;
