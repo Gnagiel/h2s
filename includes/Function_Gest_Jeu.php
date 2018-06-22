@@ -321,34 +321,35 @@ for ($j = 0; $j < count($teamA); $j++) {
 		}
 	}
 	// Gestion des healers
-	else if ($jr[$i]->types() == "soigneur"){
-		$teamAsort = [];
-		$teamBsort = [];
-		if ($teamA[$j]->id_perso() == $jr[$i]->id_perso()) {
+	else if ($jr[$i]->types() == "soigneur")
+	{
+		if ($teamA[$j]->id_perso() == $jr[$i]->id_perso())
+		{
+			$persoAsoigner = $teamA[$j];
 			for ($x = 0; $x < count($teamA); $x++) {
-				if ($teamA[$x]->etat() == "good") {
-					$pers = array(
-		        'id_perso' => $teamA[$x]->id_perso(),
-		        'vie' => $teamA[$x]->pv_fight()
-			  	);
-					$teamAsort[count($teamAsort)] = $pers;
+				if ($teamA[$x]->etat() == "good" && $teamA[$x]->pv_fight() != null)
+				{
+					if ($persoAsoigner->pv_fight() > $teamA[$x]->pv_fight())
+					{
+						$persoAsoigner = $teamA[$x];
+					}
 				}
 			}
-			usort($teamAsort, 'fonctionComparaison');
-			$id = $teamAsort[0]['id_perso'];
+			$id = $persoAsoigner->id_perso();
 		}
 		else {
-			for ($y = 0; $y < count($teamB); $y++) {
-				if ($teamB[$y]->etat() == "good") {
-					$pers = array(
-		        'id_perso' => $teamB[$y]->id_perso(),
-		        'vie' => $teamB[$y]->pv_fight()
-			  	);
-					$teamBsort[count($teamBsort)] = $pers;
+			$persoAsoigner = $teamB[$j];
+			for ($y = 0; $y < count($teamB); $y++)
+			{
+				if ($teamB[$y]->etat() == "good" && $teamB[$y]->pv_fight() != null)
+				{
+					if ($persoAsoigner->pv_fight() > $teamB[$y]->pv_fight())
+					{
+						$persoAsoigner = $teamB[$y];
+					}
 				}
 			}
-			usort($teamBsort, 'fonctionComparaison');
-			$id = $teamBsort[0]['id_perso'];
+			$id = $persoAsoigner->id_perso();
 		}
 	}
 }
