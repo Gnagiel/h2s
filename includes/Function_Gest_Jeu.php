@@ -375,8 +375,8 @@ for ($j = 0; $j < count($teamA); $j++) {
 			$("#action").attr("value","soigner");
 		}
 
-		if ($("#atout").val() == 2) {
-			alert('super coup');
+		if ($("#atout").val() == 3) {
+			//alert('super coup');
 		}
 	});
 

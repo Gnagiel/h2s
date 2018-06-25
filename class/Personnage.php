@@ -218,7 +218,7 @@ class Personnage
 
 	public function incrementAtout()
   {
-  	if ($this->atout == 2) {
+  	if ($this->atout == 3) {
   		$this->atout = 0;
   	}
   	else {

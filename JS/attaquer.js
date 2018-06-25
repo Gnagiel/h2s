@@ -1,13 +1,3 @@
-function auto_load(idU){
-  $.ajax({
-    url: "index/combat?idUser="+idU+"",
-    cache: false,
-    success: function(data){
-       $("html").load(data);
-    }
-  });
-}
-
 function angleEtOrientation(x, y, xCible, yCible)
 {
   var z = Math.tan(y - yCible, x - xCible)+Math.PI;
