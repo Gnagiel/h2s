@@ -376,7 +376,7 @@ for ($j = 0; $j < count($teamA); $j++) {
 		}
 
 		if ($("#atout").val() == 3) {
-			//alert('super coup');
+			$("#action").attr("value","super");
 		}
 	});
 

@@ -348,181 +348,24 @@ else
 	<script>
 
 		$(document).ready(function() {
-
-			if ($('input[name=id1]').val() == "<?= $perso1->id_perso();?>") {
-				$('#card<?= $perso1->id_perso();?>').css("background-color","blue");
-				// $('#<?= $perso1->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $perso1->id_perso();?>').animate({
-        // 	height: '130px'
-        // });
-			}
-			if ($('input[name=idCible]').val() == "<?= $perso1->id_perso();?>") {
-				$('#card<?= $perso1->id_perso();?>').css("background-color","grey");
-				// $('#<?= $perso1->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $perso1->id_perso();?>').animate({
-        // 	height: '130px'
-        // });
-			}
-			if ($('input[name=id1]').val() == "<?= $perso2->id_perso();?>") {
-				$('#card<?= $perso2->id_perso();?>').css("background-color","blue");
-				// $('#<?= $perso2->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $perso2->id_perso();?>').animate({
-        // 	height: '130px'
-        // });
-			}
-			if ($('input[name=idCible]').val() == "<?= $perso2->id_perso();?>") {
-				$('#card<?= $perso2->id_perso();?>').css("background-color","grey");
-				// $('#<?= $perso2->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $perso2->id_perso();?>').animate({
-        // 	height: '130px'
-        // });
-			}
-			if ($('input[name=id1]').val() == "<?= $perso3->id_perso();?>") {
-				$('#card<?= $perso3->id_perso();?>').css("background-color","blue");
-				// $('#<?= $perso3->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $perso3->id_perso();?>').animate({
-        // 	height: '130px'
-        // });
-			}
-			if ($('input[name=idCible]').val() == "<?= $perso3->id_perso();?>") {
-				$('#card<?= $perso3->id_perso();?>').css("background-color","grey");
-				// $('#<?= $perso3->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $perso3->id_perso();?>').animate({
-        // 	height: '130px'
-        // });
-			}
-			if ($('input[name=id1]').val() == "<?= $perso4->id_perso();?>") {
-				$('#card<?= $perso4->id_perso();?>').css("background-color","blue");
-				// $('#<?= $perso4->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $perso4->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=idCible]').val() == "<?= $perso4->id_perso();?>") {
-				$('#card<?= $perso4->id_perso();?>').css("background-color","grey");
-				// $('#<?= $perso4->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $perso4->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=id1]').val() == "<?= $perso5->id_perso();?>") {
-				$('#card<?= $perso5->id_perso();?>').css("background-color","blue");
-				// $('#<?= $perso5->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $perso5->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=idCible]').val() == "<?= $perso5->id_perso();?>") {
-				$('#card<?= $perso5->id_perso();?>').css("background-color","grey");
-				// $('#<?= $perso5->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $perso5->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=id1]').val() == "<?= $perso6->id_perso();?>") {
-				$('#card<?= $perso6->id_perso();?>').css("background-color","blue");
-				// $('#<?= $perso6->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $perso6->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=idCible]').val() == "<?= $perso6->id_perso();?>") {
-				$('#card<?= $perso6->id_perso();?>').css("background-color","grey");
-				// $('#<?= $perso6->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $perso6->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=id1]').val() == "<?= $adv1->id_perso();?>") {
-				$('#card<?= $adv1->id_perso();?>').css("background-color","blue");
-				// $('#<?= $adv1->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $adv1->id_perso();?>').animate({
-        // 	height: '130px'
-        // });
-			}
-			if ($('input[name=idCible]').val() == "<?= $adv1->id_perso();?>") {
-				$('#card<?= $adv1->id_perso();?>').css("background-color","grey");
-				// $('#<?= $adv1->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $adv1->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=id1]').val() == "<?= $adv2->id_perso();?>") {
-				$('#card<?= $adv2->id_perso();?>').css("background-color","blue");
-				// $('#<?= $adv2->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $adv2->id_perso();?>').animate({
-        // 	height: '130px'
-        // });
-			}
-			if ($('input[name=idCible]').val() == "<?= $adv2->id_perso();?>") {
-				$('#card<?= $adv2->id_perso();?>').css("background-color","grey");
-				// $('#<?= $adv2->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $adv2->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=id1]').val() == "<?= $adv3->id_perso();?>") {
-				$('#card<?= $adv3->id_perso();?>').css("background-color","blue");
-				// $('#<?= $adv3->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $adv3->id_perso();?>').animate({
-        // 	height: '130px'
-        // });
-			}
-			if ($('input[name=idCible]').val() == "<?= $adv3->id_perso();?>") {
-				$('#card<?= $adv3->id_perso();?>').css("background-color","grey");
-				// $('#<?= $adv3->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $adv3->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=id1]').val() == "<?= $adv4->id_perso();?>") {
-				$('#card<?= $adv4->id_perso();?>').css("background-color","blue");
-				// $('#<?= $adv4->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $adv4->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=idCible]').val() == "<?= $adv4->id_perso();?>") {
-				$('#card<?= $adv4->id_perso();?>').css("background-color","grey");
-				// $('#<?= $adv4->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $adv4->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=id1]').val() == "<?= $adv5->id_perso();?>") {
-				$('#card<?= $adv5->id_perso();?>').css("background-color","blue");
-				// $('#<?= $adv5->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $adv5->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=idCible]').val() == "<?= $adv5->id_perso();?>") {
-				$('#card<?= $adv5->id_perso();?>').css("background-color","grey");
-				// $('#<?= $adv5->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $adv5->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=id1]').val() == "<?= $adv6->id_perso();?>") {
-				$('#card<?= $adv6->id_perso();?>').css("background-color","blue");
-				// $('#<?= $adv6->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $adv6->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
-			}
-			if ($('input[name=idCible]').val() == "<?= $adv6->id_perso();?>") {
-				$('#card<?= $adv6->id_perso();?>').css("background-color","grey");
-				// $('#<?= $adv6->id_perso();?>').fadeTo('fast', 1);
-				// $('#<?= $adv6->id_perso();?>').animate({
-				// 	height: '130px'
-				// });
+			function couleur_perso(id) {
+				if (id == $('input[name=id1]').val()) {
+					if ($("#atout").val() == 3) {
+						$('#card'+id).css("background-color","red");
+					}
+					else {
+						$('#card'+id).css("background-color","blue");
+					}
+				}
+				else if (id == $('input[name=idCible]').val()) {
+					$('#card'+id).css("background-color","grey");
+				}
 			}
 
-
+			couleur_perso($('input[name=id1]').val());
+			couleur_perso($('input[name=idCible]').val());
 		});
-
 	</script>
 <?php
 }
-// var_dump($_SESSION);
 ?>

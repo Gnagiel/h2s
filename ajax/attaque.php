@@ -15,7 +15,7 @@ include("../includes/identifiant.php");
 $manager = new PersonnagesManager($db);
 $perso = $manager->get((int) $_POST['id1']);
 
-if ($_POST['action'] == "frapper") // Si on a cliqué sur un personnage pour le frapper.
+if ($_POST['action'] == "frapper" || $_POST['action'] == "super") // Si on a cliqué sur un personnage pour le frapper.
 {
   if (!isset($perso))
   {
