@@ -208,6 +208,7 @@ class Personnage
     $this->pv_fight = $this->pv;
   	$this->etat = 'good';
   	$this->timeEndormi = 0;
+    $this->atout = 0;
   }
 
   public function reveil()

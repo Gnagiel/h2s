@@ -32,9 +32,9 @@ class PersonnagesManager
 		$managerStuff->add($stuff3);
 
     $q = $this->db->prepare('INSERT INTO team(id_persos, id_user, niveau, xp, qualite, team, stuff_1, stuff_2,
-    stuff_3, stuff_4, etat)
+    stuff_3, stuff_4, etat, atout)
     VALUES(:id_persos, :id_user, :niveau, :xp, :qualite, :team, :stuff_1, :stuff_2,
-    :stuff_3, :stuff_4, :etat)');
+    :stuff_3, :stuff_4, :etat, :atout)');
 
     $q->bindValue(':id_persos', $perso->id_persos(), PDO::PARAM_INT);
     $q->bindValue(':id_user', $user->id_user(), PDO::PARAM_INT);
@@ -46,6 +46,7 @@ class PersonnagesManager
     $q->bindValue(':stuff_4', $perso->stuff_4(), PDO::PARAM_INT);
     $q->bindValue(':etat', 'good', PDO::PARAM_STR);
     $q->bindValue(':niveau', 1, PDO::PARAM_INT);
+    $q->bindValue(':atout', $perso->atout(), PDO::PARAM_INT);
     $q->bindValue(':xp', 0, PDO::PARAM_INT);
     $q->execute();
 
@@ -86,7 +87,7 @@ class PersonnagesManager
 
   public function get_team($info, $user)
   {
-    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight,
+    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight, t.atout,
     p.nom, p.types, p.emp_team,
     p.id_persos,
     q.etoile,
@@ -128,7 +129,7 @@ class PersonnagesManager
   public function get($info)
   {
 
-      $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight,
+      $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight, t.atout,
       p.nom, p.types, p.emp_team,
       p.id_persos,
       q.etoile,
@@ -220,7 +221,7 @@ class PersonnagesManager
   {
     $persos = [];
 
-    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight,
+    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight, t.atout,
     p.nom, p.types, p.emp_team,
     p.id_persos,
     q.etoile,
@@ -269,7 +270,7 @@ class PersonnagesManager
     if (isset($offset) && isset($offset)) {
       $Limit = " LIMIT $offset, $limit ";
     }
-    $q = $this->db->prepare("SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight,
+    $q = $this->db->prepare("SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight, t.atout,
     p.nom, p.types, p.emp_team, p.team,
     p.id_persos,
     q.etoile,
@@ -316,7 +317,7 @@ class PersonnagesManager
   {
     $persos = [];
 
-    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight,
+    $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight, t.atout,
     p.nom, p.types, p.emp_team, p.team,
     p.id_persos,
     q.etoile,
@@ -425,7 +426,7 @@ class PersonnagesManager
     $q = $this->db->prepare('UPDATE team
     SET niveau = :niveau, pv_fight = :pv_fight, xp = :xp, qualite = :qualite, team = :team, stuff_1 = :stuff_1,
     stuff_2 = :stuff_2, stuff_3 = :stuff_3,
-    stuff_4 = :stuff_4, etat = :etat
+    stuff_4 = :stuff_4, etat = :etat, atout = :atout
     WHERE id_perso = :id_perso');
 
     $q->bindValue(':niveau', $perso->niveau(), PDO::PARAM_INT);
@@ -438,6 +439,7 @@ class PersonnagesManager
     $q->bindValue(':stuff_3', $perso->stuff_3(), PDO::PARAM_INT);
     $q->bindValue(':stuff_4', $perso->stuff_4(), PDO::PARAM_INT);
     $q->bindValue(':etat', $perso->etat(), PDO::PARAM_STR);
+    $q->bindValue(':atout', $perso->atout(), PDO::PARAM_INT);
     $q->bindValue(':id_perso', $perso->id_perso(), PDO::PARAM_INT);
 
     $q->execute();

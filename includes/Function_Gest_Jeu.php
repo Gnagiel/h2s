@@ -376,14 +376,7 @@ for ($j = 0; $j < count($teamA); $j++) {
 		}
 
 		if ($("#atout").val() == 2) {
-			if ($("#type").val() == 'magicien') {
-				$("#submit")
-					.attr("class","submite")
-					.attr("name","submite")
-					.attr("value",'Endormir');
-
-				$("#action").attr("value","endormir");
-			}
+			alert('super coup');
 		}
 	});
 

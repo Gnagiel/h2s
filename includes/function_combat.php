@@ -248,6 +248,8 @@ else
 			}
 		}
 		$jr[$i]->incrementAtout();
+
+		echo $jr[$i]->atout();
 		$manager->update($jr[$i]);
 	}
 	else {
@@ -296,7 +298,6 @@ else
 	</div>
 	</div>
 	<div style="text-align:center" id="chargement">
-		<img src="./images/charge.gif" id="charge" hidden/>
 		<?php
 		include("./includes/Function_Gest_Jeu.php");
 		?>
@@ -323,6 +324,9 @@ else
 		</div>
 	</div>
 </div>
+<?php
+//var_dump($perso1);
+ ?>
 <!-- <img id="blastG" src="./images/effects/blastG.gif"/> -->
 <div id="log">
 	<?php
@@ -332,8 +336,10 @@ else
 		echo $contenu;
 	}
 	fclose($f) ;
+
 	?>
 </div>
+
 	<script>
 		var textarea = document.getElementById('log');
 		textarea.scrollTop = textarea.scrollHeight;
