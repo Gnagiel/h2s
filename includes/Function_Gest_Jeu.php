@@ -380,14 +380,6 @@ for ($j = 0; $j < count($teamA); $j++) {
 		}
 	});
 
-	$( document ).ajaxStart(function() {
-		$( "#charge" ).show();
-	});
-
-	$( document ).ajaxStop(function() {
-		$( "#charge" ).hide();
-	});
-
 	function submitForm() {
 	 $("#submit").click();
 	}
