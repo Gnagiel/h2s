@@ -43,7 +43,9 @@ class Personnage
             $stuff_1, /*!< id de l'équipement n°1 */
   					$stuff_2, /*!< id de l'équipement n°2 */
   					$stuff_3, /*!< id de l'équipement n°3 */
-  					$stuff_4; /*!< id de l'équipement n°4 , vide par default */
+  					$stuff_4, /*!< id de l'équipement n°4 , vide par default */
+            $type_att,
+            $type_blast;
 
 
 
@@ -261,6 +263,8 @@ class Personnage
   public function pv_fight() { return $this->pv_fight; }
   public function att() { return $this->att; }
   public function emp_team() { return $this->emp_team; }
+  public function type_att() { return $this->type_att; }
+  public function type_blast() { return $this->type_blast; }
 
   public function setAtout($atout)
   {
@@ -565,6 +569,26 @@ class Personnage
     if ($pv_fight >= 0)
     {
       $this->pv_fight = $pv_fight;
+    }
+  }
+
+  public function setType_att($type_att)
+  {
+    // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+    // Dont la longueur est inférieure à 30 caractères.
+    if (is_string($type_att) && strlen($type_att) <= 30)
+    {
+      $this->type_att = $type_att;
+    }
+  }
+
+  public function setType_blast($type_blast)
+  {
+    // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+    // Dont la longueur est inférieure à 30 caractères.
+    if (is_string($type_blast) && strlen($type_blast) <= 30)
+    {
+      $this->type_blast = $type_blast;
     }
   }
 }

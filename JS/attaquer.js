@@ -133,7 +133,20 @@ $(document).ready(function(){
                   //$("#resultat").html("<p>Pourquoi vous frappez-vous ??? ...</p>");
                 }
                 else if (json.result == 'Esquive') {
-                  //$("#resultat").html("<p>Attaque esquivé</p>");
+                  $("#blast"+attaquant).attr("hidden", false);
+
+                  var anim = CSSAnimations.create({
+                      '0%': { transform: 'translateX(0px) translateY(0px)' },
+                      '100%': { transform: 'translateX('+x+'px) translateY('+y+'px)' }
+                  });
+
+                  $("#blast"+attaquant).css({ 'animation-name': anim.name,
+                              'animation-duration': '0.5s' });
+
+                  $("#blast"+attaquant).on('animationend', function() {
+                      CSSAnimations.remove(anim.name);
+                      $("#blast"+attaquant).attr("hidden", true);
+                  });
                 }
                 else if (json.result == 'Tué') {
                   $("#blast"+attaquant).attr("hidden", false);
@@ -158,17 +171,11 @@ $(document).ready(function(){
                           CSSAnimations.remove(anim_hit.name);
                           $("#sprite"+cible).attr("hidden", true);
 
-                          $("#progress-bar"+json.id).width('0%');
-                          $("#card"+json.id+" img").attr('src', "./images/perso/rip.jpg");
+                          $("#card"+json.id).fadeOut("fast");
                       });
                   });
-
-									//$("#resultat").html("<p>Vous avez tué !</p>");
-
-							    //$('#son').get(0).play();
-
                 }
-                setTimeout("location.reload()",1*1000);
+                //setTimeout("location.reload()",1*1000);
             }
         });
     });

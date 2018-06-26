@@ -88,7 +88,7 @@ class PersonnagesManager
   public function get_team($info, $user)
   {
     $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight, t.atout,
-    p.nom, p.types, p.emp_team,
+    p.nom, p.types, p.emp_team, p.type_att, p.type_blast,
     p.id_persos,
     q.etoile,
     (n.xp_max - n.xp) as xp_min,
@@ -130,7 +130,7 @@ class PersonnagesManager
   {
 
       $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight, t.atout,
-      p.nom, p.types, p.emp_team,
+      p.nom, p.types, p.emp_team, p.type_att, p.type_blast,
       p.id_persos,
       q.etoile,
       (n.xp_max - n.xp) as xp_min,
@@ -222,8 +222,7 @@ class PersonnagesManager
     $persos = [];
 
     $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight, t.atout,
-    p.nom, p.types, p.emp_team,
-    p.id_persos,
+    p.nom, p.types, p.emp_team, p.type_att, p.type_blast, p.id_persos,
     q.etoile,
     (n.xp_max - n.xp) as xp_min,
     (p.vie + n.vie + (
@@ -271,7 +270,7 @@ class PersonnagesManager
       $Limit = " LIMIT $offset, $limit ";
     }
     $q = $this->db->prepare("SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight, t.atout,
-    p.nom, p.types, p.emp_team, p.team,
+    p.nom, p.types, p.emp_team, p.team, p.type_att, p.type_blast,
     p.id_persos,
     q.etoile,
     (n.xp_max - n.xp) as xp_min,
@@ -318,7 +317,7 @@ class PersonnagesManager
     $persos = [];
 
     $q = $this->db->prepare('SELECT t.id_perso, t.niveau, t.xp, t.qualite, t.etat, t.stuff_1, t.stuff_2, t.stuff_3, t.stuff_4, t.team, t.pv_fight, t.atout,
-    p.nom, p.types, p.emp_team, p.team,
+    p.nom, p.types, p.emp_team, p.team, p.type_att, p.type_blast,
     p.id_persos,
     q.etoile,
     (n.xp_max - n.xp) as xp_min,
