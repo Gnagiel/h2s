@@ -12,88 +12,78 @@
 </script> -->
 
 <?php
-function afficher_perso($perso, $teamA) {
+function afficher_perso($perso, $teamA, $x, $y) {
 	/**
 	 * \brief       Afficher un personnage
 	 * \details    Génère l'HTML permettant d'afficher un personnage du jeu. (cf #$perso)
 	 * \param    $perso         Personnage à afficher.
 	 * \return    Un block HTML.
 	 */
-	 if ($perso->pv_fight() != null) {
-		 $percent_pv = ($perso->pv_fight() / $perso->pv()) * 100;
-	 }
+	 if (isset($perso) && isset($teamA))
+	 {
+		 if ($perso->pv_fight() != null) {
+			 $percent_pv = ($perso->pv_fight() / $perso->pv()) * 100;
+		 }
 
-	// if ($perso->atout() == 2) {
-	// 	echo '<div class="perso2">';
-	// } else {
-	// 	echo '<div class="perso">';
-	// }
-	// if ($perso->timeEndormi() == 1) {
-	// 	echo '<span class="info">zZZZz</span><br />';
-	// }
-	if (($perso->etat() != "kill") && ($perso->pv_fight() != null))
-	{
-		$nom = str_replace(' ', '_', $perso->nom());
-	?>
-	<div class="card border rounded center" id="card<?= $perso->id_perso();?>" style="width:200px;padding:5px">
-
-		<img src="./images/perso/<?=$nom?><?= $perso->etoile();?>.jpg" class="avatarC" id="<?= $perso->id_perso();?>"/>
-		<div class="card-body">
-			<div class="col align-self-center">
-				<?php
-				if (in_array($perso, $teamA, true))
-				{
-					?>
-					<img class="blast" id="blast<?=$perso->id_perso();?>" src="./images/effects/blastG.gif" style="{width:60px;margin:auto;}" hidden/>
-					<?php
-				}
-				else
-				{
-					?>
-					<img class="blast" id="blast<?=$perso->id_perso();?>" src="./images/effects/blastD.gif" style="{width:60px;margin:auto;}" hidden/>
-					<?php
-				}
-				?>
-			</div>
-			<div class="sprite" id="sprite<?=$perso->id_perso();?>" hidden></div>
-			<div class="progress">
-
-
-				<div class="progress-bar" id="progress-bar<?=$perso->id_perso()?>"  role="progressbar" style="width:<?=$percent_pv;?>%" aria-valuenow="<?=$perso->pv_fight()?>" aria-valuemin="0" aria-valuemax="<?=$perso->pv()?>"></div>
-			</div>
-	  </div>
-	</div>
-	<?php
-	}
-	elseif ($perso->etat() == "kill")
-	{
+		// if ($perso->atout() == 2) {
+		// 	echo '<div class="perso2">';
+		// } else {
+		// 	echo '<div class="perso">';
+		// }
+		// if ($perso->timeEndormi() == 1) {
+		// 	echo '<span class="info">zZZZz</span><br />';
+		// }
+		if (($perso->etat() != "kill") && ($perso->pv_fight() != null))
+		{
+			$nom = str_replace(' ', '_', $perso->nom());
 		?>
-		<div class="card border rounded" style="width:200px;padding:5px">
+		<div class="card border rounded center" id="card<?= $perso->id_perso();?>" style="width:150px;height:200px;padding:5px;" data-x="<?=$x?>" data-y="<?=$y?>">
 
-			<img src="./images/perso/rip.jpg" class="avatarC" id=""/>
-
-		  <div class="card-body">
+			<img src="./images/perso/<?=$nom?><?= $perso->etoile();?>.jpg" class="avatarC" id="<?= $perso->id_perso();?>"/>
+			<div class="card-body">
+				<div class="col align-self-center">
+					<?php
+					if (in_array($perso, $teamA, true))
+					{
+						?>
+						<img class="blast" id="blast<?=$perso->id_perso();?>" src="./images/effects/<?=$perso->type_blast();?>G.gif" style="{width:60px;margin:auto;}" hidden/>
+						<?php
+					}
+					else
+					{
+						?>
+						<img class="blast" id="blast<?=$perso->id_perso();?>" src="./images/effects/<?=$perso->type_blast();?>D.gif" style="{width:60px;margin:auto;}" hidden/>
+						<?php
+					}
+					?>
+				</div>
+				<div class="sprite" id="sprite<?=$perso->id_perso();?>" hidden></div>
 				<div class="progress">
-					<div class="progress-bar"  role="progressbar" style="width:0%" aria-valuenow="" aria-valuemin="0" aria-valuemax=""></div>
+
+
+					<div class="progress-bar" id="progress-bar<?=$perso->id_perso()?>"  role="progressbar" style="width:<?=$percent_pv;?>%" aria-valuenow="<?=$perso->pv_fight()?>" aria-valuemin="0" aria-valuemax="<?=$perso->pv()?>"></div>
 				</div>
 		  </div>
 		</div>
 		<?php
-	}
-	elseif ($perso->etat() != "kill")
-	{
-		?>
-		<div class="card border rounded" style="width:200px;padding:5px;visibility:hidden;">
-			<img src="./images/perso/rip.jpg" class="avatarC" id=""/>
+		}
+		else
+		{
+			?>
+			<div class="card" style="width:150px;height:200px;padding:5px;"  data-x="<?=$x?>" data-y="<?=$y?>">
 
-		  <div class="card-body">
-				<div class="progress">
-					<div class="progress-bar"  role="progressbar" style="width:0%" aria-valuenow="" aria-valuemin="0" aria-valuemax=""></div>
-				</div>
-		  </div>
+			</div>
+			<?php
+		}
+	}
+	else {
+		?>
+		<div class="card" style="width:150px;height:200px;padding:5px;">
+
 		</div>
 		<?php
 	}
+
 }
 
 function verifEtat($tab, $i) {
@@ -280,52 +270,81 @@ else
 	<div class="team">
 		<div class="line">
 			<?php
-			afficher_perso($perso4, $teamA);
-
-			afficher_perso($perso5, $teamA);
-
-			afficher_perso($perso6, $teamA);
+			echo "<div class='emp_perso'>";
+			afficher_perso($perso4, $teamA, -2, 0);
+			echo "</div>";
+			echo "<div class='emp_perso'>";
+			afficher_perso($perso5, $teamA, -2, 1);
+			echo "</div>";
+			echo "<div class='emp_perso'>";
+			afficher_perso($perso6, $teamA, -2, 2);
+			echo "</div>";
 			?>
 		</div>
 		<div class="line">
 			<?php
-			afficher_perso($perso1, $teamA);
-
-			afficher_perso($perso2, $teamA);
-
-			afficher_perso($perso3, $teamA);
+			echo "<div class='emp_perso'>";
+			afficher_perso($perso1, $teamA, -1, 0);
+			echo "</div>";
+			echo "<div class='emp_perso'>";
+			afficher_perso($perso2, $teamA, -1, 1);
+			echo "</div>";
+			echo "<div class='emp_perso'>";
+			afficher_perso($perso3, $teamA, -1, 2);
+			echo "</div>";
 			?>
 	</div>
 	</div>
-	<div style="text-align:center" id="chargement">
+	<div class="line">
 		<?php
-		include("./includes/Function_Gest_Jeu.php");
+		echo "<div class='emp_perso'>";
+		afficher_perso(@$a, @$b, 0, 0);
+		echo "</div>";
+		echo "<div class='emp_perso'>";
+		afficher_perso(@$a, @$b, 0, 1);
+		echo "</div>";
+		echo "<div class='emp_perso'>";
+		afficher_perso(@$a, @$b, 0, 2);
+		echo "</div>";
 		?>
-	</div>
+</div>
 
 	<div class="team">
 		<div class="line">
 			<?php
-			afficher_perso($adv1, $teamA);
-
-			afficher_perso($adv2, $teamA);
-
-			afficher_perso($adv3, $teamA);
+			echo "<div class='emp_perso'>";
+			afficher_perso($adv1, $teamA, 1, 0);
+			echo "</div>";
+			echo "<div class='emp_perso'>";
+			afficher_perso($adv2, $teamA, 1, 1);
+			echo "</div>";
+			echo "<div class='emp_perso'>";
+			afficher_perso($adv3, $teamA, 1, 2);
+			echo "</div>";
 			?>
 		</div>
 		<div class="line">
 			<?php
-			afficher_perso($adv4, $teamA);
-
-			afficher_perso($adv5, $teamA);
-
-			afficher_perso($adv6, $teamA);
+			echo "<div class='emp_perso'>";
+			afficher_perso($adv4, $teamA, 2, 0);
+			echo "</div>";
+			echo "<div class='emp_perso'>";
+			afficher_perso($adv5, $teamA, 2, 1);
+			echo "</div>";
+			echo "<div class='emp_perso'>";
+			afficher_perso($adv6, $teamA, 2, 3);
+			echo "</div>";
 			?>
 		</div>
 	</div>
 </div>
+<div style="text-align:center" id="chargement">
+	<?php
+	include("./includes/Function_Gest_Jeu.php");
+	?>
+</div>
 <?php
-//var_dump($perso1);
+var_dump($perso1);
  ?>
 <!-- <img id="blastG" src="./images/effects/blastG.gif"/> -->
 <div id="log">
