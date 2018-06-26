@@ -16,11 +16,11 @@
 echo '<div id="team">';
 
 foreach ($perso as $persos)
-
 {
+$nom = str_replace(' ', '_', $persos->nom());
 ?>
 <div class="affiche_stuff">
-	<div class="perso_menu" id="<?=$persos->nom();?><?=$persos->id_perso();?>">
+	<div class="perso_menu" id="<?=$nom?><?=$persos->id_perso();?>">
     <?= htmlspecialchars($persos->nom()).' (Niv'.htmlspecialchars($persos->niveau()).')' ?><br /><br />
 		<br />
     <div class="sous_menu">
@@ -52,9 +52,10 @@ foreach ($perso as $persos)
 <?php
 foreach ($perso as $persos)
 {
+$nom = str_replace(' ', '_', $persos->nom());
 ?>
 	<div class='list_cheat_perso'>
-		<a href="#<?=$persos->nom();?><?=$persos->id_perso();?>"><?= htmlspecialchars($persos->nom());?><br /></a>
+		<a href="#<?=$nom?><?=$persos->id_perso();?>"><?= htmlspecialchars($persos->nom());?><br /></a>
 		<span>PV </span><?= htmlspecialchars($persos->pv());?><br />
 		<span>ATT </span><?= htmlspecialchars($persos->att());?><br /><br />
 	</div>

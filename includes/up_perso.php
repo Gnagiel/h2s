@@ -16,7 +16,6 @@
 echo '<div id="team">';
 foreach ($perso as $persos)
 {
-
 	if ($persos->xp() != 0 && $persos->xp_max() != 0)
 	{
 		$level = (($persos->xp() - $persos->xp_min()) / ($persos->xp_max() - $persos->xp_min())) * 100;
@@ -25,9 +24,10 @@ foreach ($perso as $persos)
 	{
 		$level = 0;
 	}
+	$nom = str_replace(' ', '_', $persos->nom());
 	?>
 	<div class="affiche_stuff">
-		<div class="perso_menu" id="<?=$persos->nom();?><?=$persos->id_perso();?>">
+		<div class="perso_menu" id="<?=$nom?><?=$persos->id_perso();?>">
 			<a href="./includes/up_perso_modal.php?id_perso=<?=$persos->id_perso()?>" class="manual-ajax" >
 	    <?= htmlspecialchars($persos->nom());?> (Niv <span id="lvl<?=$persos->id_perso();?>" ><?=htmlspecialchars($persos->niveau());?></span>)<br />
 			<br />
@@ -76,8 +76,9 @@ foreach ($perso as $persos)
 <?php
 foreach ($perso as $persos)
 	{
+		$nom = str_replace(' ', '_', $persos->nom());
 	?>
-	<a class="choix_stuff" id="choix<?=$persos->id_perso();?>" href="#<?=$persos->nom();?><?=$persos->id_perso();?>">
+	<a class="choix_stuff" id="choix<?=$persos->id_perso();?>" href="#<?=$nom;?><?=$persos->id_perso();?>">
 		<div class='list_cheat_perso'>
 			<?= htmlspecialchars($persos->nom());?> (Niv <span id="lvl<?=$persos->id_perso();?>" ><?=htmlspecialchars($persos->niveau());?></span>)<br />
 				<span>PV </span><?= htmlspecialchars($persos->pv());?><br />
