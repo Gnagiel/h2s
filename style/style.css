@@ -148,9 +148,14 @@ text-decoration:none
 }
 
 .avatarC {
-	height: 100px;
+  max-width:100px;
 	opacity: 0.75;
   margin:auto;
+}
+
+.emp_perso {
+  width:150px;
+  height:200px;
 }
 
 .spanDegat{
