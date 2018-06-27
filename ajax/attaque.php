@@ -221,6 +221,7 @@ elseif ($_POST['action'] == 'soigner')
 	          $manager->update($persoASoigner);
 						$entry = array(
 							'result' => 'soigner',
+              'pv' => utf8_encode($persoASoigner->pv_fight()),
 							'id' => utf8_encode($persoASoigner->id_perso())
 						);
 

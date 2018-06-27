@@ -158,8 +158,6 @@ class Personnage
     $protection = $perso2->pen / $this->arm;
     $degat = ($degat * $protection)*$critique;
 
-
-
     //Application des dégats
     $this->pv_fight = $this->pv_fight - $degat;
 
@@ -188,7 +186,6 @@ class Personnage
     {
       return self::PERSO_ENDORMI;
     }
-    //$this->magie -= 10;
     // On indique au personnage qu'il doit recevoir des soins.
     // Puis on retourne la valeur renvoyée par la méthode : self::PERSONNAGE_SOIGNE.
     return $perso->recevoirSoins($this);
@@ -221,7 +218,7 @@ class Personnage
 	public function incrementAtout()
   {
   	if ($this->atout == 3) {
-  		$this->atout = 0;
+  		$this->atout = 1;
   	}
   	else {
   		$this->atout++;

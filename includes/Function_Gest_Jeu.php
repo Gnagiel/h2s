@@ -325,11 +325,13 @@ for ($j = 0; $j < count($teamA); $j++) {
 	{
 		if ($teamA[$j]->id_perso() == $jr[$i]->id_perso())
 		{
+			$diff_pv_old = $teamA[$j]->pv() - $teamA[$j]->pv_fight();;
 			$persoAsoigner = $teamA[$j];
 			for ($x = 0; $x < count($teamA); $x++) {
 				if ($teamA[$x]->etat() == "good" && $teamA[$x]->pv_fight() != null)
 				{
-					if ($persoAsoigner->pv_fight() > $teamA[$x]->pv_fight())
+					$diff_pv = $teamA[$x]->pv() - $teamA[$x]->pv_fight();
+					if ($diff_pv > $diff_pv_old)
 					{
 						$persoAsoigner = $teamA[$x];
 					}
@@ -376,7 +378,9 @@ for ($j = 0; $j < count($teamA); $j++) {
 		}
 
 		if ($("#atout").val() == 3) {
-			$("#action").attr("value","super");
+			if ($("#type").val() != 'soigneur') {
+				$("#action").attr("value","super");
+			} 
 		}
 	});
 
