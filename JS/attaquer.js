@@ -74,10 +74,9 @@ $(document).ready(function(){
 
 
 
-                if (json.result == 'frapper')
+                if ((json.result == 'frapper') || (json.result == 'Tué') ||  (json.result == 'Esquive'))
                 {
                   $("#blast"+attaquant).attr("hidden", false);
-
 
                   var anim = CSSAnimations.create({
                       '0%': { transform: 'translateX(0px) translateY(0px)' },
@@ -90,34 +89,47 @@ $(document).ready(function(){
                   $("#blast"+attaquant).on('animationend', function() {
                       CSSAnimations.remove(anim.name);
                       $("#blast"+attaquant).attr("hidden", true);
-                      $("#sprite"+cible).attr("hidden", false);
 
-                      var anim_hit = CSSAnimations.get('play_hit');
-                      var anim_hit2 = CSSAnimations.get('play_hit2');
-                      $("#sprite"+cible).css({ 'animation-name': anim_hit.name,
-                                  'animation-duration': '0.5s' });
+                      switch (json.result) {
+                        case 'frapper':
+                          $("#sprite"+cible).attr("hidden", false);
+                          var anim_hit = CSSAnimations.get('play_hit');
 
-                      $("#sprite"+cible).on('animationend', function() {
-                          CSSAnimations.remove(anim_hit.name);
-                          // $("#sprite"+cible).css({ 'animation-name': anim_hit2.name,
-                          //             'animation-duration': '0.5s' });
-                          //$("#sprite"+cible).attr("hidden", true);
-                      });
+                          $("#sprite"+cible).css({ 'animation-name': anim_hit.name,
+                                      'animation-duration': '0.5s' });
+
+                          $("#sprite"+cible).on('animationend', function() {
+                              CSSAnimations.remove(anim_hit.name);
+                          });
+
+                          var pv = Number(json.pv);
+                          var pv_max = Number($("#progress-bar"+json.id).attr("aria-valuemax"));
+                          var level = 0;
+                          level = pv / pv_max;
+                          level = level * 100;
+                          $("#progress-bar"+json.id).width(level+'%');
+
+                          break;
+                        case 'Tué':
+                          $("#sprite"+cible).attr("hidden", false);
+                          var anim_hit = CSSAnimations.get('play_hit');
+                          $("#sprite"+cible).css({ 'animation-name': anim_hit.name,
+                                      'animation-duration': '0.5s' });
+                          $("#sprite"+cible).on('animationend', function() {
+                              CSSAnimations.remove(anim_hit.name);
+                              $("#sprite"+cible).attr("hidden", true);
+
+                              $("#card"+json.id).fadeOut("fast");
+                          });
+                          break;
+                        case 'Esquive':
+                          break;
+                        default:
+                      }
                   });
-
-									//$("#resultat").html("<p>Vous avez frappé !</p>");
-                  var pv = Number(json.pv);
-    							var pv_max = Number($("#progress-bar"+json.id).attr("aria-valuemax"));
-    							//alert(xp + " " + xp_min + " " +  xp_max);
-    							var level = 0;
-    							level = pv / pv_max;
-    							level = level * 100;
-                  $("#progress-bar"+json.id).width(level+'%');
    							}
                 else if (json.result == 'soigner') {
                 	//$('#son2').get(0).play();
-                  //$("#resultat").html("<p>Vous avez soigné !</p>");
-
                   var pv = Number(json.pv);
     							var pv_max = Number($("#progress-bar"+json.id).attr("aria-valuemax"));
     							//alert(xp + " " + xp_min + " " +  xp_max);
@@ -129,52 +141,6 @@ $(document).ready(function(){
                 // else if (json.result == 'endormir') {
 								// 	$("#resultat").html("<p>Vous avez ensorcelé !</p>");
    							// }
-                else if (json.result == 'Pas possible') {
-                  //$("#resultat").html("<p>Pourquoi vous frappez-vous ??? ...</p>");
-                }
-                else if (json.result == 'Esquive') {
-                  $("#blast"+attaquant).attr("hidden", false);
-
-                  var anim = CSSAnimations.create({
-                      '0%': { transform: 'translateX(0px) translateY(0px)' },
-                      '100%': { transform: 'translateX('+x+'px) translateY('+y+'px)' }
-                  });
-
-                  $("#blast"+attaquant).css({ 'animation-name': anim.name,
-                              'animation-duration': '0.5s' });
-
-                  $("#blast"+attaquant).on('animationend', function() {
-                      CSSAnimations.remove(anim.name);
-                      $("#blast"+attaquant).attr("hidden", true);
-                  });
-                }
-                else if (json.result == 'Tué') {
-                  $("#blast"+attaquant).attr("hidden", false);
-
-                  var anim = CSSAnimations.create({
-                      '0%': { transform: 'translateX(0px) translateY(0px)' },
-                      '100%': { transform: 'translateX('+x+'px) translateY('+y+'px)' }
-                  });
-
-                  $("#blast"+attaquant).css({ 'animation-name': anim.name,
-                              'animation-duration': '0.5s' });
-
-                  $("#blast"+attaquant).on('animationend', function() {
-                      CSSAnimations.remove(anim.name);
-                      $("#blast"+attaquant).attr("hidden", true);
-
-                      $("#sprite"+cible).attr("hidden", false);
-                      var anim_hit = CSSAnimations.get('play_hit');
-                      $("#sprite"+cible).css({ 'animation-name': anim_hit.name,
-                                  'animation-duration': '0.5s' });
-                      $("#sprite"+cible).on('animationend', function() {
-                          CSSAnimations.remove(anim_hit.name);
-                          $("#sprite"+cible).attr("hidden", true);
-
-                          $("#card"+json.id).fadeOut("fast");
-                      });
-                  });
-                }
                 //setTimeout("location.reload()",1*1000);
             }
         });
