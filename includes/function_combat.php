@@ -70,7 +70,7 @@ function afficher_perso($perso, $teamA, $x, $y) {
 		else
 		{
 			?>
-			<div class="card" style="width:150px;height:200px;padding:5px;"  data-x="<?=$x?>" data-y="<?=$y?>">
+			<div class="card" style="width:150px;height:200px;padding:5px;" data-x="<?=$x?>" data-y="<?=$y?>">
 
 			</div>
 			<?php
@@ -78,7 +78,7 @@ function afficher_perso($perso, $teamA, $x, $y) {
 	}
 	else {
 		?>
-		<div class="card" style="width:150px;height:200px;padding:5px;">
+		<div class="card" style="width:150px;height:200px;padding:5px;" data-x="<?=$x?>" data-y="<?=$y?>">
 
 		</div>
 		<?php
@@ -332,7 +332,7 @@ else
 			afficher_perso($adv5, $teamA, 2, 1);
 			echo "</div>";
 			echo "<div class='emp_perso'>";
-			afficher_perso($adv6, $teamA, 2, 3);
+			afficher_perso($adv6, $teamA, 2, 2);
 			echo "</div>";
 			?>
 		</div>
@@ -344,7 +344,7 @@ else
 	?>
 </div>
 <?php
-var_dump($perso1);
+var_dump($_SESSION);
  ?>
 <!-- <img id="blastG" src="./images/effects/blastG.gif"/> -->
 <div id="log">
