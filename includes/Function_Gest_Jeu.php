@@ -380,7 +380,7 @@ for ($j = 0; $j < count($teamA); $j++) {
 		if ($("#atout").val() == 3) {
 			if ($("#type").val() != 'soigneur') {
 				$("#action").attr("value","super");
-			} 
+			}
 		}
 	});
 
