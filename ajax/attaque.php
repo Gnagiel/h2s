@@ -56,7 +56,8 @@ if ($_POST['action'] == "frapper" || $_POST['action'] == "super") // Si on a cli
           fclose($f) ;
 
           $entry = array(
-            'result' => 'Esquive'
+            'result' => 'Esquive',
+            'type_att' => utf8_encode($perso->type_att())
           );
 
           echo json_encode($entry);
@@ -80,6 +81,7 @@ if ($_POST['action'] == "frapper" || $_POST['action'] == "super") // Si on a cli
 					fclose($f) ;
 					$entry = array(
 						'result' => 'frapper',
+            'type_att' => utf8_encode($perso->type_att()),
 						'id' => utf8_encode($persoAFrapper->id_perso()),
 						'pv' => utf8_encode($persoAFrapper->pv_fight())
 					);
@@ -105,6 +107,7 @@ if ($_POST['action'] == "frapper" || $_POST['action'] == "super") // Si on a cli
           $manager->update($persoAFrapper);
 					$entry = array(
 						'result' => 'Tué',
+            'type_att' => utf8_encode($perso->type_att()),
 						'persoForce' => utf8_encode($perso->att()),
 						'id' => utf8_encode($persoAFrapper->id_perso())
 					);
@@ -119,7 +122,6 @@ if ($_POST['action'] == "frapper" || $_POST['action'] == "super") // Si on a cli
     }
   }
 }
-
 // elseif ($_POST['action'] == 'endormir')
 // {
 //   if (!isset($perso))
