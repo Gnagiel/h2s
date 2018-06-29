@@ -211,7 +211,7 @@ $(document).ready(function(){
                 // else if (json.result == 'endormir') {
 								// 	$("#resultat").html("<p>Vous avez ensorcelé !</p>");
    							// }
-                //setTimeout("location.reload()",1*1000);
+                setTimeout("location.reload()",1*1000);
             }
         });
     });
