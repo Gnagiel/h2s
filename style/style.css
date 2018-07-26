@@ -194,17 +194,6 @@ text-decoration:none
 	margin-left: 7px;
 }
 
-.spritetest {
-  width: 256px;
-  height: 256px;
-  /* position:absolute;
-  bottom:-15px;
-  left:-15px; */
-  display: block;
-  background-image: url('../images/effects/hit.png');
-  animation: play_hit 2s steps(4);
-}
-
 .sprite {
   width: 256px;
   height: 256px;
@@ -217,6 +206,20 @@ text-decoration:none
      -moz-animation: play_hit .4s steps(4);
       -ms-animation: play_hit .4s steps(4);
        -o-animation: play_hit .4s steps(4);
+}
+
+.spriteheal {
+  width: 256px;
+  height: 256px;
+  position:absolute;
+  bottom:-15px;
+  left:-15px;
+  display: block;
+  background-image: url('../images/effects/heal.png');
+  -webkit-animation: play_heal .4s steps(4);
+     -moz-animation: play_heal .4s steps(4);
+      -ms-animation: play_heal .4s steps(4);
+       -o-animation: play_heal .4s steps(4);
 }
 
 @-webkit-keyframes play_hit {
@@ -244,6 +247,30 @@ text-decoration:none
    to { background-position: -1024px -1024px; }
 }
 
+@-webkit-keyframes play_heal {
+ from { background-position: 0px 0px; }
+   to { background-position: -960px -960px; }
+}
+
+@-moz-keyframes play_heal {
+ from { background-position: 0px 0px; }
+   to { background-position: -960px -960px; }
+}
+
+@-ms-keyframes play_heal {
+ from { background-position: 0px 0px; }
+   to { background-position: -960px -960px; }
+}
+
+@-o-keyframes play_heal {
+ from { background-position: 0px 0px; }
+   to { background-position: -960px -960px; }
+}
+
+@keyframes play_heal {
+ from { background-position: 0px 0px; }
+   to { background-position: -960px -960px; }
+}
 
 .blast {
   /* animation: blastAnim 2s; */

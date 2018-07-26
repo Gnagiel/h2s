@@ -58,6 +58,7 @@ function afficher_perso($perso, $teamA, $x, $y) {
 					?>
 				</div>
 				<div class="sprite" id="sprite<?=$perso->id_perso();?>" hidden></div>
+				<div class="sprite2" id="sprite2<?=$perso->id_perso();?>" ></div>
 				<div class="progress">
 
 
@@ -344,7 +345,7 @@ else
 	?>
 </div>
 <?php
-var_dump($_SESSION);
+//var_dump($_SESSION);
  ?>
 <!-- <img id="blastG" src="./images/effects/blastG.gif"/> -->
 <div id="log">
